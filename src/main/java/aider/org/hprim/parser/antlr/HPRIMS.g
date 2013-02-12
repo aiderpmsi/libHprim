@@ -176,9 +176,9 @@ body_obx2_1
 @after{collecteur.endElement();}:
    line_obx2_1 (line_c2_1)*;
 
-// =========== D�finition des des lignes hprim =================
+// =========== Définition des des lignes hprim =================
 
-// Ligne H 2.2 : a exactement la m�me structure que H 2.1
+// Ligne H 2.2 : a exactement la même structure que H 2.1
 line_h2_2
 @init{collecteur.startElement("ligne", "H");}
 @after{collecteur.endElement();}:
@@ -606,22 +606,26 @@ spec_sized_cna[String nameElement, int maxSize]
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
+// Le segment 8.3.1 est de type C
+// HPRIM Santé -Version 2.2-modifs Octobre 2003 Page 9
+//  C : consigné (à retourner à l'identique s'il a été renseigné par l'émetteur)
+// Donc, il peut être vide si non renseigné par l'émetteur
 spec_sized_8_3[String nameElement, int maxSize]
 @init{collecteur.startElement("champ", $nameElement);}
 @after{collecteur.endElement();}:
-  st_sized_mandatory[$nameElement + ".1", 16]
-  (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
-    DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"])?
-  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+  (st_sized_mandatory[$nameElement + ".1", 16]
+   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
+     DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"])?)?
+   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
  
-//H.PR.I.M Sant� - Version 2.1 Avril 1999 Page 17
-// D'apr�s le manuel, L'identifiant de la demande est obligatoire et unique (sous-entendu pour un patient probablement)
-// L'identifiant de l'�chantillon est facultatif et consign�. Il identifie de mani�re univoque un �chantillon physique transmis.
-// Ceci �tant, ce n'est pas sur ces num�ros qu'on peut reconnaitre des rajouts ou corrections pour un m�me examen mais
-// sur le num�ro de demande pour l'ex�cutant (9.4.2)
-// Certains n'envoient pas de num�ros dans ces champs. Ceci est interdit par la norme et je ne
-// le tol�re pas dans l'application sinon ce n'est plus la norme
+//H.PR.I.M Santé - Version 2.1 Avril 1999 Page 17
+// D'après le manuel, L'identifiant de la demande est obligatoire et unique (sous-entendu pour un patient probablement)
+// L'identifiant de l'échantillon est facultatif et consigné. Il identifie de manière univoque un échantillon physique transmis.
+// Ceci étant, ce n'est pas sur ces numéros qu'on peut reconnaitre des rajouts ou corrections pour un même examen mais
+// sur le numéro de demande pour l'exécutant (9.4.2)
+// Certains n'envoient pas de numéros dans ces champs. Ceci est interdit par la norme et je ne
+// le tolère pas dans l'application sinon ce n'est plus la norme
 spec_sized_9_3[String nameElement, int maxSize]
 @init{collecteur.startElement("champ", $nameElement);}
 @after{collecteur.endElement();}:
