@@ -44,7 +44,7 @@ public class HPRIMSParserTest {
 				new XmlContentHandler(new PrintWriter(baos)));
 		
 		// Parsing de la chaine de caractères
-		parser.hprim_2_1();
+		parser.hprim();
 
 		assertTrue(parser.getNumberOfSyntaxErrors() == 0);
 

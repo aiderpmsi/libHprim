@@ -54,7 +54,7 @@ public class SimpleExample {
 		HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
 
 		// Pour l'instant, seul le parser hprim 2.1 est fonctionnel
-		parser.hprim_2_1();
+		parser.hprim();
 
 		// Fermeture du fichier d'entrée
 		is.close();

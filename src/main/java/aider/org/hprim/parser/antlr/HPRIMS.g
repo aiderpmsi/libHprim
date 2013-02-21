@@ -101,12 +101,14 @@ package aider.org.hprim.parser.antlr;
 
 // =========== Définition de la structure hprim ================
 
-// TODO : vraiment faire la différence entre la version 2.1 et la version 2.2 
-//hprim:
-//  hprim_2_2 | hprim_2_1;
+hprim:
+  hprim_oru_2_2 | hprim_oru_2_1;
 
-hprim_2_2
-@init{contentHandler.startElement("message", "hprim_2_2");}
+// Le message ORUpour hprim V2.2 est le même que pour la V2.1
+// Je n'ai pas les specs de hprim v2.0, mais je considère que les*
+// messages oru sont les mêmes que por la v2.1
+hprim_oru_2_2
+@init{contentHandler.startElement("message", "hprim_oru_2_2");}
 @after{contentHandler.endElement();}:
   line_h2_2
   body_p2_1*
@@ -114,8 +116,8 @@ hprim_2_2
   CR?
   EOF;
 
-hprim_2_1
-@init{contentHandler.startElement("message", "hprim_2_1");}
+hprim_oru_2_1
+@init{contentHandler.startElement("message", "hprim_oru_2_1");}
 @after{contentHandler.endElement();}:
   line_h2_1
   body_p2_1*
@@ -143,6 +145,7 @@ body_obx2_1
 // =========== Définition des des lignes hprim =================
 
 // Ligne H 2.2 : a exactement la même structure que H 2.1
+// sauf le numéro de version
 line_h2_2
 @init{contentHandler.startElement("ligne", "H");}
 @after{contentHandler.endElement();}:
@@ -178,9 +181,13 @@ line_h2_1
   DELIMITER1 st_sized_optionnal["H_7.11", 80]
   DELIMITER1 spec_const_7_12["H_7.12"]
   // On force la lecture des hprim 2.0 et 2.2 avec le lecteur 2.1
-  DELIMITER1 (spec_const_7_13_version_2_0["H_7.13"] | spec_const_7_13_version_2_1["H_7.13"] | spec_const_7_13_version_2_2["H_7.13"])
+  DELIMITER1 (spec_const_7_13_version_2_0["H_7.13"] | spec_const_7_13_version_2_1["H_7.13"])
   DELIMITER1 ts_sized_mandatory["H_7.14", 26]
   DELIMITER1?;
+
+//ligne P version hprim 2.2 : idem à ligne P version 2.1
+line_p2_2:
+  line_p2_1;
 
 line_p2_1
 @init{contentHandler.startElement("ligne", "P");}
@@ -198,14 +205,14 @@ line_p2_1
         (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P_8.11", 200]
          (DELIMITER1 st_sized_optionnal["P_8.12", 120]
           (DELIMITER1 spec_sized_tn["P_8.13", 40]
-           // Je ne sais pas si c'est chaque CNA qui ne doit pas faire plus de 60 caract�res ou si c'est
-           // l'ensemble qui ne doit pas en faire plus de 60. Je consid�re le premier
+           // Je ne sais pas si c'est chaque CNA qui ne doit pas faire plus de 60 caractères ou si c'est
+           // l'ensemble qui ne doit pas en faire plus de 60. Je considère le premier
            (DELIMITER1 spec_sized_cna["P_8.14", 60] (REPETITEUR spec_sized_cna["P_8.14", 60])*
             (DELIMITER1 st_sized_optionnal["P_8.15", 60]
              (DELIMITER1 st_sized_optionnal["P_8.16", 60]
-              // Le champ 8.17 (taille) est de type CQ : impossible d'en trouver la norme, je mets un num�rique
+              // Le champ 8.17 (taille) est de type CQ : impossible d'en trouver la norme, je mets un numérique
               (DELIMITER1 nm_sized_optionnal["P_8.17", 10]
-               // Le champ 8.18 (poids) est de type CQ : impossible d'en trouver la norme, je mets un num�rique
+               // Le champ 8.18 (poids) est de type CQ : impossible d'en trouver la norme, je mets un numérique
                (DELIMITER1 nm_sized_optionnal["P_8.18", 10]
                 (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P_8.19", 200] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["P_8.19", 200])*
                  (DELIMITER1 st_sized_optionnal["P_8.20", 200] (REPETITEUR st_sized_optionnal["P_8.20", 200])*
@@ -215,20 +222,24 @@ line_p2_1
                      (DELIMITER1 ts_sized_optionnal["P_8.24", 26] (REPETITEUR ts_sized_optionnal["P_8.24", 26])?
                       (DELIMITER1 spec_const_8_25["P_8.25"]
                        (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8["P_8.26", 100]
-                        // Je n'ai pas la table des classification du diagnostic, je mets une chaine de caract�res 
+                        // Je n'ai pas la table des classification du diagnostic, je mets une chaine de caractères 
                         (DELIMITER1 st_sized_optionnal["P_8.27", 100]
                          (DELIMITER1
-                          // Je n'ai pas la table de classification de situation maritale, je mets une chaine de caract�res
+                          // Je n'ai pas la table de classification de situation maritale, je mets une chaine de caractères
                           (DELIMITER1 st_sized_optionnal["P_8.29", 2]
-                           // Je n'ai pas la table des pr�cautions � prendre, je mets une chaine de acract�res
+                           // Je n'ai pas la table des précautions à prendre, je mets une chaine de caractères
                            (DELIMITER1 st_sized_optionnal["P_8.30", 20]
                             (DELIMITER1 st_sized_optionnal["P_8.31", 20]
-                             // Je n'ai pas la table du statut de confidentialit�, je mets une chaine de caract�res
+                             // Je n'ai pas la table du statut de confidentialité, je mets une chaine de caractères
                              (DELIMITER1 st_sized_optionnal["P_8.32", 20]
                               (DELIMITER1 ts_sized_optionnal["P_8.33", 26]
                                (DELIMITER1 ts_sized_optionnal["P_8.34", 26]
                                 DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
-   
+
+//ligne OBR version hprim 2.2 : idem à ligne OBR version 2.1
+line_obr2_2:
+  line_obr2_1;
+
 line_obr2_1
 @init{contentHandler.startElement("ligne", "OBR");}
 @after{contentHandler.endElement();}:
@@ -352,11 +363,11 @@ line_l2_1
 
 // =========== Définition des éléments des champs hprim ===============
 
-// Je d�finis que :
-// Il est d�fini que quand il n'y a rien dans un champ, ce champ est d�clar� comme existant,
-//   (startElement / endElement sont envoy�s), mais le content n'est pas d�fini (content non envoy�)
+// Je définis que :
+// Il est défini que quand il n'y a rien dans un champ, ce champ est déclaré comme existant,
+//   (startElement / endElement sont envoyés), mais le content n'est pas défini (content non envoyé)
 
-// Donn�es constantes
+// Données constantes
 
 spec_const_sexe[String nameElement]
 @init{contentHandler.startElement("champ", $nameElement);}

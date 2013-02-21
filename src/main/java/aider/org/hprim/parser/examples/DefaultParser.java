@@ -57,7 +57,7 @@ public class DefaultParser {
 		// En fait, le parsing n'envoie pas de RecognitionException, tout est enregistré dans
 		// la liste des erreurs
 		try {
-			parser.hprim_2_1();
+			parser.hprim();
 		} catch (RecognitionException ignore) {
 			// Ignore
 		} catch (IllegalArgumentException e) {

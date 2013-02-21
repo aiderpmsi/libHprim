@@ -135,7 +135,7 @@ public class XmlReader extends PipedReader implements Runnable {
 	public void run() {
 			// First, parse
 			try {
-				hprimsParser.hprim_2_1();
+				hprimsParser.hprim();
 			} catch (Exception e) {
 				synchronized (lock) {
 					if (e.getCause() instanceof RecognitionException) {
