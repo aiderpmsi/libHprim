@@ -5,21 +5,20 @@ import static org.junit.Assert.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintStream;
-import java.util.List;
-
+import java.io.PrintWriter;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.junit.Test;
 
+import aider.org.hprim.parser.HPRIMSTokenSource;
 import aider.org.hprim.parser.antlr.HPRIMSParser;
-import aider.org.hprim.parser.examples.DefaultCollecteur;
+import aider.org.hprim.parser.xml.XmlContentHandler;
 
 public class HPRIMSParserTest {
 
 	@Test
 	public void testHprim_2_1() throws IOException, RecognitionException {
-		// Chaine de caractÃ¨res Ã  tester
+		// Chaine de caractères à tester
 		String testString = 
 		"H|~^\\&|Test1.HPR||PO~LABM||ORU|||HPRIM~TESTE||P|H2.1~C|201204292059\r\n" +
 		"P|1|398|B1042100871||GAULLE~MARECHAL|PIT|19370325|F||28 RUE DE LA PAIX~~PARIS~~75000|||||||||||||||~~TEST\r\n" +
@@ -42,7 +41,7 @@ public class HPRIMSParserTest {
 		// Initialisation du parseur
 		HPRIMSParser parser = new HPRIMSParser(
 				new CommonTokenStream(tks),
-				new DefaultCollecteur(new PrintStream(baos)));
+				new XmlContentHandler(new PrintWriter(baos)));
 		
 		// Parsing de la chaine de caractères
 		parser.hprim_2_1();
@@ -187,7 +186,7 @@ public class HPRIMSParserTest {
 	 */
 	@Test
 	public void testSgt_nm_long() throws IOException, RecognitionException {
-		// Chaine de caractï¿½res ï¿½ tester
+		// Chaine de caractères à tester
 		String testString = "H|~^\\&-1.60";
 		
 		// Crï¿½ation de la source de tokens
@@ -195,24 +194,24 @@ public class HPRIMSParserTest {
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
 		
-		// Rï¿½cupï¿½re ce qui est ï¿½crit pas le collecteur
+		// Récupàre ce qui est écrit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
 		HPRIMSParser parser = new HPRIMSParser(
 				new CommonTokenStream(tks),
-				new DefaultCollecteur(new PrintStream(baos)));
+				new XmlContentHandler(new PrintWriter(baos)));
 		
 		// Parsing de la chaine de caractï¿½res
 		parser.delimiters();
-		parser.nm_sized_optionnal("MainExample", 15);
+		parser.nm_sized_optionnal("SimpleExample", 15);
 
 		// Tests des rï¿½sultats
 		assertEquals("Erreur de resultat de parsing",
 				"<champ nom = delimiteurs>\n" +
 				"|~^\\&\n" +
 				"<\\champ>\n" +
-				"<champ nom = MainExample>\n" +
+				"<champ nom = SimpleExample>\n" +
 				"-1.60\n" +
 				"<\\champ>\n",
 				baos.toString());	
@@ -220,7 +219,7 @@ public class HPRIMSParserTest {
 	}
 	
 	/**
-	 * MainExample la possibilitï¿½ qu'il y ait un segment 9.3 avec :
+	 * SimpleExample la possibilitï¿½ qu'il y ait un segment 9.3 avec :
 	 * DELIMITER1 (vide) DELIMITER2 (vide) DELIMITER1
 	 * @throws IOException 
 	 * @throws RecognitionException 
@@ -241,7 +240,7 @@ public class HPRIMSParserTest {
 		// Initialisation du parseur
 		HPRIMSParser parser = new HPRIMSParser(
 				new CommonTokenStream(tks),
-				new DefaultCollecteur(new PrintStream(baos)));
+				new XmlContentHandler(new PrintWriter(baos)));
 		
 		// Parsing de la chaine de caractï¿½res
 		parser.delimiters();
@@ -264,37 +263,29 @@ public class HPRIMSParserTest {
 	}
 	
 	/**
-	 * MainExample la rï¿½action devant une erreur de matchRegexp
+	 * SimpleExample la rï¿½action devant une erreur de matchRegexp
 	 */
 	@Test
 	public void testError_Case_1() throws IOException, RecognitionException {
-		// Chaine de caractï¿½res ï¿½ tester
+		// Chaine de caractères à tester
 		String testString = "H|~^\\&123";
 		
-		// Crï¿½ation de la source de tokens
+		// Création de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
 		
-		// Rï¿½cupï¿½re ce qui est ï¿½crit pas le collecteur
+		// Récupère ce qui est écrit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
 		HPRIMSParser parser = new HPRIMSParser(
 				new CommonTokenStream(tks),
-				new DefaultCollecteur(new PrintStream(baos)));
+				new XmlContentHandler(new PrintWriter(baos)));
 		
-		// Parsing de la chaine de caractï¿½res
+		// Parsing de la chaine de caractères
 		parser.delimiters();
-		parser.st_sized_optionnal("MainExample", 2);
-		
-		assertFalse(parser.getStateSuccess());
-		
-		List<String> erreurs = parser.getErrors();
-		
-		assertEquals(1, erreurs.size());
-		assertEquals("Reader line 1:7 / malformed message : 123 does not match ^.{0,2}$",
-				erreurs.get(0));
+		parser.st_sized_optionnal("SimpleExample", 2);
 	}
 
 }

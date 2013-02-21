@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import aider.org.hprim.parser.HPRIMSCollecteur;
+import aider.org.hprim.parser.ContentHandler;
 import aider.org.hprim.parser.MatchRegexTokenException;
 
 }
@@ -31,22 +31,11 @@ package aider.org.hprim.parser.antlr;
   /**
    * Collecteur utilisé dans cette classe
    */
-  public HPRIMSCollecteur collecteur;
-  
-  /**
-   * Etat de succès ou d'échec dimport du fichier
-   */
-  private boolean stateSuccess = true;
-
-  /**
-   * Stocke la liste des erreurs
-   */
-  private ArrayList<String> errors = new ArrayList<String>();
+  public ContentHandler contentHandler;
 
   /**
    * Logger de la classe
    */
-  //@SuppressWarnings("unused")
   private static final Logger logger = Logger.getLogger(HPRIMSParser.class.getCanonicalName());
 
   /**
@@ -54,21 +43,13 @@ package aider.org.hprim.parser.antlr;
    * @param lexer
    * @param my_col
    */
-  public HPRIMSParser(TokenStream input, HPRIMSCollecteur collecteur) {
+  public HPRIMSParser(TokenStream input, ContentHandler contentHandler) {
     this(input);
-    this.collecteur = collecteur;
-  }
-
-  /**
-   * Retourne la liste des erreurs de la liste de parsing
-   * @return
-   */
-  public ArrayList<String> getErrors() {
-    return errors;
+    this.contentHandler = contentHandler;
   }
   
   /**
-   * Formate une erreur sous forme de chaine de caract�res
+   * Formate une erreur sous forme de chaine de caractères
    * @param err
    * @return
    */
@@ -93,34 +74,17 @@ package aider.org.hprim.parser.antlr;
   }
   
   /**
-   * La reconnaissance d'une erreur dans le parser ajoute cette erreur dans la liste des erreurs
+   * La reconnaissance d'une erreur dans le parser 
+   * lance une erreur et arrête l'ensemble du parsing immédiatement
    * @param tokenNames
    * @param e
    */
-  public void displayRecognitionError(String[] tokenNames, RecognitionException e) {
-    String msg = formatError(e);
-    errors.add(msg);
-    setStateSuccess(false);
-  }
-  
+   public void recover(RecognitionException e) {
+     throw new IllegalArgumentException(e);
+   }
+    
     /**
-     * Définit si le parsing a été un succès ou non
-     * @param stateSuccess
-     */
-    public void setStateSuccess(boolean stateSuccess) {
-      this.stateSuccess = stateSuccess;
-    }
-      
-    /**
-     * Renvoie si le parsing a �t� un succ�s ou non
-     * @return 
-     */
-    public boolean getStateSuccess() {
-      return this.stateSuccess;
-    }
- 
-    /**
-     * R�alise un regexp
+     * Réalise un regexp
      * @param text
      * @param regex
      * @param input
@@ -137,13 +101,13 @@ package aider.org.hprim.parser.antlr;
 
 // =========== Définition de la structure hprim ================
 
-// TODO : vraiment faire la diff�rence entre la version 2.1 et la version 2.2 
+// TODO : vraiment faire la différence entre la version 2.1 et la version 2.2 
 //hprim:
 //  hprim_2_2 | hprim_2_1;
 
 hprim_2_2
-@init{collecteur.startElement("message", "hprim_2_2");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("message", "hprim_2_2");}
+@after{contentHandler.endElement();}:
   line_h2_2
   body_p2_1*
   line_l2_1
@@ -151,8 +115,8 @@ hprim_2_2
   EOF;
 
 hprim_2_1
-@init{collecteur.startElement("message", "hprim_2_1");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("message", "hprim_2_1");}
+@after{contentHandler.endElement();}:
   line_h2_1
   body_p2_1*
   line_l2_1
@@ -160,28 +124,28 @@ hprim_2_1
   EOF;
 
 body_p2_1
-@init{collecteur.startElement("body", "P");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("body", "P");}
+@after{contentHandler.endElement();}:
   line_p2_1 (line_c2_1)*
    body_obr2_1+;
 
 body_obr2_1
-@init{collecteur.startElement("body", "OBR");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("body", "OBR");}
+@after{contentHandler.endElement();}:
    line_obr2_1 (line_c2_1)*
     body_obx2_1+;
 
 body_obx2_1
-@init{collecteur.startElement("body", "OBX");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("body", "OBX");}
+@after{contentHandler.endElement();}:
    line_obx2_1 (line_c2_1)*;
 
 // =========== Définition des des lignes hprim =================
 
 // Ligne H 2.2 : a exactement la même structure que H 2.1
 line_h2_2
-@init{collecteur.startElement("ligne", "H");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("ligne", "H");}
+@after{contentHandler.endElement();}:
   delimiters
   DELIMITER1 st_sized_optionnal["H_7.3", 12]
   DELIMITER1 st_sized_optionnal["H_7.4", 12]
@@ -200,8 +164,8 @@ line_h2_2
 // Ligne H 2.1 : comme la date est nécessaire, en fait tous les champs
 // sont obligatoires
 line_h2_1
-@init{collecteur.startElement("ligne", "H");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("ligne", "H");}
+@after{contentHandler.endElement();}:
   delimiters
   DELIMITER1 st_sized_optionnal["H_7.3", 12]
   DELIMITER1 st_sized_optionnal["H_7.4", 12]
@@ -219,8 +183,8 @@ line_h2_1
   DELIMITER1?;
 
 line_p2_1
-@init{collecteur.startElement("ligne", "P");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("ligne", "P");}
+@after{contentHandler.endElement();}:
   CR CHARP
   DELIMITER1 nm_integer_sized_optionnal["P_8.2", 4]
   DELIMITER1 spec_sized_8_3["P_8.3", 36]
@@ -266,8 +230,8 @@ line_p2_1
                                 DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
    
 line_obr2_1
-@init{collecteur.startElement("ligne", "OBR");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("ligne", "OBR");}
+@after{contentHandler.endElement();}:
   CR CHARO CHARB CHARR
   DELIMITER1 nm_integer_sized_mandatory["OBR_9.2", 4]
   DELIMITER1 spec_sized_9_3["OBR_9.3", 23]
@@ -313,8 +277,8 @@ line_obr2_1
                             DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
 line_obx2_1
-@init{collecteur.startElement("ligne", "OBX");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("ligne", "OBX");}
+@after{contentHandler.endElement();}:
   CR CHARO CHARB CHARX
   DELIMITER1 nm_integer_sized_mandatory["OBX_10.2", 10]
   DELIMITER1
@@ -368,8 +332,8 @@ line_obx2_1_post10_6:
               (DELIMITER1 st_sized_optionnal["OBX_10.17", 60] DELIMITER1?)?)?)?)?)?)?)?)?)?)?);
 
 line_c2_1
-@init{collecteur.startElement("ligne", "C");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("ligne", "C");}
+@after{contentHandler.endElement();}:
   CR CHARC
   DELIMITER1 nm_integer_sized_mandatory["C_12.2", 10]
   DELIMITER1 spec_const_12_3["C_12.3"]
@@ -377,8 +341,8 @@ line_c2_1
   DELIMITER1?;
 
 line_l2_1
-@init{collecteur.startElement("ligne", "L");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("ligne", "L");}
+@after{contentHandler.endElement();}:
   CR CHARL
   (DELIMITER1 nm_integer_sized_optionnal["L_14.2", 1]
    (DELIMITER1
@@ -395,144 +359,144 @@ line_l2_1
 // Donn�es constantes
 
 spec_const_sexe[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_charM | final_charF | final_charU)?;
 
 spec_const_7_13_version_2_0[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   spec_const_7_13_1_version_2_0[$nameElement + ".1"] DELIMITER2 spec_const_7_13_2[$nameElement + ".2"];
   
 spec_const_7_13_version_2_1[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   spec_const_7_13_1_version_2_1[$nameElement + ".1"] DELIMITER2 spec_const_7_13_2[$nameElement + ".2"];
 
 spec_const_7_13_version_2_2[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   spec_const_7_13_1_version_2_2[$nameElement + ".1"] DELIMITER2 spec_const_7_13_2[$nameElement + ".2"];
 
 spec_const_7_13_2[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_charC | final_charL | final_charR;
 
 spec_const_7_7_contexte[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_ORU;
 
 spec_const_7_12[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_charP | final_charD | final_charT);
 
 spec_const_9_31[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_PORT | final_CART | final_WHLC | final_WALK)?;
 
 spec_const_8_25[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_OP | final_IP | final_ER | final_PA | final_MP)?;
 
 spec_const_9_26[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_charF | final_charP | final_charM | final_charI | final_charR | final_charC | final_charO |
   final_charD | final_charX)?; 
 
 spec_const_10_3_nm[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
-  CHARN CHARM {collecteur.content($text);}; 
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
+  CHARN CHARM {contentHandler.content($text);}; 
 
 spec_const_10_3_ce[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
-  CHARC CHARE {collecteur.content($text);}; 
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
+  CHARC CHARE {contentHandler.content($text);}; 
 
 spec_const_10_3_st[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
-  CHARS CHART {collecteur.content($text);}; 
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
+  CHARS CHART {contentHandler.content($text);}; 
 
 spec_const_10_3_gc[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
-  CHARG CHARC {collecteur.content($text);};
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
+  CHARG CHARC {contentHandler.content($text);};
   
 spec_const_10_3_tx[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
-  CHART CHARX {collecteur.content($text);};
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
+  CHART CHARX {contentHandler.content($text);};
 
 spec_const_10_3_fic[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
-  (CHARF CHARI CHARC) {collecteur.content($text);};
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
+  (CHARF CHARI CHARC) {contentHandler.content($text);};
 
 spec_const_10_3_std[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (CHARA CHARD) | (CHARC CHARK) | (CHARC CHARN CHARA) | (CHARD CHART) |
   (CHARP CHARN) | (CHART CHARN) |
-  (CHARG CHARB) | (CHARG CHARN) {collecteur.content($text);};
+  (CHARG CHARB) | (CHARG CHARN) {contentHandler.content($text);};
 
 // Données spéciales (associant plusieurs données générales)
 
 spec_sized_10_6[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_sized_optionnal[$nameElement + ".1", 10]
   (DELIMITER2 st_sized_optionnal[$nameElement + ".2", 60]
    (DELIMITER2 st_sized_optionnal[$nameElement + ".3", 10])?)?
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_const_10_9[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_charL | final_charH | final_LL | final_HH | final_symbol_inf | final_symbol_sup |
   final_charN | final_charA | final_AA | final_Null | final_charU | final_charD | final_charB |
   final_charW | final_charR | final_charI | final_charS | final_MS | final_VS)?;
 
 spec_const_10_11[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_charA | final_charS | final_charR | final_charN)?;
 
 spec_const_10_12[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_charR | final_charP | final_charF | final_charC | final_charI | final_charD |
    final_charX | final_charU)?;
 
 spec_const_12_3[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (final_charP | final_charL)?;
 
 spec_sized_mult_lvl1_st_mandatory_2[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_nonsized_mandatory[$nameElement + ".1"]
    DELIMITER2 st_nonsized_mandatory[$nameElement + ".2"]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_2[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"])?
   {if ($text != null)
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_4[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"]
@@ -541,8 +505,8 @@ spec_sized_mult_lvl1_st_optionnal_4[String nameElement, int maxSize]
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_6[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
     (DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"]
@@ -553,8 +517,8 @@ spec_sized_mult_lvl1_st_optionnal_6[String nameElement, int maxSize]
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_8[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"]
@@ -567,15 +531,15 @@ spec_sized_mult_lvl1_st_optionnal_8[String nameElement, int maxSize]
     matchRegex($text, "^.{0," + maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl2_st_optionnal_3[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER3 st_non_sized_optionnal[$nameElement + ".2"]
    (DELIMITER3 st_non_sized_optionnal[$nameElement + ".3"])?)?;
 
 spec_sized_mult_lvl2_st_optionnal_6[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER3 st_non_sized_optionnal[$nameElement + ".2"]
    (DELIMITER3 st_non_sized_optionnal[$nameElement + ".3"]
@@ -584,22 +548,22 @@ spec_sized_mult_lvl2_st_optionnal_6[String nameElement]
       (DELIMITER3 st_non_sized_optionnal[$nameElement + ".6"])?)?)?)?)?;
 
 spec_sized_mult_lvl1_nm_optionnal_2[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   nm_nonsized_optionnal[$nameElement + ".1"]
   DELIMITER2 nm_nonsized_optionnal[$nameElement + ".2"]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
   
 spec_sized_mult_lvl1_nm_mandatory_2[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   nm_nonsized_mandatory[$nameElement + ".1"]
   DELIMITER2 nm_nonsized_mandatory[$nameElement + ".2"]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_cna[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
    (DELIMITER2 spec_sized_mult_lvl2_st_optionnal_6[$nameElement + ".2"]
     (DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"])?)?
@@ -611,8 +575,8 @@ spec_sized_cna[String nameElement, int maxSize]
 //  C : consigné (à retourner à l'identique s'il a été renseigné par l'émetteur)
 // Donc, il peut être vide si non renseigné par l'émetteur
 spec_sized_8_3[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   (st_sized_mandatory[$nameElement + ".1", 16]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
      DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"])?)?
@@ -627,30 +591,30 @@ spec_sized_8_3[String nameElement, int maxSize]
 // Certains n'envoient pas de numéros dans ces champs. Ceci est interdit par la norme et je ne
 // le tolère pas dans l'application sinon ce n'est plus la norme
 spec_sized_9_3[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   //st_sized_mandatory[$nameElement + ".1", 12]
   st_sized_optionnal[$nameElement + ".1", 12]
   (DELIMITER2 st_sized_optionnal[$nameElement + ".2", 10])?
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_non_sized_9_8[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   ts_sized_optionnal[$nameElement + ".1", 26]
    (REPETITEUR ts_sized_optionnal[$nameElement + ".2", 26])?;
 
 spec_sized_9_16[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   spec_sized_mult_lvl2_st_optionnal_3[$nameElement + ".2"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"])?)?
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_10_4[String my_NameElement, int my_maxsize]
-@init{collecteur.startElement("champ", $my_NameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $my_NameElement);}
+@after{contentHandler.endElement();}:
   st_nonsized_mandatory[$my_NameElement + ".1"]
   (DELIMITER2 st_non_sized_optionnal[$my_NameElement + ".2"]
    (DELIMITER2 st_non_sized_optionnal[$my_NameElement + ".3"]
@@ -663,15 +627,15 @@ spec_sized_10_6_tx[String nameElement, int maxSize]
 @init{
   ParserRuleReturnScope retval = new ParserRuleReturnScope();
   retval.start = input.LT(1);
-  collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+  contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   g=final_spec_10_6_tx?
   {if ($g.consoText != null)
     matchRegex($g.consoText, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_tn[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
  st_non_sized_optionnal[$nameElement + ".1"]
   (REPETITEUR st_non_sized_optionnal[$nameElement + ".2"])?
   {if ($text != null)
@@ -680,92 +644,92 @@ spec_sized_tn[String nameElement, int maxSize]
 // Chaines de caract�res, nombres, ...
  
 st_sized_optionnal[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_st?
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 st_sized_mandatory[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_st
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 st_non_sized_optionnal[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_st?;
 
 st_nonsized_mandatory[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_st;
 
 nm_sized_optionnal[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_nm?
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 nm_integer_sized_optionnal[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_nm_integer?
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
      
 nm_integer_sized_mandatory[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_nm_integer
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 // Dates
 ts_sized_optionnal[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_ts?
   {if ($text != null)
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 ts_sized_mandatory[String nameElement, int maxSize]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_ts
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 nm_nonsized_mandatory[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_nm;
 
 nm_nonsized_optionnal[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_nm?;
 
 spec_const_7_13_1_version_2_0[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_version_2_0;
 
 spec_const_7_13_1_version_2_1[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_version_2_1;
   
 spec_const_7_13_1_version_2_2[String nameElement]
-@init{collecteur.startElement("champ", $nameElement);}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", $nameElement);}
+@after{contentHandler.endElement();}:
   final_version_2_2;
 
 // Donn�es finales construites
 
 final_spec_10_6_tx returns [String consoText]:
   g=content_spec_10_6
-  {collecteur.content($g.consoText);
+  {contentHandler.content($g.consoText);
    $consoText = $g.consoText;};
   
 content_spec_10_6 returns [String consoText]:
@@ -778,73 +742,73 @@ final_ts:
   chiffre (chiffre chiffre
   (chiffre chiffre chiffre
   chiffre (chiffre chiffre)?)?)?
-  {collecteur.content($text);};
+  {contentHandler.content($text);};
 
 final_st:
   character+
-  {collecteur.content($text);};
+  {contentHandler.content($text);};
 
 final_nm:
   ((PLUS | MOINS)? 
   ((chiffre+ (POINT chiffre*)?)
   |(POINT chiffre+)))
-  {collecteur.content($text);};
+  {contentHandler.content($text);};
 
 final_nm_integer:
   chiffre+
-  {collecteur.content($text);};
+  {contentHandler.content($text);};
 
-final_ORU: CHARO CHARR CHARU {collecteur.content($text);};
+final_ORU: CHARO CHARR CHARU {contentHandler.content($text);};
 
-final_CART: CHARC CHARA CHARR CHART {collecteur.content($text);};
-final_PORT: CHARP CHARO CHARR CHART {collecteur.content($text);};
-final_WHLC: CHARW CHARH CHARL CHARC {collecteur.content($text);};
-final_WALK: CHARW CHARA CHARL CHARK {collecteur.content($text);};
+final_CART: CHARC CHARA CHARR CHART {contentHandler.content($text);};
+final_PORT: CHARP CHARO CHARR CHART {contentHandler.content($text);};
+final_WHLC: CHARW CHARH CHARL CHARC {contentHandler.content($text);};
+final_WALK: CHARW CHARA CHARL CHARK {contentHandler.content($text);};
 
-final_LL: CHARL CHARL {collecteur.content($text);};
-final_AA: CHARA CHARA {collecteur.content($text);};
-final_HH: CHARH CHARH {collecteur.content($text);};
-final_MS: CHARM CHARS {collecteur.content($text);};
-final_VS: CHARV CHARS {collecteur.content($text);};
-final_Null: CHARN CHARu CHARl CHARl {collecteur.content($text);};
-final_symbol_inf: CHAR_SYMBOL_INF {collecteur.content($text);};
-final_symbol_sup: CHAR_SYMBOL_SUP {collecteur.content($text);};
+final_LL: CHARL CHARL {contentHandler.content($text);};
+final_AA: CHARA CHARA {contentHandler.content($text);};
+final_HH: CHARH CHARH {contentHandler.content($text);};
+final_MS: CHARM CHARS {contentHandler.content($text);};
+final_VS: CHARV CHARS {contentHandler.content($text);};
+final_Null: CHARN CHARu CHARl CHARl {contentHandler.content($text);};
+final_symbol_inf: CHAR_SYMBOL_INF {contentHandler.content($text);};
+final_symbol_sup: CHAR_SYMBOL_SUP {contentHandler.content($text);};
 
-final_version_2_0: CHARH CHIFFRE2 POINT CHIFFRE0 {collecteur.content($text);};
-final_version_2_1: CHARH CHIFFRE2 POINT CHIFFRE1 {collecteur.content($text);};
-final_version_2_2: CHARH CHIFFRE2 POINT CHIFFRE2 {collecteur.content($text);};
+final_version_2_0: CHARH CHIFFRE2 POINT CHIFFRE0 {contentHandler.content($text);};
+final_version_2_1: CHARH CHIFFRE2 POINT CHIFFRE1 {contentHandler.content($text);};
+final_version_2_2: CHARH CHIFFRE2 POINT CHIFFRE2 {contentHandler.content($text);};
 
-final_OP: CHARO CHARP {collecteur.content($text);};
-final_IP: CHARI CHARP {collecteur.content($text);};
-final_ER: CHARE CHARR {collecteur.content($text);};
-final_PA: CHARP CHARA {collecteur.content($text);};
-final_MP: CHARM CHARP {collecteur.content($text);};
+final_OP: CHARO CHARP {contentHandler.content($text);};
+final_IP: CHARI CHARP {contentHandler.content($text);};
+final_ER: CHARE CHARR {contentHandler.content($text);};
+final_PA: CHARP CHARA {contentHandler.content($text);};
+final_MP: CHARM CHARP {contentHandler.content($text);};
   
-final_charA: CHARA {collecteur.content($text);};
-final_charB: CHARB {collecteur.content($text);};
-final_charC: CHARC {collecteur.content($text);};
-final_charD: CHARD {collecteur.content($text);};
-final_charF: CHARF {collecteur.content($text);};
-final_charH: CHARH {collecteur.content($text);};
-final_charI: CHARI {collecteur.content($text);};
-final_charL: CHARL {collecteur.content($text);};
-final_charM: CHARM {collecteur.content($text);};
-final_charN: CHARN {collecteur.content($text);};
-final_charO: CHARO {collecteur.content($text);};
-final_charP: CHARP {collecteur.content($text);};
-final_charR: CHARR {collecteur.content($text);};
-final_charS: CHARS {collecteur.content($text);};
-final_charT: CHART {collecteur.content($text);};
-final_charU: CHARU {collecteur.content($text);};
-final_charW: CHARW {collecteur.content($text);};
-final_charX: CHARX {collecteur.content($text);};
+final_charA: CHARA {contentHandler.content($text);};
+final_charB: CHARB {contentHandler.content($text);};
+final_charC: CHARC {contentHandler.content($text);};
+final_charD: CHARD {contentHandler.content($text);};
+final_charF: CHARF {contentHandler.content($text);};
+final_charH: CHARH {contentHandler.content($text);};
+final_charI: CHARI {contentHandler.content($text);};
+final_charL: CHARL {contentHandler.content($text);};
+final_charM: CHARM {contentHandler.content($text);};
+final_charN: CHARN {contentHandler.content($text);};
+final_charO: CHARO {contentHandler.content($text);};
+final_charP: CHARP {contentHandler.content($text);};
+final_charR: CHARR {contentHandler.content($text);};
+final_charS: CHARS {contentHandler.content($text);};
+final_charT: CHART {contentHandler.content($text);};
+final_charU: CHARU {contentHandler.content($text);};
+final_charW: CHARW {contentHandler.content($text);};
+final_charX: CHARX {contentHandler.content($text);};
  
 // Données de type délimiteurs
 delimiters
-@init{collecteur.startElement("champ", "delimiteurs");}
-@after{collecteur.endElement();}:
+@init{contentHandler.startElement("champ", "delimiteurs");}
+@after{contentHandler.endElement();}:
   DELIMITERS
-  {collecteur.content($text);};
+  {contentHandler.content($text);};
 
 // Donn�es de base
 

@@ -2,13 +2,12 @@ package aider.org.hprim.parser.examples;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 
-import aider.org.hprim.parser.HPRIMSCollecteur;
+import aider.org.hprim.parser.ContentHandler;
 import aider.org.hprim.parser.HPRIMSInputStreamReader;
 import aider.org.hprim.parser.HPRIMSTokenSource;
 import aider.org.hprim.parser.antlr.HPRIMSParser;
@@ -38,7 +37,7 @@ public class DefaultParser {
 	 * @param input Source du flux de caractères
 	 * @param collecteur Reçoit les éléments du flux HPRIM
 	 */
-	public DefaultParser(InputStream input, HPRIMSCollecteur collecteur) throws IOException {
+	public DefaultParser(InputStream input, ContentHandler collecteur) throws IOException {
 		// Création de la source des tokens
 		HPRIMSInputStreamReader inputreader = new HPRIMSInputStreamReader(input, "ISO8859_1");
 		HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader);
@@ -54,37 +53,20 @@ public class DefaultParser {
 	 * Parse le fichier en entier
 	 * @return true si le parsing a réussi sans erreurs, false sinon
 	 */
-	public boolean parse() {
+	public boolean parse() throws RecognitionException {
 		// En fait, le parsing n'envoie pas de RecognitionException, tout est enregistré dans
 		// la liste des erreurs
 		try {
 			parser.hprim_2_1();
-		} catch (RecognitionException ignore) { }
-		
-		return parser.getStateSuccess();
+		} catch (RecognitionException ignore) {
+			// Ignore
+		} catch (IllegalArgumentException e) {
+			if (e.getCause() instanceof RecognitionException)
+				throw (RecognitionException)e.getCause();
+			else
+				throw e;
+		}
+		return true;
 	}
 	
-	/**
-	 * Retourne si le parsing a eu des erreurs
-	 * @return true si il y eu des erreurs de parsing, false sinon
-	 */
-	public boolean hasErrors() {
-		return !parser.getStateSuccess();
-	}
-	
-	/**
-	 * Retourne la liste des erreurs rencontrées
-	 * @return Liste des erreurs
-	 */
-	public List<String> getErrors() {
-		return parser.getErrors(); 
-	}
-	
-	/**
-	 * Retourne le nombre d'erreurs de syntaxe
-	 * @return Nombre d'erreurs de snytaxe
-	 */
-	public int getNumberOfSyntaxErrors() {
-		return parser.getNumberOfSyntaxErrors();
-	}
 }
