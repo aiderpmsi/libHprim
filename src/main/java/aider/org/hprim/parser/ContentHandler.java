@@ -1,5 +1,7 @@
 package aider.org.hprim.parser;
 
+import org.antlr.runtime.RecognitionException;
+
 /**
  * Définition de la structure de base de collecte des élément du hpri
  * 3 fonctions permettent de récupérer les données parsées :
@@ -25,17 +27,17 @@ public interface ContentHandler {
 	 * @param typeElement
 	 * @param nameElement
 	 */
-	public void startElement(String typeElement, String nameElement);
+	public void startElement(String typeElement, String nameElement) throws RecognitionException;
 
 	/**
 	 * Méthode appelée lorsque le parseur quitte l'élément
 	 */
-	public void endElement();
+	public void endElement() throws RecognitionException;
 	
 	/**
 	 * Méthode appelée quand le parseur est à l'intérieur de l'élément
 	 * @param content
 	 */
-	public void content(String content);
+	public void content(String content) throws RecognitionException;
 
 }
