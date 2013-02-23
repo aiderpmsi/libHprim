@@ -106,8 +106,11 @@ package aider.org.hprim.parser.antlr;
   public String getErrorMessage(RecognitionException e, String[] tokenNames) {
     if (e instanceof MatchRegexTokenException) {
       MatchRegexTokenException mrte = (MatchRegexTokenException) e;
-      return "malformed message : " + mrte.getText() +
+      return "Malformed message : " + mrte.getText() +
         " does not match " + mrte.getRegex();
+    } else if (e instanceof ContentHandlerException) {
+      ContentHandlerException che = (ContentHandlerException) e;
+      return "Content handling error : " + che.getText();
     } else {
        return super.getErrorMessage(e, tokenNames);
     }
