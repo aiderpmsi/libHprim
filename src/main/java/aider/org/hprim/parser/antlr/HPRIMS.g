@@ -79,8 +79,8 @@ package aider.org.hprim.parser.antlr;
    * @param tokenNames
    * @param e
    */
-   public void recover(RecognitionException e) {
-     throw new IllegalArgumentException(e);
+   public void emitErrorMessage(String msg) {
+      throw new IllegalArgumentException(msg);
    }
     
     /**

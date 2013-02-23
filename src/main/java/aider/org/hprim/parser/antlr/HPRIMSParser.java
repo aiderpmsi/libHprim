@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g 2013-02-21 22:16:26
+// $ANTLR 3.4 C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g 2013-02-23 10:38:01
 
 package aider.org.hprim.parser.antlr;
 
@@ -143,8 +143,8 @@ public class HPRIMSParser extends Parser {
        * @param tokenNames
        * @param e
        */
-       public void recover(RecognitionException e) {
-         throw new IllegalArgumentException(e);
+       public void emitErrorMessage(String msg) {
+          throw new IllegalArgumentException(msg);
        }
         
         /**
