@@ -31,25 +31,29 @@ public class XmlXsltSimpleExample {
 	 * @throws TransformerException 
 	 */
 	public static void main(String[] args) throws IOException, TransformerException {
-		// Création de l'inputstream en entrée
-		InputStream is = new FileInputStream(args[0]);
-
-		// Transformation de cet inputstream hprim en reader xml
-		XmlReader reader = new XmlReader(is);
 		
-		// Création d'une instance de transformation
-		TransformerFactory tFactory = TransformerFactory.newInstance();
-		// Définition du xslt utilisé
-		InputStream isXslt = reader.getClass().getClassLoader().getResourceAsStream("aider/org/hprim/parser/examples/example.xslt");
-	    Transformer transformer = tFactory.newTransformer(new StreamSource(isXslt));
-	    // Transformation 
-	    transformer.transform(new StreamSource(reader), new StreamResult(System.out));
+		InputStream is = null;
+		XmlReader reader = null;
 		
-		// Fermeture du fichier d'entrée
-		is.close();
-		
-		reader.close();
-
-		System.out.println("done");
+		try {
+			// Création de l'inputstream en entrée
+			is = new FileInputStream(args[0]);
+	
+			// Transformation de cet inputstream hprim en reader xml
+			reader = new XmlReader(is);
+			
+			// Création d'une instance de transformation
+			TransformerFactory tFactory = TransformerFactory.newInstance();
+			// Définition du xslt utilisé
+			InputStream isXslt = reader.getClass().getClassLoader().getResourceAsStream("aider/org/hprim/parser/examples/example.xslt");
+		    Transformer transformer = tFactory.newTransformer(new StreamSource(isXslt));
+		    // Transformation 
+		    transformer.transform(new StreamSource(reader), new StreamResult(System.out));
+		} finally {
+			if (reader != null)
+				reader.close();
+			else if (is != null)
+				is.close();
+		}
 	}
 }
