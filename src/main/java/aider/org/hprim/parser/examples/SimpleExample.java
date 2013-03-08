@@ -39,25 +39,34 @@ public class SimpleExample {
 		// Création du collecteur par défaut (affiche sur la console les données)
 		XmlContentHandler contentHandler = new XmlContentHandler(new PrintWriter(System.out));
 		
-		// Création de l'inputstream en entrée
-		InputStream is = new FileInputStream(args[0]);
-
-		// Création de la source des tokens
-		HPRIMSInputStreamReader inputreader = new HPRIMSInputStreamReader(is, "ISO8859_1");
-		HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader);
+		// Définition des flux matériels (à fermer en fin d'utilisation)
+		InputStream is = null;
+		HPRIMSInputStreamReader inputreader = null;
 		
-		// Création du flux de tokens
-		TokenStream tokenstream = new CommonTokenStream (toksce);
-		
-		// Création du parser de tokens provenant de input et réalisant dans
-		// la classe collecteur l'export des données
-		HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
-
-		// Pour l'instant, seul le parser hprim 2.1 est fonctionnel
-		parser.hprim();
-
-		// Fermeture du fichier d'entrée
-		is.close();
+		try {
+			// Création de l'inputstream en entrée
+			is = new FileInputStream(args[0]);
+	
+			// Création de la source des tokens
+			inputreader = new HPRIMSInputStreamReader(is, "ISO8859_1");
+			HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader);
+	
+			// Création du flux de tokens
+			TokenStream tokenstream = new CommonTokenStream (toksce);
+	
+			// Création du parser de tokens provenant de input et réalisant dans
+			// la classe collecteur l'export des données
+			HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
+	
+			// Pour l'instant, seul le parser hprim 2.1 est fonctionnel
+			parser.hprim();
+		} finally {
+			// Fermeture propre des ressources allouées
+			if (inputreader != null)
+				inputreader.close();
+			if (is != null)
+				is.close();
+		}
 		
 		System.out.println("done");
 	}
