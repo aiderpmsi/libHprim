@@ -864,7 +864,7 @@ delimiters
   DELIMITERS
   {content($text);};
 
-// Donn�es de base
+// Données de base
 
 character:
   (lettre | chiffre);
