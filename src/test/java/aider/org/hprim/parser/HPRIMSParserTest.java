@@ -10,7 +10,6 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.junit.Test;
 
-import aider.org.hprim.parser.HPRIMSTokenSource;
 import aider.org.hprim.parser.antlr.HPRIMSParser;
 import aider.org.hprim.parser.xml.XmlContentHandler;
 
@@ -35,7 +34,7 @@ public class HPRIMSParserTest {
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859-1"));
 		
-		// Rï¿½cupï¿½re ce qui est ï¿½crit pas le collecteur
+		// Récupère ce qui est écrit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
@@ -136,12 +135,12 @@ public class HPRIMSParserTest {
 		// Chaine de caractères à tester
 		String testString = "H|~^\\&-1.60";
 		
-		// Crï¿½ation de la source de tokens
+		// Création de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
 		
-		// Récupàre ce qui est écrit pas le collecteur
+		// Récupère ce qui est écrit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
@@ -162,14 +161,14 @@ public class HPRIMSParserTest {
 	}
 	
 	/**
-	 * SimpleExample la possibilitï¿½ qu'il y ait un segment 9.3 avec :
+	 * SimpleExample la possibilité qu'il y ait un segment 9.3 avec :
 	 * DELIMITER1 (vide) DELIMITER2 (vide) DELIMITER1
 	 * @throws IOException 
 	 * @throws RecognitionException 
 	 */
 	@Test
 	public void testSgt_cm_9_3_Case_1() throws IOException, RecognitionException {
-		// Chaine de caractï¿½res ï¿½ tester
+		// Chaine de caractères à tester
 		String testString = "H|~^\\&toto~";
 		
 		// Création de la source de tokens
@@ -197,7 +196,7 @@ public class HPRIMSParserTest {
 	}
 	
 	/**
-	 * SimpleExample la rï¿½action devant une erreur de matchRegexp
+	 * SimpleExample la réaction devant une erreur de matchRegexp
 	 */
 	@Test
 	public void testError_Case_1() throws IOException, RecognitionException {
@@ -227,7 +226,7 @@ public class HPRIMSParserTest {
 		} catch (IllegalArgumentException e) {
 			error = e.getMessage();
 		}
-		assertEquals("Reader line 1:7 malformed message : 123 does not match ^.{0,2}$", error);
+		assertEquals("Reader line 1:7 Malformed message : 123 does not match ^.{0,2}$", error);
 	}
 
 }
