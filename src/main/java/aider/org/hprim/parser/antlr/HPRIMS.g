@@ -244,7 +244,7 @@ line_p2_1
     (DELIMITER1 st_sized_optionnal["P_8.7", 24]
      (DELIMITER1 ts_sized_optionnal["P_8.8", 26]
       (DELIMITER1 spec_const_sexe["P_8.9"]
-       (DELIMITER1
+       (DELIMITER1 spec_const_race["P_8.10"]
         (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P_8.11", 200]
          (DELIMITER1 st_sized_optionnal["P_8.12", 120]
           (DELIMITER1 spec_sized_tn["P_8.13", 40]
@@ -416,6 +416,11 @@ spec_const_sexe[String nameElement]
 @init{startElement("champ", $nameElement);}
 @after{endElement();}:
   (final_charM | final_charF | final_charU)?;
+
+spec_const_race[String nameElement]
+@init{startElement("champ", $nameElement);}
+@after{endElement();}:
+  ;
 
 spec_const_7_13_version_2_0[String nameElement]
 @init{startElement("champ", $nameElement);}
