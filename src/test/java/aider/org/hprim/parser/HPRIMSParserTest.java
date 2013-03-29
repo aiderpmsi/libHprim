@@ -95,8 +95,8 @@ public class HPRIMSParserTest {
 			"<champ nom=\"OBR_9.17.3\">L</champ><champ nom=\"OBR_9.17.4\">TESTHP</champ><champ nom=\"OBR_9.17.5\">Clinique HP</champ>" +
 			"<champ nom=\"OBR_9.17.6\">L</champ></champ><champ nom=\"OBR_9.18\"><champ nom=\"OBR_9.18.1\">0468638395</champ>" +
 			"</champ><champ nom=\"OBR_9.19\"></champ><champ nom=\"OBR_9.20\"></champ><champ nom=\"OBR_9.21\"></champ>" +
-			"<champ nom=\"OBR_9.22\"></champ><champ nom=\"OBR_9.23\"></champ><champ nom=\"OBR_9.25\"><champ nom=\"OBR_9.25.1\">" +
-			"</champ></champ><champ nom=\"OBR_9.26\">F</champ><champ nom=\"OBR_9.29\"><champ nom=\"OBR_9.29.1\"></champ>" +
+			"<champ nom=\"OBR_9.22\"></champ><champ nom=\"OBR_9.23\"></champ><champ nom=\"OBR_9.24\"></champ><champ nom=\"OBR_9.25\"><champ nom=\"OBR_9.25.1\">" +
+			"</champ></champ><champ nom=\"OBR_9.26\">F</champ><champ nom=\"OBR_9.27\"></champ><champ nom=\"OBR_9.28\"></champ><champ nom=\"OBR_9.29\"><champ nom=\"OBR_9.29.1\"></champ>" +
 			"</champ><champ nom=\"OBR_9.30\"><champ nom=\"OBR_9.30.1\"></champ></champ><champ nom=\"OBR_9.31\"></champ>" +
 			"<champ nom=\"OBR_9.32\"></champ><champ nom=\"OBR_9.33\"><champ nom=\"OBR_9.33.1\">VBIO</champ></champ>" +
 			"</ligne><body nom=\"OBX\"><ligne nom=\"OBX\"><champ nom=\"OBX_10.2\">1</champ><champ nom=\"OBX_10.3\">NM</champ>" +

@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g 2013-03-29 18:03:43
+// $ANTLR 3.4 C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g 2013-03-29 18:47:01
 
 package aider.org.hprim.parser.antlr;
 
@@ -1138,12 +1138,12 @@ public class HPRIMSParser extends Parser {
 
 
     // $ANTLR start "line_p2_1"
-    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:235:1: line_p2_1 : CR CHARP DELIMITER1 nm_integer_sized_optionnal[\"P_8.2\", 4] DELIMITER1 spec_sized_8_3[\"P_8.3\", 36] DELIMITER1 st_sized_optionnal[\"P_8.4\", 16] ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? ;
+    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:235:1: line_p2_1 : CR CHARP DELIMITER1 nm_integer_sized_optionnal[\"P_8.2\", 4] DELIMITER1 spec_sized_8_3[\"P_8.3\", 36] DELIMITER1 st_sized_optionnal[\"P_8.4\", 16] ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? ;
     public final void line_p2_1() throws RecognitionException {
         startElement("ligne", "P");
         try {
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:237:22: ( CR CHARP DELIMITER1 nm_integer_sized_optionnal[\"P_8.2\", 4] DELIMITER1 spec_sized_8_3[\"P_8.3\", 36] DELIMITER1 st_sized_optionnal[\"P_8.4\", 16] ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:238:3: CR CHARP DELIMITER1 nm_integer_sized_optionnal[\"P_8.2\", 4] DELIMITER1 spec_sized_8_3[\"P_8.3\", 36] DELIMITER1 st_sized_optionnal[\"P_8.4\", 16] ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:237:22: ( CR CHARP DELIMITER1 nm_integer_sized_optionnal[\"P_8.2\", 4] DELIMITER1 spec_sized_8_3[\"P_8.3\", 36] DELIMITER1 st_sized_optionnal[\"P_8.4\", 16] ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:238:3: CR CHARP DELIMITER1 nm_integer_sized_optionnal[\"P_8.2\", 4] DELIMITER1 spec_sized_8_3[\"P_8.3\", 36] DELIMITER1 st_sized_optionnal[\"P_8.4\", 16] ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
             {
             match(input,CR,FOLLOW_CR_in_line_p2_1473); 
 
@@ -1173,7 +1173,7 @@ public class HPRIMSParser extends Parser {
             state._fsp--;
 
 
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:242:3: ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:242:3: ( DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
             int alt48=2;
             int LA48_0 = input.LA(1);
 
@@ -1182,7 +1182,7 @@ public class HPRIMSParser extends Parser {
             }
             switch (alt48) {
                 case 1 :
-                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:242:4: DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:242:4: DELIMITER1 st_sized_optionnal[\"P_8.5\", 16] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                     {
                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1501); 
 
@@ -1192,7 +1192,7 @@ public class HPRIMSParser extends Parser {
                     state._fsp--;
 
 
-                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:243:4: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:243:4: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                     int alt47=2;
                     int LA47_0 = input.LA(1);
 
@@ -1201,7 +1201,7 @@ public class HPRIMSParser extends Parser {
                     }
                     switch (alt47) {
                         case 1 :
-                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:243:5: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:243:5: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.6\", 48] ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                             {
                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1510); 
 
@@ -1211,7 +1211,7 @@ public class HPRIMSParser extends Parser {
                             state._fsp--;
 
 
-                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:244:5: ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:244:5: ( DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                             int alt46=2;
                             int LA46_0 = input.LA(1);
 
@@ -1220,7 +1220,7 @@ public class HPRIMSParser extends Parser {
                             }
                             switch (alt46) {
                                 case 1 :
-                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:244:6: DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:244:6: DELIMITER1 st_sized_optionnal[\"P_8.7\", 24] ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                     {
                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1520); 
 
@@ -1230,7 +1230,7 @@ public class HPRIMSParser extends Parser {
                                     state._fsp--;
 
 
-                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:245:6: ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:245:6: ( DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                     int alt45=2;
                                     int LA45_0 = input.LA(1);
 
@@ -1239,7 +1239,7 @@ public class HPRIMSParser extends Parser {
                                     }
                                     switch (alt45) {
                                         case 1 :
-                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:245:7: DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:245:7: DELIMITER1 ts_sized_optionnal[\"P_8.8\", 26] ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                             {
                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1531); 
 
@@ -1249,7 +1249,7 @@ public class HPRIMSParser extends Parser {
                                             state._fsp--;
 
 
-                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:246:7: ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:246:7: ( DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                             int alt44=2;
                                             int LA44_0 = input.LA(1);
 
@@ -1258,7 +1258,7 @@ public class HPRIMSParser extends Parser {
                                             }
                                             switch (alt44) {
                                                 case 1 :
-                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:246:8: DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:246:8: DELIMITER1 spec_const_sexe[\"P_8.9\"] ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                     {
                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1543); 
 
@@ -1268,7 +1268,7 @@ public class HPRIMSParser extends Parser {
                                                     state._fsp--;
 
 
-                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:247:8: ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:247:8: ( DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                     int alt43=2;
                                                     int LA43_0 = input.LA(1);
 
@@ -1277,7 +1277,7 @@ public class HPRIMSParser extends Parser {
                                                     }
                                                     switch (alt43) {
                                                         case 1 :
-                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:247:9: DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:247:9: DELIMITER1 spec_const_race[\"P_8.10\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                             {
                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1556); 
 
@@ -1287,7 +1287,7 @@ public class HPRIMSParser extends Parser {
                                                             state._fsp--;
 
 
-                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:248:9: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:248:9: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                             int alt42=2;
                                                             int LA42_0 = input.LA(1);
 
@@ -1296,7 +1296,7 @@ public class HPRIMSParser extends Parser {
                                                             }
                                                             switch (alt42) {
                                                                 case 1 :
-                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:248:10: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:248:10: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.11\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                     {
                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1570); 
 
@@ -1306,7 +1306,7 @@ public class HPRIMSParser extends Parser {
                                                                     state._fsp--;
 
 
-                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:249:10: ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:249:10: ( DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                     int alt41=2;
                                                                     int LA41_0 = input.LA(1);
 
@@ -1315,7 +1315,7 @@ public class HPRIMSParser extends Parser {
                                                                     }
                                                                     switch (alt41) {
                                                                         case 1 :
-                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:249:11: DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:249:11: DELIMITER1 st_sized_optionnal[\"P_8.12\", 120] ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                             {
                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1585); 
 
@@ -1325,7 +1325,7 @@ public class HPRIMSParser extends Parser {
                                                                             state._fsp--;
 
 
-                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:250:11: ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:250:11: ( DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                             int alt40=2;
                                                                             int LA40_0 = input.LA(1);
 
@@ -1334,7 +1334,7 @@ public class HPRIMSParser extends Parser {
                                                                             }
                                                                             switch (alt40) {
                                                                                 case 1 :
-                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:250:12: DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:250:12: DELIMITER1 spec_sized_tn[\"P_8.13\", 40] ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                     {
                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1601); 
 
@@ -1344,7 +1344,7 @@ public class HPRIMSParser extends Parser {
                                                                                     state._fsp--;
 
 
-                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:253:12: ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:253:12: ( DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                     int alt39=2;
                                                                                     int LA39_0 = input.LA(1);
 
@@ -1353,7 +1353,7 @@ public class HPRIMSParser extends Parser {
                                                                                     }
                                                                                     switch (alt39) {
                                                                                         case 1 :
-                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:253:13: DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:253:13: DELIMITER1 spec_sized_cna[\"P_8.14\", 60] ( REPETITEUR spec_sized_cna[\"P_8.14\", 60] )* ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                             {
                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1642); 
 
@@ -1395,7 +1395,7 @@ public class HPRIMSParser extends Parser {
                                                                                             } while (true);
 
 
-                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:254:13: ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:254:13: ( DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                             int alt38=2;
                                                                                             int LA38_0 = input.LA(1);
 
@@ -1404,7 +1404,7 @@ public class HPRIMSParser extends Parser {
                                                                                             }
                                                                                             switch (alt38) {
                                                                                                 case 1 :
-                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:254:14: DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:254:14: DELIMITER1 st_sized_optionnal[\"P_8.15\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                     {
                                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1668); 
 
@@ -1414,7 +1414,7 @@ public class HPRIMSParser extends Parser {
                                                                                                     state._fsp--;
 
 
-                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:255:14: ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:255:14: ( DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                     int alt37=2;
                                                                                                     int LA37_0 = input.LA(1);
 
@@ -1423,7 +1423,7 @@ public class HPRIMSParser extends Parser {
                                                                                                     }
                                                                                                     switch (alt37) {
                                                                                                         case 1 :
-                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:255:15: DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:255:15: DELIMITER1 st_sized_optionnal[\"P_8.16\", 60] ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                             {
                                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1687); 
 
@@ -1433,7 +1433,7 @@ public class HPRIMSParser extends Parser {
                                                                                                             state._fsp--;
 
 
-                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:257:15: ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:257:15: ( DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                             int alt36=2;
                                                                                                             int LA36_0 = input.LA(1);
 
@@ -1442,7 +1442,7 @@ public class HPRIMSParser extends Parser {
                                                                                                             }
                                                                                                             switch (alt36) {
                                                                                                                 case 1 :
-                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:257:16: DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:257:16: DELIMITER1 nm_sized_optionnal[\"P_8.17\", 10] ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                     {
                                                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1722); 
 
@@ -1452,7 +1452,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                     state._fsp--;
 
 
-                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:259:16: ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:259:16: ( DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                     int alt35=2;
                                                                                                                     int LA35_0 = input.LA(1);
 
@@ -1461,7 +1461,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                     }
                                                                                                                     switch (alt35) {
                                                                                                                         case 1 :
-                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:259:17: DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:259:17: DELIMITER1 nm_sized_optionnal[\"P_8.18\", 10] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                             {
                                                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1759); 
 
@@ -1471,7 +1471,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                             state._fsp--;
 
 
-                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:260:17: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:260:17: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                             int alt34=2;
                                                                                                                             int LA34_0 = input.LA(1);
 
@@ -1480,7 +1480,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                             }
                                                                                                                             switch (alt34) {
                                                                                                                                 case 1 :
-                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:260:18: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:260:18: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"P_8.19\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                     {
                                                                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1781); 
 
@@ -1522,7 +1522,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                     } while (true);
 
 
-                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:261:18: ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:261:18: ( DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                     int alt33=2;
                                                                                                                                     int LA33_0 = input.LA(1);
 
@@ -1531,7 +1531,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                     }
                                                                                                                                     switch (alt33) {
                                                                                                                                         case 1 :
-                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:261:19: DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:261:19: DELIMITER1 st_sized_optionnal[\"P_8.20\", 200] ( REPETITEUR st_sized_optionnal[\"P_8.20\", 200] )* ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                             {
                                                                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1812); 
 
@@ -1573,7 +1573,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                             } while (true);
 
 
-                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:262:19: ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:262:19: ( DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                             int alt32=2;
                                                                                                                                             int LA32_0 = input.LA(1);
 
@@ -1582,7 +1582,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                             }
                                                                                                                                             switch (alt32) {
                                                                                                                                                 case 1 :
-                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:262:20: DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:262:20: DELIMITER1 st_sized_optionnal[\"P_8.21\", 200] ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                     {
                                                                                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1844); 
 
@@ -1592,7 +1592,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                     state._fsp--;
 
 
-                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:263:20: ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:263:20: ( DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                     int alt31=2;
                                                                                                                                                     int LA31_0 = input.LA(1);
 
@@ -1601,7 +1601,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                     }
                                                                                                                                                     switch (alt31) {
                                                                                                                                                         case 1 :
-                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:263:21: DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:263:21: DELIMITER1 st_sized_optionnal[\"P_8.22\", 60] ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                             {
                                                                                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1869); 
 
@@ -1611,7 +1611,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                             state._fsp--;
 
 
-                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:264:21: ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:264:21: ( DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                             int alt30=2;
                                                                                                                                                             int LA30_0 = input.LA(1);
 
@@ -1620,7 +1620,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                             }
                                                                                                                                                             switch (alt30) {
                                                                                                                                                                 case 1 :
-                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:264:22: DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:264:22: DELIMITER1 st_sized_optionnal[\"P_8.23\", 60] ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                                     {
                                                                                                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1895); 
 
@@ -1630,7 +1630,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                     state._fsp--;
 
 
-                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:265:22: ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:265:22: ( DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                                     int alt29=2;
                                                                                                                                                                     int LA29_0 = input.LA(1);
 
@@ -1639,7 +1639,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                     }
                                                                                                                                                                     switch (alt29) {
                                                                                                                                                                         case 1 :
-                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:265:23: DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:265:23: DELIMITER1 ts_sized_optionnal[\"P_8.24\", 26] ( REPETITEUR ts_sized_optionnal[\"P_8.24\", 26] )? ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                                             {
                                                                                                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1922); 
 
@@ -1674,7 +1674,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                             }
 
 
-                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:266:23: ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:266:23: ( DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                                             int alt28=2;
                                                                                                                                                                             int LA28_0 = input.LA(1);
 
@@ -1683,7 +1683,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                             }
                                                                                                                                                                             switch (alt28) {
                                                                                                                                                                                 case 1 :
-                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:266:24: DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:266:24: DELIMITER1 spec_const_8_25[\"P_8.25\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                                                     {
                                                                                                                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1958); 
 
@@ -1693,7 +1693,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                     state._fsp--;
 
 
-                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:267:24: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:267:24: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
                                                                                                                                                                                     int alt27=2;
                                                                                                                                                                                     int LA27_0 = input.LA(1);
 
@@ -1702,7 +1702,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                     }
                                                                                                                                                                                     switch (alt27) {
                                                                                                                                                                                         case 1 :
-                                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:267:25: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:267:25: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8[\"P_8.26\", 100] ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )?
                                                                                                                                                                                             {
                                                                                                                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_1987); 
 
@@ -1712,7 +1712,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                             state._fsp--;
 
 
-                                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:269:25: ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )?
+                                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:269:25: ( DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )?
                                                                                                                                                                                             int alt26=2;
                                                                                                                                                                                             int LA26_0 = input.LA(1);
 
@@ -1721,7 +1721,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                             }
                                                                                                                                                                                             switch (alt26) {
                                                                                                                                                                                                 case 1 :
-                                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:269:26: DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )?
+                                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:269:26: DELIMITER1 st_sized_optionnal[\"P_8.27\", 100] ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )?
                                                                                                                                                                                                     {
                                                                                                                                                                                                     match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11042); 
 
@@ -1731,7 +1731,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                     state._fsp--;
 
 
-                                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:270:26: ( DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )?
+                                                                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:270:26: ( DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )?
                                                                                                                                                                                                     int alt25=2;
                                                                                                                                                                                                     int LA25_0 = input.LA(1);
 
@@ -1740,9 +1740,15 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                     }
                                                                                                                                                                                                     switch (alt25) {
                                                                                                                                                                                                         case 1 :
-                                                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:270:27: DELIMITER1 ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )?
+                                                                                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:270:27: DELIMITER1 spec_const_race[\"P_8.28\"] ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )?
                                                                                                                                                                                                             {
                                                                                                                                                                                                             match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11073); 
+
+                                                                                                                                                                                                            pushFollow(FOLLOW_spec_const_race_in_line_p2_11075);
+                                                                                                                                                                                                            spec_const_race("P_8.28");
+
+                                                                                                                                                                                                            state._fsp--;
+
 
                                                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:272:27: ( DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )? )?
                                                                                                                                                                                                             int alt24=2;
@@ -1755,9 +1761,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                 case 1 :
                                                                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:272:28: DELIMITER1 st_sized_optionnal[\"P_8.29\", 2] ( DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )? )?
                                                                                                                                                                                                                     {
-                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11129); 
+                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11132); 
 
-                                                                                                                                                                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11131);
+                                                                                                                                                                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11134);
                                                                                                                                                                                                                     st_sized_optionnal("P_8.29", 2);
 
                                                                                                                                                                                                                     state._fsp--;
@@ -1774,9 +1780,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                         case 1 :
                                                                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:274:29: DELIMITER1 st_sized_optionnal[\"P_8.30\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )? )?
                                                                                                                                                                                                                             {
-                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11190); 
+                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11193); 
 
-                                                                                                                                                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11192);
+                                                                                                                                                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11195);
                                                                                                                                                                                                                             st_sized_optionnal("P_8.30", 20);
 
                                                                                                                                                                                                                             state._fsp--;
@@ -1793,9 +1799,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                                 case 1 :
                                                                                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:275:30: DELIMITER1 st_sized_optionnal[\"P_8.31\", 20] ( DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )? )?
                                                                                                                                                                                                                                     {
-                                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11224); 
+                                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11227); 
 
-                                                                                                                                                                                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11226);
+                                                                                                                                                                                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11229);
                                                                                                                                                                                                                                     st_sized_optionnal("P_8.31", 20);
 
                                                                                                                                                                                                                                     state._fsp--;
@@ -1812,9 +1818,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                                         case 1 :
                                                                                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:277:31: DELIMITER1 st_sized_optionnal[\"P_8.32\", 20] ( DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )? )?
                                                                                                                                                                                                                                             {
-                                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11289); 
+                                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11292); 
 
-                                                                                                                                                                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11291);
+                                                                                                                                                                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_p2_11294);
                                                                                                                                                                                                                                             st_sized_optionnal("P_8.32", 20);
 
                                                                                                                                                                                                                                             state._fsp--;
@@ -1831,9 +1837,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                                                 case 1 :
                                                                                                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:278:32: DELIMITER1 ts_sized_optionnal[\"P_8.33\", 26] ( DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )? )?
                                                                                                                                                                                                                                                     {
-                                                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11325); 
+                                                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11328); 
 
-                                                                                                                                                                                                                                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_p2_11327);
+                                                                                                                                                                                                                                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_p2_11330);
                                                                                                                                                                                                                                                     ts_sized_optionnal("P_8.33", 26);
 
                                                                                                                                                                                                                                                     state._fsp--;
@@ -1850,9 +1856,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                                                         case 1 :
                                                                                                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:279:33: DELIMITER1 ts_sized_optionnal[\"P_8.34\", 26] ( DELIMITER1 )?
                                                                                                                                                                                                                                                             {
-                                                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11362); 
+                                                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11365); 
 
-                                                                                                                                                                                                                                                            pushFollow(FOLLOW_ts_sized_optionnal_in_line_p2_11364);
+                                                                                                                                                                                                                                                            pushFollow(FOLLOW_ts_sized_optionnal_in_line_p2_11367);
                                                                                                                                                                                                                                                             ts_sized_optionnal("P_8.34", 26);
 
                                                                                                                                                                                                                                                             state._fsp--;
@@ -1869,7 +1875,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                                                                 case 1 :
                                                                                                                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:280:33: DELIMITER1
                                                                                                                                                                                                                                                                     {
-                                                                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11399); 
+                                                                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_p2_11402); 
 
                                                                                                                                                                                                                                                                     }
                                                                                                                                                                                                                                                                     break;
@@ -2082,7 +2088,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:283:12: ( line_obr2_1 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:284:3: line_obr2_1
             {
-            pushFollow(FOLLOW_line_obr2_1_in_line_obr2_21470);
+            pushFollow(FOLLOW_line_obr2_1_in_line_obr2_21473);
             line_obr2_1();
 
             state._fsp--;
@@ -2106,48 +2112,48 @@ public class HPRIMSParser extends Parser {
 
 
     // $ANTLR start "line_obr2_1"
-    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:286:1: line_obr2_1 : CR CHARO CHARB CHARR DELIMITER1 nm_integer_sized_mandatory[\"OBR_9.2\", 4] DELIMITER1 spec_sized_9_3[\"OBR_9.3\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.4\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 640000] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 64000] )* DELIMITER1 st_sized_optionnal[\"OBR_9.6\", 2] ( REPETITEUR st_sized_optionnal[\"OBR_9.6\", 2] )* DELIMITER1 ts_sized_optionnal[\"OBR_9.7\", 26] DELIMITER1 spec_non_sized_9_8[\"OBR_9.8\"] DELIMITER1 ts_sized_optionnal[\"OBR_9.9\", 26] DELIMITER1 st_sized_optionnal[\"OBR_9.10\", 20] DELIMITER1 spec_sized_cna[\"OBR_9.11\", 60] DELIMITER1 st_sized_optionnal[\"OBR_9.12\", 1] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? ;
+    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:286:1: line_obr2_1 : CR CHARO CHARB CHARR DELIMITER1 nm_integer_sized_mandatory[\"OBR_9.2\", 4] DELIMITER1 spec_sized_9_3[\"OBR_9.3\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.4\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 640000] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 64000] )* DELIMITER1 st_sized_optionnal[\"OBR_9.6\", 2] ( REPETITEUR st_sized_optionnal[\"OBR_9.6\", 2] )* DELIMITER1 ts_sized_optionnal[\"OBR_9.7\", 26] DELIMITER1 spec_non_sized_9_8[\"OBR_9.8\"] DELIMITER1 ts_sized_optionnal[\"OBR_9.9\", 26] DELIMITER1 st_sized_optionnal[\"OBR_9.10\", 20] DELIMITER1 spec_sized_cna[\"OBR_9.11\", 60] DELIMITER1 st_sized_optionnal[\"OBR_9.12\", 1] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? ;
     public final void line_obr2_1() throws RecognitionException {
         startElement("ligne", "OBR");
         try {
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:288:22: ( CR CHARO CHARB CHARR DELIMITER1 nm_integer_sized_mandatory[\"OBR_9.2\", 4] DELIMITER1 spec_sized_9_3[\"OBR_9.3\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.4\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 640000] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 64000] )* DELIMITER1 st_sized_optionnal[\"OBR_9.6\", 2] ( REPETITEUR st_sized_optionnal[\"OBR_9.6\", 2] )* DELIMITER1 ts_sized_optionnal[\"OBR_9.7\", 26] DELIMITER1 spec_non_sized_9_8[\"OBR_9.8\"] DELIMITER1 ts_sized_optionnal[\"OBR_9.9\", 26] DELIMITER1 st_sized_optionnal[\"OBR_9.10\", 20] DELIMITER1 spec_sized_cna[\"OBR_9.11\", 60] DELIMITER1 st_sized_optionnal[\"OBR_9.12\", 1] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:289:3: CR CHARO CHARB CHARR DELIMITER1 nm_integer_sized_mandatory[\"OBR_9.2\", 4] DELIMITER1 spec_sized_9_3[\"OBR_9.3\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.4\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 640000] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 64000] )* DELIMITER1 st_sized_optionnal[\"OBR_9.6\", 2] ( REPETITEUR st_sized_optionnal[\"OBR_9.6\", 2] )* DELIMITER1 ts_sized_optionnal[\"OBR_9.7\", 26] DELIMITER1 spec_non_sized_9_8[\"OBR_9.8\"] DELIMITER1 ts_sized_optionnal[\"OBR_9.9\", 26] DELIMITER1 st_sized_optionnal[\"OBR_9.10\", 20] DELIMITER1 spec_sized_cna[\"OBR_9.11\", 60] DELIMITER1 st_sized_optionnal[\"OBR_9.12\", 1] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:288:22: ( CR CHARO CHARB CHARR DELIMITER1 nm_integer_sized_mandatory[\"OBR_9.2\", 4] DELIMITER1 spec_sized_9_3[\"OBR_9.3\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.4\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 640000] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 64000] )* DELIMITER1 st_sized_optionnal[\"OBR_9.6\", 2] ( REPETITEUR st_sized_optionnal[\"OBR_9.6\", 2] )* DELIMITER1 ts_sized_optionnal[\"OBR_9.7\", 26] DELIMITER1 spec_non_sized_9_8[\"OBR_9.8\"] DELIMITER1 ts_sized_optionnal[\"OBR_9.9\", 26] DELIMITER1 st_sized_optionnal[\"OBR_9.10\", 20] DELIMITER1 spec_sized_cna[\"OBR_9.11\", 60] DELIMITER1 st_sized_optionnal[\"OBR_9.12\", 1] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:289:3: CR CHARO CHARB CHARR DELIMITER1 nm_integer_sized_mandatory[\"OBR_9.2\", 4] DELIMITER1 spec_sized_9_3[\"OBR_9.3\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.4\", 23] DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 640000] ( REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 64000] )* DELIMITER1 st_sized_optionnal[\"OBR_9.6\", 2] ( REPETITEUR st_sized_optionnal[\"OBR_9.6\", 2] )* DELIMITER1 ts_sized_optionnal[\"OBR_9.7\", 26] DELIMITER1 spec_non_sized_9_8[\"OBR_9.8\"] DELIMITER1 ts_sized_optionnal[\"OBR_9.9\", 26] DELIMITER1 st_sized_optionnal[\"OBR_9.10\", 20] DELIMITER1 spec_sized_cna[\"OBR_9.11\", 60] DELIMITER1 st_sized_optionnal[\"OBR_9.12\", 1] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
             {
-            match(input,CR,FOLLOW_CR_in_line_obr2_11487); 
+            match(input,CR,FOLLOW_CR_in_line_obr2_11490); 
 
-            match(input,CHARO,FOLLOW_CHARO_in_line_obr2_11489); 
+            match(input,CHARO,FOLLOW_CHARO_in_line_obr2_11492); 
 
-            match(input,CHARB,FOLLOW_CHARB_in_line_obr2_11491); 
+            match(input,CHARB,FOLLOW_CHARB_in_line_obr2_11494); 
 
-            match(input,CHARR,FOLLOW_CHARR_in_line_obr2_11493); 
+            match(input,CHARR,FOLLOW_CHARR_in_line_obr2_11496); 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11497); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11500); 
 
-            pushFollow(FOLLOW_nm_integer_sized_mandatory_in_line_obr2_11499);
+            pushFollow(FOLLOW_nm_integer_sized_mandatory_in_line_obr2_11502);
             nm_integer_sized_mandatory("OBR_9.2", 4);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11504); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11507); 
 
-            pushFollow(FOLLOW_spec_sized_9_3_in_line_obr2_11506);
+            pushFollow(FOLLOW_spec_sized_9_3_in_line_obr2_11509);
             spec_sized_9_3("OBR_9.3", 23);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11511); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11514); 
 
-            pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11513);
+            pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11516);
             spec_sized_mult_lvl1_st_optionnal_2("OBR_9.4", 23);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11518); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11521); 
 
-            pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11520);
+            pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11523);
             spec_sized_mult_lvl1_st_optionnal_6("OBR_9.5", 640000);
 
             state._fsp--;
@@ -2168,9 +2174,9 @@ public class HPRIMSParser extends Parser {
             	case 1 :
             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:293:70: REPETITEUR spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.5\", 64000]
             	    {
-            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11524); 
+            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11527); 
 
-            	    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11526);
+            	    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11529);
             	    spec_sized_mult_lvl1_st_optionnal_6("OBR_9.5", 64000);
 
             	    state._fsp--;
@@ -2185,9 +2191,9 @@ public class HPRIMSParser extends Parser {
             } while (true);
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11536); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11539); 
 
-            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11538);
+            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11541);
             st_sized_optionnal("OBR_9.6", 2);
 
             state._fsp--;
@@ -2208,9 +2214,9 @@ public class HPRIMSParser extends Parser {
             	case 1 :
             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:295:48: REPETITEUR st_sized_optionnal[\"OBR_9.6\", 2]
             	    {
-            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11542); 
+            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11545); 
 
-            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11544);
+            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11547);
             	    st_sized_optionnal("OBR_9.6", 2);
 
             	    state._fsp--;
@@ -2225,55 +2231,55 @@ public class HPRIMSParser extends Parser {
             } while (true);
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11551); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11554); 
 
-            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11553);
+            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11556);
             ts_sized_optionnal("OBR_9.7", 26);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11558); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11561); 
 
-            pushFollow(FOLLOW_spec_non_sized_9_8_in_line_obr2_11560);
+            pushFollow(FOLLOW_spec_non_sized_9_8_in_line_obr2_11563);
             spec_non_sized_9_8("OBR_9.8");
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11565); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11568); 
 
-            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11567);
+            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11570);
             ts_sized_optionnal("OBR_9.9", 26);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11575); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11578); 
 
-            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11577);
+            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11580);
             st_sized_optionnal("OBR_9.10", 20);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11582); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11585); 
 
-            pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_11584);
+            pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_11587);
             spec_sized_cna("OBR_9.11", 60);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11592); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11595); 
 
-            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11594);
+            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11597);
             st_sized_optionnal("OBR_9.12", 1);
 
             state._fsp--;
 
 
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:305:3: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:305:3: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
             int alt78=2;
             int LA78_0 = input.LA(1);
 
@@ -2282,17 +2288,17 @@ public class HPRIMSParser extends Parser {
             }
             switch (alt78) {
                 case 1 :
-                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:305:4: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:305:4: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.13\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                     {
-                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11603); 
+                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11606); 
 
-                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11605);
+                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11608);
                     spec_sized_mult_lvl1_st_optionnal_2("OBR_9.13", 60);
 
                     state._fsp--;
 
 
-                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:306:4: ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:306:4: ( DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                     int alt77=2;
                     int LA77_0 = input.LA(1);
 
@@ -2301,17 +2307,17 @@ public class HPRIMSParser extends Parser {
                     }
                     switch (alt77) {
                         case 1 :
-                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:306:5: DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:306:5: DELIMITER1 st_sized_optionnal[\"OBR_9.14\", 300] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11612); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11615); 
 
-                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11614);
+                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11617);
                             st_sized_optionnal("OBR_9.14", 300);
 
                             state._fsp--;
 
 
-                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:307:5: ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:307:5: ( DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                             int alt76=2;
                             int LA76_0 = input.LA(1);
 
@@ -2320,17 +2326,17 @@ public class HPRIMSParser extends Parser {
                             }
                             switch (alt76) {
                                 case 1 :
-                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:307:6: DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:307:6: DELIMITER1 ts_sized_optionnal[\"OBR_9.15\", 26] ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11622); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11625); 
 
-                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11624);
+                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11627);
                                     ts_sized_optionnal("OBR_9.15", 26);
 
                                     state._fsp--;
 
 
-                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:308:6: ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:308:6: ( DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                     int alt75=2;
                                     int LA75_0 = input.LA(1);
 
@@ -2339,17 +2345,17 @@ public class HPRIMSParser extends Parser {
                                     }
                                     switch (alt75) {
                                         case 1 :
-                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:308:7: DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:308:7: DELIMITER1 spec_sized_9_16[\"OBR_9_16\", 300] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11633); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11636); 
 
-                                            pushFollow(FOLLOW_spec_sized_9_16_in_line_obr2_11635);
+                                            pushFollow(FOLLOW_spec_sized_9_16_in_line_obr2_11638);
                                             spec_sized_9_16("OBR_9_16", 300);
 
                                             state._fsp--;
 
 
-                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:309:7: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:309:7: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                             int alt74=2;
                                             int LA74_0 = input.LA(1);
 
@@ -2358,17 +2364,17 @@ public class HPRIMSParser extends Parser {
                                             }
                                             switch (alt74) {
                                                 case 1 :
-                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:309:8: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:309:8: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBR_9.17\", 60] ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                     {
-                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11645); 
+                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11648); 
 
-                                                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11647);
+                                                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11650);
                                                     spec_sized_mult_lvl1_st_optionnal_6("OBR_9.17", 60);
 
                                                     state._fsp--;
 
 
-                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:310:8: ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:310:8: ( DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                     int alt73=2;
                                                     int LA73_0 = input.LA(1);
 
@@ -2377,17 +2383,17 @@ public class HPRIMSParser extends Parser {
                                                     }
                                                     switch (alt73) {
                                                         case 1 :
-                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:310:9: DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:310:9: DELIMITER1 spec_sized_tn[\"OBR_9.18\", 40] ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                             {
-                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11658); 
+                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11661); 
 
-                                                            pushFollow(FOLLOW_spec_sized_tn_in_line_obr2_11660);
+                                                            pushFollow(FOLLOW_spec_sized_tn_in_line_obr2_11663);
                                                             spec_sized_tn("OBR_9.18", 40);
 
                                                             state._fsp--;
 
 
-                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:311:9: ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:311:9: ( DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                             int alt72=2;
                                                             int LA72_0 = input.LA(1);
 
@@ -2396,17 +2402,17 @@ public class HPRIMSParser extends Parser {
                                                             }
                                                             switch (alt72) {
                                                                 case 1 :
-                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:311:10: DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:311:10: DELIMITER1 st_sized_optionnal[\"OBR_9.19\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                     {
-                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11672); 
+                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11675); 
 
-                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11674);
+                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11677);
                                                                     st_sized_optionnal("OBR_9.19", 60);
 
                                                                     state._fsp--;
 
 
-                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:312:10: ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:312:10: ( DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                     int alt71=2;
                                                                     int LA71_0 = input.LA(1);
 
@@ -2415,17 +2421,17 @@ public class HPRIMSParser extends Parser {
                                                                     }
                                                                     switch (alt71) {
                                                                         case 1 :
-                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:312:11: DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:312:11: DELIMITER1 st_sized_optionnal[\"OBR_9.20\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                             {
-                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11687); 
+                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11690); 
 
-                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11689);
+                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11692);
                                                                             st_sized_optionnal("OBR_9.20", 60);
 
                                                                             state._fsp--;
 
 
-                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:313:11: ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:313:11: ( DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                             int alt70=2;
                                                                             int LA70_0 = input.LA(1);
 
@@ -2434,17 +2440,17 @@ public class HPRIMSParser extends Parser {
                                                                             }
                                                                             switch (alt70) {
                                                                                 case 1 :
-                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:313:12: DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:313:12: DELIMITER1 st_sized_optionnal[\"OBR_9.21\", 60] ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                     {
-                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11703); 
+                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11706); 
 
-                                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11705);
+                                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11708);
                                                                                     st_sized_optionnal("OBR_9.21", 60);
 
                                                                                     state._fsp--;
 
 
-                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:314:12: ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:314:12: ( DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                     int alt69=2;
                                                                                     int LA69_0 = input.LA(1);
 
@@ -2453,17 +2459,17 @@ public class HPRIMSParser extends Parser {
                                                                                     }
                                                                                     switch (alt69) {
                                                                                         case 1 :
-                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:314:13: DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:314:13: DELIMITER1 st_sized_optionnal[\"OBR_9.22\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                             {
-                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11720); 
+                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11723); 
 
-                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11722);
+                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11725);
                                                                                             st_sized_optionnal("OBR_9.22", 60);
 
                                                                                             state._fsp--;
 
 
-                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:315:13: ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:315:13: ( DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                             int alt68=2;
                                                                                             int LA68_0 = input.LA(1);
 
@@ -2472,17 +2478,17 @@ public class HPRIMSParser extends Parser {
                                                                                             }
                                                                                             switch (alt68) {
                                                                                                 case 1 :
-                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:315:14: DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:315:14: DELIMITER1 ts_sized_optionnal[\"OBR_9.23\", 26] ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                     {
-                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11738); 
+                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11741); 
 
-                                                                                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11740);
+                                                                                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_11743);
                                                                                                     ts_sized_optionnal("OBR_9.23", 26);
 
                                                                                                     state._fsp--;
 
 
-                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:316:14: ( DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:316:14: ( DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                     int alt67=2;
                                                                                                     int LA67_0 = input.LA(1);
 
@@ -2491,11 +2497,17 @@ public class HPRIMSParser extends Parser {
                                                                                                     }
                                                                                                     switch (alt67) {
                                                                                                         case 1 :
-                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:316:15: DELIMITER1 ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:316:15: DELIMITER1 spec_const_race[\"OBR_9.24\"] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                             {
-                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11757); 
+                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11760); 
 
-                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:317:15: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                            pushFollow(FOLLOW_spec_const_race_in_line_obr2_11762);
+                                                                                                            spec_const_race("OBR_9.24");
+
+                                                                                                            state._fsp--;
+
+
+                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:317:15: ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                             int alt66=2;
                                                                                                             int LA66_0 = input.LA(1);
 
@@ -2504,17 +2516,17 @@ public class HPRIMSParser extends Parser {
                                                                                                             }
                                                                                                             switch (alt66) {
                                                                                                                 case 1 :
-                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:317:16: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:317:16: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2[\"OBR_9.25\", 10] ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                     {
-                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11775); 
+                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11780); 
 
-                                                                                                                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11777);
+                                                                                                                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11782);
                                                                                                                     spec_sized_mult_lvl1_st_optionnal_2("OBR_9.25", 10);
 
                                                                                                                     state._fsp--;
 
 
-                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:318:16: ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:318:16: ( DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                     int alt65=2;
                                                                                                                     int LA65_0 = input.LA(1);
 
@@ -2523,17 +2535,17 @@ public class HPRIMSParser extends Parser {
                                                                                                                     }
                                                                                                                     switch (alt65) {
                                                                                                                         case 1 :
-                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:318:17: DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:318:17: DELIMITER1 spec_const_9_26[\"OBR_9.26\"] ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                             {
-                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11796); 
+                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11801); 
 
-                                                                                                                            pushFollow(FOLLOW_spec_const_9_26_in_line_obr2_11798);
+                                                                                                                            pushFollow(FOLLOW_spec_const_9_26_in_line_obr2_11803);
                                                                                                                             spec_const_9_26("OBR_9.26");
 
                                                                                                                             state._fsp--;
 
 
-                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:319:17: ( DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:319:17: ( DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                             int alt64=2;
                                                                                                                             int LA64_0 = input.LA(1);
 
@@ -2542,11 +2554,17 @@ public class HPRIMSParser extends Parser {
                                                                                                                             }
                                                                                                                             switch (alt64) {
                                                                                                                                 case 1 :
-                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:319:18: DELIMITER1 ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:319:18: DELIMITER1 spec_const_race[\"OBR_9.27\"] ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                     {
-                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11818); 
+                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11823); 
 
-                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:320:18: ( DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                    pushFollow(FOLLOW_spec_const_race_in_line_obr2_11825);
+                                                                                                                                    spec_const_race("OBR_9.27");
+
+                                                                                                                                    state._fsp--;
+
+
+                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:320:18: ( DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
                                                                                                                                     int alt63=2;
                                                                                                                                     int LA63_0 = input.LA(1);
 
@@ -2555,11 +2573,17 @@ public class HPRIMSParser extends Parser {
                                                                                                                                     }
                                                                                                                                     switch (alt63) {
                                                                                                                                         case 1 :
-                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:320:19: DELIMITER1 ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:320:19: DELIMITER1 spec_const_race[\"OBR_9.28\"] ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
                                                                                                                                             {
-                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11838); 
+                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11846); 
 
-                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:19: ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
+                                                                                                                                            pushFollow(FOLLOW_spec_const_race_in_line_obr2_11848);
+                                                                                                                                            spec_const_race("OBR_9.28");
+
+                                                                                                                                            state._fsp--;
+
+
+                                                                                                                                            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:19: ( DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
                                                                                                                                             int alt62=2;
                                                                                                                                             int LA62_0 = input.LA(1);
 
@@ -2568,17 +2592,17 @@ public class HPRIMSParser extends Parser {
                                                                                                                                             }
                                                                                                                                             switch (alt62) {
                                                                                                                                                 case 1 :
-                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:20: DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )?
+                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:20: DELIMITER1 spec_sized_cna[\"OBR_9.29\", 150] ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )* ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )? )?
                                                                                                                                                     {
-                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11859); 
+                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11870); 
 
-                                                                                                                                                    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_11861);
+                                                                                                                                                    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_11872);
                                                                                                                                                     spec_sized_cna("OBR_9.29", 150);
 
                                                                                                                                                     state._fsp--;
 
 
-                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:63: ( REPETITEUR spec_sized_cna[\"P_8.14\", 150] )*
+                                                                                                                                                    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:63: ( REPETITEUR spec_sized_cna[\"OBR_9.29\", 150] )*
                                                                                                                                                     loop51:
                                                                                                                                                     do {
                                                                                                                                                         int alt51=2;
@@ -2591,12 +2615,12 @@ public class HPRIMSParser extends Parser {
 
                                                                                                                                                         switch (alt51) {
                                                                                                                                                     	case 1 :
-                                                                                                                                                    	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:64: REPETITEUR spec_sized_cna[\"P_8.14\", 150]
+                                                                                                                                                    	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:321:64: REPETITEUR spec_sized_cna[\"OBR_9.29\", 150]
                                                                                                                                                     	    {
-                                                                                                                                                    	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11865); 
+                                                                                                                                                    	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11876); 
 
-                                                                                                                                                    	    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_11867);
-                                                                                                                                                    	    spec_sized_cna("P_8.14", 150);
+                                                                                                                                                    	    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_11878);
+                                                                                                                                                    	    spec_sized_cna("OBR_9.29", 150);
 
                                                                                                                                                     	    state._fsp--;
 
@@ -2621,9 +2645,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                         case 1 :
                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:322:21: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4[\"OBR_9.30\", 150] ( DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )? )?
                                                                                                                                                             {
-                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11892); 
+                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11903); 
 
-                                                                                                                                                            pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_4_in_line_obr2_11894);
+                                                                                                                                                            pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_4_in_line_obr2_11905);
                                                                                                                                                             spec_sized_mult_lvl1_st_optionnal_4("OBR_9.30", 150);
 
                                                                                                                                                             state._fsp--;
@@ -2640,9 +2664,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                 case 1 :
                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:323:22: DELIMITER1 spec_const_9_31[\"OBR_9.31\"] ( DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )? )?
                                                                                                                                                                     {
-                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11918); 
+                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11929); 
 
-                                                                                                                                                                    pushFollow(FOLLOW_spec_const_9_31_in_line_obr2_11920);
+                                                                                                                                                                    pushFollow(FOLLOW_spec_const_9_31_in_line_obr2_11931);
                                                                                                                                                                     spec_const_9_31("OBR_9.31");
 
                                                                                                                                                                     state._fsp--;
@@ -2659,9 +2683,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                         case 1 :
                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:325:23: DELIMITER1 st_sized_optionnal[\"OBR_9.32\", 300] ( REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300] )* ( DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )? )?
                                                                                                                                                                             {
-                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11967); 
+                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_11978); 
 
-                                                                                                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11969);
+                                                                                                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11980);
                                                                                                                                                                             st_sized_optionnal("OBR_9.32", 300);
 
                                                                                                                                                                             state._fsp--;
@@ -2682,9 +2706,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                             	case 1 :
                                                                                                                                                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:325:71: REPETITEUR st_sized_optionnal[\"OBR_9.32\", 300]
                                                                                                                                                                             	    {
-                                                                                                                                                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11973); 
+                                                                                                                                                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obr2_11984); 
 
-                                                                                                                                                                            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11975);
+                                                                                                                                                                            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obr2_11986);
                                                                                                                                                                             	    st_sized_optionnal("OBR_9.32", 300);
 
                                                                                                                                                                             	    state._fsp--;
@@ -2710,9 +2734,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                 case 1 :
                                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:326:24: DELIMITER1 spec_sized_cna[\"OBR_9.33\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )? )?
                                                                                                                                                                                     {
-                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12003); 
+                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12014); 
 
-                                                                                                                                                                                    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12005);
+                                                                                                                                                                                    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12016);
                                                                                                                                                                                     spec_sized_cna("OBR_9.33", 60);
 
                                                                                                                                                                                     state._fsp--;
@@ -2729,9 +2753,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                         case 1 :
                                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:327:25: DELIMITER1 spec_sized_cna[\"OBR_9.34\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )? )?
                                                                                                                                                                                             {
-                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12032); 
+                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12043); 
 
-                                                                                                                                                                                            pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12034);
+                                                                                                                                                                                            pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12045);
                                                                                                                                                                                             spec_sized_cna("OBR_9.34", 60);
 
                                                                                                                                                                                             state._fsp--;
@@ -2748,9 +2772,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                 case 1 :
                                                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:328:26: DELIMITER1 spec_sized_cna[\"OBR_9.35\", 60] ( DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )? )?
                                                                                                                                                                                                     {
-                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12062); 
+                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12073); 
 
-                                                                                                                                                                                                    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12064);
+                                                                                                                                                                                                    pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12075);
                                                                                                                                                                                                     spec_sized_cna("OBR_9.35", 60);
 
                                                                                                                                                                                                     state._fsp--;
@@ -2767,9 +2791,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                         case 1 :
                                                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:329:27: DELIMITER1 spec_sized_cna[\"OBR_9.36\", 60] ( DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )? )?
                                                                                                                                                                                                             {
-                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12093); 
+                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12104); 
 
-                                                                                                                                                                                                            pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12095);
+                                                                                                                                                                                                            pushFollow(FOLLOW_spec_sized_cna_in_line_obr2_12106);
                                                                                                                                                                                                             spec_sized_cna("OBR_9.36", 60);
 
                                                                                                                                                                                                             state._fsp--;
@@ -2786,9 +2810,9 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                 case 1 :
                                                                                                                                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:330:28: DELIMITER1 ts_sized_optionnal[\"OBR_9.37\", 26] ( DELIMITER1 )?
                                                                                                                                                                                                                     {
-                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12125); 
+                                                                                                                                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12136); 
 
-                                                                                                                                                                                                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_12127);
+                                                                                                                                                                                                                    pushFollow(FOLLOW_ts_sized_optionnal_in_line_obr2_12138);
                                                                                                                                                                                                                     ts_sized_optionnal("OBR_9.37", 26);
 
                                                                                                                                                                                                                     state._fsp--;
@@ -2805,7 +2829,7 @@ public class HPRIMSParser extends Parser {
                                                                                                                                                                                                                         case 1 :
                                                                                                                                                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:331:29: DELIMITER1
                                                                                                                                                                                                                             {
-                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12158); 
+                                                                                                                                                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obr2_12169); 
 
                                                                                                                                                                                                                             }
                                                                                                                                                                                                                             break;
@@ -2989,23 +3013,23 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:335:22: ( CR CHARO CHARB CHARX DELIMITER1 nm_integer_sized_mandatory[\"OBX_10.2\", 10] DELIMITER1 ( ( spec_const_10_3_nm[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_ce[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_fic[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_st[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_gc[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_tx[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_std[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) ) )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:336:3: CR CHARO CHARB CHARX DELIMITER1 nm_integer_sized_mandatory[\"OBX_10.2\", 10] DELIMITER1 ( ( spec_const_10_3_nm[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_ce[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_fic[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_st[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_gc[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_tx[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_std[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) )
             {
-            match(input,CR,FOLLOW_CR_in_line_obx2_12226); 
+            match(input,CR,FOLLOW_CR_in_line_obx2_12237); 
 
-            match(input,CHARO,FOLLOW_CHARO_in_line_obx2_12228); 
+            match(input,CHARO,FOLLOW_CHARO_in_line_obx2_12239); 
 
-            match(input,CHARB,FOLLOW_CHARB_in_line_obx2_12230); 
+            match(input,CHARB,FOLLOW_CHARB_in_line_obx2_12241); 
 
-            match(input,CHARX,FOLLOW_CHARX_in_line_obx2_12232); 
+            match(input,CHARX,FOLLOW_CHARX_in_line_obx2_12243); 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12236); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12247); 
 
-            pushFollow(FOLLOW_nm_integer_sized_mandatory_in_line_obx2_12238);
+            pushFollow(FOLLOW_nm_integer_sized_mandatory_in_line_obx2_12249);
             nm_integer_sized_mandatory("OBX_10.2", 10);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12243); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12254); 
 
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:339:5: ( ( spec_const_10_3_nm[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_ce[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_fic[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_st[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_gc[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_tx[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) | ( spec_const_10_3_std[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? ) )
             int alt114=7;
@@ -3104,7 +3128,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:339:6: ( spec_const_10_3_nm[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:339:7: spec_const_10_3_nm[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )?
                     {
-                    pushFollow(FOLLOW_spec_const_10_3_nm_in_line_obx2_12251);
+                    pushFollow(FOLLOW_spec_const_10_3_nm_in_line_obx2_12262);
                     spec_const_10_3_nm("OBX_10.3");
 
                     state._fsp--;
@@ -3121,9 +3145,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:340:7: DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12260); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12271); 
 
-                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12262);
+                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12273);
                             spec_sized_10_4("OBX_10.4", 200);
 
                             state._fsp--;
@@ -3140,9 +3164,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:341:8: DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12272); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12283); 
 
-                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12274);
+                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12285);
                                     st_sized_optionnal("OBX_10.5", 10);
 
                                     state._fsp--;
@@ -3159,9 +3183,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:342:9: DELIMITER1 nm_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12285); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12296); 
 
-                                            pushFollow(FOLLOW_nm_sized_optionnal_in_line_obx2_12287);
+                                            pushFollow(FOLLOW_nm_sized_optionnal_in_line_obx2_12298);
                                             nm_sized_optionnal("OBX_10.6", 64000);
 
                                             state._fsp--;
@@ -3182,9 +3206,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:342:59: REPETITEUR nm_sized_optionnal[\"OBX_10.6\", 64000]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12291); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12302); 
 
-                                            	    pushFollow(FOLLOW_nm_sized_optionnal_in_line_obx2_12293);
+                                            	    pushFollow(FOLLOW_nm_sized_optionnal_in_line_obx2_12304);
                                             	    nm_sized_optionnal("OBX_10.6", 64000);
 
                                             	    state._fsp--;
@@ -3210,7 +3234,7 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:343:9: line_obx2_1_post10_6
                                                     {
-                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12306);
+                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12317);
                                                     line_obx2_1_post10_6();
 
                                                     state._fsp--;
@@ -3251,7 +3275,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:344:7: ( spec_const_10_3_ce[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:344:8: spec_const_10_3_ce[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )?
                     {
-                    pushFollow(FOLLOW_spec_const_10_3_ce_in_line_obx2_12323);
+                    pushFollow(FOLLOW_spec_const_10_3_ce_in_line_obx2_12334);
                     spec_const_10_3_ce("OBX_10.3");
 
                     state._fsp--;
@@ -3268,9 +3292,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:345:7: DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12332); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12343); 
 
-                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12334);
+                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12345);
                             spec_sized_10_4("OBX_10.4", 200);
 
                             state._fsp--;
@@ -3287,9 +3311,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:346:8: DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12344); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12355); 
 
-                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12346);
+                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12357);
                                     st_sized_optionnal("OBX_10.5", 10);
 
                                     state._fsp--;
@@ -3306,9 +3330,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:347:9: DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12357); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12368); 
 
-                                            pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12359);
+                                            pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12370);
                                             spec_sized_10_6("OBX_10.6", 64000);
 
                                             state._fsp--;
@@ -3329,9 +3353,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:347:56: REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12363); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12374); 
 
-                                            	    pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12365);
+                                            	    pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12376);
                                             	    spec_sized_10_6("OBX_10.6", 64000);
 
                                             	    state._fsp--;
@@ -3357,7 +3381,7 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:348:9: line_obx2_1_post10_6
                                                     {
-                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12378);
+                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12389);
                                                     line_obx2_1_post10_6();
 
                                                     state._fsp--;
@@ -3398,7 +3422,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:349:7: ( spec_const_10_3_fic[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:349:8: spec_const_10_3_fic[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )?
                     {
-                    pushFollow(FOLLOW_spec_const_10_3_fic_in_line_obx2_12395);
+                    pushFollow(FOLLOW_spec_const_10_3_fic_in_line_obx2_12406);
                     spec_const_10_3_fic("OBX_10.3");
 
                     state._fsp--;
@@ -3415,9 +3439,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:350:7: DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12404); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12415); 
 
-                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12406);
+                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12417);
                             spec_sized_10_4("OBX_10.4", 200);
 
                             state._fsp--;
@@ -3434,9 +3458,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:351:8: DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12416); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12427); 
 
-                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12418);
+                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12429);
                                     st_sized_optionnal("OBX_10.5", 10);
 
                                     state._fsp--;
@@ -3453,9 +3477,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:352:9: DELIMITER1 spec_sized_10_6[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12429); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12440); 
 
-                                            pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12431);
+                                            pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12442);
                                             spec_sized_10_6("OBX_10.6", 64000);
 
                                             state._fsp--;
@@ -3476,9 +3500,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:352:56: REPETITEUR spec_sized_10_6[\"OBX_10.6\", 64000]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12435); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12446); 
 
-                                            	    pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12437);
+                                            	    pushFollow(FOLLOW_spec_sized_10_6_in_line_obx2_12448);
                                             	    spec_sized_10_6("OBX_10.6", 64000);
 
                                             	    state._fsp--;
@@ -3504,7 +3528,7 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:353:9: line_obx2_1_post10_6
                                                     {
-                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12450);
+                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12461);
                                                     line_obx2_1_post10_6();
 
                                                     state._fsp--;
@@ -3545,7 +3569,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:354:7: ( spec_const_10_3_st[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:354:8: spec_const_10_3_st[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )?
                     {
-                    pushFollow(FOLLOW_spec_const_10_3_st_in_line_obx2_12467);
+                    pushFollow(FOLLOW_spec_const_10_3_st_in_line_obx2_12478);
                     spec_const_10_3_st("OBX_10.3");
 
                     state._fsp--;
@@ -3562,9 +3586,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:355:7: DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12476); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12487); 
 
-                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12478);
+                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12489);
                             spec_sized_10_4("OBX_10.4", 200);
 
                             state._fsp--;
@@ -3581,9 +3605,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:356:8: DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12488); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12499); 
 
-                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12490);
+                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12501);
                                     st_sized_optionnal("OBX_10.5", 10);
 
                                     state._fsp--;
@@ -3600,9 +3624,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:357:9: DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12501); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12512); 
 
-                                            pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12503);
+                                            pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12514);
                                             spec_sized_10_6_tx("OBX_10.6", 64000);
 
                                             state._fsp--;
@@ -3623,9 +3647,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:357:59: REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12507); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12518); 
 
-                                            	    pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12509);
+                                            	    pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12520);
                                             	    spec_sized_10_6_tx("OBX_10.6", 64000);
 
                                             	    state._fsp--;
@@ -3651,7 +3675,7 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:358:9: line_obx2_1_post10_6
                                                     {
-                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12522);
+                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12533);
                                                     line_obx2_1_post10_6();
 
                                                     state._fsp--;
@@ -3692,7 +3716,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:359:7: ( spec_const_10_3_gc[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:359:8: spec_const_10_3_gc[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )?
                     {
-                    pushFollow(FOLLOW_spec_const_10_3_gc_in_line_obx2_12539);
+                    pushFollow(FOLLOW_spec_const_10_3_gc_in_line_obx2_12550);
                     spec_const_10_3_gc("OBX_10.3");
 
                     state._fsp--;
@@ -3709,9 +3733,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:360:7: DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12548); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12559); 
 
-                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12550);
+                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12561);
                             spec_sized_10_4("OBX_10.4", 200);
 
                             state._fsp--;
@@ -3728,9 +3752,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:361:8: DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12560); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12571); 
 
-                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12562);
+                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12573);
                                     st_sized_optionnal("OBX_10.5", 10);
 
                                     state._fsp--;
@@ -3747,9 +3771,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:362:9: DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12573); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12584); 
 
-                                            pushFollow(FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12575);
+                                            pushFollow(FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12586);
                                             spec_sized_mult_lvl1_nm_optionnal_2("OBX_10.6", 64000);
 
                                             state._fsp--;
@@ -3770,9 +3794,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:362:76: REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2[\"OBX_10.6\", 64000]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12579); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12590); 
 
-                                            	    pushFollow(FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12581);
+                                            	    pushFollow(FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12592);
                                             	    spec_sized_mult_lvl1_nm_optionnal_2("OBX_10.6", 64000);
 
                                             	    state._fsp--;
@@ -3798,7 +3822,7 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:363:9: line_obx2_1_post10_6
                                                     {
-                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12594);
+                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12605);
                                                     line_obx2_1_post10_6();
 
                                                     state._fsp--;
@@ -3839,7 +3863,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:364:7: ( spec_const_10_3_tx[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:364:8: spec_const_10_3_tx[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )?
                     {
-                    pushFollow(FOLLOW_spec_const_10_3_tx_in_line_obx2_12611);
+                    pushFollow(FOLLOW_spec_const_10_3_tx_in_line_obx2_12622);
                     spec_const_10_3_tx("OBX_10.3");
 
                     state._fsp--;
@@ -3856,9 +3880,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:365:7: DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12620); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12631); 
 
-                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12622);
+                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12633);
                             spec_sized_10_4("OBX_10.4", 200);
 
                             state._fsp--;
@@ -3875,9 +3899,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:366:8: DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12632); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12643); 
 
-                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12634);
+                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12645);
                                     st_sized_optionnal("OBX_10.5", 10);
 
                                     state._fsp--;
@@ -3894,9 +3918,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:367:9: DELIMITER1 spec_sized_10_6_tx[\"OBX_10.6\", 64000] ( REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12645); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12656); 
 
-                                            pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12647);
+                                            pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12658);
                                             spec_sized_10_6_tx("OBX_10.6", 64000);
 
                                             state._fsp--;
@@ -3917,9 +3941,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:367:59: REPETITEUR spec_sized_10_6_tx[\"OBX_10.6\", 64000]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12651); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12662); 
 
-                                            	    pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12653);
+                                            	    pushFollow(FOLLOW_spec_sized_10_6_tx_in_line_obx2_12664);
                                             	    spec_sized_10_6_tx("OBX_10.6", 64000);
 
                                             	    state._fsp--;
@@ -3945,7 +3969,7 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:368:9: line_obx2_1_post10_6
                                                     {
-                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12666);
+                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12677);
                                                     line_obx2_1_post10_6();
 
                                                     state._fsp--;
@@ -3986,7 +4010,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:369:7: ( spec_const_10_3_std[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )? )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:369:8: spec_const_10_3_std[\"OBX_10.3\"] ( DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )? )?
                     {
-                    pushFollow(FOLLOW_spec_const_10_3_std_in_line_obx2_12683);
+                    pushFollow(FOLLOW_spec_const_10_3_std_in_line_obx2_12694);
                     spec_const_10_3_std("OBX_10.3");
 
                     state._fsp--;
@@ -4003,9 +4027,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:370:7: DELIMITER1 spec_sized_10_4[\"OBX_10.4\", 200] ( DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12692); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12703); 
 
-                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12694);
+                            pushFollow(FOLLOW_spec_sized_10_4_in_line_obx2_12705);
                             spec_sized_10_4("OBX_10.4", 200);
 
                             state._fsp--;
@@ -4022,9 +4046,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:371:8: DELIMITER1 st_sized_optionnal[\"OBX_10.5\", 10] ( DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12704); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12715); 
 
-                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12706);
+                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12717);
                                     st_sized_optionnal("OBX_10.5", 10);
 
                                     state._fsp--;
@@ -4041,9 +4065,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:372:9: DELIMITER1 st_sized_optionnal[\"OBX_10.6\", 64000] ( REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000] )* ( line_obx2_1_post10_6 )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12717); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_12728); 
 
-                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12719);
+                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12730);
                                             st_sized_optionnal("OBX_10.6", 64000);
 
                                             state._fsp--;
@@ -4064,9 +4088,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:372:59: REPETITEUR st_sized_optionnal[\"OBX_10.6\", 64000]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12723); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_12734); 
 
-                                            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12725);
+                                            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_12736);
                                             	    st_sized_optionnal("OBX_10.6", 64000);
 
                                             	    state._fsp--;
@@ -4092,7 +4116,7 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:373:9: line_obx2_1_post10_6
                                                     {
-                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12738);
+                                                    pushFollow(FOLLOW_line_obx2_1_post10_6_in_line_obx2_12749);
                                                     line_obx2_1_post10_6();
 
                                                     state._fsp--;
@@ -4159,9 +4183,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:376:5: ( DELIMITER1 st_sized_optionnal[\"OBX_10.7\", 20] ( DELIMITER1 st_sized_optionnal[\"OBX_10.8\", 60] ( REPETITEUR st_sized_optionnal[\"OBX_10.8\", 60] )* ( DELIMITER1 spec_const_10_9[\"OBX_10.9\"] ( REPETITEUR spec_const_10_9[\"OBX_10.9\"] )* ( DELIMITER1 nm_sized_optionnal[\"OBX_10.10\", 5] ( DELIMITER1 spec_const_10_11[\"OBX_10.11\"] ( REPETITEUR spec_const_10_11[\"OBX_10.11\"] )* ( DELIMITER1 spec_const_10_12[\"OBX_10.12\"] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:376:6: DELIMITER1 st_sized_optionnal[\"OBX_10.7\", 20] ( DELIMITER1 st_sized_optionnal[\"OBX_10.8\", 60] ( REPETITEUR st_sized_optionnal[\"OBX_10.8\", 60] )* ( DELIMITER1 spec_const_10_9[\"OBX_10.9\"] ( REPETITEUR spec_const_10_9[\"OBX_10.9\"] )* ( DELIMITER1 nm_sized_optionnal[\"OBX_10.10\", 5] ( DELIMITER1 spec_const_10_11[\"OBX_10.11\"] ( REPETITEUR spec_const_10_11[\"OBX_10.11\"] )* ( DELIMITER1 spec_const_10_12[\"OBX_10.12\"] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )? )?
             {
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62759); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62770); 
 
-            pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62761);
+            pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62772);
             st_sized_optionnal("OBX_10.7", 20);
 
             state._fsp--;
@@ -4178,9 +4202,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:377:7: DELIMITER1 st_sized_optionnal[\"OBX_10.8\", 60] ( REPETITEUR st_sized_optionnal[\"OBX_10.8\", 60] )* ( DELIMITER1 spec_const_10_9[\"OBX_10.9\"] ( REPETITEUR spec_const_10_9[\"OBX_10.9\"] )* ( DELIMITER1 nm_sized_optionnal[\"OBX_10.10\", 5] ( DELIMITER1 spec_const_10_11[\"OBX_10.11\"] ( REPETITEUR spec_const_10_11[\"OBX_10.11\"] )* ( DELIMITER1 spec_const_10_12[\"OBX_10.12\"] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )? )? )? )? )? )?
                     {
-                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62770); 
+                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62781); 
 
-                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62772);
+                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62783);
                     st_sized_optionnal("OBX_10.8", 60);
 
                     state._fsp--;
@@ -4201,9 +4225,9 @@ public class HPRIMSParser extends Parser {
                     	case 1 :
                     	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:377:54: REPETITEUR st_sized_optionnal[\"OBX_10.8\", 60]
                     	    {
-                    	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_1_post10_62776); 
+                    	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_1_post10_62787); 
 
-                    	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62778);
+                    	    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62789);
                     	    st_sized_optionnal("OBX_10.8", 60);
 
                     	    state._fsp--;
@@ -4229,9 +4253,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:378:8: DELIMITER1 spec_const_10_9[\"OBX_10.9\"] ( REPETITEUR spec_const_10_9[\"OBX_10.9\"] )* ( DELIMITER1 nm_sized_optionnal[\"OBX_10.10\", 5] ( DELIMITER1 spec_const_10_11[\"OBX_10.11\"] ( REPETITEUR spec_const_10_11[\"OBX_10.11\"] )* ( DELIMITER1 spec_const_10_12[\"OBX_10.12\"] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )? )? )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62790); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62801); 
 
-                            pushFollow(FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62792);
+                            pushFollow(FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62803);
                             spec_const_10_9("OBX_10.9");
 
                             state._fsp--;
@@ -4252,9 +4276,9 @@ public class HPRIMSParser extends Parser {
                             	case 1 :
                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:378:48: REPETITEUR spec_const_10_9[\"OBX_10.9\"]
                             	    {
-                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_1_post10_62796); 
+                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_1_post10_62807); 
 
-                            	    pushFollow(FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62798);
+                            	    pushFollow(FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62809);
                             	    spec_const_10_9("OBX_10.9");
 
                             	    state._fsp--;
@@ -4280,9 +4304,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:379:9: DELIMITER1 nm_sized_optionnal[\"OBX_10.10\", 5] ( DELIMITER1 spec_const_10_11[\"OBX_10.11\"] ( REPETITEUR spec_const_10_11[\"OBX_10.11\"] )* ( DELIMITER1 spec_const_10_12[\"OBX_10.12\"] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )? )? )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62811); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62822); 
 
-                                    pushFollow(FOLLOW_nm_sized_optionnal_in_line_obx2_1_post10_62813);
+                                    pushFollow(FOLLOW_nm_sized_optionnal_in_line_obx2_1_post10_62824);
                                     nm_sized_optionnal("OBX_10.10", 5);
 
                                     state._fsp--;
@@ -4299,9 +4323,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:380:10: DELIMITER1 spec_const_10_11[\"OBX_10.11\"] ( REPETITEUR spec_const_10_11[\"OBX_10.11\"] )* ( DELIMITER1 spec_const_10_12[\"OBX_10.12\"] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )? )? )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62825); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62836); 
 
-                                            pushFollow(FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62827);
+                                            pushFollow(FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62838);
                                             spec_const_10_11("OBX_10.11");
 
                                             state._fsp--;
@@ -4322,9 +4346,9 @@ public class HPRIMSParser extends Parser {
                                             	case 1 :
                                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:380:52: REPETITEUR spec_const_10_11[\"OBX_10.11\"]
                                             	    {
-                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_1_post10_62831); 
+                                            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_obx2_1_post10_62842); 
 
-                                            	    pushFollow(FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62833);
+                                            	    pushFollow(FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62844);
                                             	    spec_const_10_11("OBX_10.11");
 
                                             	    state._fsp--;
@@ -4350,9 +4374,9 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:381:11: DELIMITER1 spec_const_10_12[\"OBX_10.12\"] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )? )?
                                                     {
-                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62848); 
+                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62859); 
 
-                                                    pushFollow(FOLLOW_spec_const_10_12_in_line_obx2_1_post10_62850);
+                                                    pushFollow(FOLLOW_spec_const_10_12_in_line_obx2_1_post10_62861);
                                                     spec_const_10_12("OBX_10.12");
 
                                                     state._fsp--;
@@ -4369,9 +4393,9 @@ public class HPRIMSParser extends Parser {
                                                         case 1 :
                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:382:12: DELIMITER1 ts_sized_optionnal[\"OBX_10.13\", 26] ( DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )? )?
                                                             {
-                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62865); 
+                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62876); 
 
-                                                            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62867);
+                                                            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62878);
                                                             ts_sized_optionnal("OBX_10.13", 26);
 
                                                             state._fsp--;
@@ -4388,9 +4412,9 @@ public class HPRIMSParser extends Parser {
                                                                 case 1 :
                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:383:13: DELIMITER1 st_sized_optionnal[\"OBX_10.14\", 20] ( DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )? )?
                                                                     {
-                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62883); 
+                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62894); 
 
-                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62885);
+                                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62896);
                                                                     st_sized_optionnal("OBX_10.14", 20);
 
                                                                     state._fsp--;
@@ -4407,9 +4431,9 @@ public class HPRIMSParser extends Parser {
                                                                         case 1 :
                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:384:14: DELIMITER1 ts_sized_optionnal[\"OBX_10.15\", 26] ( DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )? )?
                                                                             {
-                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62901); 
+                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62912); 
 
-                                                                            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62903);
+                                                                            pushFollow(FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62914);
                                                                             ts_sized_optionnal("OBX_10.15", 26);
 
                                                                             state._fsp--;
@@ -4426,9 +4450,9 @@ public class HPRIMSParser extends Parser {
                                                                                 case 1 :
                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:385:15: DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6[\"OBX_10.16\", 60] ( DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )? )?
                                                                                     {
-                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62920); 
+                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62931); 
 
-                                                                                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obx2_1_post10_62922);
+                                                                                    pushFollow(FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obx2_1_post10_62933);
                                                                                     spec_sized_mult_lvl1_st_optionnal_6("OBX_10.16", 60);
 
                                                                                     state._fsp--;
@@ -4445,9 +4469,9 @@ public class HPRIMSParser extends Parser {
                                                                                         case 1 :
                                                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:386:16: DELIMITER1 st_sized_optionnal[\"OBX_10.17\", 60] ( DELIMITER1 )?
                                                                                             {
-                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62940); 
+                                                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62951); 
 
-                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62942);
+                                                                                            pushFollow(FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62953);
                                                                                             st_sized_optionnal("OBX_10.17", 60);
 
                                                                                             state._fsp--;
@@ -4464,7 +4488,7 @@ public class HPRIMSParser extends Parser {
                                                                                                 case 1 :
                                                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:386:63: DELIMITER1
                                                                                                     {
-                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62945); 
+                                                                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_obx2_1_post10_62956); 
 
                                                                                                     }
                                                                                                     break;
@@ -4560,29 +4584,29 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:390:22: ( CR CHARC DELIMITER1 nm_integer_sized_mandatory[\"C_12.2\", 10] DELIMITER1 spec_const_12_3[\"C_12.3\"] DELIMITER1 st_sized_optionnal[\"C_12.4\", 64000] ( REPETITEUR st_sized_optionnal[\"C_12.4\", 64000] )* ( DELIMITER1 )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:391:3: CR CHARC DELIMITER1 nm_integer_sized_mandatory[\"C_12.2\", 10] DELIMITER1 spec_const_12_3[\"C_12.3\"] DELIMITER1 st_sized_optionnal[\"C_12.4\", 64000] ( REPETITEUR st_sized_optionnal[\"C_12.4\", 64000] )* ( DELIMITER1 )?
             {
-            match(input,CR,FOLLOW_CR_in_line_c2_12984); 
+            match(input,CR,FOLLOW_CR_in_line_c2_12995); 
 
-            match(input,CHARC,FOLLOW_CHARC_in_line_c2_12986); 
+            match(input,CHARC,FOLLOW_CHARC_in_line_c2_12997); 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_12990); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_13001); 
 
-            pushFollow(FOLLOW_nm_integer_sized_mandatory_in_line_c2_12992);
+            pushFollow(FOLLOW_nm_integer_sized_mandatory_in_line_c2_13003);
             nm_integer_sized_mandatory("C_12.2", 10);
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_12997); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_13008); 
 
-            pushFollow(FOLLOW_spec_const_12_3_in_line_c2_12999);
+            pushFollow(FOLLOW_spec_const_12_3_in_line_c2_13010);
             spec_const_12_3("C_12.3");
 
             state._fsp--;
 
 
-            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_13004); 
+            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_13015); 
 
-            pushFollow(FOLLOW_st_sized_optionnal_in_line_c2_13006);
+            pushFollow(FOLLOW_st_sized_optionnal_in_line_c2_13017);
             st_sized_optionnal("C_12.4", 64000);
 
             state._fsp--;
@@ -4603,9 +4627,9 @@ public class HPRIMSParser extends Parser {
             	case 1 :
             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:394:51: REPETITEUR st_sized_optionnal[\"C_12.4\", 64000]
             	    {
-            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_c2_13010); 
+            	    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_line_c2_13021); 
 
-            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_c2_13012);
+            	    pushFollow(FOLLOW_st_sized_optionnal_in_line_c2_13023);
             	    st_sized_optionnal("C_12.4", 64000);
 
             	    state._fsp--;
@@ -4631,7 +4655,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:395:3: DELIMITER1
                     {
-                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_13021); 
+                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_c2_13032); 
 
                     }
                     break;
@@ -4665,9 +4689,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:399:22: ( CR CHARL ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.2\", 1] ( DELIMITER1 ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.4\", 4] ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )? )? )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:400:3: CR CHARL ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.2\", 1] ( DELIMITER1 ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.4\", 4] ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )? )? )? )? )?
             {
-            match(input,CR,FOLLOW_CR_in_line_l2_13039); 
+            match(input,CR,FOLLOW_CR_in_line_l2_13050); 
 
-            match(input,CHARL,FOLLOW_CHARL_in_line_l2_13041); 
+            match(input,CHARL,FOLLOW_CHARL_in_line_l2_13052); 
 
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:401:3: ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.2\", 1] ( DELIMITER1 ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.4\", 4] ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )? )? )? )? )?
             int alt136=2;
@@ -4680,9 +4704,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:401:4: DELIMITER1 nm_integer_sized_optionnal[\"L_14.2\", 1] ( DELIMITER1 ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.4\", 4] ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )? )? )? )?
                     {
-                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13046); 
+                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13057); 
 
-                    pushFollow(FOLLOW_nm_integer_sized_optionnal_in_line_l2_13048);
+                    pushFollow(FOLLOW_nm_integer_sized_optionnal_in_line_l2_13059);
                     nm_integer_sized_optionnal("L_14.2", 1);
 
                     state._fsp--;
@@ -4699,7 +4723,7 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:402:5: DELIMITER1 ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.4\", 4] ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )? )? )?
                             {
-                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13055); 
+                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13066); 
 
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:403:5: ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.4\", 4] ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )? )? )?
                             int alt134=2;
@@ -4712,9 +4736,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:403:6: DELIMITER1 nm_integer_sized_optionnal[\"L_14.4\", 4] ( DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )? )?
                                     {
-                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13062); 
+                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13073); 
 
-                                    pushFollow(FOLLOW_nm_integer_sized_optionnal_in_line_l2_13064);
+                                    pushFollow(FOLLOW_nm_integer_sized_optionnal_in_line_l2_13075);
                                     nm_integer_sized_optionnal("L_14.4", 4);
 
                                     state._fsp--;
@@ -4731,9 +4755,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:404:7: DELIMITER1 nm_integer_sized_optionnal[\"L_14.5\", 10] ( DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )? )?
                                             {
-                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13073); 
+                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13084); 
 
-                                            pushFollow(FOLLOW_nm_integer_sized_optionnal_in_line_l2_13075);
+                                            pushFollow(FOLLOW_nm_integer_sized_optionnal_in_line_l2_13086);
                                             nm_integer_sized_optionnal("L_14.5", 10);
 
                                             state._fsp--;
@@ -4750,9 +4774,9 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:405:8: DELIMITER1 st_sized_optionnal[\"L_14.6\", 12] ( DELIMITER1 )?
                                                     {
-                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13085); 
+                                                    match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13096); 
 
-                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_l2_13087);
+                                                    pushFollow(FOLLOW_st_sized_optionnal_in_line_l2_13098);
                                                     st_sized_optionnal("L_14.6", 12);
 
                                                     state._fsp--;
@@ -4769,7 +4793,7 @@ public class HPRIMSParser extends Parser {
                                                         case 1 :
                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:405:52: DELIMITER1
                                                             {
-                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13090); 
+                                                            match(input,DELIMITER1,FOLLOW_DELIMITER1_in_line_l2_13101); 
 
                                                             }
                                                             break;
@@ -4857,7 +4881,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:418:4: final_charM
                     {
-                    pushFollow(FOLLOW_final_charM_in_spec_const_sexe3128);
+                    pushFollow(FOLLOW_final_charM_in_spec_const_sexe3139);
                     final_charM();
 
                     state._fsp--;
@@ -4868,7 +4892,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:418:18: final_charF
                     {
-                    pushFollow(FOLLOW_final_charF_in_spec_const_sexe3132);
+                    pushFollow(FOLLOW_final_charF_in_spec_const_sexe3143);
                     final_charF();
 
                     state._fsp--;
@@ -4879,7 +4903,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:418:32: final_charU
                     {
-                    pushFollow(FOLLOW_final_charU_in_spec_const_sexe3136);
+                    pushFollow(FOLLOW_final_charU_in_spec_const_sexe3147);
                     final_charU();
 
                     state._fsp--;
@@ -4938,15 +4962,15 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:427:22: ( spec_const_7_13_1_version_2_0[$nameElement + \".1\"] DELIMITER2 spec_const_7_13_2[$nameElement + \".2\"] )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:428:3: spec_const_7_13_1_version_2_0[$nameElement + \".1\"] DELIMITER2 spec_const_7_13_2[$nameElement + \".2\"]
             {
-            pushFollow(FOLLOW_spec_const_7_13_1_version_2_0_in_spec_const_7_13_version_2_03173);
+            pushFollow(FOLLOW_spec_const_7_13_1_version_2_0_in_spec_const_7_13_version_2_03184);
             spec_const_7_13_1_version_2_0(nameElement + ".1");
 
             state._fsp--;
 
 
-            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_03176); 
+            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_03187); 
 
-            pushFollow(FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_03178);
+            pushFollow(FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_03189);
             spec_const_7_13_2(nameElement + ".2");
 
             state._fsp--;
@@ -4978,15 +5002,15 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:432:22: ( spec_const_7_13_1_version_2_1[$nameElement + \".1\"] DELIMITER2 spec_const_7_13_2[$nameElement + \".2\"] )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:433:3: spec_const_7_13_1_version_2_1[$nameElement + \".1\"] DELIMITER2 spec_const_7_13_2[$nameElement + \".2\"]
             {
-            pushFollow(FOLLOW_spec_const_7_13_1_version_2_1_in_spec_const_7_13_version_2_13199);
+            pushFollow(FOLLOW_spec_const_7_13_1_version_2_1_in_spec_const_7_13_version_2_13210);
             spec_const_7_13_1_version_2_1(nameElement + ".1");
 
             state._fsp--;
 
 
-            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_13202); 
+            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_13213); 
 
-            pushFollow(FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_13204);
+            pushFollow(FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_13215);
             spec_const_7_13_2(nameElement + ".2");
 
             state._fsp--;
@@ -5018,15 +5042,15 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:437:22: ( spec_const_7_13_1_version_2_2[$nameElement + \".1\"] DELIMITER2 spec_const_7_13_2[$nameElement + \".2\"] )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:438:3: spec_const_7_13_1_version_2_2[$nameElement + \".1\"] DELIMITER2 spec_const_7_13_2[$nameElement + \".2\"]
             {
-            pushFollow(FOLLOW_spec_const_7_13_1_version_2_2_in_spec_const_7_13_version_2_23223);
+            pushFollow(FOLLOW_spec_const_7_13_1_version_2_2_in_spec_const_7_13_version_2_23234);
             spec_const_7_13_1_version_2_2(nameElement + ".1");
 
             state._fsp--;
 
 
-            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_23226); 
+            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_23237); 
 
-            pushFollow(FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_23228);
+            pushFollow(FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_23239);
             spec_const_7_13_2(nameElement + ".2");
 
             state._fsp--;
@@ -5085,7 +5109,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:443:3: final_charC
                     {
-                    pushFollow(FOLLOW_final_charC_in_spec_const_7_13_23247);
+                    pushFollow(FOLLOW_final_charC_in_spec_const_7_13_23258);
                     final_charC();
 
                     state._fsp--;
@@ -5096,7 +5120,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:443:17: final_charL
                     {
-                    pushFollow(FOLLOW_final_charL_in_spec_const_7_13_23251);
+                    pushFollow(FOLLOW_final_charL_in_spec_const_7_13_23262);
                     final_charL();
 
                     state._fsp--;
@@ -5107,7 +5131,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:443:31: final_charR
                     {
-                    pushFollow(FOLLOW_final_charR_in_spec_const_7_13_23255);
+                    pushFollow(FOLLOW_final_charR_in_spec_const_7_13_23266);
                     final_charR();
 
                     state._fsp--;
@@ -5141,7 +5165,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:447:22: ( final_ORU )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:448:3: final_ORU
             {
-            pushFollow(FOLLOW_final_ORU_in_spec_const_7_7_contexte3273);
+            pushFollow(FOLLOW_final_ORU_in_spec_const_7_7_contexte3284);
             final_ORU();
 
             state._fsp--;
@@ -5203,7 +5227,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:453:4: final_charP
                     {
-                    pushFollow(FOLLOW_final_charP_in_spec_const_7_123292);
+                    pushFollow(FOLLOW_final_charP_in_spec_const_7_123303);
                     final_charP();
 
                     state._fsp--;
@@ -5214,7 +5238,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:453:18: final_charD
                     {
-                    pushFollow(FOLLOW_final_charD_in_spec_const_7_123296);
+                    pushFollow(FOLLOW_final_charD_in_spec_const_7_123307);
                     final_charD();
 
                     state._fsp--;
@@ -5225,7 +5249,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:453:32: final_charT
                     {
-                    pushFollow(FOLLOW_final_charT_in_spec_const_7_123300);
+                    pushFollow(FOLLOW_final_charT_in_spec_const_7_123311);
                     final_charT();
 
                     state._fsp--;
@@ -5294,7 +5318,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:458:4: final_PORT
                     {
-                    pushFollow(FOLLOW_final_PORT_in_spec_const_9_313320);
+                    pushFollow(FOLLOW_final_PORT_in_spec_const_9_313331);
                     final_PORT();
 
                     state._fsp--;
@@ -5305,7 +5329,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:458:17: final_CART
                     {
-                    pushFollow(FOLLOW_final_CART_in_spec_const_9_313324);
+                    pushFollow(FOLLOW_final_CART_in_spec_const_9_313335);
                     final_CART();
 
                     state._fsp--;
@@ -5316,7 +5340,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:458:30: final_WHLC
                     {
-                    pushFollow(FOLLOW_final_WHLC_in_spec_const_9_313328);
+                    pushFollow(FOLLOW_final_WHLC_in_spec_const_9_313339);
                     final_WHLC();
 
                     state._fsp--;
@@ -5327,7 +5351,7 @@ public class HPRIMSParser extends Parser {
                 case 4 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:458:43: final_WALK
                     {
-                    pushFollow(FOLLOW_final_WALK_in_spec_const_9_313332);
+                    pushFollow(FOLLOW_final_WALK_in_spec_const_9_313343);
                     final_WALK();
 
                     state._fsp--;
@@ -5399,7 +5423,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:463:4: final_OP
                     {
-                    pushFollow(FOLLOW_final_OP_in_spec_const_8_253353);
+                    pushFollow(FOLLOW_final_OP_in_spec_const_8_253364);
                     final_OP();
 
                     state._fsp--;
@@ -5410,7 +5434,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:463:15: final_IP
                     {
-                    pushFollow(FOLLOW_final_IP_in_spec_const_8_253357);
+                    pushFollow(FOLLOW_final_IP_in_spec_const_8_253368);
                     final_IP();
 
                     state._fsp--;
@@ -5421,7 +5445,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:463:26: final_ER
                     {
-                    pushFollow(FOLLOW_final_ER_in_spec_const_8_253361);
+                    pushFollow(FOLLOW_final_ER_in_spec_const_8_253372);
                     final_ER();
 
                     state._fsp--;
@@ -5432,7 +5456,7 @@ public class HPRIMSParser extends Parser {
                 case 4 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:463:37: final_PA
                     {
-                    pushFollow(FOLLOW_final_PA_in_spec_const_8_253365);
+                    pushFollow(FOLLOW_final_PA_in_spec_const_8_253376);
                     final_PA();
 
                     state._fsp--;
@@ -5443,7 +5467,7 @@ public class HPRIMSParser extends Parser {
                 case 5 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:463:48: final_MP
                     {
-                    pushFollow(FOLLOW_final_MP_in_spec_const_8_253369);
+                    pushFollow(FOLLOW_final_MP_in_spec_const_8_253380);
                     final_MP();
 
                     state._fsp--;
@@ -5535,7 +5559,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:468:4: final_charF
                     {
-                    pushFollow(FOLLOW_final_charF_in_spec_const_9_263390);
+                    pushFollow(FOLLOW_final_charF_in_spec_const_9_263401);
                     final_charF();
 
                     state._fsp--;
@@ -5546,7 +5570,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:468:18: final_charP
                     {
-                    pushFollow(FOLLOW_final_charP_in_spec_const_9_263394);
+                    pushFollow(FOLLOW_final_charP_in_spec_const_9_263405);
                     final_charP();
 
                     state._fsp--;
@@ -5557,7 +5581,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:468:32: final_charM
                     {
-                    pushFollow(FOLLOW_final_charM_in_spec_const_9_263398);
+                    pushFollow(FOLLOW_final_charM_in_spec_const_9_263409);
                     final_charM();
 
                     state._fsp--;
@@ -5568,7 +5592,7 @@ public class HPRIMSParser extends Parser {
                 case 4 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:468:46: final_charI
                     {
-                    pushFollow(FOLLOW_final_charI_in_spec_const_9_263402);
+                    pushFollow(FOLLOW_final_charI_in_spec_const_9_263413);
                     final_charI();
 
                     state._fsp--;
@@ -5579,7 +5603,7 @@ public class HPRIMSParser extends Parser {
                 case 5 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:468:60: final_charR
                     {
-                    pushFollow(FOLLOW_final_charR_in_spec_const_9_263406);
+                    pushFollow(FOLLOW_final_charR_in_spec_const_9_263417);
                     final_charR();
 
                     state._fsp--;
@@ -5590,7 +5614,7 @@ public class HPRIMSParser extends Parser {
                 case 6 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:468:74: final_charC
                     {
-                    pushFollow(FOLLOW_final_charC_in_spec_const_9_263410);
+                    pushFollow(FOLLOW_final_charC_in_spec_const_9_263421);
                     final_charC();
 
                     state._fsp--;
@@ -5601,7 +5625,7 @@ public class HPRIMSParser extends Parser {
                 case 7 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:468:88: final_charO
                     {
-                    pushFollow(FOLLOW_final_charO_in_spec_const_9_263414);
+                    pushFollow(FOLLOW_final_charO_in_spec_const_9_263425);
                     final_charO();
 
                     state._fsp--;
@@ -5612,7 +5636,7 @@ public class HPRIMSParser extends Parser {
                 case 8 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:469:3: final_charD
                     {
-                    pushFollow(FOLLOW_final_charD_in_spec_const_9_263420);
+                    pushFollow(FOLLOW_final_charD_in_spec_const_9_263431);
                     final_charD();
 
                     state._fsp--;
@@ -5623,7 +5647,7 @@ public class HPRIMSParser extends Parser {
                 case 9 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:469:17: final_charX
                     {
-                    pushFollow(FOLLOW_final_charX_in_spec_const_9_263424);
+                    pushFollow(FOLLOW_final_charX_in_spec_const_9_263435);
                     final_charX();
 
                     state._fsp--;
@@ -5668,9 +5692,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:473:22: ( CHARN CHARM )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:474:3: CHARN CHARM
             {
-            match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_nm3445); 
+            match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_nm3456); 
 
-            match(input,CHARM,FOLLOW_CHARM_in_spec_const_10_3_nm3447); 
+            match(input,CHARM,FOLLOW_CHARM_in_spec_const_10_3_nm3458); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -5710,9 +5734,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:478:22: ( CHARC CHARE )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:479:3: CHARC CHARE
             {
-            match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_ce3468); 
+            match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_ce3479); 
 
-            match(input,CHARE,FOLLOW_CHARE_in_spec_const_10_3_ce3470); 
+            match(input,CHARE,FOLLOW_CHARE_in_spec_const_10_3_ce3481); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -5752,9 +5776,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:483:22: ( CHARS CHART )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:484:3: CHARS CHART
             {
-            match(input,CHARS,FOLLOW_CHARS_in_spec_const_10_3_st3491); 
+            match(input,CHARS,FOLLOW_CHARS_in_spec_const_10_3_st3502); 
 
-            match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_st3493); 
+            match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_st3504); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -5794,9 +5818,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:488:22: ( CHARG CHARC )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:489:3: CHARG CHARC
             {
-            match(input,CHARG,FOLLOW_CHARG_in_spec_const_10_3_gc3514); 
+            match(input,CHARG,FOLLOW_CHARG_in_spec_const_10_3_gc3525); 
 
-            match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_gc3516); 
+            match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_gc3527); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -5836,9 +5860,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:493:22: ( CHART CHARX )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:494:3: CHART CHARX
             {
-            match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_tx3538); 
+            match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_tx3549); 
 
-            match(input,CHARX,FOLLOW_CHARX_in_spec_const_10_3_tx3540); 
+            match(input,CHARX,FOLLOW_CHARX_in_spec_const_10_3_tx3551); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -5881,11 +5905,11 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:499:3: ( CHARF CHARI CHARC )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:499:4: CHARF CHARI CHARC
             {
-            match(input,CHARF,FOLLOW_CHARF_in_spec_const_10_3_fic3561); 
+            match(input,CHARF,FOLLOW_CHARF_in_spec_const_10_3_fic3572); 
 
-            match(input,CHARI,FOLLOW_CHARI_in_spec_const_10_3_fic3563); 
+            match(input,CHARI,FOLLOW_CHARI_in_spec_const_10_3_fic3574); 
 
-            match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_fic3565); 
+            match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_fic3576); 
 
             }
 
@@ -6001,9 +6025,9 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:3: ( CHARA CHARD )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:4: CHARA CHARD
                     {
-                    match(input,CHARA,FOLLOW_CHARA_in_spec_const_10_3_std3587); 
+                    match(input,CHARA,FOLLOW_CHARA_in_spec_const_10_3_std3598); 
 
-                    match(input,CHARD,FOLLOW_CHARD_in_spec_const_10_3_std3589); 
+                    match(input,CHARD,FOLLOW_CHARD_in_spec_const_10_3_std3600); 
 
                     }
 
@@ -6016,9 +6040,9 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:19: ( CHARC CHARK )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:20: CHARC CHARK
                     {
-                    match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_std3595); 
+                    match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_std3606); 
 
-                    match(input,CHARK,FOLLOW_CHARK_in_spec_const_10_3_std3597); 
+                    match(input,CHARK,FOLLOW_CHARK_in_spec_const_10_3_std3608); 
 
                     }
 
@@ -6031,11 +6055,11 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:35: ( CHARC CHARN CHARA )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:36: CHARC CHARN CHARA
                     {
-                    match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_std3603); 
+                    match(input,CHARC,FOLLOW_CHARC_in_spec_const_10_3_std3614); 
 
-                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3605); 
+                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3616); 
 
-                    match(input,CHARA,FOLLOW_CHARA_in_spec_const_10_3_std3607); 
+                    match(input,CHARA,FOLLOW_CHARA_in_spec_const_10_3_std3618); 
 
                     }
 
@@ -6048,9 +6072,9 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:57: ( CHARD CHART )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:504:58: CHARD CHART
                     {
-                    match(input,CHARD,FOLLOW_CHARD_in_spec_const_10_3_std3613); 
+                    match(input,CHARD,FOLLOW_CHARD_in_spec_const_10_3_std3624); 
 
-                    match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_std3615); 
+                    match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_std3626); 
 
                     }
 
@@ -6063,9 +6087,9 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:505:3: ( CHARP CHARN )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:505:4: CHARP CHARN
                     {
-                    match(input,CHARP,FOLLOW_CHARP_in_spec_const_10_3_std3623); 
+                    match(input,CHARP,FOLLOW_CHARP_in_spec_const_10_3_std3634); 
 
-                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3625); 
+                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3636); 
 
                     }
 
@@ -6078,9 +6102,9 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:505:19: ( CHART CHARN )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:505:20: CHART CHARN
                     {
-                    match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_std3631); 
+                    match(input,CHART,FOLLOW_CHART_in_spec_const_10_3_std3642); 
 
-                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3633); 
+                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3644); 
 
                     }
 
@@ -6093,9 +6117,9 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:506:3: ( CHARG CHARB )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:506:4: CHARG CHARB
                     {
-                    match(input,CHARG,FOLLOW_CHARG_in_spec_const_10_3_std3641); 
+                    match(input,CHARG,FOLLOW_CHARG_in_spec_const_10_3_std3652); 
 
-                    match(input,CHARB,FOLLOW_CHARB_in_spec_const_10_3_std3643); 
+                    match(input,CHARB,FOLLOW_CHARB_in_spec_const_10_3_std3654); 
 
                     }
 
@@ -6108,9 +6132,9 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:506:19: ( CHARG CHARN )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:506:20: CHARG CHARN
                     {
-                    match(input,CHARG,FOLLOW_CHARG_in_spec_const_10_3_std3649); 
+                    match(input,CHARG,FOLLOW_CHARG_in_spec_const_10_3_std3660); 
 
-                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3651); 
+                    match(input,CHARN,FOLLOW_CHARN_in_spec_const_10_3_std3662); 
 
                     }
 
@@ -6155,7 +6179,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:512:22: ( st_sized_optionnal[$nameElement + \".1\", 10] ( DELIMITER2 st_sized_optionnal[$nameElement + \".2\", 60] ( DELIMITER2 st_sized_optionnal[$nameElement + \".3\", 10] )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:513:3: st_sized_optionnal[$nameElement + \".1\", 10] ( DELIMITER2 st_sized_optionnal[$nameElement + \".2\", 60] ( DELIMITER2 st_sized_optionnal[$nameElement + \".3\", 10] )? )?
             {
-            pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_10_63674);
+            pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_10_63685);
             st_sized_optionnal(nameElement + ".1", 10);
 
             state._fsp--;
@@ -6172,9 +6196,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:514:4: DELIMITER2 st_sized_optionnal[$nameElement + \".2\", 60] ( DELIMITER2 st_sized_optionnal[$nameElement + \".3\", 10] )?
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_63680); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_63691); 
 
-                    pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_10_63682);
+                    pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_10_63693);
                     st_sized_optionnal(nameElement + ".2", 60);
 
                     state._fsp--;
@@ -6191,9 +6215,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:515:5: DELIMITER2 st_sized_optionnal[$nameElement + \".3\", 10]
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_63689); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_63700); 
 
-                            pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_10_63691);
+                            pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_10_63702);
                             st_sized_optionnal(nameElement + ".3", 10);
 
                             state._fsp--;
@@ -6354,7 +6378,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:521:4: final_charL
                     {
-                    pushFollow(FOLLOW_final_charL_in_spec_const_10_93719);
+                    pushFollow(FOLLOW_final_charL_in_spec_const_10_93730);
                     final_charL();
 
                     state._fsp--;
@@ -6365,7 +6389,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:521:18: final_charH
                     {
-                    pushFollow(FOLLOW_final_charH_in_spec_const_10_93723);
+                    pushFollow(FOLLOW_final_charH_in_spec_const_10_93734);
                     final_charH();
 
                     state._fsp--;
@@ -6376,7 +6400,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:521:32: final_LL
                     {
-                    pushFollow(FOLLOW_final_LL_in_spec_const_10_93727);
+                    pushFollow(FOLLOW_final_LL_in_spec_const_10_93738);
                     final_LL();
 
                     state._fsp--;
@@ -6387,7 +6411,7 @@ public class HPRIMSParser extends Parser {
                 case 4 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:521:43: final_HH
                     {
-                    pushFollow(FOLLOW_final_HH_in_spec_const_10_93731);
+                    pushFollow(FOLLOW_final_HH_in_spec_const_10_93742);
                     final_HH();
 
                     state._fsp--;
@@ -6398,7 +6422,7 @@ public class HPRIMSParser extends Parser {
                 case 5 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:521:54: final_symbol_inf
                     {
-                    pushFollow(FOLLOW_final_symbol_inf_in_spec_const_10_93735);
+                    pushFollow(FOLLOW_final_symbol_inf_in_spec_const_10_93746);
                     final_symbol_inf();
 
                     state._fsp--;
@@ -6409,7 +6433,7 @@ public class HPRIMSParser extends Parser {
                 case 6 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:521:73: final_symbol_sup
                     {
-                    pushFollow(FOLLOW_final_symbol_sup_in_spec_const_10_93739);
+                    pushFollow(FOLLOW_final_symbol_sup_in_spec_const_10_93750);
                     final_symbol_sup();
 
                     state._fsp--;
@@ -6420,7 +6444,7 @@ public class HPRIMSParser extends Parser {
                 case 7 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:522:3: final_charN
                     {
-                    pushFollow(FOLLOW_final_charN_in_spec_const_10_93745);
+                    pushFollow(FOLLOW_final_charN_in_spec_const_10_93756);
                     final_charN();
 
                     state._fsp--;
@@ -6431,7 +6455,7 @@ public class HPRIMSParser extends Parser {
                 case 8 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:522:17: final_charA
                     {
-                    pushFollow(FOLLOW_final_charA_in_spec_const_10_93749);
+                    pushFollow(FOLLOW_final_charA_in_spec_const_10_93760);
                     final_charA();
 
                     state._fsp--;
@@ -6442,7 +6466,7 @@ public class HPRIMSParser extends Parser {
                 case 9 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:522:31: final_AA
                     {
-                    pushFollow(FOLLOW_final_AA_in_spec_const_10_93753);
+                    pushFollow(FOLLOW_final_AA_in_spec_const_10_93764);
                     final_AA();
 
                     state._fsp--;
@@ -6453,7 +6477,7 @@ public class HPRIMSParser extends Parser {
                 case 10 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:522:42: final_Null
                     {
-                    pushFollow(FOLLOW_final_Null_in_spec_const_10_93757);
+                    pushFollow(FOLLOW_final_Null_in_spec_const_10_93768);
                     final_Null();
 
                     state._fsp--;
@@ -6464,7 +6488,7 @@ public class HPRIMSParser extends Parser {
                 case 11 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:522:55: final_charU
                     {
-                    pushFollow(FOLLOW_final_charU_in_spec_const_10_93761);
+                    pushFollow(FOLLOW_final_charU_in_spec_const_10_93772);
                     final_charU();
 
                     state._fsp--;
@@ -6475,7 +6499,7 @@ public class HPRIMSParser extends Parser {
                 case 12 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:522:69: final_charD
                     {
-                    pushFollow(FOLLOW_final_charD_in_spec_const_10_93765);
+                    pushFollow(FOLLOW_final_charD_in_spec_const_10_93776);
                     final_charD();
 
                     state._fsp--;
@@ -6486,7 +6510,7 @@ public class HPRIMSParser extends Parser {
                 case 13 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:522:83: final_charB
                     {
-                    pushFollow(FOLLOW_final_charB_in_spec_const_10_93769);
+                    pushFollow(FOLLOW_final_charB_in_spec_const_10_93780);
                     final_charB();
 
                     state._fsp--;
@@ -6497,7 +6521,7 @@ public class HPRIMSParser extends Parser {
                 case 14 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:523:3: final_charW
                     {
-                    pushFollow(FOLLOW_final_charW_in_spec_const_10_93775);
+                    pushFollow(FOLLOW_final_charW_in_spec_const_10_93786);
                     final_charW();
 
                     state._fsp--;
@@ -6508,7 +6532,7 @@ public class HPRIMSParser extends Parser {
                 case 15 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:523:17: final_charR
                     {
-                    pushFollow(FOLLOW_final_charR_in_spec_const_10_93779);
+                    pushFollow(FOLLOW_final_charR_in_spec_const_10_93790);
                     final_charR();
 
                     state._fsp--;
@@ -6519,7 +6543,7 @@ public class HPRIMSParser extends Parser {
                 case 16 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:523:31: final_charI
                     {
-                    pushFollow(FOLLOW_final_charI_in_spec_const_10_93783);
+                    pushFollow(FOLLOW_final_charI_in_spec_const_10_93794);
                     final_charI();
 
                     state._fsp--;
@@ -6530,7 +6554,7 @@ public class HPRIMSParser extends Parser {
                 case 17 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:523:45: final_charS
                     {
-                    pushFollow(FOLLOW_final_charS_in_spec_const_10_93787);
+                    pushFollow(FOLLOW_final_charS_in_spec_const_10_93798);
                     final_charS();
 
                     state._fsp--;
@@ -6541,7 +6565,7 @@ public class HPRIMSParser extends Parser {
                 case 18 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:523:59: final_MS
                     {
-                    pushFollow(FOLLOW_final_MS_in_spec_const_10_93791);
+                    pushFollow(FOLLOW_final_MS_in_spec_const_10_93802);
                     final_MS();
 
                     state._fsp--;
@@ -6552,7 +6576,7 @@ public class HPRIMSParser extends Parser {
                 case 19 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:523:70: final_VS
                     {
-                    pushFollow(FOLLOW_final_VS_in_spec_const_10_93795);
+                    pushFollow(FOLLOW_final_VS_in_spec_const_10_93806);
                     final_VS();
 
                     state._fsp--;
@@ -6619,7 +6643,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:528:4: final_charA
                     {
-                    pushFollow(FOLLOW_final_charA_in_spec_const_10_113816);
+                    pushFollow(FOLLOW_final_charA_in_spec_const_10_113827);
                     final_charA();
 
                     state._fsp--;
@@ -6630,7 +6654,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:528:18: final_charS
                     {
-                    pushFollow(FOLLOW_final_charS_in_spec_const_10_113820);
+                    pushFollow(FOLLOW_final_charS_in_spec_const_10_113831);
                     final_charS();
 
                     state._fsp--;
@@ -6641,7 +6665,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:528:32: final_charR
                     {
-                    pushFollow(FOLLOW_final_charR_in_spec_const_10_113824);
+                    pushFollow(FOLLOW_final_charR_in_spec_const_10_113835);
                     final_charR();
 
                     state._fsp--;
@@ -6652,7 +6676,7 @@ public class HPRIMSParser extends Parser {
                 case 4 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:528:46: final_charN
                     {
-                    pushFollow(FOLLOW_final_charN_in_spec_const_10_113828);
+                    pushFollow(FOLLOW_final_charN_in_spec_const_10_113839);
                     final_charN();
 
                     state._fsp--;
@@ -6739,7 +6763,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:533:4: final_charR
                     {
-                    pushFollow(FOLLOW_final_charR_in_spec_const_10_123849);
+                    pushFollow(FOLLOW_final_charR_in_spec_const_10_123860);
                     final_charR();
 
                     state._fsp--;
@@ -6750,7 +6774,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:533:18: final_charP
                     {
-                    pushFollow(FOLLOW_final_charP_in_spec_const_10_123853);
+                    pushFollow(FOLLOW_final_charP_in_spec_const_10_123864);
                     final_charP();
 
                     state._fsp--;
@@ -6761,7 +6785,7 @@ public class HPRIMSParser extends Parser {
                 case 3 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:533:32: final_charF
                     {
-                    pushFollow(FOLLOW_final_charF_in_spec_const_10_123857);
+                    pushFollow(FOLLOW_final_charF_in_spec_const_10_123868);
                     final_charF();
 
                     state._fsp--;
@@ -6772,7 +6796,7 @@ public class HPRIMSParser extends Parser {
                 case 4 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:533:46: final_charC
                     {
-                    pushFollow(FOLLOW_final_charC_in_spec_const_10_123861);
+                    pushFollow(FOLLOW_final_charC_in_spec_const_10_123872);
                     final_charC();
 
                     state._fsp--;
@@ -6783,7 +6807,7 @@ public class HPRIMSParser extends Parser {
                 case 5 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:533:60: final_charI
                     {
-                    pushFollow(FOLLOW_final_charI_in_spec_const_10_123865);
+                    pushFollow(FOLLOW_final_charI_in_spec_const_10_123876);
                     final_charI();
 
                     state._fsp--;
@@ -6794,7 +6818,7 @@ public class HPRIMSParser extends Parser {
                 case 6 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:533:74: final_charD
                     {
-                    pushFollow(FOLLOW_final_charD_in_spec_const_10_123869);
+                    pushFollow(FOLLOW_final_charD_in_spec_const_10_123880);
                     final_charD();
 
                     state._fsp--;
@@ -6805,7 +6829,7 @@ public class HPRIMSParser extends Parser {
                 case 7 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:534:4: final_charX
                     {
-                    pushFollow(FOLLOW_final_charX_in_spec_const_10_123876);
+                    pushFollow(FOLLOW_final_charX_in_spec_const_10_123887);
                     final_charX();
 
                     state._fsp--;
@@ -6816,7 +6840,7 @@ public class HPRIMSParser extends Parser {
                 case 8 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:534:18: final_charU
                     {
-                    pushFollow(FOLLOW_final_charU_in_spec_const_10_123880);
+                    pushFollow(FOLLOW_final_charU_in_spec_const_10_123891);
                     final_charU();
 
                     state._fsp--;
@@ -6868,7 +6892,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:539:4: final_charP
                     {
-                    pushFollow(FOLLOW_final_charP_in_spec_const_12_33901);
+                    pushFollow(FOLLOW_final_charP_in_spec_const_12_33912);
                     final_charP();
 
                     state._fsp--;
@@ -6879,7 +6903,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:539:18: final_charL
                     {
-                    pushFollow(FOLLOW_final_charL_in_spec_const_12_33905);
+                    pushFollow(FOLLOW_final_charL_in_spec_const_12_33916);
                     final_charL();
 
                     state._fsp--;
@@ -6924,15 +6948,15 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:543:22: ( st_nonsized_mandatory[$nameElement + \".1\"] DELIMITER2 st_nonsized_mandatory[$nameElement + \".2\"] )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:544:3: st_nonsized_mandatory[$nameElement + \".1\"] DELIMITER2 st_nonsized_mandatory[$nameElement + \".2\"]
             {
-            pushFollow(FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23925);
+            pushFollow(FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23936);
             st_nonsized_mandatory(nameElement + ".1");
 
             state._fsp--;
 
 
-            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_mandatory_23931); 
+            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_mandatory_23942); 
 
-            pushFollow(FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23933);
+            pushFollow(FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23944);
             st_nonsized_mandatory(nameElement + ".2");
 
             state._fsp--;
@@ -6976,7 +7000,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:550:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:551:3: st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23956);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23967);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -6993,9 +7017,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:552:4: DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"]
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_23962); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_23973); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23964);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23975);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -7046,7 +7070,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:558:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:559:3: st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] )? )? )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_43989);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44000);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -7063,9 +7087,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:560:4: DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] )? )?
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_43995); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44006); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_43997);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44008);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -7082,9 +7106,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:561:5: DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] )?
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44004); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44015); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44006);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44017);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -7101,9 +7125,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:562:6: DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"]
                                     {
-                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44014); 
+                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44025); 
 
-                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44016);
+                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44027);
                                     st_non_sized_optionnal(nameElement + ".2");
 
                                     state._fsp--;
@@ -7166,7 +7190,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:568:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:569:3: st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )? )? )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64045);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64056);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -7183,9 +7207,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:570:5: DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )? )?
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64052); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64063); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64054);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64065);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -7202,9 +7226,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:571:6: DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )?
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64062); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64073); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64064);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64075);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -7221,9 +7245,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:572:7: DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] )? )?
                                     {
-                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64073); 
+                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64084); 
 
-                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64075);
+                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64086);
                                     st_non_sized_optionnal(nameElement + ".4");
 
                                     state._fsp--;
@@ -7240,9 +7264,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:573:8: DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] )?
                                             {
-                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64085); 
+                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64096); 
 
-                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64087);
+                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64098);
                                             st_non_sized_optionnal(nameElement + ".5");
 
                                             state._fsp--;
@@ -7259,9 +7283,9 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:574:9: DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"]
                                                     {
-                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64098); 
+                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64109); 
 
-                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64100);
+                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64111);
                                                     st_non_sized_optionnal(nameElement + ".6");
 
                                                     state._fsp--;
@@ -7336,7 +7360,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:580:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )? )? )? )? )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:581:3: st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )? )? )? )? )? )? )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84133);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84144);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -7353,9 +7377,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:582:4: DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )? )? )? )? )? )?
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84139); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84150); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84141);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84152);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -7372,9 +7396,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:583:5: DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )? )? )? )? )?
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84148); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84159); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84150);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84161);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -7391,9 +7415,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:584:6: DELIMITER2 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )? )? )? )?
                                     {
-                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84158); 
+                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84169); 
 
-                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84160);
+                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84171);
                                     st_non_sized_optionnal(nameElement + ".4");
 
                                     state._fsp--;
@@ -7410,9 +7434,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:585:7: DELIMITER2 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )? )? )?
                                             {
-                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84169); 
+                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84180); 
 
-                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84171);
+                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84182);
                                             st_non_sized_optionnal(nameElement + ".5");
 
                                             state._fsp--;
@@ -7429,9 +7453,9 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:586:8: DELIMITER2 st_non_sized_optionnal[$nameElement + \".6\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )? )?
                                                     {
-                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84181); 
+                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84192); 
 
-                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84183);
+                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84194);
                                                     st_non_sized_optionnal(nameElement + ".6");
 
                                                     state._fsp--;
@@ -7448,9 +7472,9 @@ public class HPRIMSParser extends Parser {
                                                         case 1 :
                                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:587:9: DELIMITER2 st_non_sized_optionnal[$nameElement + \".7\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"] )?
                                                             {
-                                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84194); 
+                                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84205); 
 
-                                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84196);
+                                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84207);
                                                             st_non_sized_optionnal(nameElement + ".7");
 
                                                             state._fsp--;
@@ -7467,9 +7491,9 @@ public class HPRIMSParser extends Parser {
                                                                 case 1 :
                                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:588:10: DELIMITER2 st_non_sized_optionnal[$nameElement + \".8\"]
                                                                     {
-                                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84208); 
+                                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84219); 
 
-                                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84210);
+                                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84221);
                                                                     st_non_sized_optionnal(nameElement + ".8");
 
                                                                     state._fsp--;
@@ -7549,7 +7573,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:594:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"] )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:595:3: st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"] )? )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34247);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34258);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -7566,9 +7590,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:596:4: DELIMITER3 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"] )?
                     {
-                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34253); 
+                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34264); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34255);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34266);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -7585,9 +7609,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:597:5: DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"]
                             {
-                            match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34262); 
+                            match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34273); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34264);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34275);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -7631,7 +7655,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:601:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:602:3: st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )? )? )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64287);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64298);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -7648,9 +7672,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:603:4: DELIMITER3 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )? )?
                     {
-                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64293); 
+                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64304); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64295);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64306);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -7667,9 +7691,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:604:5: DELIMITER3 st_non_sized_optionnal[$nameElement + \".3\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".6\"] )? )? )?
                             {
-                            match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64302); 
+                            match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64313); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64304);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64315);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -7686,9 +7710,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:605:6: DELIMITER3 st_non_sized_optionnal[$nameElement + \".4\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".6\"] )? )?
                                     {
-                                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64312); 
+                                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64323); 
 
-                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64314);
+                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64325);
                                     st_non_sized_optionnal(nameElement + ".4");
 
                                     state._fsp--;
@@ -7705,9 +7729,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:606:7: DELIMITER3 st_non_sized_optionnal[$nameElement + \".5\"] ( DELIMITER3 st_non_sized_optionnal[$nameElement + \".6\"] )?
                                             {
-                                            match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64323); 
+                                            match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64334); 
 
-                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64325);
+                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64336);
                                             st_non_sized_optionnal(nameElement + ".5");
 
                                             state._fsp--;
@@ -7724,9 +7748,9 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:607:8: DELIMITER3 st_non_sized_optionnal[$nameElement + \".6\"]
                                                     {
-                                                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64335); 
+                                                    match(input,DELIMITER3,FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64346); 
 
-                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64337);
+                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64348);
                                                     st_non_sized_optionnal(nameElement + ".6");
 
                                                     state._fsp--;
@@ -7795,15 +7819,15 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:611:22: ( nm_nonsized_optionnal[$nameElement + \".1\"] DELIMITER2 nm_nonsized_optionnal[$nameElement + \".2\"] )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:612:3: nm_nonsized_optionnal[$nameElement + \".1\"] DELIMITER2 nm_nonsized_optionnal[$nameElement + \".2\"]
             {
-            pushFollow(FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24366);
+            pushFollow(FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24377);
             nm_nonsized_optionnal(nameElement + ".1");
 
             state._fsp--;
 
 
-            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_optionnal_24371); 
+            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_optionnal_24382); 
 
-            pushFollow(FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24373);
+            pushFollow(FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24384);
             nm_nonsized_optionnal(nameElement + ".2");
 
             state._fsp--;
@@ -7847,15 +7871,15 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:618:22: ( nm_nonsized_mandatory[$nameElement + \".1\"] DELIMITER2 nm_nonsized_mandatory[$nameElement + \".2\"] )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:619:3: nm_nonsized_mandatory[$nameElement + \".1\"] DELIMITER2 nm_nonsized_mandatory[$nameElement + \".2\"]
             {
-            pushFollow(FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24398);
+            pushFollow(FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24409);
             nm_nonsized_mandatory(nameElement + ".1");
 
             state._fsp--;
 
 
-            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_mandatory_24403); 
+            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_mandatory_24414); 
 
-            pushFollow(FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24405);
+            pushFollow(FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24416);
             nm_nonsized_mandatory(nameElement + ".2");
 
             state._fsp--;
@@ -7899,7 +7923,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:625:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 spec_sized_mult_lvl2_st_optionnal_6[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:626:3: st_non_sized_optionnal[$nameElement + \".1\"] ( DELIMITER2 spec_sized_mult_lvl2_st_optionnal_6[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] )? )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4428);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4439);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -7916,9 +7940,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:627:5: DELIMITER2 spec_sized_mult_lvl2_st_optionnal_6[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] )?
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_cna4435); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_cna4446); 
 
-                    pushFollow(FOLLOW_spec_sized_mult_lvl2_st_optionnal_6_in_spec_sized_cna4437);
+                    pushFollow(FOLLOW_spec_sized_mult_lvl2_st_optionnal_6_in_spec_sized_cna4448);
                     spec_sized_mult_lvl2_st_optionnal_6(nameElement + ".2");
 
                     state._fsp--;
@@ -7935,9 +7959,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:628:6: DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"]
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_cna4445); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_cna4456); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4447);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4458);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -8005,7 +8029,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:639:4: st_sized_mandatory[$nameElement + \".1\", 16] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] )?
                     {
-                    pushFollow(FOLLOW_st_sized_mandatory_in_spec_sized_8_34479);
+                    pushFollow(FOLLOW_st_sized_mandatory_in_spec_sized_8_34490);
                     st_sized_mandatory(nameElement + ".1", 16);
 
                     state._fsp--;
@@ -8022,17 +8046,17 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:640:5: DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"]
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_8_34486); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_8_34497); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34488);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34499);
                             st_non_sized_optionnal(nameElement + ".2");
 
                             state._fsp--;
 
 
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_8_34496); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_8_34507); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34498);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34509);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -8088,7 +8112,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:654:22: ( st_sized_optionnal[$nameElement + \".1\", 12] ( DELIMITER2 st_sized_optionnal[$nameElement + \".2\", 10] )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:656:3: st_sized_optionnal[$nameElement + \".1\", 12] ( DELIMITER2 st_sized_optionnal[$nameElement + \".2\", 10] )?
             {
-            pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_9_34538);
+            pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_9_34549);
             st_sized_optionnal(nameElement + ".1", 12);
 
             state._fsp--;
@@ -8105,9 +8129,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:657:4: DELIMITER2 st_sized_optionnal[$nameElement + \".2\", 10]
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_9_34544); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_9_34555); 
 
-                    pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_9_34546);
+                    pushFollow(FOLLOW_st_sized_optionnal_in_spec_sized_9_34557);
                     st_sized_optionnal(nameElement + ".2", 10);
 
                     state._fsp--;
@@ -8150,7 +8174,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:662:22: ( ts_sized_optionnal[$nameElement + \".1\", 26] ( REPETITEUR ts_sized_optionnal[$nameElement + \".2\", 26] )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:663:3: ts_sized_optionnal[$nameElement + \".1\", 26] ( REPETITEUR ts_sized_optionnal[$nameElement + \".2\", 26] )?
             {
-            pushFollow(FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84571);
+            pushFollow(FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84582);
             ts_sized_optionnal(nameElement + ".1", 26);
 
             state._fsp--;
@@ -8167,9 +8191,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:664:5: REPETITEUR ts_sized_optionnal[$nameElement + \".2\", 26]
                     {
-                    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_spec_non_sized_9_84578); 
+                    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_spec_non_sized_9_84589); 
 
-                    pushFollow(FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84580);
+                    pushFollow(FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84591);
                     ts_sized_optionnal(nameElement + ".2", 26);
 
                     state._fsp--;
@@ -8214,7 +8238,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:668:22: ( spec_sized_mult_lvl2_st_optionnal_3[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:669:3: spec_sized_mult_lvl2_st_optionnal_3[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] )? )?
             {
-            pushFollow(FOLLOW_spec_sized_mult_lvl2_st_optionnal_3_in_spec_sized_9_164601);
+            pushFollow(FOLLOW_spec_sized_mult_lvl2_st_optionnal_3_in_spec_sized_9_164612);
             spec_sized_mult_lvl2_st_optionnal_3(nameElement + ".2");
 
             state._fsp--;
@@ -8231,9 +8255,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:670:4: DELIMITER2 st_non_sized_optionnal[$nameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"] )?
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_9_164607); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_9_164618); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164609);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164620);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -8250,9 +8274,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:671:5: DELIMITER2 st_non_sized_optionnal[$nameElement + \".3\"]
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_9_164616); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_9_164627); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164618);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164629);
                             st_non_sized_optionnal(nameElement + ".3");
 
                             state._fsp--;
@@ -8308,7 +8332,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:676:22: ( st_nonsized_mandatory[$my_NameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".6\"] )? )? )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:677:3: st_nonsized_mandatory[$my_NameElement + \".1\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".6\"] )? )? )? )? )?
             {
-            pushFollow(FOLLOW_st_nonsized_mandatory_in_spec_sized_10_44645);
+            pushFollow(FOLLOW_st_nonsized_mandatory_in_spec_sized_10_44656);
             st_nonsized_mandatory(my_NameElement + ".1");
 
             state._fsp--;
@@ -8325,9 +8349,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:678:4: DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".2\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".6\"] )? )? )? )?
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44651); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44662); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44653);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44664);
                     st_non_sized_optionnal(my_NameElement + ".2");
 
                     state._fsp--;
@@ -8344,9 +8368,9 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:679:5: DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".3\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".6\"] )? )? )?
                             {
-                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44660); 
+                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44671); 
 
-                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44662);
+                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44673);
                             st_non_sized_optionnal(my_NameElement + ".3");
 
                             state._fsp--;
@@ -8363,9 +8387,9 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:680:6: DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".4\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".6\"] )? )?
                                     {
-                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44670); 
+                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44681); 
 
-                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44672);
+                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44683);
                                     st_non_sized_optionnal(my_NameElement + ".4");
 
                                     state._fsp--;
@@ -8382,9 +8406,9 @@ public class HPRIMSParser extends Parser {
                                         case 1 :
                                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:681:7: DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".5\"] ( DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".6\"] )?
                                             {
-                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44681); 
+                                            match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44692); 
 
-                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44683);
+                                            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44694);
                                             st_non_sized_optionnal(my_NameElement + ".5");
 
                                             state._fsp--;
@@ -8401,9 +8425,9 @@ public class HPRIMSParser extends Parser {
                                                 case 1 :
                                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:682:8: DELIMITER2 st_non_sized_optionnal[$my_NameElement + \".6\"]
                                                     {
-                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44693); 
+                                                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_spec_sized_10_44704); 
 
-                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44695);
+                                                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44706);
                                                     st_non_sized_optionnal(my_NameElement + ".6");
 
                                                     state._fsp--;
@@ -8487,7 +8511,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:691:4: g= final_spec_10_6_tx
                     {
-                    pushFollow(FOLLOW_final_spec_10_6_tx_in_spec_sized_10_6_tx4730);
+                    pushFollow(FOLLOW_final_spec_10_6_tx_in_spec_sized_10_6_tx4741);
                     g=final_spec_10_6_tx();
 
                     state._fsp--;
@@ -8535,7 +8559,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:697:22: ( st_non_sized_optionnal[$nameElement + \".1\"] ( REPETITEUR st_non_sized_optionnal[$nameElement + \".2\"] )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:698:2: st_non_sized_optionnal[$nameElement + \".1\"] ( REPETITEUR st_non_sized_optionnal[$nameElement + \".2\"] )?
             {
-            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4752);
+            pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4763);
             st_non_sized_optionnal(nameElement + ".1");
 
             state._fsp--;
@@ -8552,9 +8576,9 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:699:4: REPETITEUR st_non_sized_optionnal[$nameElement + \".2\"]
                     {
-                    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_spec_sized_tn4758); 
+                    match(input,REPETITEUR,FOLLOW_REPETITEUR_in_spec_sized_tn4769); 
 
-                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4760);
+                    pushFollow(FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4771);
                     st_non_sized_optionnal(nameElement + ".2");
 
                     state._fsp--;
@@ -8616,7 +8640,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:708:3: final_st
                     {
-                    pushFollow(FOLLOW_final_st_in_st_sized_optionnal4788);
+                    pushFollow(FOLLOW_final_st_in_st_sized_optionnal4799);
                     final_st();
 
                     state._fsp--;
@@ -8667,7 +8691,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:714:22: ( final_st )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:715:3: final_st
             {
-            pushFollow(FOLLOW_final_st_in_st_sized_mandatory4811);
+            pushFollow(FOLLOW_final_st_in_st_sized_mandatory4822);
             final_st();
 
             state._fsp--;
@@ -8715,7 +8739,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:721:3: final_st
                     {
-                    pushFollow(FOLLOW_final_st_in_st_non_sized_optionnal4833);
+                    pushFollow(FOLLOW_final_st_in_st_non_sized_optionnal4844);
                     final_st();
 
                     state._fsp--;
@@ -8753,7 +8777,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:725:22: ( final_st )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:726:3: final_st
             {
-            pushFollow(FOLLOW_final_st_in_st_nonsized_mandatory4852);
+            pushFollow(FOLLOW_final_st_in_st_nonsized_mandatory4863);
             final_st();
 
             state._fsp--;
@@ -8803,7 +8827,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:731:3: final_nm
                     {
-                    pushFollow(FOLLOW_final_nm_in_nm_sized_optionnal4870);
+                    pushFollow(FOLLOW_final_nm_in_nm_sized_optionnal4881);
                     final_nm();
 
                     state._fsp--;
@@ -8865,7 +8889,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:738:3: final_nm_integer
                     {
-                    pushFollow(FOLLOW_final_nm_integer_in_nm_integer_sized_optionnal4893);
+                    pushFollow(FOLLOW_final_nm_integer_in_nm_integer_sized_optionnal4904);
                     final_nm_integer();
 
                     state._fsp--;
@@ -8916,7 +8940,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:744:22: ( final_nm_integer )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:745:3: final_nm_integer
             {
-            pushFollow(FOLLOW_final_nm_integer_in_nm_integer_sized_mandatory4921);
+            pushFollow(FOLLOW_final_nm_integer_in_nm_integer_sized_mandatory4932);
             final_nm_integer();
 
             state._fsp--;
@@ -8971,7 +8995,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:752:3: final_ts
                     {
-                    pushFollow(FOLLOW_final_ts_in_ts_sized_optionnal4944);
+                    pushFollow(FOLLOW_final_ts_in_ts_sized_optionnal4955);
                     final_ts();
 
                     state._fsp--;
@@ -9022,7 +9046,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:758:22: ( final_ts )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:759:3: final_ts
             {
-            pushFollow(FOLLOW_final_ts_in_ts_sized_mandatory4967);
+            pushFollow(FOLLOW_final_ts_in_ts_sized_mandatory4978);
             final_ts();
 
             state._fsp--;
@@ -9059,7 +9083,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:764:22: ( final_nm )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:765:3: final_nm
             {
-            pushFollow(FOLLOW_final_nm_in_nm_nonsized_mandatory4989);
+            pushFollow(FOLLOW_final_nm_in_nm_nonsized_mandatory5000);
             final_nm();
 
             state._fsp--;
@@ -9102,7 +9126,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:770:3: final_nm
                     {
-                    pushFollow(FOLLOW_final_nm_in_nm_nonsized_optionnal5007);
+                    pushFollow(FOLLOW_final_nm_in_nm_nonsized_optionnal5018);
                     final_nm();
 
                     state._fsp--;
@@ -9140,7 +9164,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:774:22: ( final_version_2_0 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:775:3: final_version_2_0
             {
-            pushFollow(FOLLOW_final_version_2_0_in_spec_const_7_13_1_version_2_05026);
+            pushFollow(FOLLOW_final_version_2_0_in_spec_const_7_13_1_version_2_05037);
             final_version_2_0();
 
             state._fsp--;
@@ -9172,7 +9196,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:779:22: ( final_version_2_1 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:780:3: final_version_2_1
             {
-            pushFollow(FOLLOW_final_version_2_1_in_spec_const_7_13_1_version_2_15044);
+            pushFollow(FOLLOW_final_version_2_1_in_spec_const_7_13_1_version_2_15055);
             final_version_2_1();
 
             state._fsp--;
@@ -9204,7 +9228,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:784:22: ( final_version_2_2 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:785:3: final_version_2_2
             {
-            pushFollow(FOLLOW_final_version_2_2_in_spec_const_7_13_1_version_2_25064);
+            pushFollow(FOLLOW_final_version_2_2_in_spec_const_7_13_1_version_2_25075);
             final_version_2_2();
 
             state._fsp--;
@@ -9241,7 +9265,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:789:46: (g= content_spec_10_6 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:790:3: g= content_spec_10_6
             {
-            pushFollow(FOLLOW_content_spec_10_6_in_final_spec_10_6_tx5081);
+            pushFollow(FOLLOW_content_spec_10_6_in_final_spec_10_6_tx5092);
             g=content_spec_10_6();
 
             state._fsp--;
@@ -9303,7 +9327,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:795:4: r= character
                     {
-                    pushFollow(FOLLOW_character_in_content_spec_10_65103);
+                    pushFollow(FOLLOW_character_in_content_spec_10_65114);
                     r=character();
 
                     state._fsp--;
@@ -9316,7 +9340,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:795:42: DELIMITER2
                     {
-                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_content_spec_10_65109); 
+                    match(input,DELIMITER2,FOLLOW_DELIMITER2_in_content_spec_10_65120); 
 
                     consoText = "\n";
 
@@ -9337,7 +9361,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:796:6: p= content_spec_10_6
                     {
-                    pushFollow(FOLLOW_content_spec_10_6_in_content_spec_10_65120);
+                    pushFollow(FOLLOW_content_spec_10_6_in_content_spec_10_65131);
                     p=content_spec_10_6();
 
                     state._fsp--;
@@ -9382,37 +9406,37 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:798:9: ( chiffre chiffre chiffre chiffre chiffre chiffre ( chiffre chiffre ( chiffre chiffre chiffre chiffre ( chiffre chiffre )? )? )? )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:799:3: chiffre chiffre chiffre chiffre chiffre chiffre ( chiffre chiffre ( chiffre chiffre chiffre chiffre ( chiffre chiffre )? )? )?
             {
-            pushFollow(FOLLOW_chiffre_in_final_ts5132);
+            pushFollow(FOLLOW_chiffre_in_final_ts5143);
             chiffre();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_chiffre_in_final_ts5134);
+            pushFollow(FOLLOW_chiffre_in_final_ts5145);
             chiffre();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_chiffre_in_final_ts5138);
+            pushFollow(FOLLOW_chiffre_in_final_ts5149);
             chiffre();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_chiffre_in_final_ts5140);
+            pushFollow(FOLLOW_chiffre_in_final_ts5151);
             chiffre();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_chiffre_in_final_ts5142);
+            pushFollow(FOLLOW_chiffre_in_final_ts5153);
             chiffre();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_chiffre_in_final_ts5146);
+            pushFollow(FOLLOW_chiffre_in_final_ts5157);
             chiffre();
 
             state._fsp--;
@@ -9429,13 +9453,13 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:801:12: chiffre chiffre ( chiffre chiffre chiffre chiffre ( chiffre chiffre )? )?
                     {
-                    pushFollow(FOLLOW_chiffre_in_final_ts5149);
+                    pushFollow(FOLLOW_chiffre_in_final_ts5160);
                     chiffre();
 
                     state._fsp--;
 
 
-                    pushFollow(FOLLOW_chiffre_in_final_ts5151);
+                    pushFollow(FOLLOW_chiffre_in_final_ts5162);
                     chiffre();
 
                     state._fsp--;
@@ -9452,25 +9476,25 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:802:4: chiffre chiffre chiffre chiffre ( chiffre chiffre )?
                             {
-                            pushFollow(FOLLOW_chiffre_in_final_ts5156);
+                            pushFollow(FOLLOW_chiffre_in_final_ts5167);
                             chiffre();
 
                             state._fsp--;
 
 
-                            pushFollow(FOLLOW_chiffre_in_final_ts5158);
+                            pushFollow(FOLLOW_chiffre_in_final_ts5169);
                             chiffre();
 
                             state._fsp--;
 
 
-                            pushFollow(FOLLOW_chiffre_in_final_ts5160);
+                            pushFollow(FOLLOW_chiffre_in_final_ts5171);
                             chiffre();
 
                             state._fsp--;
 
 
-                            pushFollow(FOLLOW_chiffre_in_final_ts5164);
+                            pushFollow(FOLLOW_chiffre_in_final_ts5175);
                             chiffre();
 
                             state._fsp--;
@@ -9487,13 +9511,13 @@ public class HPRIMSParser extends Parser {
                                 case 1 :
                                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:803:12: chiffre chiffre
                                     {
-                                    pushFollow(FOLLOW_chiffre_in_final_ts5167);
+                                    pushFollow(FOLLOW_chiffre_in_final_ts5178);
                                     chiffre();
 
                                     state._fsp--;
 
 
-                                    pushFollow(FOLLOW_chiffre_in_final_ts5169);
+                                    pushFollow(FOLLOW_chiffre_in_final_ts5180);
                                     chiffre();
 
                                     state._fsp--;
@@ -9569,7 +9593,7 @@ public class HPRIMSParser extends Parser {
             	case 1 :
             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:807:3: character
             	    {
-            	    pushFollow(FOLLOW_character_in_final_st5188);
+            	    pushFollow(FOLLOW_character_in_final_st5199);
             	    character();
 
             	    state._fsp--;
@@ -9694,7 +9718,7 @@ public class HPRIMSParser extends Parser {
                     	case 1 :
                     	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:812:5: chiffre
                     	    {
-                    	    pushFollow(FOLLOW_chiffre_in_final_nm5217);
+                    	    pushFollow(FOLLOW_chiffre_in_final_nm5228);
                     	    chiffre();
 
                     	    state._fsp--;
@@ -9724,7 +9748,7 @@ public class HPRIMSParser extends Parser {
                         case 1 :
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:812:15: POINT ( chiffre )*
                             {
-                            match(input,POINT,FOLLOW_POINT_in_final_nm5221); 
+                            match(input,POINT,FOLLOW_POINT_in_final_nm5232); 
 
                             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:812:21: ( chiffre )*
                             loop202:
@@ -9741,7 +9765,7 @@ public class HPRIMSParser extends Parser {
                             	case 1 :
                             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:812:21: chiffre
                             	    {
-                            	    pushFollow(FOLLOW_chiffre_in_final_nm5223);
+                            	    pushFollow(FOLLOW_chiffre_in_final_nm5234);
                             	    chiffre();
 
                             	    state._fsp--;
@@ -9773,7 +9797,7 @@ public class HPRIMSParser extends Parser {
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:813:4: ( POINT ( chiffre )+ )
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:813:5: POINT ( chiffre )+
                     {
-                    match(input,POINT,FOLLOW_POINT_in_final_nm5233); 
+                    match(input,POINT,FOLLOW_POINT_in_final_nm5244); 
 
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:813:11: ( chiffre )+
                     int cnt204=0;
@@ -9791,7 +9815,7 @@ public class HPRIMSParser extends Parser {
                     	case 1 :
                     	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:813:11: chiffre
                     	    {
-                    	    pushFollow(FOLLOW_chiffre_in_final_nm5235);
+                    	    pushFollow(FOLLOW_chiffre_in_final_nm5246);
                     	    chiffre();
 
                     	    state._fsp--;
@@ -9874,7 +9898,7 @@ public class HPRIMSParser extends Parser {
             	case 1 :
             	    // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:817:3: chiffre
             	    {
-            	    pushFollow(FOLLOW_chiffre_in_final_nm_integer5252);
+            	    pushFollow(FOLLOW_chiffre_in_final_nm_integer5263);
             	    chiffre();
 
             	    state._fsp--;
@@ -9929,11 +9953,11 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:820:10: ( CHARO CHARR CHARU )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:820:12: CHARO CHARR CHARU
             {
-            match(input,CHARO,FOLLOW_CHARO_in_final_ORU5264); 
+            match(input,CHARO,FOLLOW_CHARO_in_final_ORU5275); 
 
-            match(input,CHARR,FOLLOW_CHARR_in_final_ORU5266); 
+            match(input,CHARR,FOLLOW_CHARR_in_final_ORU5277); 
 
-            match(input,CHARU,FOLLOW_CHARU_in_final_ORU5268); 
+            match(input,CHARU,FOLLOW_CHARU_in_final_ORU5279); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -9971,13 +9995,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:822:11: ( CHARC CHARA CHARR CHART )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:822:13: CHARC CHARA CHARR CHART
             {
-            match(input,CHARC,FOLLOW_CHARC_in_final_CART5277); 
+            match(input,CHARC,FOLLOW_CHARC_in_final_CART5288); 
 
-            match(input,CHARA,FOLLOW_CHARA_in_final_CART5279); 
+            match(input,CHARA,FOLLOW_CHARA_in_final_CART5290); 
 
-            match(input,CHARR,FOLLOW_CHARR_in_final_CART5281); 
+            match(input,CHARR,FOLLOW_CHARR_in_final_CART5292); 
 
-            match(input,CHART,FOLLOW_CHART_in_final_CART5283); 
+            match(input,CHART,FOLLOW_CHART_in_final_CART5294); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10015,13 +10039,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:823:11: ( CHARP CHARO CHARR CHART )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:823:13: CHARP CHARO CHARR CHART
             {
-            match(input,CHARP,FOLLOW_CHARP_in_final_PORT5291); 
+            match(input,CHARP,FOLLOW_CHARP_in_final_PORT5302); 
 
-            match(input,CHARO,FOLLOW_CHARO_in_final_PORT5293); 
+            match(input,CHARO,FOLLOW_CHARO_in_final_PORT5304); 
 
-            match(input,CHARR,FOLLOW_CHARR_in_final_PORT5295); 
+            match(input,CHARR,FOLLOW_CHARR_in_final_PORT5306); 
 
-            match(input,CHART,FOLLOW_CHART_in_final_PORT5297); 
+            match(input,CHART,FOLLOW_CHART_in_final_PORT5308); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10059,13 +10083,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:824:11: ( CHARW CHARH CHARL CHARC )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:824:13: CHARW CHARH CHARL CHARC
             {
-            match(input,CHARW,FOLLOW_CHARW_in_final_WHLC5305); 
+            match(input,CHARW,FOLLOW_CHARW_in_final_WHLC5316); 
 
-            match(input,CHARH,FOLLOW_CHARH_in_final_WHLC5307); 
+            match(input,CHARH,FOLLOW_CHARH_in_final_WHLC5318); 
 
-            match(input,CHARL,FOLLOW_CHARL_in_final_WHLC5309); 
+            match(input,CHARL,FOLLOW_CHARL_in_final_WHLC5320); 
 
-            match(input,CHARC,FOLLOW_CHARC_in_final_WHLC5311); 
+            match(input,CHARC,FOLLOW_CHARC_in_final_WHLC5322); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10103,13 +10127,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:825:11: ( CHARW CHARA CHARL CHARK )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:825:13: CHARW CHARA CHARL CHARK
             {
-            match(input,CHARW,FOLLOW_CHARW_in_final_WALK5319); 
+            match(input,CHARW,FOLLOW_CHARW_in_final_WALK5330); 
 
-            match(input,CHARA,FOLLOW_CHARA_in_final_WALK5321); 
+            match(input,CHARA,FOLLOW_CHARA_in_final_WALK5332); 
 
-            match(input,CHARL,FOLLOW_CHARL_in_final_WALK5323); 
+            match(input,CHARL,FOLLOW_CHARL_in_final_WALK5334); 
 
-            match(input,CHARK,FOLLOW_CHARK_in_final_WALK5325); 
+            match(input,CHARK,FOLLOW_CHARK_in_final_WALK5336); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10147,9 +10171,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:827:9: ( CHARL CHARL )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:827:11: CHARL CHARL
             {
-            match(input,CHARL,FOLLOW_CHARL_in_final_LL5334); 
+            match(input,CHARL,FOLLOW_CHARL_in_final_LL5345); 
 
-            match(input,CHARL,FOLLOW_CHARL_in_final_LL5336); 
+            match(input,CHARL,FOLLOW_CHARL_in_final_LL5347); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10187,9 +10211,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:828:9: ( CHARA CHARA )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:828:11: CHARA CHARA
             {
-            match(input,CHARA,FOLLOW_CHARA_in_final_AA5344); 
+            match(input,CHARA,FOLLOW_CHARA_in_final_AA5355); 
 
-            match(input,CHARA,FOLLOW_CHARA_in_final_AA5346); 
+            match(input,CHARA,FOLLOW_CHARA_in_final_AA5357); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10227,9 +10251,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:829:9: ( CHARH CHARH )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:829:11: CHARH CHARH
             {
-            match(input,CHARH,FOLLOW_CHARH_in_final_HH5354); 
+            match(input,CHARH,FOLLOW_CHARH_in_final_HH5365); 
 
-            match(input,CHARH,FOLLOW_CHARH_in_final_HH5356); 
+            match(input,CHARH,FOLLOW_CHARH_in_final_HH5367); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10267,9 +10291,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:830:9: ( CHARM CHARS )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:830:11: CHARM CHARS
             {
-            match(input,CHARM,FOLLOW_CHARM_in_final_MS5364); 
+            match(input,CHARM,FOLLOW_CHARM_in_final_MS5375); 
 
-            match(input,CHARS,FOLLOW_CHARS_in_final_MS5366); 
+            match(input,CHARS,FOLLOW_CHARS_in_final_MS5377); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10307,9 +10331,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:831:9: ( CHARV CHARS )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:831:11: CHARV CHARS
             {
-            match(input,CHARV,FOLLOW_CHARV_in_final_VS5374); 
+            match(input,CHARV,FOLLOW_CHARV_in_final_VS5385); 
 
-            match(input,CHARS,FOLLOW_CHARS_in_final_VS5376); 
+            match(input,CHARS,FOLLOW_CHARS_in_final_VS5387); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10347,13 +10371,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:832:11: ( CHARN CHARu CHARl CHARl )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:832:13: CHARN CHARu CHARl CHARl
             {
-            match(input,CHARN,FOLLOW_CHARN_in_final_Null5384); 
+            match(input,CHARN,FOLLOW_CHARN_in_final_Null5395); 
 
-            match(input,CHARu,FOLLOW_CHARu_in_final_Null5386); 
+            match(input,CHARu,FOLLOW_CHARu_in_final_Null5397); 
 
-            match(input,CHARl,FOLLOW_CHARl_in_final_Null5388); 
+            match(input,CHARl,FOLLOW_CHARl_in_final_Null5399); 
 
-            match(input,CHARl,FOLLOW_CHARl_in_final_Null5390); 
+            match(input,CHARl,FOLLOW_CHARl_in_final_Null5401); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10391,7 +10415,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:833:17: ( CHAR_SYMBOL_INF )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:833:19: CHAR_SYMBOL_INF
             {
-            match(input,CHAR_SYMBOL_INF,FOLLOW_CHAR_SYMBOL_INF_in_final_symbol_inf5398); 
+            match(input,CHAR_SYMBOL_INF,FOLLOW_CHAR_SYMBOL_INF_in_final_symbol_inf5409); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10429,7 +10453,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:834:17: ( CHAR_SYMBOL_SUP )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:834:19: CHAR_SYMBOL_SUP
             {
-            match(input,CHAR_SYMBOL_SUP,FOLLOW_CHAR_SYMBOL_SUP_in_final_symbol_sup5406); 
+            match(input,CHAR_SYMBOL_SUP,FOLLOW_CHAR_SYMBOL_SUP_in_final_symbol_sup5417); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10467,13 +10491,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:836:18: ( CHARH CHIFFRE2 POINT CHIFFRE0 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:836:20: CHARH CHIFFRE2 POINT CHIFFRE0
             {
-            match(input,CHARH,FOLLOW_CHARH_in_final_version_2_05415); 
+            match(input,CHARH,FOLLOW_CHARH_in_final_version_2_05426); 
 
-            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_05417); 
+            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_05428); 
 
-            match(input,POINT,FOLLOW_POINT_in_final_version_2_05419); 
+            match(input,POINT,FOLLOW_POINT_in_final_version_2_05430); 
 
-            match(input,CHIFFRE0,FOLLOW_CHIFFRE0_in_final_version_2_05421); 
+            match(input,CHIFFRE0,FOLLOW_CHIFFRE0_in_final_version_2_05432); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10511,13 +10535,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:837:18: ( CHARH CHIFFRE2 POINT CHIFFRE1 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:837:20: CHARH CHIFFRE2 POINT CHIFFRE1
             {
-            match(input,CHARH,FOLLOW_CHARH_in_final_version_2_15429); 
+            match(input,CHARH,FOLLOW_CHARH_in_final_version_2_15440); 
 
-            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_15431); 
+            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_15442); 
 
-            match(input,POINT,FOLLOW_POINT_in_final_version_2_15433); 
+            match(input,POINT,FOLLOW_POINT_in_final_version_2_15444); 
 
-            match(input,CHIFFRE1,FOLLOW_CHIFFRE1_in_final_version_2_15435); 
+            match(input,CHIFFRE1,FOLLOW_CHIFFRE1_in_final_version_2_15446); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10555,13 +10579,13 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:838:18: ( CHARH CHIFFRE2 POINT CHIFFRE2 )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:838:20: CHARH CHIFFRE2 POINT CHIFFRE2
             {
-            match(input,CHARH,FOLLOW_CHARH_in_final_version_2_25443); 
+            match(input,CHARH,FOLLOW_CHARH_in_final_version_2_25454); 
 
-            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_25445); 
+            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_25456); 
 
-            match(input,POINT,FOLLOW_POINT_in_final_version_2_25447); 
+            match(input,POINT,FOLLOW_POINT_in_final_version_2_25458); 
 
-            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_25449); 
+            match(input,CHIFFRE2,FOLLOW_CHIFFRE2_in_final_version_2_25460); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10599,9 +10623,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:840:9: ( CHARO CHARP )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:840:11: CHARO CHARP
             {
-            match(input,CHARO,FOLLOW_CHARO_in_final_OP5458); 
+            match(input,CHARO,FOLLOW_CHARO_in_final_OP5469); 
 
-            match(input,CHARP,FOLLOW_CHARP_in_final_OP5460); 
+            match(input,CHARP,FOLLOW_CHARP_in_final_OP5471); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10639,9 +10663,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:841:9: ( CHARI CHARP )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:841:11: CHARI CHARP
             {
-            match(input,CHARI,FOLLOW_CHARI_in_final_IP5468); 
+            match(input,CHARI,FOLLOW_CHARI_in_final_IP5479); 
 
-            match(input,CHARP,FOLLOW_CHARP_in_final_IP5470); 
+            match(input,CHARP,FOLLOW_CHARP_in_final_IP5481); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10679,9 +10703,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:842:9: ( CHARE CHARR )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:842:11: CHARE CHARR
             {
-            match(input,CHARE,FOLLOW_CHARE_in_final_ER5478); 
+            match(input,CHARE,FOLLOW_CHARE_in_final_ER5489); 
 
-            match(input,CHARR,FOLLOW_CHARR_in_final_ER5480); 
+            match(input,CHARR,FOLLOW_CHARR_in_final_ER5491); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10719,9 +10743,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:843:9: ( CHARP CHARA )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:843:11: CHARP CHARA
             {
-            match(input,CHARP,FOLLOW_CHARP_in_final_PA5488); 
+            match(input,CHARP,FOLLOW_CHARP_in_final_PA5499); 
 
-            match(input,CHARA,FOLLOW_CHARA_in_final_PA5490); 
+            match(input,CHARA,FOLLOW_CHARA_in_final_PA5501); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10759,9 +10783,9 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:844:9: ( CHARM CHARP )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:844:11: CHARM CHARP
             {
-            match(input,CHARM,FOLLOW_CHARM_in_final_MP5498); 
+            match(input,CHARM,FOLLOW_CHARM_in_final_MP5509); 
 
-            match(input,CHARP,FOLLOW_CHARP_in_final_MP5500); 
+            match(input,CHARP,FOLLOW_CHARP_in_final_MP5511); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10799,7 +10823,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:846:12: ( CHARA )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:846:14: CHARA
             {
-            match(input,CHARA,FOLLOW_CHARA_in_final_charA5511); 
+            match(input,CHARA,FOLLOW_CHARA_in_final_charA5522); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10837,7 +10861,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:847:12: ( CHARB )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:847:14: CHARB
             {
-            match(input,CHARB,FOLLOW_CHARB_in_final_charB5519); 
+            match(input,CHARB,FOLLOW_CHARB_in_final_charB5530); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10875,7 +10899,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:848:12: ( CHARC )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:848:14: CHARC
             {
-            match(input,CHARC,FOLLOW_CHARC_in_final_charC5527); 
+            match(input,CHARC,FOLLOW_CHARC_in_final_charC5538); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10913,7 +10937,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:849:12: ( CHARD )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:849:14: CHARD
             {
-            match(input,CHARD,FOLLOW_CHARD_in_final_charD5535); 
+            match(input,CHARD,FOLLOW_CHARD_in_final_charD5546); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10951,7 +10975,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:850:12: ( CHARF )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:850:14: CHARF
             {
-            match(input,CHARF,FOLLOW_CHARF_in_final_charF5543); 
+            match(input,CHARF,FOLLOW_CHARF_in_final_charF5554); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -10989,7 +11013,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:851:12: ( CHARH )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:851:14: CHARH
             {
-            match(input,CHARH,FOLLOW_CHARH_in_final_charH5551); 
+            match(input,CHARH,FOLLOW_CHARH_in_final_charH5562); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11027,7 +11051,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:852:12: ( CHARI )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:852:14: CHARI
             {
-            match(input,CHARI,FOLLOW_CHARI_in_final_charI5559); 
+            match(input,CHARI,FOLLOW_CHARI_in_final_charI5570); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11065,7 +11089,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:853:12: ( CHARL )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:853:14: CHARL
             {
-            match(input,CHARL,FOLLOW_CHARL_in_final_charL5567); 
+            match(input,CHARL,FOLLOW_CHARL_in_final_charL5578); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11103,7 +11127,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:854:12: ( CHARM )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:854:14: CHARM
             {
-            match(input,CHARM,FOLLOW_CHARM_in_final_charM5575); 
+            match(input,CHARM,FOLLOW_CHARM_in_final_charM5586); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11141,7 +11165,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:855:12: ( CHARN )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:855:14: CHARN
             {
-            match(input,CHARN,FOLLOW_CHARN_in_final_charN5583); 
+            match(input,CHARN,FOLLOW_CHARN_in_final_charN5594); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11179,7 +11203,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:856:12: ( CHARO )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:856:14: CHARO
             {
-            match(input,CHARO,FOLLOW_CHARO_in_final_charO5591); 
+            match(input,CHARO,FOLLOW_CHARO_in_final_charO5602); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11217,7 +11241,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:857:12: ( CHARP )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:857:14: CHARP
             {
-            match(input,CHARP,FOLLOW_CHARP_in_final_charP5599); 
+            match(input,CHARP,FOLLOW_CHARP_in_final_charP5610); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11255,7 +11279,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:858:12: ( CHARR )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:858:14: CHARR
             {
-            match(input,CHARR,FOLLOW_CHARR_in_final_charR5607); 
+            match(input,CHARR,FOLLOW_CHARR_in_final_charR5618); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11293,7 +11317,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:859:12: ( CHARS )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:859:14: CHARS
             {
-            match(input,CHARS,FOLLOW_CHARS_in_final_charS5615); 
+            match(input,CHARS,FOLLOW_CHARS_in_final_charS5626); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11331,7 +11355,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:860:12: ( CHART )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:860:14: CHART
             {
-            match(input,CHART,FOLLOW_CHART_in_final_charT5623); 
+            match(input,CHART,FOLLOW_CHART_in_final_charT5634); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11369,7 +11393,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:861:12: ( CHARU )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:861:14: CHARU
             {
-            match(input,CHARU,FOLLOW_CHARU_in_final_charU5631); 
+            match(input,CHARU,FOLLOW_CHARU_in_final_charU5642); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11407,7 +11431,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:862:12: ( CHARW )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:862:14: CHARW
             {
-            match(input,CHARW,FOLLOW_CHARW_in_final_charW5639); 
+            match(input,CHARW,FOLLOW_CHARW_in_final_charW5650); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11445,7 +11469,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:863:12: ( CHARX )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:863:14: CHARX
             {
-            match(input,CHARX,FOLLOW_CHARX_in_final_charX5647); 
+            match(input,CHARX,FOLLOW_CHARX_in_final_charX5658); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11484,7 +11508,7 @@ public class HPRIMSParser extends Parser {
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:868:22: ( DELIMITERS )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:869:3: DELIMITERS
             {
-            match(input,DELIMITERS,FOLLOW_DELIMITERS_in_delimiters5668); 
+            match(input,DELIMITERS,FOLLOW_DELIMITERS_in_delimiters5679); 
 
             content(input.toString(retval.start,input.LT(-1)));
 
@@ -11544,7 +11568,7 @@ public class HPRIMSParser extends Parser {
                 case 1 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:875:4: lettre
                     {
-                    pushFollow(FOLLOW_lettre_in_character5684);
+                    pushFollow(FOLLOW_lettre_in_character5695);
                     lettre();
 
                     state._fsp--;
@@ -11555,7 +11579,7 @@ public class HPRIMSParser extends Parser {
                 case 2 :
                     // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\aider\\org\\hprim\\parser\\antlr\\HPRIMS.g:875:13: chiffre
                     {
-                    pushFollow(FOLLOW_chiffre_in_character5688);
+                    pushFollow(FOLLOW_chiffre_in_character5699);
                     chiffre();
 
                     state._fsp--;
@@ -11909,550 +11933,554 @@ public class HPRIMSParser extends Parser {
     public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_8_in_line_p2_1989 = new BitSet(new long[]{0x0000020000000002L});
     public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11042 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
     public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11044 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11073 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11129 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11131 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11190 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11192 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11224 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11226 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11289 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11291 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11325 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_p2_11327 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11362 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_p2_11364 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_line_obr2_1_in_line_obr2_21470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CR_in_line_obr2_11487 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_CHARO_in_line_obr2_11489 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_CHARB_in_line_obr2_11491 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_CHARR_in_line_obr2_11493 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11497 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_nm_integer_sized_mandatory_in_line_obr2_11499 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11504 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_9_3_in_line_obr2_11506 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11511 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11513 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11518 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11520 = new BitSet(new long[]{0x0002020000000000L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11524 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11526 = new BitSet(new long[]{0x0002020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11536 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11538 = new BitSet(new long[]{0x0002020000000000L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11542 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11544 = new BitSet(new long[]{0x0002020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11551 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11553 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11558 = new BitSet(new long[]{0x000200FFC0000000L});
-    public static final BitSet FOLLOW_spec_non_sized_9_8_in_line_obr2_11560 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11565 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11567 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11575 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11577 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11582 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_11584 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11592 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11594 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11603 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11605 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11612 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11614 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11622 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11624 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11633 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_9_16_in_line_obr2_11635 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11645 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11647 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11658 = new BitSet(new long[]{0x0003E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_tn_in_line_obr2_11660 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11672 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11674 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11687 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11689 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11703 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11705 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11720 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11722 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11738 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11740 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11757 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11775 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11777 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11796 = new BitSet(new long[]{0x00000200020E92C0L});
-    public static final BitSet FOLLOW_spec_const_9_26_in_line_obr2_11798 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11818 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11838 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11859 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_11861 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11865 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_11867 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11892 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_4_in_line_obr2_11894 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11918 = new BitSet(new long[]{0x0000020001040040L});
-    public static final BitSet FOLLOW_spec_const_9_31_in_line_obr2_11920 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11967 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11969 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11973 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11975 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12003 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12005 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12032 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12034 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12062 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12064 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12093 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12095 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12125 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_12127 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CR_in_line_obx2_12226 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_CHARO_in_line_obx2_12228 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_CHARB_in_line_obx2_12230 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_CHARX_in_line_obx2_12232 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12236 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_nm_integer_sized_mandatory_in_line_obx2_12238 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12243 = new BitSet(new long[]{0x00000000003506D0L});
-    public static final BitSet FOLLOW_spec_const_10_3_nm_in_line_obx2_12251 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12260 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12262 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12272 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12274 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12285 = new BitSet(new long[]{0x0003C2FFC0000000L});
-    public static final BitSet FOLLOW_nm_sized_optionnal_in_line_obx2_12287 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12291 = new BitSet(new long[]{0x0003C2FFC0000000L});
-    public static final BitSet FOLLOW_nm_sized_optionnal_in_line_obx2_12293 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_10_3_ce_in_line_obx2_12323 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12332 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12334 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12344 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12346 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12357 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12359 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12363 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12365 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_10_3_fic_in_line_obx2_12395 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12404 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12406 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12416 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12418 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12429 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12431 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12435 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12437 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_10_3_st_in_line_obx2_12467 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12476 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12478 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12488 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12490 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12501 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12503 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12507 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12509 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_10_3_gc_in_line_obx2_12539 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12548 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12550 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12560 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12562 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12573 = new BitSet(new long[]{0x0001C4FFC0000000L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12575 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12579 = new BitSet(new long[]{0x0001C4FFC0000000L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12581 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_10_3_tx_in_line_obx2_12611 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12620 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12622 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12632 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12634 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12645 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12647 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12651 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12653 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_10_3_std_in_line_obx2_12683 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12692 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12694 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12704 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12706 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12717 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12719 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12723 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12725 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62759 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62761 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62770 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62772 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_1_post10_62776 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62778 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62790 = new BitSet(new long[]{0x000202000DD9D8B0L});
-    public static final BitSet FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62792 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_1_post10_62796 = new BitSet(new long[]{0x000202000DD9D8B0L});
-    public static final BitSet FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62798 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62811 = new BitSet(new long[]{0x0001C2FFC0000000L});
-    public static final BitSet FOLLOW_nm_sized_optionnal_in_line_obx2_1_post10_62813 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62825 = new BitSet(new long[]{0x0002020000190010L});
-    public static final BitSet FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62827 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_1_post10_62831 = new BitSet(new long[]{0x0002020000190010L});
-    public static final BitSet FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62833 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62848 = new BitSet(new long[]{0x00000200024C12C0L});
-    public static final BitSet FOLLOW_spec_const_10_12_in_line_obx2_1_post10_62850 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62865 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62867 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62883 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62885 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62901 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62903 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62920 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obx2_1_post10_62922 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62940 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62942 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CR_in_line_c2_12984 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_CHARC_in_line_c2_12986 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_12990 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_nm_integer_sized_mandatory_in_line_c2_12992 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_12997 = new BitSet(new long[]{0x0000020000044000L});
-    public static final BitSet FOLLOW_spec_const_12_3_in_line_c2_12999 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_13004 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_c2_13006 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_line_c2_13010 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_c2_13012 = new BitSet(new long[]{0x0002020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_13021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CR_in_line_l2_13039 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_CHARL_in_line_l2_13041 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13046 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_nm_integer_sized_optionnal_in_line_l2_13048 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13055 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13062 = new BitSet(new long[]{0x000002FFC0000000L});
-    public static final BitSet FOLLOW_nm_integer_sized_optionnal_in_line_l2_13064 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11073 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_spec_const_race_in_line_p2_11075 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11132 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11134 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11193 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11195 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11227 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11229 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11292 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_p2_11294 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11328 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_p2_11330 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11365 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_p2_11367 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_p2_11402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_line_obr2_1_in_line_obr2_21473 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CR_in_line_obr2_11490 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_CHARO_in_line_obr2_11492 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_CHARB_in_line_obr2_11494 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_CHARR_in_line_obr2_11496 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11500 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_nm_integer_sized_mandatory_in_line_obr2_11502 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11507 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_9_3_in_line_obr2_11509 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11514 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11516 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11521 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11523 = new BitSet(new long[]{0x0002020000000000L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11527 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11529 = new BitSet(new long[]{0x0002020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11539 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11541 = new BitSet(new long[]{0x0002020000000000L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11545 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11547 = new BitSet(new long[]{0x0002020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11554 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11556 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11561 = new BitSet(new long[]{0x000200FFC0000000L});
+    public static final BitSet FOLLOW_spec_non_sized_9_8_in_line_obr2_11563 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11568 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11570 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11578 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11580 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11585 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_11587 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11595 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11597 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11606 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11608 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11615 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11617 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11625 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11627 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11636 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_9_16_in_line_obr2_11638 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11648 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obr2_11650 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11661 = new BitSet(new long[]{0x0003E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_tn_in_line_obr2_11663 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11675 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11677 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11690 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11692 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11706 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11708 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11723 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11725 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11741 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_11743 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11760 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_spec_const_race_in_line_obr2_11762 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11780 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_2_in_line_obr2_11782 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11801 = new BitSet(new long[]{0x00000200020E92C0L});
+    public static final BitSet FOLLOW_spec_const_9_26_in_line_obr2_11803 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11823 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_spec_const_race_in_line_obr2_11825 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11846 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_spec_const_race_in_line_obr2_11848 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11870 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_11872 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11876 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_11878 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11903 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_4_in_line_obr2_11905 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11929 = new BitSet(new long[]{0x0000020001040040L});
+    public static final BitSet FOLLOW_spec_const_9_31_in_line_obr2_11931 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_11978 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11980 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obr2_11984 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obr2_11986 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12014 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12016 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12043 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12045 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12073 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12075 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12104 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_cna_in_line_obr2_12106 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12136 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obr2_12138 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obr2_12169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CR_in_line_obx2_12237 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_CHARO_in_line_obx2_12239 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_CHARB_in_line_obx2_12241 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_CHARX_in_line_obx2_12243 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12247 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_nm_integer_sized_mandatory_in_line_obx2_12249 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12254 = new BitSet(new long[]{0x00000000003506D0L});
+    public static final BitSet FOLLOW_spec_const_10_3_nm_in_line_obx2_12262 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12271 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12273 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12283 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12285 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12296 = new BitSet(new long[]{0x0003C2FFC0000000L});
+    public static final BitSet FOLLOW_nm_sized_optionnal_in_line_obx2_12298 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12302 = new BitSet(new long[]{0x0003C2FFC0000000L});
+    public static final BitSet FOLLOW_nm_sized_optionnal_in_line_obx2_12304 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_10_3_ce_in_line_obx2_12334 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12343 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12345 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12355 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12357 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12368 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12370 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12374 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12376 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_10_3_fic_in_line_obx2_12406 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12415 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12417 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12427 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12429 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12440 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12442 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12446 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_in_line_obx2_12448 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_10_3_st_in_line_obx2_12478 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12487 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12489 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12499 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12501 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12512 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12514 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12518 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12520 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_10_3_gc_in_line_obx2_12550 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12559 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12561 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12571 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12573 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12584 = new BitSet(new long[]{0x0001C4FFC0000000L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12586 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12590 = new BitSet(new long[]{0x0001C4FFC0000000L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_nm_optionnal_2_in_line_obx2_12592 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_10_3_tx_in_line_obx2_12622 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12631 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12633 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12643 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12645 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12656 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12658 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12662 = new BitSet(new long[]{0x0003E6FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_6_tx_in_line_obx2_12664 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_10_3_std_in_line_obx2_12694 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12703 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_10_4_in_line_obx2_12705 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12715 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12717 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_12728 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12730 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_12734 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_12736 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_line_obx2_1_post10_6_in_line_obx2_12749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62770 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62772 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62781 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62783 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_1_post10_62787 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62789 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62801 = new BitSet(new long[]{0x000202000DD9D8B0L});
+    public static final BitSet FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62803 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_1_post10_62807 = new BitSet(new long[]{0x000202000DD9D8B0L});
+    public static final BitSet FOLLOW_spec_const_10_9_in_line_obx2_1_post10_62809 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62822 = new BitSet(new long[]{0x0001C2FFC0000000L});
+    public static final BitSet FOLLOW_nm_sized_optionnal_in_line_obx2_1_post10_62824 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62836 = new BitSet(new long[]{0x0002020000190010L});
+    public static final BitSet FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62838 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_obx2_1_post10_62842 = new BitSet(new long[]{0x0002020000190010L});
+    public static final BitSet FOLLOW_spec_const_10_11_in_line_obx2_1_post10_62844 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62859 = new BitSet(new long[]{0x00000200024C12C0L});
+    public static final BitSet FOLLOW_spec_const_10_12_in_line_obx2_1_post10_62861 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62876 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62878 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62894 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62896 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62912 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_line_obx2_1_post10_62914 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62931 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl1_st_optionnal_6_in_line_obx2_1_post10_62933 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62951 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_obx2_1_post10_62953 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_obx2_1_post10_62956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CR_in_line_c2_12995 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_CHARC_in_line_c2_12997 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_13001 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_nm_integer_sized_mandatory_in_line_c2_13003 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_13008 = new BitSet(new long[]{0x0000020000044000L});
+    public static final BitSet FOLLOW_spec_const_12_3_in_line_c2_13010 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_13015 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_c2_13017 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_line_c2_13021 = new BitSet(new long[]{0x0003E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_c2_13023 = new BitSet(new long[]{0x0002020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_c2_13032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CR_in_line_l2_13050 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_CHARL_in_line_l2_13052 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13057 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_nm_integer_sized_optionnal_in_line_l2_13059 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13066 = new BitSet(new long[]{0x0000020000000002L});
     public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13073 = new BitSet(new long[]{0x000002FFC0000000L});
     public static final BitSet FOLLOW_nm_integer_sized_optionnal_in_line_l2_13075 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13085 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_line_l2_13087 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charM_in_spec_const_sexe3128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charF_in_spec_const_sexe3132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charU_in_spec_const_sexe3136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_7_13_1_version_2_0_in_spec_const_7_13_version_2_03173 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_03176 = new BitSet(new long[]{0x0000000000084040L});
-    public static final BitSet FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_03178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_7_13_1_version_2_1_in_spec_const_7_13_version_2_13199 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_13202 = new BitSet(new long[]{0x0000000000084040L});
-    public static final BitSet FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_13204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_const_7_13_1_version_2_2_in_spec_const_7_13_version_2_23223 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_23226 = new BitSet(new long[]{0x0000000000084040L});
-    public static final BitSet FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_23228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charC_in_spec_const_7_13_23247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charL_in_spec_const_7_13_23251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charR_in_spec_const_7_13_23255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_ORU_in_spec_const_7_7_contexte3273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charP_in_spec_const_7_123292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charD_in_spec_const_7_123296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charT_in_spec_const_7_123300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_PORT_in_spec_const_9_313320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_CART_in_spec_const_9_313324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_WHLC_in_spec_const_9_313328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_WALK_in_spec_const_9_313332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_OP_in_spec_const_8_253353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_IP_in_spec_const_8_253357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_ER_in_spec_const_8_253361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_PA_in_spec_const_8_253365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_MP_in_spec_const_8_253369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charF_in_spec_const_9_263390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charP_in_spec_const_9_263394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charM_in_spec_const_9_263398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charI_in_spec_const_9_263402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charR_in_spec_const_9_263406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charC_in_spec_const_9_263410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charO_in_spec_const_9_263414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charD_in_spec_const_9_263420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charX_in_spec_const_9_263424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_nm3445 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_CHARM_in_spec_const_10_3_nm3447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_ce3468 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_CHARE_in_spec_const_10_3_ce3470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARS_in_spec_const_10_3_st3491 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_st3493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARG_in_spec_const_10_3_gc3514 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_gc3516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_tx3538 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_CHARX_in_spec_const_10_3_tx3540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARF_in_spec_const_10_3_fic3561 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_CHARI_in_spec_const_10_3_fic3563 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_fic3565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARA_in_spec_const_10_3_std3587 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_CHARD_in_spec_const_10_3_std3589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_std3595 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_CHARK_in_spec_const_10_3_std3597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_std3603 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3605 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CHARA_in_spec_const_10_3_std3607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARD_in_spec_const_10_3_std3613 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_std3615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARP_in_spec_const_10_3_std3623 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_std3631 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARG_in_spec_const_10_3_std3641 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_CHARB_in_spec_const_10_3_std3643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARG_in_spec_const_10_3_std3649 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_10_63674 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_63680 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_10_63682 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_63689 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_10_63691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charL_in_spec_const_10_93719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charH_in_spec_const_10_93723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_LL_in_spec_const_10_93727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_HH_in_spec_const_10_93731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_symbol_inf_in_spec_const_10_93735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_symbol_sup_in_spec_const_10_93739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charN_in_spec_const_10_93745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charA_in_spec_const_10_93749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_AA_in_spec_const_10_93753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_Null_in_spec_const_10_93757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charU_in_spec_const_10_93761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charD_in_spec_const_10_93765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charB_in_spec_const_10_93769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charW_in_spec_const_10_93775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charR_in_spec_const_10_93779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charI_in_spec_const_10_93783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charS_in_spec_const_10_93787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_MS_in_spec_const_10_93791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_VS_in_spec_const_10_93795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charA_in_spec_const_10_113816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charS_in_spec_const_10_113820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charR_in_spec_const_10_113824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charN_in_spec_const_10_113828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charR_in_spec_const_10_123849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charP_in_spec_const_10_123853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charF_in_spec_const_10_123857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charC_in_spec_const_10_123861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charI_in_spec_const_10_123865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charD_in_spec_const_10_123869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charX_in_spec_const_10_123876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charU_in_spec_const_10_123880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charP_in_spec_const_12_33901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_charL_in_spec_const_12_33905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23925 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_mandatory_23931 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23956 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_23962 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_43989 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_43995 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_43997 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44004 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44006 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44014 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64045 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64052 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64054 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64062 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64064 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13084 = new BitSet(new long[]{0x000002FFC0000000L});
+    public static final BitSet FOLLOW_nm_integer_sized_optionnal_in_line_l2_13086 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13096 = new BitSet(new long[]{0x0001E2FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_line_l2_13098 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_DELIMITER1_in_line_l2_13101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charM_in_spec_const_sexe3139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charF_in_spec_const_sexe3143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charU_in_spec_const_sexe3147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_7_13_1_version_2_0_in_spec_const_7_13_version_2_03184 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_03187 = new BitSet(new long[]{0x0000000000084040L});
+    public static final BitSet FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_03189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_7_13_1_version_2_1_in_spec_const_7_13_version_2_13210 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_13213 = new BitSet(new long[]{0x0000000000084040L});
+    public static final BitSet FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_13215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_const_7_13_1_version_2_2_in_spec_const_7_13_version_2_23234 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_const_7_13_version_2_23237 = new BitSet(new long[]{0x0000000000084040L});
+    public static final BitSet FOLLOW_spec_const_7_13_2_in_spec_const_7_13_version_2_23239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charC_in_spec_const_7_13_23258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charL_in_spec_const_7_13_23262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charR_in_spec_const_7_13_23266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_ORU_in_spec_const_7_7_contexte3284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charP_in_spec_const_7_123303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charD_in_spec_const_7_123307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charT_in_spec_const_7_123311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_PORT_in_spec_const_9_313331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_CART_in_spec_const_9_313335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_WHLC_in_spec_const_9_313339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_WALK_in_spec_const_9_313343 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_OP_in_spec_const_8_253364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_IP_in_spec_const_8_253368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_ER_in_spec_const_8_253372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_PA_in_spec_const_8_253376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_MP_in_spec_const_8_253380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charF_in_spec_const_9_263401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charP_in_spec_const_9_263405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charM_in_spec_const_9_263409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charI_in_spec_const_9_263413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charR_in_spec_const_9_263417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charC_in_spec_const_9_263421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charO_in_spec_const_9_263425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charD_in_spec_const_9_263431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charX_in_spec_const_9_263435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_nm3456 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_CHARM_in_spec_const_10_3_nm3458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_ce3479 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_CHARE_in_spec_const_10_3_ce3481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARS_in_spec_const_10_3_st3502 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_st3504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARG_in_spec_const_10_3_gc3525 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_gc3527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_tx3549 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_CHARX_in_spec_const_10_3_tx3551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARF_in_spec_const_10_3_fic3572 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_CHARI_in_spec_const_10_3_fic3574 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_fic3576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARA_in_spec_const_10_3_std3598 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_CHARD_in_spec_const_10_3_std3600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_std3606 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_CHARK_in_spec_const_10_3_std3608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARC_in_spec_const_10_3_std3614 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3616 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CHARA_in_spec_const_10_3_std3618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARD_in_spec_const_10_3_std3624 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_std3626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARP_in_spec_const_10_3_std3634 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHART_in_spec_const_10_3_std3642 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARG_in_spec_const_10_3_std3652 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_CHARB_in_spec_const_10_3_std3654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARG_in_spec_const_10_3_std3660 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_CHARN_in_spec_const_10_3_std3662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_10_63685 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_63691 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_10_63693 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_63700 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_10_63702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charL_in_spec_const_10_93730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charH_in_spec_const_10_93734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_LL_in_spec_const_10_93738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_HH_in_spec_const_10_93742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_symbol_inf_in_spec_const_10_93746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_symbol_sup_in_spec_const_10_93750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charN_in_spec_const_10_93756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charA_in_spec_const_10_93760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_AA_in_spec_const_10_93764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_Null_in_spec_const_10_93768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charU_in_spec_const_10_93772 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charD_in_spec_const_10_93776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charB_in_spec_const_10_93780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charW_in_spec_const_10_93786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charR_in_spec_const_10_93790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charI_in_spec_const_10_93794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charS_in_spec_const_10_93798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_MS_in_spec_const_10_93802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_VS_in_spec_const_10_93806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charA_in_spec_const_10_113827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charS_in_spec_const_10_113831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charR_in_spec_const_10_113835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charN_in_spec_const_10_113839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charR_in_spec_const_10_123860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charP_in_spec_const_10_123864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charF_in_spec_const_10_123868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charC_in_spec_const_10_123872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charI_in_spec_const_10_123876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charD_in_spec_const_10_123880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charX_in_spec_const_10_123887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charU_in_spec_const_10_123891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charP_in_spec_const_12_33912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_charL_in_spec_const_12_33916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23936 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_mandatory_23942 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_nonsized_mandatory_in_spec_sized_mult_lvl1_st_mandatory_23944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23967 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_23973 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_23975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44000 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44006 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44008 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44015 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44017 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_44025 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_44027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64056 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64063 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64065 = new BitSet(new long[]{0x0000040000000002L});
     public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64073 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
     public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64075 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64085 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64087 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64098 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84133 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84139 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84141 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84148 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84150 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84158 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84160 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64084 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64086 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64096 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64098 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_64109 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_64111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84144 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84150 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84152 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84159 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84161 = new BitSet(new long[]{0x0000040000000002L});
     public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84169 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
     public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84171 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84181 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84183 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84194 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84196 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84208 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34247 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34253 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34255 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34262 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64287 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64293 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64295 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64302 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64304 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64312 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64314 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84180 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84182 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84192 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84194 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84205 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84207 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_st_optionnal_84219 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl1_st_optionnal_84221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34258 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34264 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34266 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_34273 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_34275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64298 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64304 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64306 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64313 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64315 = new BitSet(new long[]{0x0000080000000002L});
     public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64323 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
     public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64325 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64335 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24366 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_optionnal_24371 = new BitSet(new long[]{0x0001C0FFC0000000L});
-    public static final BitSet FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24398 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_mandatory_24403 = new BitSet(new long[]{0x0001C0FFC0000000L});
-    public static final BitSet FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4428 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_cna4435 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl2_st_optionnal_6_in_spec_sized_cna4437 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_cna4445 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_sized_mandatory_in_spec_sized_8_34479 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_8_34486 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34488 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_8_34496 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_9_34538 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_9_34544 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_9_34546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84571 = new BitSet(new long[]{0x0002000000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_spec_non_sized_9_84578 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_spec_sized_mult_lvl2_st_optionnal_3_in_spec_sized_9_164601 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_9_164607 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164609 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_9_164616 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_nonsized_mandatory_in_spec_sized_10_44645 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44651 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44653 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44660 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44662 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44670 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44672 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64334 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64336 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_DELIMITER3_in_spec_sized_mult_lvl2_st_optionnal_64346 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_mult_lvl2_st_optionnal_64348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24377 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_optionnal_24382 = new BitSet(new long[]{0x0001C0FFC0000000L});
+    public static final BitSet FOLLOW_nm_nonsized_optionnal_in_spec_sized_mult_lvl1_nm_optionnal_24384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24409 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_mult_lvl1_nm_mandatory_24414 = new BitSet(new long[]{0x0001C0FFC0000000L});
+    public static final BitSet FOLLOW_nm_nonsized_mandatory_in_spec_sized_mult_lvl1_nm_mandatory_24416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4439 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_cna4446 = new BitSet(new long[]{0x0001E8FFFFFFFFF0L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl2_st_optionnal_6_in_spec_sized_cna4448 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_cna4456 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_cna4458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_sized_mandatory_in_spec_sized_8_34490 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_8_34497 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34499 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_8_34507 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_8_34509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_9_34549 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_9_34555 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_sized_optionnal_in_spec_sized_9_34557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84582 = new BitSet(new long[]{0x0002000000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_spec_non_sized_9_84589 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_ts_sized_optionnal_in_spec_non_sized_9_84591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_spec_sized_mult_lvl2_st_optionnal_3_in_spec_sized_9_164612 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_9_164618 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164620 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_9_164627 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_9_164629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_nonsized_mandatory_in_spec_sized_10_44656 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44662 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44664 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44671 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44673 = new BitSet(new long[]{0x0000040000000002L});
     public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44681 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
     public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44683 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44693 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_spec_10_6_tx_in_spec_sized_10_6_tx4730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4752 = new BitSet(new long[]{0x0002000000000002L});
-    public static final BitSet FOLLOW_REPETITEUR_in_spec_sized_tn4758 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
-    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_st_in_st_sized_optionnal4788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_st_in_st_sized_mandatory4811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_st_in_st_non_sized_optionnal4833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_st_in_st_nonsized_mandatory4852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_nm_in_nm_sized_optionnal4870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_nm_integer_in_nm_integer_sized_optionnal4893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_nm_integer_in_nm_integer_sized_mandatory4921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_ts_in_ts_sized_optionnal4944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_ts_in_ts_sized_mandatory4967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_nm_in_nm_nonsized_mandatory4989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_nm_in_nm_nonsized_optionnal5007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_version_2_0_in_spec_const_7_13_1_version_2_05026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_version_2_1_in_spec_const_7_13_1_version_2_15044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_final_version_2_2_in_spec_const_7_13_1_version_2_25064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_content_spec_10_6_in_final_spec_10_6_tx5081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_character_in_content_spec_10_65103 = new BitSet(new long[]{0x0001E4FFFFFFFFF2L});
-    public static final BitSet FOLLOW_DELIMITER2_in_content_spec_10_65109 = new BitSet(new long[]{0x0001E4FFFFFFFFF2L});
-    public static final BitSet FOLLOW_content_spec_10_6_in_content_spec_10_65120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5132 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5134 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5138 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5140 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5142 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5146 = new BitSet(new long[]{0x000000FFC0000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44692 = new BitSet(new long[]{0x0001E4FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44694 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_DELIMITER2_in_spec_sized_10_44704 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_10_44706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_spec_10_6_tx_in_spec_sized_10_6_tx4741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4763 = new BitSet(new long[]{0x0002000000000002L});
+    public static final BitSet FOLLOW_REPETITEUR_in_spec_sized_tn4769 = new BitSet(new long[]{0x0001E0FFFFFFFFF0L});
+    public static final BitSet FOLLOW_st_non_sized_optionnal_in_spec_sized_tn4771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_st_in_st_sized_optionnal4799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_st_in_st_sized_mandatory4822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_st_in_st_non_sized_optionnal4844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_st_in_st_nonsized_mandatory4863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_nm_in_nm_sized_optionnal4881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_nm_integer_in_nm_integer_sized_optionnal4904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_nm_integer_in_nm_integer_sized_mandatory4932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_ts_in_ts_sized_optionnal4955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_ts_in_ts_sized_mandatory4978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_nm_in_nm_nonsized_mandatory5000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_nm_in_nm_nonsized_optionnal5018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_version_2_0_in_spec_const_7_13_1_version_2_05037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_version_2_1_in_spec_const_7_13_1_version_2_15055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_final_version_2_2_in_spec_const_7_13_1_version_2_25075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_content_spec_10_6_in_final_spec_10_6_tx5092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_character_in_content_spec_10_65114 = new BitSet(new long[]{0x0001E4FFFFFFFFF2L});
+    public static final BitSet FOLLOW_DELIMITER2_in_content_spec_10_65120 = new BitSet(new long[]{0x0001E4FFFFFFFFF2L});
+    public static final BitSet FOLLOW_content_spec_10_6_in_content_spec_10_65131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5143 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5145 = new BitSet(new long[]{0x000000FFC0000000L});
     public static final BitSet FOLLOW_chiffre_in_final_ts5149 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5151 = new BitSet(new long[]{0x000000FFC0000002L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5156 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5158 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5151 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5153 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5157 = new BitSet(new long[]{0x000000FFC0000002L});
     public static final BitSet FOLLOW_chiffre_in_final_ts5160 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5164 = new BitSet(new long[]{0x000000FFC0000002L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5162 = new BitSet(new long[]{0x000000FFC0000002L});
     public static final BitSet FOLLOW_chiffre_in_final_ts5167 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_ts5169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_character_in_final_st5188 = new BitSet(new long[]{0x0001E0FFFFFFFFF2L});
-    public static final BitSet FOLLOW_chiffre_in_final_nm5217 = new BitSet(new long[]{0x000100FFC0000002L});
-    public static final BitSet FOLLOW_POINT_in_final_nm5221 = new BitSet(new long[]{0x000000FFC0000002L});
-    public static final BitSet FOLLOW_chiffre_in_final_nm5223 = new BitSet(new long[]{0x000000FFC0000002L});
-    public static final BitSet FOLLOW_POINT_in_final_nm5233 = new BitSet(new long[]{0x000000FFC0000000L});
-    public static final BitSet FOLLOW_chiffre_in_final_nm5235 = new BitSet(new long[]{0x000000FFC0000002L});
-    public static final BitSet FOLLOW_chiffre_in_final_nm_integer5252 = new BitSet(new long[]{0x000000FFC0000002L});
-    public static final BitSet FOLLOW_CHARO_in_final_ORU5264 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_CHARR_in_final_ORU5266 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_CHARU_in_final_ORU5268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARC_in_final_CART5277 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CHARA_in_final_CART5279 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_CHARR_in_final_CART5281 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_CHART_in_final_CART5283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARP_in_final_PORT5291 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_CHARO_in_final_PORT5293 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_CHARR_in_final_PORT5295 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_CHART_in_final_PORT5297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARW_in_final_WHLC5305 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_CHARH_in_final_WHLC5307 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_CHARL_in_final_WHLC5309 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_CHARC_in_final_WHLC5311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARW_in_final_WALK5319 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CHARA_in_final_WALK5321 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_CHARL_in_final_WALK5323 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_CHARK_in_final_WALK5325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARL_in_final_LL5334 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_CHARL_in_final_LL5336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARA_in_final_AA5344 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CHARA_in_final_AA5346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARH_in_final_HH5354 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_CHARH_in_final_HH5356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARM_in_final_MS5364 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_CHARS_in_final_MS5366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARV_in_final_VS5374 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_CHARS_in_final_VS5376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARN_in_final_Null5384 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_CHARu_in_final_Null5386 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_CHARl_in_final_Null5388 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_CHARl_in_final_Null5390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHAR_SYMBOL_INF_in_final_symbol_inf5398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHAR_SYMBOL_SUP_in_final_symbol_sup5406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARH_in_final_version_2_05415 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_05417 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_POINT_in_final_version_2_05419 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_CHIFFRE0_in_final_version_2_05421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARH_in_final_version_2_15429 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_15431 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_POINT_in_final_version_2_15433 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_CHIFFRE1_in_final_version_2_15435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARH_in_final_version_2_25443 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_25445 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_POINT_in_final_version_2_25447 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_25449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARO_in_final_OP5458 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_CHARP_in_final_OP5460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARI_in_final_IP5468 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_CHARP_in_final_IP5470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARE_in_final_ER5478 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_CHARR_in_final_ER5480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARP_in_final_PA5488 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CHARA_in_final_PA5490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARM_in_final_MP5498 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_CHARP_in_final_MP5500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARA_in_final_charA5511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARB_in_final_charB5519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARC_in_final_charC5527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARD_in_final_charD5535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARF_in_final_charF5543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARH_in_final_charH5551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARI_in_final_charI5559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARL_in_final_charL5567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARM_in_final_charM5575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARN_in_final_charN5583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARO_in_final_charO5591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARP_in_final_charP5599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARR_in_final_charR5607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARS_in_final_charS5615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHART_in_final_charT5623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARU_in_final_charU5631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARW_in_final_charW5639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARX_in_final_charX5647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DELIMITERS_in_delimiters5668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lettre_in_character5684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_chiffre_in_character5688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5169 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5171 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5175 = new BitSet(new long[]{0x000000FFC0000002L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5178 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_ts5180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_character_in_final_st5199 = new BitSet(new long[]{0x0001E0FFFFFFFFF2L});
+    public static final BitSet FOLLOW_chiffre_in_final_nm5228 = new BitSet(new long[]{0x000100FFC0000002L});
+    public static final BitSet FOLLOW_POINT_in_final_nm5232 = new BitSet(new long[]{0x000000FFC0000002L});
+    public static final BitSet FOLLOW_chiffre_in_final_nm5234 = new BitSet(new long[]{0x000000FFC0000002L});
+    public static final BitSet FOLLOW_POINT_in_final_nm5244 = new BitSet(new long[]{0x000000FFC0000000L});
+    public static final BitSet FOLLOW_chiffre_in_final_nm5246 = new BitSet(new long[]{0x000000FFC0000002L});
+    public static final BitSet FOLLOW_chiffre_in_final_nm_integer5263 = new BitSet(new long[]{0x000000FFC0000002L});
+    public static final BitSet FOLLOW_CHARO_in_final_ORU5275 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_CHARR_in_final_ORU5277 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_CHARU_in_final_ORU5279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARC_in_final_CART5288 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CHARA_in_final_CART5290 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_CHARR_in_final_CART5292 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_CHART_in_final_CART5294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARP_in_final_PORT5302 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_CHARO_in_final_PORT5304 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_CHARR_in_final_PORT5306 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_CHART_in_final_PORT5308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARW_in_final_WHLC5316 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_CHARH_in_final_WHLC5318 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_CHARL_in_final_WHLC5320 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_CHARC_in_final_WHLC5322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARW_in_final_WALK5330 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CHARA_in_final_WALK5332 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_CHARL_in_final_WALK5334 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_CHARK_in_final_WALK5336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARL_in_final_LL5345 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_CHARL_in_final_LL5347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARA_in_final_AA5355 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CHARA_in_final_AA5357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARH_in_final_HH5365 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_CHARH_in_final_HH5367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARM_in_final_MS5375 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_CHARS_in_final_MS5377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARV_in_final_VS5385 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_CHARS_in_final_VS5387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARN_in_final_Null5395 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_CHARu_in_final_Null5397 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_CHARl_in_final_Null5399 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_CHARl_in_final_Null5401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHAR_SYMBOL_INF_in_final_symbol_inf5409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHAR_SYMBOL_SUP_in_final_symbol_sup5417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARH_in_final_version_2_05426 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_05428 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_POINT_in_final_version_2_05430 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_CHIFFRE0_in_final_version_2_05432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARH_in_final_version_2_15440 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_15442 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_POINT_in_final_version_2_15444 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_CHIFFRE1_in_final_version_2_15446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARH_in_final_version_2_25454 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_25456 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_POINT_in_final_version_2_25458 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_CHIFFRE2_in_final_version_2_25460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARO_in_final_OP5469 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_CHARP_in_final_OP5471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARI_in_final_IP5479 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_CHARP_in_final_IP5481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARE_in_final_ER5489 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_CHARR_in_final_ER5491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARP_in_final_PA5499 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CHARA_in_final_PA5501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARM_in_final_MP5509 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_CHARP_in_final_MP5511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARA_in_final_charA5522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARB_in_final_charB5530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARC_in_final_charC5538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARD_in_final_charD5546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARF_in_final_charF5554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARH_in_final_charH5562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARI_in_final_charI5570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARL_in_final_charL5578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARM_in_final_charM5586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARN_in_final_charN5594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARO_in_final_charO5602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARP_in_final_charP5610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARR_in_final_charR5618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARS_in_final_charS5626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHART_in_final_charT5634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARU_in_final_charU5642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARW_in_final_charW5650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARX_in_final_charX5658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DELIMITERS_in_delimiters5679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lettre_in_character5695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_chiffre_in_character5699 = new BitSet(new long[]{0x0000000000000002L});
 
 }

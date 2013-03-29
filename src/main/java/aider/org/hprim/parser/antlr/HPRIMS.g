@@ -267,7 +267,7 @@ line_p2_1
                        (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8["P_8.26", 100]
                         // Je n'ai pas la table des classification du diagnostic, je mets une chaine de caractères 
                         (DELIMITER1 st_sized_optionnal["P_8.27", 100]
-                         (DELIMITER1
+                         (DELIMITER1 spec_const_race["P_8.28"]
                           // Je n'ai pas la table de classification de situation maritale, je mets une chaine de caractères
                           (DELIMITER1 st_sized_optionnal["P_8.29", 2]
                            // Je n'ai pas la table des précautions à prendre, je mets une chaine de caractères
@@ -313,12 +313,12 @@ line_obr2_1
           (DELIMITER1 st_sized_optionnal["OBR_9.21", 60]
            (DELIMITER1 st_sized_optionnal["OBR_9.22", 60]
             (DELIMITER1 ts_sized_optionnal["OBR_9.23", 26]
-             (DELIMITER1 
+             (DELIMITER1 spec_const_race["OBR_9.24"]
               (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR_9.25", 10]
                (DELIMITER1 spec_const_9_26["OBR_9.26"]
-                (DELIMITER1
-                 (DELIMITER1
-                  (DELIMITER1 spec_sized_cna["OBR_9.29", 150] (REPETITEUR spec_sized_cna["P_8.14", 150])*
+                (DELIMITER1 spec_const_race["OBR_9.27"]
+                 (DELIMITER1 spec_const_race["OBR_9.28"]
+                  (DELIMITER1 spec_sized_cna["OBR_9.29", 150] (REPETITEUR spec_sized_cna["OBR_9.29", 150])*
                    (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4["OBR_9.30", 150]
                     (DELIMITER1 spec_const_9_31["OBR_9.31"]
                      // Les specs du motif de la demande sont inconnues, on met une chaine de caract�res que l'on peut r�p�ter
