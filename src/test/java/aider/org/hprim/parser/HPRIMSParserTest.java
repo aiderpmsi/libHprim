@@ -60,6 +60,7 @@ public class HPRIMSParserTest {
 			"<champ nom=\"P_8.4\">B1042100871</champ><champ nom=\"P_8.5\"></champ><champ nom=\"P_8.6\">" +
 			"<champ nom=\"P_8.6.1\">GAULLE</champ><champ nom=\"P_8.6.2\">MARECHAL</champ></champ>" +
 			"<champ nom=\"P_8.7\">PIT</champ><champ nom=\"P_8.8\">19370325</champ><champ nom=\"P_8.9\">F</champ>" +
+			"<champ nom=\"P_8.10\"></champ>" +
 			"<champ nom=\"P_8.11\"><champ nom=\"P_8.11.1\">28 RUE DE LA PAIX</champ><champ nom=\"P_8.11.2\">" +
 			"</champ><champ nom=\"P_8.11.3\">PARIS</champ><champ nom=\"P_8.11.4\"></champ><champ nom=\"P_8.11.5\">75000</champ>" +
 			"</champ><champ nom=\"P_8.12\"></champ><champ nom=\"P_8.13\"><champ nom=\"P_8.13.1\"></champ></champ>" +
