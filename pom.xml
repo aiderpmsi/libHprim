@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>aider.org</groupId>
   <artifactId>libHprim</artifactId>
-  <version>3.0.1</version>
+  <version>3.1.0</version>
   <name>libHprim</name>
   <build>
 

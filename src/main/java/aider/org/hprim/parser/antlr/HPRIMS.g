@@ -11,10 +11,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.LinkedList;
 
-import aider.org.hprim.parser.ContentHandler;
 import aider.org.hprim.parser.MatchRegexTokenException;
 import aider.org.hprim.parser.ContentHandlerException;
+import org.xml.sax.ContentHandler;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.AttributesImpl;
 
 }
 
@@ -38,6 +41,20 @@ package aider.org.hprim.parser.antlr;
    * Logger de la classe
    */
   private static final Logger logger = Logger.getLogger(HPRIMSParser.class.getCanonicalName());
+  
+  /**
+   * Type utilisé pour se souvenir du dernier élément
+   */
+  private class XmlElement {
+      public String uri;
+      public String localName;
+      public String qName;
+  }
+  
+  /**
+   * Liste des éléments parcourus
+   */
+  private LinkedList<XmlElement> xmlElements = new LinkedList<XmlElement>(); 
 
   /**
    * Constructeur
@@ -62,25 +79,67 @@ package aider.org.hprim.parser.antlr;
    * Encadre l'appel du contentHandler
    */
   public void startElement(String typeElement, String nameElement) throws ContentHandlerException {
-    try {
-      contentHandler.startElement(typeElement, nameElement);
-     } catch (ContentHandlerException e) {
-       e.setIntStream(input);
-       e.setStartToken(input.LT(1));
-       throw e;
-     }
-  }
-
+      try {
+          // Enregistrement de cet élément
+          XmlElement xmlElement = new XmlElement();
+          xmlElement.uri = "";
+          xmlElement.localName = typeElement;
+          xmlElement.qName = typeElement;
+          xmlElements.add(xmlElement);
+          // Définition des attributs
+          AttributesImpl atts = new AttributesImpl();
+          atts.addAttribute("", "nom", "nom", "string", nameElement);
+          // Ajout de ce élément
+          contentHandler.startElement("", typeElement, typeElement, atts);
+       } catch (SAXException e) {
+          ContentHandlerException exc = new ContentHandlerException(e.getMessage());
+          exc.setIntStream(input);
+          exc.setStartToken(input.LT(1));
+          throw exc;
+       }
+    }
+   
   /**
    * Encadre l'appel du contentHandler
    */
   public void endElement() throws ContentHandlerException {
     try {
-      contentHandler.endElement();
-     } catch (ContentHandlerException e) {
-       e.setIntStream(input);
-       e.setStartToken(input.LT(1));
-       throw e;
+        XmlElement xmlElement = xmlElements.pollLast();
+        contentHandler.endElement(xmlElement.uri,
+            xmlElement.localName, xmlElement.qName);
+     } catch (SAXException e) {
+        ContentHandlerException exc = new ContentHandlerException(e.getMessage());
+        exc.setIntStream(input);
+        exc.setStartToken(input.LT(1));
+        throw exc;
+     }
+  }
+
+  /**
+   * Début de document hprim
+   */
+  public void startDocument() throws ContentHandlerException {
+    try {
+        contentHandler.startDocument();
+     } catch (SAXException e) {
+        ContentHandlerException exc = new ContentHandlerException(e.getMessage());
+        exc.setIntStream(input);
+        exc.setStartToken(input.LT(1));
+        throw exc;
+     }
+  }
+
+  /**
+   * Fin de document hprim
+   */
+  public void endDocument() throws ContentHandlerException {
+    try {
+        contentHandler.endDocument();
+     } catch (SAXException e) {
+        ContentHandlerException exc = new ContentHandlerException(e.getMessage());
+        exc.setIntStream(input);
+        exc.setStartToken(input.LT(1));
+        throw exc;
      }
   }
 
@@ -89,11 +148,13 @@ package aider.org.hprim.parser.antlr;
    */
   public void content(String content) throws ContentHandlerException {
     try {
-      contentHandler.content(content);
-     } catch (ContentHandlerException e) {
-       e.setIntStream(input);
-       e.setStartToken(input.LT(1));
-       throw e;
+        contentHandler.characters(content.toCharArray(),
+            0, content.length());
+     } catch (SAXException e) {
+         ContentHandlerException exc = new ContentHandlerException(e.getMessage());
+         exc.setIntStream(input);
+         exc.setStartToken(input.LT(1));
+         throw exc;
      }
   }
 
@@ -144,7 +205,9 @@ package aider.org.hprim.parser.antlr;
 
 // =========== Définition de la structure hprim ================
 
-hprim:
+hprim
+@init{startDocument();}
+@after{endDocument();}:
   hprim_oru_2_2 | hprim_oru_2_1;
 
 // Le message ORUpour hprim V2.2 est le même que pour la V2.1

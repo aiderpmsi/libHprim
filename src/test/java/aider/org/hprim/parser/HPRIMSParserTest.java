@@ -155,7 +155,7 @@ public class HPRIMSParserTest {
 
 		// Tests des résultats
 		assertEquals("Erreur de resultat de parsing",
-				"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><champ nom=\"delimiteurs\">|~^\\&amp;</champ>" +
+				"<champ nom=\"delimiteurs\">|~^\\&amp;</champ>" +
 				"<champ nom=\"SimpleExample\">-1.60</champ>",
 				baos.toString());	
 		assertTrue(parser.getNumberOfSyntaxErrors() == 0);
@@ -191,7 +191,7 @@ public class HPRIMSParserTest {
 
 		// Tests des résultats
 		assertEquals("Erreur de resultat de parsing",
-				"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><champ nom=\"delimiteurs\">|~^\\&amp;</champ>" +
+				"<champ nom=\"delimiteurs\">|~^\\&amp;</champ>" +
 				"<champ nom=\"OBR_9.3\"><champ nom=\"OBR_9.3.1\">toto</champ><champ nom=\"OBR_9.3.2\"></champ></champ>",
 				baos.toString());	
 	}
