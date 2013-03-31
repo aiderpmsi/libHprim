@@ -1,8 +1,11 @@
 package aider.org.hprim.parser;
 
+import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.CharBuffer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -13,7 +16,7 @@ import java.util.regex.Pattern;
  * @author delabre
  * @version $Revision: 1022 $
  */
-public class HPRIMSInputStreamReader extends InputStreamReader {
+public class HPRIMSInputStreamReader implements Closeable, Readable {
 
 	/**
 	 * Logger Log4J
@@ -55,23 +58,46 @@ public class HPRIMSInputStreamReader extends InputStreamReader {
 	private StateReader stateReader;
 	
 	/**
-	 * Surcharge du contructeur
+	 * Reader utilisé
+	 */
+	private Reader reader = null;
+	
+	/**
+	 * Indicateur définissant si le reader a été créé par cette classe ou non
+	 */
+	boolean readerCreated = false;
+	
+	/**
+	 * Constructino à partir d'un inputstream. NB : hprim encode en ISO8859_1
 	 * @param input
 	 * @throws IOException
 	 */
 	public HPRIMSInputStreamReader(InputStream input)
 			throws IOException {
-		super(input);
+		reader = new InputStreamReader(input, "ISO8859_1");
+		readerCreated = true;
 	}
 
 	/**
-	 * Redirection du constructeur
+	 * Constrution avec un encoding. attention, hprim ne devrait encoder qu'en ISO8859_1
 	 * @param input Flux d'entrée
 	 * @param encoding (NB : hprim encode en ISO)
 	 */
 	public HPRIMSInputStreamReader(InputStream input, String encoding)
 			throws IOException {
-		super(input, encoding);
+		reader = new InputStreamReader(input, "ISO8859_1");
+		readerCreated = true;
+	}
+
+	/**
+	 * Construction à partir d'un reader. Attention, ce reader ne sera pas détruit par cette classe
+	 * @param input Flux d'entrée
+	 * @param encoding (NB : hprim encode en ISO)
+	 */
+	public HPRIMSInputStreamReader(Reader reader)
+			throws IOException {
+		this.reader = reader;
+		readerCreated = false;
 	}
 
 	/**
@@ -104,10 +130,9 @@ public class HPRIMSInputStreamReader extends InputStreamReader {
 	 * @param charBuffer
 	 * @return
 	 */
-	@Override
 	public int read(char[] charBuffer, int offset, int length) throws IOException {
 		// Lecture du flux
-		int charsread = super.read(charBuffer, offset, length);
+		int charsread = reader.read(charBuffer, offset, length);
 		
 		// On parse ce flux pour mettre à jour charNumber,
 		// lineNumber et stateReader.
@@ -120,19 +145,33 @@ public class HPRIMSInputStreamReader extends InputStreamReader {
 	/**
 	 * Lit le flux en remplissant simplement un buffer
 	 */
-	@Override
 	public int read(char[] charBuffer) throws IOException {
-		return this.read(charBuffer, 0, charBuffer.length);
+		return read(charBuffer, 0, charBuffer.length);
 	}
+
+	/**
+	 * Ecriture dans un CharBuffer
+	 */
+	public int read(CharBuffer cb) throws IOException {
+		// Récupération de la place restante dans le buffer
+		int length = cb.remaining();
+		char[] charBuffer = new char[length];
+		
+		// Lecture des caractères
+		int charsread = read(charBuffer, 0, length);
+		if (charsread > 0)
+			cb.put(charBuffer, 0, charsread);
+		return charsread;
+	}
+
 
 	/**
 	 * Lit un seul caractère dans le flux
 	 */
-	@Override
 	public int read() throws IOException {
 		
 		// Lecture du flux
-		int charread = super.read();
+		int charread = reader.read();
 
 		if (charread != -1)
 			processState((char) charread);
@@ -143,28 +182,38 @@ public class HPRIMSInputStreamReader extends InputStreamReader {
 	}
 
 	/**
-	 * Prend un caractèe et modifie l'état du lecteur en fonction
+	 * Prend un caractère et modifie l'état du lecteur en fonction
 	 * @param character
 	 */
 	private void processState(char character) {
 		if (stateReader == StateReader.STD_CHAR) {
 			if (character == '\r')
-				// CR, on change l'�tat du reader
+				// CR, on change l'état du reader
 				stateReader = StateReader.POST_CR;
 			charNumber++;
 		} else {
-			// On est apr�s un CR
+			// On est après un CR
 			Matcher m = patternPrintable.matcher(Character.toString(character));
 			if (m.matches())
-				// On a un caract�re non imprimable
+				// On a un caractère non imprimable
 				charNumber++;
 			else {
-				// On a de nouveau un caract�re imprimable
+				// On a de nouveau un caractère imprimable
 				stateReader = StateReader.STD_CHAR;
-				// reset charNumber et mise � jour LineNumber
+				// reset charNumber et mise à jour LineNumber
 				charNumber = 0;
 				lineNumber++;
 			}
+		}
+	}
+
+	@Override
+	public void close() throws IOException {
+		if (reader != null && readerCreated) {
+			reader.close();
+			reader = null;
+		} else {
+			reader = null;
 		}
 	}
 }
