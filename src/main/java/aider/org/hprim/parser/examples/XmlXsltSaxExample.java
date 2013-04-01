@@ -1,17 +1,26 @@
 package aider.org.hprim.parser.examples;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.logging.Logger;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
+import javax.xml.transform.sax.SAXSource;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+import org.xml.sax.ContentHandler;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
 
-import aider.org.hprim.parser.xml.XmlReader;
+import aider.org.hprim.parser.xml.HprimReader;
 
 
 /**
@@ -34,26 +43,39 @@ public class XmlXsltSaxExample {
 	 * @throws SAXException 
 	 */
 	public static void main(String[] args) throws IOException, TransformerException, SAXException {
-		// Création de l'inputstream en entrée
-		InputStream is = new FileInputStream(args[0]);
-
-		// Transformation de cet inputstream hprim en reader xml
-		XmlReader reader = new XmlReader(is);
 		
-		// Création d'une instance de transformation
-		TransformerFactory tFactory = TransformerFactory.newInstance();
-		// Définition du xslt utilisé
-		InputStream isXslt = reader.getClass().getClassLoader().getResourceAsStream("aider/org/hprim/parser/examples/example.xslt");
-	    Transformer transformer = tFactory.newTransformer(new StreamSource(isXslt));
-	    // Définition du gestionnaire de contenu utilisé sur le résultat de la transformation
-	    ContentHandlerExample example = new ContentHandlerExample(new PrintWriter(System.out));
-	    // Transformation 
-	    transformer.transform(new StreamSource(reader), new SAXResult(example));
-			    
-		// Fermeture du fichier d'entrée
-		is.close();
+		// Définition des flux matériels (à fermer en fin d'utilisation)
+		InputStream is = null;
+		InputSource inputS = null;
 		
-		reader.close();
+		try {
+			// Création de l'inputstream en entrée
+			is = new FileInputStream(args[0]);
+			
+			inputS = new InputSource(new InputStreamReader(is, "ISO8859_1"));
+			
+			// Définition du reader utilisé
+			XMLReader reader = new HprimReader();
+	
+			// Création d'une instance de transformation
+			TransformerFactory tFactory = TransformerFactory.newInstance();
+			
+			// Définition du xslt utilisé
+			InputStream isXslt = reader.getClass().getClassLoader().getResourceAsStream("aider/org/hprim/parser/examples/example.xslt");
+		    Transformer transformer = tFactory.newTransformer(new StreamSource(isXslt));
+		    
+		    // Définition du contenthandler de sortie :
+		    ContentHandler example = new ContentHandlerExample(new PrintWriter(System.out));
+		    
+		    // Transformation
+		    // transformer.transform(new SAXSource(reader, inputS), new SAXResult(example));
+		    // If only xml output :
+		    transformer.transform(new SAXSource(reader, inputS), new StreamResult(System.out));
+		} finally {
+			if (is != null) {
+				is.close();
+			}
+		}
 
 		System.out.println("done");
 	}
