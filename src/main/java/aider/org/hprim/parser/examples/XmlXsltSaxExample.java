@@ -68,9 +68,9 @@ public class XmlXsltSaxExample {
 		    ContentHandler example = new ContentHandlerExample(new PrintWriter(System.out));
 		    
 		    // Transformation
-		    // transformer.transform(new SAXSource(reader, inputS), new SAXResult(example));
+		    transformer.transform(new SAXSource(reader, inputS), new SAXResult(example));
 		    // If only xml output :
-		    transformer.transform(new SAXSource(reader, inputS), new StreamResult(System.out));
+		    // transformer.transform(new SAXSource(reader, inputS), new StreamResult(System.out));
 		} finally {
 			if (is != null) {
 				is.close();
