@@ -78,19 +78,16 @@ package aider.org.hprim.parser.antlr;
   /**
    * Encadre l'appel du contentHandler
    */
-  public void startElement(String typeElement, String nameElement) throws ContentHandlerException {
+  public void startElement(String nameElement) throws ContentHandlerException {
       try {
           // Enregistrement de cet élément
           XmlElement xmlElement = new XmlElement();
           xmlElement.uri = "";
-          xmlElement.localName = typeElement;
-          xmlElement.qName = typeElement;
+          xmlElement.localName = nameElement;
+          xmlElement.qName = nameElement;
           xmlElements.add(xmlElement);
-          // Définition des attributs
-          AttributesImpl atts = new AttributesImpl();
-          atts.addAttribute("", "nom", "nom", "string", nameElement);
           // Ajout de ce élément
-          contentHandler.startElement("", typeElement, typeElement, atts);
+          contentHandler.startElement("", nameElement, nameElement, new AttributesImpl());
        } catch (SAXException e) {
           ContentHandlerException exc = new ContentHandlerException(e.getMessage());
           exc.setIntStream(input);
@@ -214,7 +211,7 @@ hprim
 // Je n'ai pas les specs de hprim v2.0, mais je considère que les*
 // messages oru sont les mêmes que por la v2.1
 hprim_oru_2_2
-@init{startElement("message", "hprim_oru_2_2");}
+@init{startElement("HPRIM.ORU.2.2");}
 @after{endElement();}:
   line_h2_2
   body_p2_1*
@@ -223,7 +220,7 @@ hprim_oru_2_2
   EOF;
 
 hprim_oru_2_1
-@init{startElement("message", "hprim_oru_2_1");}
+@init{startElement("HPRIM.ORU.2.1");}
 @after{endElement();}:
   line_h2_1
   body_p2_1*
@@ -231,21 +228,24 @@ hprim_oru_2_1
   CR?
   EOF;
 
-body_p2_1
-@init{startElement("body", "P");}
+hprim_oru_2_0
+@init{startElement("HPRIM.ORU.2.0");}
 @after{endElement();}:
+  line_h2_0
+  body_p2_1*
+  line_l2_1
+  CR?
+  EOF;
+
+body_p2_1 :
   line_p2_1 (line_c2_1)*
    body_obr2_1+;
 
-body_obr2_1
-@init{startElement("body", "OBR");}
-@after{endElement();}:
+body_obr2_1 :
    line_obr2_1 (line_c2_1)*
     body_obx2_1+;
 
-body_obx2_1
-@init{startElement("body", "OBX");}
-@after{endElement();}:
+body_obx2_1 :
    line_obx2_1 (line_c2_1)*;
 
 // =========== Définition des des lignes hprim =================
@@ -253,42 +253,60 @@ body_obx2_1
 // Ligne H 2.2 : a exactement la même structure que H 2.1
 // sauf le numéro de version
 line_h2_2
-@init{startElement("ligne", "H");}
+@init{startElement("H");}
 @after{endElement();}:
   delimiters
-  DELIMITER1 st_sized_optionnal["H_7.3", 12]
-  DELIMITER1 st_sized_optionnal["H_7.4", 12]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H_7.5", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H_7.6", 100]
-  DELIMITER1 spec_const_7_7_contexte["H_7.7"]
-  DELIMITER1 spec_sized_tn["H_7.8", 40]
-  DELIMITER1 st_sized_optionnal["H_7.9", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H_7.10", 40]
-  DELIMITER1 st_sized_optionnal["H_7.11", 80]
-  DELIMITER1 spec_const_7_12["H_7.12"]
-  DELIMITER1 spec_const_7_13_version_2_2["H_7.13"]
-  DELIMITER1 ts_sized_mandatory["H_7.14", 26]
+  DELIMITER1 st_sized_optionnal["H.3", 12]
+  DELIMITER1 st_sized_optionnal["H.4", 12]
+  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
+  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100]
+  DELIMITER1 spec_const_7_7_contexte["H.7"]
+  DELIMITER1 spec_sized_tn["H.8", 40]
+  DELIMITER1 st_sized_optionnal["H.9", 40]
+  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.10", 40]
+  DELIMITER1 st_sized_optionnal["H.11", 80]
+  DELIMITER1 spec_const_7_12["H.12"]
+  DELIMITER1 spec_const_7_13_version_2_2["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
 // Ligne H 2.1 : comme la date est nécessaire, en fait tous les champs
 // sont obligatoires
 line_h2_1
-@init{startElement("ligne", "H");}
+@init{startElement("H");}
 @after{endElement();}:
   delimiters
-  DELIMITER1 st_sized_optionnal["H_7.3", 12]
-  DELIMITER1 st_sized_optionnal["H_7.4", 12]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H_7.5", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H_7.6", 100]
-  DELIMITER1 spec_const_7_7_contexte["H_7.7"]
-  DELIMITER1 spec_sized_tn["H_7.8", 40]
-  DELIMITER1 st_sized_optionnal["H_7.9", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H_7.10", 40]
-  DELIMITER1 st_sized_optionnal["H_7.11", 80]
-  DELIMITER1 spec_const_7_12["H_7.12"]
-  // On force la lecture des hprim 2.0 et 2.2 avec le lecteur 2.1
-  DELIMITER1 (spec_const_7_13_version_2_0["H_7.13"] | spec_const_7_13_version_2_1["H_7.13"])
-  DELIMITER1 ts_sized_mandatory["H_7.14", 26]
+  DELIMITER1 st_sized_optionnal["H.3", 12]
+  DELIMITER1 st_sized_optionnal["H.4", 12]
+  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
+  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100]
+  DELIMITER1 spec_const_7_7_contexte["H.7"]
+  DELIMITER1 spec_sized_tn["H.8", 40]
+  DELIMITER1 st_sized_optionnal["H.9", 40]
+  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.10", 40]
+  DELIMITER1 st_sized_optionnal["H.11", 80]
+  DELIMITER1 spec_const_7_12["H.12"]
+  DELIMITER1 spec_const_7_13_version_2_1["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
+  DELIMITER1?;
+
+// Ligne H 2.0
+line_h2_0
+@init{startElement("H");}
+@after{endElement();}:
+  delimiters
+  DELIMITER1 st_sized_optionnal["H.3", 12]
+  DELIMITER1 st_sized_optionnal["H.4", 12]
+  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
+  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100]
+  DELIMITER1 spec_const_7_7_contexte["H.7"]
+  DELIMITER1 spec_sized_tn["H.8", 40]
+  DELIMITER1 st_sized_optionnal["H.9", 40]
+  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.10", 40]
+  DELIMITER1 st_sized_optionnal["H.11", 80]
+  DELIMITER1 spec_const_7_12["H.12"]
+  DELIMITER1 spec_const_7_13_version_2_0["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
 //ligne P version hprim 2.2 : idem à ligne P version 2.1
@@ -296,50 +314,50 @@ line_p2_2:
   line_p2_1;
 
 line_p2_1
-@init{startElement("ligne", "P");}
+@init{startElement("P");}
 @after{endElement();}:
   CR CHARP
-  DELIMITER1 nm_integer_sized_optionnal["P_8.2", 4]
-  DELIMITER1 spec_sized_8_3["P_8.3", 36]
-  DELIMITER1 st_sized_optionnal["P_8.4", 16]
-  (DELIMITER1 st_sized_optionnal["P_8.5", 16]
-   (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P_8.6", 48]
-    (DELIMITER1 st_sized_optionnal["P_8.7", 24]
-     (DELIMITER1 ts_sized_optionnal["P_8.8", 26]
-      (DELIMITER1 spec_const_sexe["P_8.9"]
-       (DELIMITER1 spec_const_race["P_8.10"]
-        (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P_8.11", 200]
-         (DELIMITER1 st_sized_optionnal["P_8.12", 120]
-          (DELIMITER1 spec_sized_tn["P_8.13", 40]
+  DELIMITER1 nm_integer_sized_optionnal["P.2", 4]
+  DELIMITER1 spec_sized_8_3["P.3", 36]
+  DELIMITER1 st_sized_optionnal["P.4", 16]
+  (DELIMITER1 st_sized_optionnal["P.5", 16]
+   (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P.6", 48]
+    (DELIMITER1 st_sized_optionnal["P.7", 24]
+     (DELIMITER1 ts_sized_optionnal["P.8", 26]
+      (DELIMITER1 spec_const_sexe["P.9"]
+       (DELIMITER1 spec_const_race["P.10"]
+        (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P.11", 200]
+         (DELIMITER1 st_sized_optionnal["P.12", 120]
+          (DELIMITER1 spec_sized_tn["P.13", 40]
            // Je ne sais pas si c'est chaque CNA qui ne doit pas faire plus de 60 caractères ou si c'est
            // l'ensemble qui ne doit pas en faire plus de 60. Je considère le premier
-           (DELIMITER1 spec_sized_cna["P_8.14", 60] (REPETITEUR spec_sized_cna["P_8.14", 60])*
-            (DELIMITER1 st_sized_optionnal["P_8.15", 60]
-             (DELIMITER1 st_sized_optionnal["P_8.16", 60]
+           (DELIMITER1 spec_sized_cna["P.14", 60] (REPETITEUR spec_sized_cna["P.14", 60])*
+            (DELIMITER1 st_sized_optionnal["P.15", 60]
+             (DELIMITER1 st_sized_optionnal["P.16", 60]
               // Le champ 8.17 (taille) est de type CQ : impossible d'en trouver la norme, je mets un numérique
-              (DELIMITER1 nm_sized_optionnal["P_8.17", 10]
+              (DELIMITER1 nm_sized_optionnal["P.17", 10]
                // Le champ 8.18 (poids) est de type CQ : impossible d'en trouver la norme, je mets un numérique
-               (DELIMITER1 nm_sized_optionnal["P_8.18", 10]
-                (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P_8.19", 200] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["P_8.19", 200])*
-                 (DELIMITER1 st_sized_optionnal["P_8.20", 200] (REPETITEUR st_sized_optionnal["P_8.20", 200])*
-                  (DELIMITER1 st_sized_optionnal["P_8.21", 200]
-                   (DELIMITER1 st_sized_optionnal["P_8.22", 60]
-                    (DELIMITER1 st_sized_optionnal["P_8.23", 60]
-                     (DELIMITER1 ts_sized_optionnal["P_8.24", 26] (REPETITEUR ts_sized_optionnal["P_8.24", 26])?
-                      (DELIMITER1 spec_const_8_25["P_8.25"]
-                       (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8["P_8.26", 100]
+               (DELIMITER1 nm_sized_optionnal["P.18", 10]
+                (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P.19", 200] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["P.19", 200])*
+                 (DELIMITER1 st_sized_optionnal["P.20", 200] (REPETITEUR st_sized_optionnal["P.20", 200])*
+                  (DELIMITER1 st_sized_optionnal["P.21", 200]
+                   (DELIMITER1 st_sized_optionnal["P.22", 60]
+                    (DELIMITER1 st_sized_optionnal["P.23", 60]
+                     (DELIMITER1 ts_sized_optionnal["P.24", 26] (REPETITEUR ts_sized_optionnal["P.24", 26])?
+                      (DELIMITER1 spec_const_8_25["P.25"]
+                       (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8["P.26", 100]
                         // Je n'ai pas la table des classification du diagnostic, je mets une chaine de caractères 
-                        (DELIMITER1 st_sized_optionnal["P_8.27", 100]
-                         (DELIMITER1 spec_const_race["P_8.28"]
+                        (DELIMITER1 st_sized_optionnal["P.27", 100]
+                         (DELIMITER1 spec_const_race["P.28"]
                           // Je n'ai pas la table de classification de situation maritale, je mets une chaine de caractères
-                          (DELIMITER1 st_sized_optionnal["P_8.29", 2]
+                          (DELIMITER1 st_sized_optionnal["P.29", 2]
                            // Je n'ai pas la table des précautions à prendre, je mets une chaine de caractères
-                           (DELIMITER1 st_sized_optionnal["P_8.30", 20]
-                            (DELIMITER1 st_sized_optionnal["P_8.31", 20]
+                           (DELIMITER1 st_sized_optionnal["P.30", 20]
+                            (DELIMITER1 st_sized_optionnal["P.31", 20]
                              // Je n'ai pas la table du statut de confidentialité, je mets une chaine de caractères
-                             (DELIMITER1 st_sized_optionnal["P_8.32", 20]
-                              (DELIMITER1 ts_sized_optionnal["P_8.33", 26]
-                               (DELIMITER1 ts_sized_optionnal["P_8.34", 26]
+                             (DELIMITER1 st_sized_optionnal["P.32", 20]
+                              (DELIMITER1 ts_sized_optionnal["P.33", 26]
+                               (DELIMITER1 ts_sized_optionnal["P.34", 26]
                                 DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
 //ligne OBR version hprim 2.2 : idem à ligne OBR version 2.1
@@ -347,125 +365,125 @@ line_obr2_2:
   line_obr2_1;
 
 line_obr2_1
-@init{startElement("ligne", "OBR");}
+@init{startElement("OBR");}
 @after{endElement();}:
   CR CHARO CHARB CHARR
-  DELIMITER1 nm_integer_sized_mandatory["OBR_9.2", 4]
-  DELIMITER1 spec_sized_9_3["OBR_9.3", 23]
-  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR_9.4", 23]
-  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR_9.5", 640000] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["OBR_9.5", 64000])*
+  DELIMITER1 nm_integer_sized_mandatory["OBR.2", 4]
+  DELIMITER1 spec_sized_9_3["OBR.3", 23]
+  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR.4", 23]
+  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR.5", 640000] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["OBR.5", 64000])*
   // Je n'ai pas la table de specs pour la priorité, je mets une chaine de caractères
-  DELIMITER1 st_sized_optionnal["OBR_9.6", 2] (REPETITEUR st_sized_optionnal["OBR_9.6", 2])*
-  DELIMITER1 ts_sized_optionnal["OBR_9.7", 26]
-  DELIMITER1 spec_non_sized_9_8["OBR_9.8"]
-  DELIMITER1 ts_sized_optionnal["OBR_9.9", 26]
-  // Le volume de recueil est de type CQ dont je ne connais pas la norme, je mets une chaine de caract�res
-  DELIMITER1 st_sized_optionnal["OBR_9.10", 20]
-  DELIMITER1 spec_sized_cna["OBR_9.11", 60]
-  // Je n'ai pas les specs du code action, je mets une chaine de caract�res en attendant
-  DELIMITER1 st_sized_optionnal["OBR_9.12", 1]
+  DELIMITER1 st_sized_optionnal["OBR.6", 2] (REPETITEUR st_sized_optionnal["OBR.6", 2])*
+  DELIMITER1 ts_sized_optionnal["OBR.7", 26]
+  DELIMITER1 spec_non_sized_9_8["OBR.8"]
+  DELIMITER1 ts_sized_optionnal["OBR.9", 26]
+  // Le volume de recueil est de type CQ dont je ne connais pas la norme, je mets une chaine de caractères
+  DELIMITER1 st_sized_optionnal["OBR.10", 20]
+  DELIMITER1 spec_sized_cna["OBR.11", 60]
+  // Je n'ai pas les specs du code action, je mets une chaine de caractères en attendant
+  DELIMITER1 st_sized_optionnal["OBR.12", 1]
   // TODO : vérifier que le cm du 9.13 correspond aux mêmes que 9.3 et 9.4
-  (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR_9.13", 60]
-   (DELIMITER1 st_sized_optionnal["OBR_9.14", 300]
-    (DELIMITER1 ts_sized_optionnal["OBR_9.15", 26]
-     (DELIMITER1 spec_sized_9_16["OBR_9_16", 300]
-      (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR_9.17", 60]
-       (DELIMITER1 spec_sized_tn["OBR_9.18", 40]
-        (DELIMITER1 st_sized_optionnal["OBR_9.19", 60]
-         (DELIMITER1 st_sized_optionnal["OBR_9.20", 60]
-          (DELIMITER1 st_sized_optionnal["OBR_9.21", 60]
-           (DELIMITER1 st_sized_optionnal["OBR_9.22", 60]
-            (DELIMITER1 ts_sized_optionnal["OBR_9.23", 26]
-             (DELIMITER1 spec_const_race["OBR_9.24"]
-              (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR_9.25", 10]
-               (DELIMITER1 spec_const_9_26["OBR_9.26"]
-                (DELIMITER1 spec_const_race["OBR_9.27"]
-                 (DELIMITER1 spec_const_race["OBR_9.28"]
-                  (DELIMITER1 spec_sized_cna["OBR_9.29", 150] (REPETITEUR spec_sized_cna["OBR_9.29", 150])*
-                   (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4["OBR_9.30", 150]
-                    (DELIMITER1 spec_const_9_31["OBR_9.31"]
-                     // Les specs du motif de la demande sont inconnues, on met une chaine de caract�res que l'on peut r�p�ter
-                     (DELIMITER1 st_sized_optionnal["OBR_9.32", 300] (REPETITEUR st_sized_optionnal["OBR_9.32", 300])*
-                      (DELIMITER1 spec_sized_cna["OBR_9.33", 60]
-                       (DELIMITER1 spec_sized_cna["OBR_9.34", 60]
-                        (DELIMITER1 spec_sized_cna["OBR_9.35", 60]
-                         (DELIMITER1 spec_sized_cna["OBR_9.36", 60]
-                          (DELIMITER1 ts_sized_optionnal["OBR_9.37", 26]
+  (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR.13", 60]
+   (DELIMITER1 st_sized_optionnal["OBR.14", 300]
+    (DELIMITER1 ts_sized_optionnal["OBR.15", 26]
+     (DELIMITER1 spec_sized_9_16["OBR.16", 300]
+      (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR.17", 60]
+       (DELIMITER1 spec_sized_tn["OBR.18", 40]
+        (DELIMITER1 st_sized_optionnal["OBR.19", 60]
+         (DELIMITER1 st_sized_optionnal["OBR.20", 60]
+          (DELIMITER1 st_sized_optionnal["OBR.21", 60]
+           (DELIMITER1 st_sized_optionnal["OBR.22", 60]
+            (DELIMITER1 ts_sized_optionnal["OBR.23", 26]
+             (DELIMITER1 spec_const_race["OBR.24"]
+              (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR.25", 10]
+               (DELIMITER1 spec_const_9_26["OBR.26"]
+                (DELIMITER1 spec_const_race["OBR.27"]
+                 (DELIMITER1 spec_const_race["OBR.28"]
+                  (DELIMITER1 spec_sized_cna["OBR.29", 150] (REPETITEUR spec_sized_cna["OBR.29", 150])*
+                   (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4["OBR.30", 150]
+                    (DELIMITER1 spec_const_9_31["OBR.31"]
+                     // Les specs du motif de la demande sont inconnues, on met une chaine de caractères que l'on peut répéter
+                     (DELIMITER1 st_sized_optionnal["OBR.32", 300] (REPETITEUR st_sized_optionnal["OBR.32", 300])*
+                      (DELIMITER1 spec_sized_cna["OBR.33", 60]
+                       (DELIMITER1 spec_sized_cna["OBR.34", 60]
+                        (DELIMITER1 spec_sized_cna["OBR.35", 60]
+                         (DELIMITER1 spec_sized_cna["OBR.36", 60]
+                          (DELIMITER1 ts_sized_optionnal["OBR.37", 26]
                             DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
 line_obx2_1
-@init{startElement("ligne", "OBX");}
+@init{startElement("OBX");}
 @after{endElement();}:
   CR CHARO CHARB CHARX
-  DELIMITER1 nm_integer_sized_mandatory["OBX_10.2", 10]
+  DELIMITER1 nm_integer_sized_mandatory["OBX.2", 10]
   DELIMITER1
-    ((spec_const_10_3_nm["OBX_10.3"]
-     (DELIMITER1 spec_sized_10_4["OBX_10.4", 200]
-      (DELIMITER1 st_sized_optionnal["OBX_10.5", 10]
-       (DELIMITER1 nm_sized_optionnal["OBX_10.6", 64000] (REPETITEUR nm_sized_optionnal["OBX_10.6", 64000])*
+    ((spec_const_10_3_nm["OBX.3"]
+     (DELIMITER1 spec_sized_10_4["OBX.4", 200]
+      (DELIMITER1 st_sized_optionnal["OBX.5", 10]
+       (DELIMITER1 nm_sized_optionnal["OBX.6", 64000] (REPETITEUR nm_sized_optionnal["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?)
-    | (spec_const_10_3_ce["OBX_10.3"]
-     (DELIMITER1 spec_sized_10_4["OBX_10.4", 200]
-      (DELIMITER1 st_sized_optionnal["OBX_10.5", 10]
-       (DELIMITER1 spec_sized_10_6["OBX_10.6", 64000] (REPETITEUR spec_sized_10_6["OBX_10.6", 64000])*
+    | (spec_const_10_3_ce["OBX.3"]
+     (DELIMITER1 spec_sized_10_4["OBX.4", 200]
+      (DELIMITER1 st_sized_optionnal["OBX.5", 10]
+       (DELIMITER1 spec_sized_10_6["OBX.6", 64000] (REPETITEUR spec_sized_10_6["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?)
-    | (spec_const_10_3_fic["OBX_10.3"]
-     (DELIMITER1 spec_sized_10_4["OBX_10.4", 200]
-      (DELIMITER1 st_sized_optionnal["OBX_10.5", 10]
-       (DELIMITER1 spec_sized_10_6["OBX_10.6", 64000] (REPETITEUR spec_sized_10_6["OBX_10.6", 64000])*
+    | (spec_const_10_3_fic["OBX.3"]
+     (DELIMITER1 spec_sized_10_4["OBX.4", 200]
+      (DELIMITER1 st_sized_optionnal["OBX.5", 10]
+       (DELIMITER1 spec_sized_10_6["OBX.6", 64000] (REPETITEUR spec_sized_10_6["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?)
-    | (spec_const_10_3_st["OBX_10.3"]
-     (DELIMITER1 spec_sized_10_4["OBX_10.4", 200]
-      (DELIMITER1 st_sized_optionnal["OBX_10.5", 10]
-       (DELIMITER1 spec_sized_10_6_tx["OBX_10.6", 64000] (REPETITEUR spec_sized_10_6_tx["OBX_10.6", 64000])*
+    | (spec_const_10_3_st["OBX.3"]
+     (DELIMITER1 spec_sized_10_4["OBX.4", 200]
+      (DELIMITER1 st_sized_optionnal["OBX.5", 10]
+       (DELIMITER1 spec_sized_10_6_tx["OBX.6", 64000] (REPETITEUR spec_sized_10_6_tx["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?)
-    | (spec_const_10_3_gc["OBX_10.3"]
-     (DELIMITER1 spec_sized_10_4["OBX_10.4", 200]
-      (DELIMITER1 st_sized_optionnal["OBX_10.5", 10]
-       (DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2["OBX_10.6", 64000] (REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2["OBX_10.6", 64000])*
+    | (spec_const_10_3_gc["OBX.3"]
+     (DELIMITER1 spec_sized_10_4["OBX.4", 200]
+      (DELIMITER1 st_sized_optionnal["OBX.5", 10]
+       (DELIMITER1 spec_sized_mult_lvl1_nm_optionnal_2["OBX.6", 64000] (REPETITEUR spec_sized_mult_lvl1_nm_optionnal_2["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?)
-    | (spec_const_10_3_tx["OBX_10.3"]
-     (DELIMITER1 spec_sized_10_4["OBX_10.4", 200]
-      (DELIMITER1 st_sized_optionnal["OBX_10.5", 10]
-       (DELIMITER1 spec_sized_10_6_tx["OBX_10.6", 64000] (REPETITEUR spec_sized_10_6_tx["OBX_10.6", 64000])*
+    | (spec_const_10_3_tx["OBX.3"]
+     (DELIMITER1 spec_sized_10_4["OBX.4", 200]
+      (DELIMITER1 st_sized_optionnal["OBX.5", 10]
+       (DELIMITER1 spec_sized_10_6_tx["OBX.6", 64000] (REPETITEUR spec_sized_10_6_tx["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?)
-    | (spec_const_10_3_std["OBX_10.3"]
-     (DELIMITER1 spec_sized_10_4["OBX_10.4", 200]
-      (DELIMITER1 st_sized_optionnal["OBX_10.5", 10]
-       (DELIMITER1 st_sized_optionnal["OBX_10.6", 64000] (REPETITEUR st_sized_optionnal["OBX_10.6", 64000])*
+    | (spec_const_10_3_std["OBX.3"]
+     (DELIMITER1 spec_sized_10_4["OBX.4", 200]
+      (DELIMITER1 st_sized_optionnal["OBX.5", 10]
+       (DELIMITER1 st_sized_optionnal["OBX.6", 64000] (REPETITEUR st_sized_optionnal["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?));
 
 line_obx2_1_post10_6:
-    (DELIMITER1 st_sized_optionnal["OBX_10.7", 20]
-     (DELIMITER1 st_sized_optionnal["OBX_10.8", 60] (REPETITEUR st_sized_optionnal["OBX_10.8", 60])*
-      (DELIMITER1 spec_const_10_9["OBX_10.9"] (REPETITEUR spec_const_10_9["OBX_10.9"])*
-       (DELIMITER1 nm_sized_optionnal["OBX_10.10", 5]
-        (DELIMITER1 spec_const_10_11["OBX_10.11"] (REPETITEUR spec_const_10_11["OBX_10.11"])*
-         (DELIMITER1 spec_const_10_12["OBX_10.12"] 
-          (DELIMITER1 ts_sized_optionnal["OBX_10.13", 26] 
-           (DELIMITER1 st_sized_optionnal["OBX_10.14", 20]
-            (DELIMITER1 ts_sized_optionnal["OBX_10.15", 26]
-             (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBX_10.16", 60]
-              (DELIMITER1 st_sized_optionnal["OBX_10.17", 60] DELIMITER1?)?)?)?)?)?)?)?)?)?)?);
+    (DELIMITER1 st_sized_optionnal["OBX.7", 20]
+     (DELIMITER1 st_sized_optionnal["OBX.8", 60] (REPETITEUR st_sized_optionnal["OBX.8", 60])*
+      (DELIMITER1 spec_const_10_9["OBX.9"] (REPETITEUR spec_const_10_9["OBX.9"])*
+       (DELIMITER1 nm_sized_optionnal["OBX.10", 5]
+        (DELIMITER1 spec_const_10_11["OBX.11"] (REPETITEUR spec_const_10_11["OBX.11"])*
+         (DELIMITER1 spec_const_10_12["OBX.12"] 
+          (DELIMITER1 ts_sized_optionnal["OBX.13", 26] 
+           (DELIMITER1 st_sized_optionnal["OBX.14", 20]
+            (DELIMITER1 ts_sized_optionnal["OBX.15", 26]
+             (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBX.16", 60]
+              (DELIMITER1 st_sized_optionnal["OBX.17", 60] DELIMITER1?)?)?)?)?)?)?)?)?)?)?);
 
 line_c2_1
-@init{startElement("ligne", "C");}
+@init{startElement("C");}
 @after{endElement();}:
   CR CHARC
-  DELIMITER1 nm_integer_sized_mandatory["C_12.2", 10]
-  DELIMITER1 spec_const_12_3["C_12.3"]
-  DELIMITER1 st_sized_optionnal["C_12.4", 64000] (REPETITEUR st_sized_optionnal["C_12.4", 64000])*  
+  DELIMITER1 nm_integer_sized_mandatory["C.2", 10]
+  DELIMITER1 spec_const_12_3["C.3"]
+  DELIMITER1 st_sized_optionnal["C.4", 64000] (REPETITEUR st_sized_optionnal["C.4", 64000])*  
   DELIMITER1?;
 
 line_l2_1
-@init{startElement("ligne", "L");}
+@init{startElement("L");}
 @after{endElement();}:
   CR CHARL
-  (DELIMITER1 nm_integer_sized_optionnal["L_14.2", 1]
-   (DELIMITER1
-    (DELIMITER1 nm_integer_sized_optionnal["L_14.4", 4]
-     (DELIMITER1 nm_integer_sized_optionnal["L_14.5", 10]
-      (DELIMITER1 st_sized_optionnal["L_14.6", 12] DELIMITER1?)?)?)?)?)?;
+  (DELIMITER1 nm_integer_sized_optionnal["L.2", 1]
+   (DELIMITER1 spec_const_race["L.3"]
+    (DELIMITER1 nm_integer_sized_optionnal["L.4", 4]
+     (DELIMITER1 nm_integer_sized_optionnal["L.5", 10]
+      (DELIMITER1 st_sized_optionnal["L.6", 12] DELIMITER1?)?)?)?)?)?;
 
 // =========== Définition des éléments des champs hprim ===============
 
@@ -476,93 +494,93 @@ line_l2_1
 // Données constantes
 
 spec_const_sexe[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_charM | final_charF | final_charU)?;
 
 spec_const_race[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   ;
 
 spec_const_7_13_version_2_0[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   spec_const_7_13_1_version_2_0[$nameElement + ".1"] DELIMITER2 spec_const_7_13_2[$nameElement + ".2"];
   
 spec_const_7_13_version_2_1[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   spec_const_7_13_1_version_2_1[$nameElement + ".1"] DELIMITER2 spec_const_7_13_2[$nameElement + ".2"];
 
 spec_const_7_13_version_2_2[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   spec_const_7_13_1_version_2_2[$nameElement + ".1"] DELIMITER2 spec_const_7_13_2[$nameElement + ".2"];
 
 spec_const_7_13_2[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_charC | final_charL | final_charR;
 
 spec_const_7_7_contexte[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_ORU;
 
 spec_const_7_12[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_charP | final_charD | final_charT);
 
 spec_const_9_31[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_PORT | final_CART | final_WHLC | final_WALK)?;
 
 spec_const_8_25[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_OP | final_IP | final_ER | final_PA | final_MP)?;
 
 spec_const_9_26[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_charF | final_charP | final_charM | final_charI | final_charR | final_charC | final_charO |
   final_charD | final_charX)?; 
 
 spec_const_10_3_nm[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   CHARN CHARM {content($text);}; 
 
 spec_const_10_3_ce[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   CHARC CHARE {content($text);}; 
 
 spec_const_10_3_st[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   CHARS CHART {content($text);}; 
 
 spec_const_10_3_gc[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   CHARG CHARC {content($text);};
   
 spec_const_10_3_tx[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   CHART CHARX {content($text);};
 
 spec_const_10_3_fic[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (CHARF CHARI CHARC) {content($text);};
 
 spec_const_10_3_std[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (CHARA CHARD) | (CHARC CHARK) | (CHARC CHARN CHARA) | (CHARD CHART) |
   (CHARP CHARN) | (CHART CHARN) |
@@ -571,7 +589,7 @@ spec_const_10_3_std[String nameElement]
 // Données spéciales (associant plusieurs données générales)
 
 spec_sized_10_6[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_sized_optionnal[$nameElement + ".1", 10]
   (DELIMITER2 st_sized_optionnal[$nameElement + ".2", 60]
@@ -579,37 +597,37 @@ spec_sized_10_6[String nameElement, int maxSize]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_const_10_9[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_charL | final_charH | final_LL | final_HH | final_symbol_inf | final_symbol_sup |
   final_charN | final_charA | final_AA | final_Null | final_charU | final_charD | final_charB |
   final_charW | final_charR | final_charI | final_charS | final_MS | final_VS)?;
 
 spec_const_10_11[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_charA | final_charS | final_charR | final_charN)?;
 
 spec_const_10_12[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_charR | final_charP | final_charF | final_charC | final_charI | final_charD |
    final_charX | final_charU)?;
 
 spec_const_12_3[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (final_charP | final_charL)?;
 
 spec_sized_mult_lvl1_st_mandatory_2[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_nonsized_mandatory[$nameElement + ".1"]
    DELIMITER2 st_nonsized_mandatory[$nameElement + ".2"]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_2[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"])?
@@ -617,7 +635,7 @@ spec_sized_mult_lvl1_st_optionnal_2[String nameElement, int maxSize]
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_4[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
@@ -627,7 +645,7 @@ spec_sized_mult_lvl1_st_optionnal_4[String nameElement, int maxSize]
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_6[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
@@ -639,7 +657,7 @@ spec_sized_mult_lvl1_st_optionnal_6[String nameElement, int maxSize]
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_8[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
@@ -653,14 +671,14 @@ spec_sized_mult_lvl1_st_optionnal_8[String nameElement, int maxSize]
     matchRegex($text, "^.{0," + maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl2_st_optionnal_3[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER3 st_non_sized_optionnal[$nameElement + ".2"]
    (DELIMITER3 st_non_sized_optionnal[$nameElement + ".3"])?)?;
 
 spec_sized_mult_lvl2_st_optionnal_6[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
   (DELIMITER3 st_non_sized_optionnal[$nameElement + ".2"]
@@ -670,21 +688,21 @@ spec_sized_mult_lvl2_st_optionnal_6[String nameElement]
       (DELIMITER3 st_non_sized_optionnal[$nameElement + ".6"])?)?)?)?)?;
 
 spec_sized_mult_lvl1_nm_optionnal_2[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   nm_nonsized_optionnal[$nameElement + ".1"]
   DELIMITER2 nm_nonsized_optionnal[$nameElement + ".2"]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
   
 spec_sized_mult_lvl1_nm_mandatory_2[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   nm_nonsized_mandatory[$nameElement + ".1"]
   DELIMITER2 nm_nonsized_mandatory[$nameElement + ".2"]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_cna[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"]
    (DELIMITER2 spec_sized_mult_lvl2_st_optionnal_6[$nameElement + ".2"]
@@ -697,7 +715,7 @@ spec_sized_cna[String nameElement, int maxSize]
 //  C : consigné (à retourner à l'identique s'il a été renseigné par l'émetteur)
 // Donc, il peut être vide si non renseigné par l'émetteur
 spec_sized_8_3[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   (st_sized_mandatory[$nameElement + ".1", 16]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
@@ -713,7 +731,7 @@ spec_sized_8_3[String nameElement, int maxSize]
 // Certains n'envoient pas de numéros dans ces champs. Ceci est interdit par la norme et je ne
 // le tolère pas dans l'application sinon ce n'est plus la norme
 spec_sized_9_3[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   //st_sized_mandatory[$nameElement + ".1", 12]
   st_sized_optionnal[$nameElement + ".1", 12]
@@ -721,133 +739,133 @@ spec_sized_9_3[String nameElement, int maxSize]
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_non_sized_9_8[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   ts_sized_optionnal[$nameElement + ".1", 26]
    (REPETITEUR ts_sized_optionnal[$nameElement + ".2", 26])?;
 
 spec_sized_9_16[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   spec_sized_mult_lvl2_st_optionnal_3[$nameElement + ".2"]
   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"])?)?
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
-spec_sized_10_4[String my_NameElement, int my_maxsize]
-@init{startElement("champ", $my_NameElement);}
+spec_sized_10_4[String nameElement, int maxsize]
+@init{startElement($nameElement);}
 @after{endElement();}:
-  st_nonsized_mandatory[$my_NameElement + ".1"]
-  (DELIMITER2 st_non_sized_optionnal[$my_NameElement + ".2"]
-   (DELIMITER2 st_non_sized_optionnal[$my_NameElement + ".3"]
-    (DELIMITER2 st_non_sized_optionnal[$my_NameElement + ".4"]
-     (DELIMITER2 st_non_sized_optionnal[$my_NameElement + ".5"]
-      (DELIMITER2 st_non_sized_optionnal[$my_NameElement + ".6"])?)?)?)?)?
-  {matchRegex($text, "^.{0," + $my_maxsize + "}$", retval.start);};
+  st_nonsized_mandatory[$nameElement + ".1"]
+  (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
+   (DELIMITER2 st_non_sized_optionnal[$nameElement + ".3"]
+    (DELIMITER2 st_non_sized_optionnal[$nameElement + ".4"]
+     (DELIMITER2 st_non_sized_optionnal[$nameElement + ".5"]
+      (DELIMITER2 st_non_sized_optionnal[$nameElement + ".6"])?)?)?)?)?
+  {matchRegex($text, "^.{0," + $maxsize + "}$", retval.start);};
 
 spec_sized_10_6_tx[String nameElement, int maxSize]
 @init{
   ParserRuleReturnScope retval = new ParserRuleReturnScope();
   retval.start = input.LT(1);
-  startElement("champ", $nameElement);}
+  startElement($nameElement);}
 @after{endElement();}:
   g=final_spec_10_6_tx?
   {if ($g.consoText != null)
     matchRegex($g.consoText, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_tn[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
  st_non_sized_optionnal[$nameElement + ".1"]
   (REPETITEUR st_non_sized_optionnal[$nameElement + ".2"])?
   {if ($text != null)
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
-// Chaines de caract�res, nombres, ...
+// Chaines de caractères, nombres, ...
  
 st_sized_optionnal[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_st?
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 st_sized_mandatory[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_st
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 st_non_sized_optionnal[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_st?;
 
 st_nonsized_mandatory[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_st;
 
 nm_sized_optionnal[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_nm?
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 nm_integer_sized_optionnal[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_nm_integer?
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
      
 nm_integer_sized_mandatory[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_nm_integer
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 // Dates
 ts_sized_optionnal[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_ts?
   {if ($text != null)
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 ts_sized_mandatory[String nameElement, int maxSize]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_ts
   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 nm_nonsized_mandatory[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_nm;
 
 nm_nonsized_optionnal[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_nm?;
 
 spec_const_7_13_1_version_2_0[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_version_2_0;
 
 spec_const_7_13_1_version_2_1[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_version_2_1;
   
 spec_const_7_13_1_version_2_2[String nameElement]
-@init{startElement("champ", $nameElement);}
+@init{startElement($nameElement);}
 @after{endElement();}:
   final_version_2_2;
 
-// Donn�es finales construites
+// Données finales construites
 
 final_spec_10_6_tx returns [String consoText]:
   g=content_spec_10_6
@@ -927,7 +945,7 @@ final_charX: CHARX {content($text);};
  
 // Données de type délimiteurs
 delimiters
-@init{startElement("champ", "delimiteurs");}
+@init{startElement("H.2");}
 @after{endElement();}:
   DELIMITERS
   {content($text);};

@@ -56,7 +56,7 @@ public class ContentHandlerExample implements ContentHandler {
 		try {
 			out.write("\n");
 			indent();
-			out.write(atts.getValue("nom") + " : ");
+			out.write(localName + " : ");
 		} catch (IOException e) {
 			throw new SAXException(e);
 		}

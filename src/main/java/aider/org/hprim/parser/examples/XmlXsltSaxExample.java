@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.MalformedURLException;
 import java.util.logging.Logger;
 
 import javax.xml.transform.Transformer;
@@ -12,7 +13,6 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.sax.SAXSource;
-import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.xml.sax.ContentHandler;
@@ -71,6 +71,8 @@ public class XmlXsltSaxExample {
 		    transformer.transform(new SAXSource(reader, inputS), new SAXResult(example));
 		    // If only xml output :
 		    // transformer.transform(new SAXSource(reader, inputS), new StreamResult(System.out));
+		} catch (NullPointerException e) {
+			e.printStackTrace();
 		} finally {
 			if (is != null) {
 				is.close();
