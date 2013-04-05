@@ -205,119 +205,205 @@ package aider.org.hprim.parser.antlr;
 hprim
 @init{startDocument();}
 @after{endDocument();}:
-  hprim_oru_2_2 | hprim_oru_2_1;
+  hprim_oru_2_2 | hprim_oru_2_1 | hprim_oru_2_0;
 
-// Le message ORUpour hprim V2.2 est le même que pour la V2.1
-// Je n'ai pas les specs de hprim v2.0, mais je considère que les*
-// messages oru sont les mêmes que por la v2.1
+// Messages ORU
 hprim_oru_2_2
 @init{startElement("HPRIM.ORU.2.2");}
 @after{endElement();}:
-  line_h2_2
-  body_p2_1*
-  line_l2_1
+  line_h2_2_oru
+  body_p_oru+
+  line_l
   CR?
   EOF;
 
 hprim_oru_2_1
 @init{startElement("HPRIM.ORU.2.1");}
 @after{endElement();}:
-  line_h2_1
-  body_p2_1*
-  line_l2_1
+  line_h2_1_oru
+  body_p_oru+
+  line_l
   CR?
   EOF;
 
 hprim_oru_2_0
 @init{startElement("HPRIM.ORU.2.0");}
 @after{endElement();}:
-  line_h2_0
-  body_p2_1*
-  line_l2_1
+  line_h2_0_oru
+  body_p_oru+
+  line_l
   CR?
   EOF;
 
-body_p2_1 :
-  line_p2_1 (line_c2_1)*
-   body_obr2_1+;
+// Messages ORM
+hprim_orm_2_2
+@init{startElement("HPRIM.ORM.2.2");}
+@after{endElement();}:
+  line_h2_2_orm
+  body_p_orm+
+  line_l
+  CR?
+  EOF;
 
-body_obr2_1 :
-   line_obr2_1 (line_c2_1)*
-    body_obx2_1+;
+hprim_orm_2_1
+@init{startElement("HPRIM.ORM.2.1");}
+@after{endElement();}:
+  line_h2_1_orm
+  body_p_orm+
+  line_l
+  CR?
+  EOF;
 
-body_obx2_1 :
-   line_obx2_1 (line_c2_1)*;
+hprim_orm_2_0
+@init{startElement("HPRIM.ORM.2.0");}
+@after{endElement();}:
+  line_h2_0_orm
+  body_p_orm+
+  line_l
+  CR?
+  EOF;
+
+// Définitions ORM
+body_p_orm :
+  line_p (line_c)*
+  body_obr_orm+;
+
+body_obr_orm :
+   line_obr (line_c)*
+   body_obx_oru*;
+
+// Définitions ORU
+body_p_oru :
+  line_p (line_c)*
+  body_obr_oru+;
+
+body_obr_oru :
+   line_obr (line_c)*
+   body_obx_oru+;
+
+body_obx_oru :
+   line_obx (line_c)*;
 
 // =========== Définition des des lignes hprim =================
 
-// Ligne H 2.2 : a exactement la même structure que H 2.1
-// sauf le numéro de version
-line_h2_2
-@init{startElement("H");}
-@after{endElement();}:
+// Début de ligne H, identique pour toutes les versions
+start_line_h :
   delimiters
   DELIMITER1 st_sized_optionnal["H.3", 12]
   DELIMITER1 st_sized_optionnal["H.4", 12]
   DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100]
-  DELIMITER1 spec_const_7_7_contexte["H.7"]
+  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100];
+
+// Milieu de ligne H, identique pour toutes les versions
+midd_line_h :
   DELIMITER1 spec_sized_tn["H.8", 40]
   DELIMITER1 st_sized_optionnal["H.9", 40]
   DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.10", 40]
   DELIMITER1 st_sized_optionnal["H.11", 80]
-  DELIMITER1 spec_const_7_12["H.12"]
+  DELIMITER1 spec_const_7_12["H.12"];
+
+// Messages ORU
+
+line_h2_2_oru
+@init{startElement("H");}
+@after{endElement();}:
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_ORU["H.7"]
+  midd_line_h
   DELIMITER1 spec_const_7_13_version_2_2["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
 // Ligne H 2.1 : comme la date est nécessaire, en fait tous les champs
 // sont obligatoires
-line_h2_1
+line_h2_1_oru
 @init{startElement("H");}
 @after{endElement();}:
-  delimiters
-  DELIMITER1 st_sized_optionnal["H.3", 12]
-  DELIMITER1 st_sized_optionnal["H.4", 12]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100]
-  DELIMITER1 spec_const_7_7_contexte["H.7"]
-  DELIMITER1 spec_sized_tn["H.8", 40]
-  DELIMITER1 st_sized_optionnal["H.9", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.10", 40]
-  DELIMITER1 st_sized_optionnal["H.11", 80]
-  DELIMITER1 spec_const_7_12["H.12"]
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_ORU["H.7"]
+  midd_line_h
   DELIMITER1 spec_const_7_13_version_2_1["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
 // Ligne H 2.0
-line_h2_0
+line_h2_0_oru
 @init{startElement("H");}
 @after{endElement();}:
-  delimiters
-  DELIMITER1 st_sized_optionnal["H.3", 12]
-  DELIMITER1 st_sized_optionnal["H.4", 12]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100]
-  DELIMITER1 spec_const_7_7_contexte["H.7"]
-  DELIMITER1 spec_sized_tn["H.8", 40]
-  DELIMITER1 st_sized_optionnal["H.9", 40]
-  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.10", 40]
-  DELIMITER1 st_sized_optionnal["H.11", 80]
-  DELIMITER1 spec_const_7_12["H.12"]
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_ORU["H.7"]
+  midd_line_h
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
-//ligne P version hprim 2.2 : idem à ligne P version 2.1
-line_p2_2:
-  line_p2_1;
+// Messages ORM :
+line_h2_2_orm
+@init{startElement("H");}
+@after{endElement();}:
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_ORM["H.7"]
+  midd_line_h
+  DELIMITER1 spec_const_7_13_version_2_2["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
+  DELIMITER1?;
 
-line_p2_1
+line_h2_1_orm
+@init{startElement("H");}
+@after{endElement();}:
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_ORM["H.7"]
+  midd_line_h
+  DELIMITER1 spec_const_7_13_version_2_1["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
+  DELIMITER1?;
+
+line_h2_0_orm
+@init{startElement("H");}
+@after{endElement();}:
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_ORM["H.7"]
+  midd_line_h
+  DELIMITER1 spec_const_7_13_version_2_0["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
+  DELIMITER1?;
+
+// Ligne AP
+line_ap
+@init{startElement("AP");}
+@after{endElement();}:
+  CR CHARA CHARP
+  DELIMITER1 nm_integer_sized_mandatory["AP.2", 4]
+  DELIMITER1 st_sized_mandatory["AP.3", 2]
+  DELIMITER1 ts_sized_optionnal["AP.4", 8]
+  DELIMITER1 ts_sized_optionnal["AP.5", 8]
+  DELIMITER1 nm_integer_sized_mandatory["AP.6", 15]
+  DELIMITER1 st_sized_mandatory["AP.7", 3]
+  DELIMITER1 nm_integer_sized_mandatory["AP.8", 2]
+  DELIMITER1 nm_integer_sized_mandatory["AP.9", 2]
+  DELIMITER1 nm_integer_sized_mandatory["AP.10", 3]
+  DELIMITER1 nm_integer_sized_mandatory["AP.11", 4]
+  DELIMITER1 nm_integer_sized_mandatory["AP.11", 4]
+  DELIMITER1 st_sized_mandatory["AP.12", 1]
+  DELIMITER1 st_sized_mandatory["AP.13", 2]
+  DELIMITER1 spec_sized_mult_lvl1_st_mandatory_6["AP.14", 48]
+  DELIMITER1 st_sized_optionnal["AP.15", 24]
+  DELIMITER1 nm_integer_sized_mandatory["AP.16", 6]
+  (DELIMITER1 nm_sized_optionnal["AP.17", 9]
+   (DELIMITER1 spec_on_optionnal["AP.18"]
+    (DELIMITER1 ts_sized_optionnal["AP.19", 8]
+     (DELIMITER1 ts_sized_optionnal["AP.20", 8]
+      (DELIMITER1 st_sized_optionnal["AP.21", 30]
+       (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["AP.22", 200]
+        (DELIMITER1 ts_sized_optionnal["AP.23", 15]
+         DELIMITER1?)?)?)?)?)?)?)?;
+
+// Ligne P
+line_p
 @init{startElement("P");}
 @after{endElement();}:
   CR CHARP
-  DELIMITER1 nm_integer_sized_optionnal["P.2", 4]
+  DELIMITER1 nm_integer_sized_mandatory["P.2", 4]
   DELIMITER1 spec_sized_8_3["P.3", 36]
   DELIMITER1 st_sized_optionnal["P.4", 16]
   (DELIMITER1 st_sized_optionnal["P.5", 16]
@@ -360,11 +446,7 @@ line_p2_1
                                (DELIMITER1 ts_sized_optionnal["P.34", 26]
                                 DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
-//ligne OBR version hprim 2.2 : idem à ligne OBR version 2.1
-line_obr2_2:
-  line_obr2_1;
-
-line_obr2_1
+line_obr
 @init{startElement("OBR");}
 @after{endElement();}:
   CR CHARO CHARB CHARR
@@ -411,7 +493,7 @@ line_obr2_1
                           (DELIMITER1 ts_sized_optionnal["OBR.37", 26]
                             DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
-line_obx2_1
+line_obx
 @init{startElement("OBX");}
 @after{endElement();}:
   CR CHARO CHARB CHARX
@@ -466,7 +548,7 @@ line_obx2_1_post10_6:
              (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBX.16", 60]
               (DELIMITER1 st_sized_optionnal["OBX.17", 60] DELIMITER1?)?)?)?)?)?)?)?)?)?)?);
 
-line_c2_1
+line_c
 @init{startElement("C");}
 @after{endElement();}:
   CR CHARC
@@ -475,7 +557,7 @@ line_c2_1
   DELIMITER1 st_sized_optionnal["C.4", 64000] (REPETITEUR st_sized_optionnal["C.4", 64000])*  
   DELIMITER1?;
 
-line_l2_1
+line_l
 @init{startElement("L");}
 @after{endElement();}:
   CR CHARL
@@ -492,6 +574,11 @@ line_l2_1
 //   (startElement / endElement sont envoyés), mais le content n'est pas défini (content non envoyé)
 
 // Données constantes
+
+spec_on_optionnal[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  (final_charO | final_charN)?;
 
 spec_const_sexe[String nameElement]
 @init{startElement($nameElement);}
@@ -523,10 +610,15 @@ spec_const_7_13_2[String nameElement]
 @after{endElement();}:
   final_charC | final_charL | final_charR;
 
-spec_const_7_7_contexte[String nameElement]
+spec_const_7_7_contexte_ORU[String nameElement]
 @init{startElement($nameElement);}
 @after{endElement();}:
   final_ORU;
+
+spec_const_7_7_contexte_ORM[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  final_ORM;
 
 spec_const_7_12[String nameElement]
 @init{startElement($nameElement);}
@@ -643,6 +735,17 @@ spec_sized_mult_lvl1_st_optionnal_4[String nameElement, int maxSize]
     (DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"])?)?)?
   {if ($text != null)
     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+
+spec_sized_mult_lvl1_st_mandatory_6[String nameElement, int maxSize]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  st_nonsized_mandatory[$nameElement + ".1"]
+   DELIMITER2 st_nonsized_mandatory[$nameElement + ".2"]
+    DELIMITER2 st_nonsized_mandatory[$nameElement + ".3"]
+     DELIMITER2 st_nonsized_mandatory[$nameElement + ".4"]
+      DELIMITER2 st_nonsized_mandatory[$nameElement + ".5"]
+       DELIMITER2 st_nonsized_mandatory[$nameElement + ".6"]
+  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_sized_mult_lvl1_st_optionnal_6[String nameElement, int maxSize]
 @init{startElement($nameElement);}
@@ -899,6 +1002,7 @@ final_nm_integer:
   {content($text);};
 
 final_ORU: CHARO CHARR CHARU {content($text);};
+final_ORM: CHARO CHARR CHARM {content($text);};
 
 final_CART: CHARC CHARA CHARR CHART {content($text);};
 final_PORT: CHARP CHARO CHARR CHART {content($text);};
@@ -963,7 +1067,7 @@ lettre:
   ~(CHIFFRE0 | CHIFFRE1 | CHIFFRE2 | CHIFFRE3 | CHIFFRE4 | CHIFFRE5 | CHIFFRE6 | CHIFFRE7 | CHIFFRE8 |
     CHIFFRE9 | CR | TOKENMISMATCH | DELIMITER1 | DELIMITER2 | DELIMITER3 | DELIMITERS | REPETITEUR);
 
-// =========== D�finitions pour le lexer perso =========
+// =========== Définitions pour le lexer perso =========
 
 CR : 'CR';
 TOKENMISMATCH : 'MISMATCH';
