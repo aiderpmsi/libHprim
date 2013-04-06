@@ -513,16 +513,16 @@ line_ap :
   DELIMITER1 ts_sized_optionnal["AP.5", 8]
   DELIMITER1 nm_integer_sized_mandatory["AP.6", 15]
   DELIMITER1 st_sized_mandatory["AP.7", 3]
-  DELIMITER1 nm_integer_sized_mandatory["AP.8", 2]
-  DELIMITER1 nm_integer_sized_mandatory["AP.9", 2]
-  DELIMITER1 nm_integer_sized_mandatory["AP.10", 3]
-  DELIMITER1 nm_integer_sized_mandatory["AP.11", 4]
-  DELIMITER1 nm_integer_sized_mandatory["AP.11", 4]
+  DELIMITER1 nm_sized_mandatory["AP.8", 2]
+  DELIMITER1 nm_sized_mandatory["AP.9", 2]
+  DELIMITER1 nm_sized_mandatory["AP.10", 3]
+  DELIMITER1 nm_sized_mandatory["AP.11", 4]
+  DELIMITER1 nm_sized_mandatory["AP.11", 4]
   DELIMITER1 st_sized_mandatory["AP.12", 1]
   DELIMITER1 st_sized_mandatory["AP.13", 2]
   DELIMITER1 spec_sized_mult_lvl1_st_mandatory_6["AP.14", 48]
   DELIMITER1 st_sized_optionnal["AP.15", 24]
-  DELIMITER1 nm_integer_sized_mandatory["AP.16", 6]
+  DELIMITER1 nm_sized_mandatory["AP.16", 6]
   (DELIMITER1 nm_sized_optionnal["AP.17", 9]
    (DELIMITER1 spec_on_optionnal["AP.18"]
     (DELIMITER1 ts_sized_optionnal["AP.19", 8]
@@ -533,9 +533,7 @@ line_ap :
          DELIMITER1?)?)?)?)?)?)?)?;
 
 // Ligne AC (assuré complémentaire)
-line_ac
-@init{startElement("AC");}
-@after{endElement();}:
+line_ac :
   (CR CHARA CHARC) {startElement("AC.1");content("AC");endElement();}
   DELIMITER1 nm_integer_sized_mandatory["AC.2", 4]
   DELIMITER1 st_sized_mandatory["AC.3", 9]
@@ -547,7 +545,34 @@ line_ac
   (DELIMITER1 st_sized_optionnal["AC.9", 40]
    (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["AC.10", 200]
     DELIMITER1?)?)?;
-    
+
+// ligne ACT (acte)
+line_act :
+  (CR CHARA CHARC CHART) {startElement("ACT.1");content("ACT");endElement();}
+  DELIMITER1 nm_integer_sized_mandatory["ACT.2", 4]
+  DELIMITER1 st_sized_mandatory["ACT.3", 10]
+  DELIMITER1 nm_sized_mandatory["ACT.4", 10]
+  DELIMITER1 nm_sized_mandatory["ACT.5", 10]
+  DELIMITER1 nm_sized_mandatory["ACT.6", 10]
+  DELIMITER1 st_sized_optionnal["ACT.7", 64000]
+  DELIMITER1 st_sized_optionnal["ACT.8", 3]
+  DELIMITER1 spec_fac_6["ACT.9", 60]
+  DELIMITER1 spec_act_10["ACT.10", 64000]
+  DELIMITER1 spec_act_11["ACT.11"]
+  DELIMITER1?;
+
+// Ligne fac (facture)
+line_fac :
+  (CR CHARF CHARA CHARC) {startElement("FAC.1");content("FAC");endElement();}
+  DELIMITER1 nm_integer_sized_mandatory["FAC.2", 4]
+  DELIMITER1 st_sized_mandatory["FAC.3", 16]
+  DELIMITER1 st_sized_mandatory["FAC.4", 10]
+  DELIMITER1 ts_sized_mandatory["FAC.5", 26]
+  (DELIMITER1 spec_fac_6["FAC.6", 60]
+   (DELIMITER1 spec_fac_6["FAC.7", 60]
+    (DELIMITER1 spec_on_optionnal["FAC.8"]
+     DELIMITER1?)?)?)?;
+  
 // Ligne P
 line_p :
   (CR CHARP) {startElement("P.1");content("P");endElement();}
@@ -593,6 +618,19 @@ line_p :
                               (DELIMITER1 ts_sized_optionnal["P.33", 26]
                                (DELIMITER1 ts_sized_optionnal["P.34", 26]
                                 DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+
+// Ligne REG (règlements)
+line_reg :
+  (CR CHARR CHARE CHARG) {startElement("REG.1");content("REG");endElement();}
+  DELIMITER1 nm_integer_sized_mandatory["REG.2", 4]
+  DELIMITER1 st_sized_mandatory["REG.3", 16]
+  DELIMITER1 spec_reg_4["REG.4", 11]
+  DELIMITER1 spec_p_or_m["REG.5"]
+  DELIMITER1 ts_sized_mandatory["REG.6", 26]
+  // Le Mode de paiement (champ REG.7) est un spec qui n'est pas défini dans la norme hprim, je mais une chaine de caractères en attendant d'en savoir plus.
+  (DELIMITER1 st_sized_optionnal["REG.7", 60]
+   (DELIMITER1 st_sized_optionnal["REG.8", 10]
+    DELIMITER1?)?)?;
 
 line_obr :
   (CR CHARO CHARB CHARR) {startElement("OBR.1");content("OBR");endElement();}
@@ -718,15 +756,16 @@ line_l
 //   (startElement / endElement sont envoyés), mais le content n'est pas défini (content non envoyé)
 
 // Données constantes
-
-spec_ac_8[String nameElement, int maxSize]
+spec_act_11[String nameElement]
 @init{startElement($nameElement);}
 @after{endElement();}:
-  nm_nonsized_mandatory[$nameElement + ".1"]
-  DELIMITER2 spec_ac_8_2[$nameElement + ".2"]
-  DELIMITER2 spec_ac_8_3[$nameElement + ".3"]
-  nm_nonsized_mandatory[$nameElement + ".4"]
-  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+  final_HR | final_RX | final_charR;
+
+
+spec_p_or_m[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  final_symbol_plus | final_symbol_moins;
 
 spec_ac_8_2[String nameElement]
 @init{startElement($nameElement);}
@@ -737,7 +776,6 @@ spec_ac_8_3[String nameElement]
 @init{startElement($nameElement);}
 @after{endElement();}:
   final_PF | final_SS | final_TR;
-
 
 spec_on_optionnal[String nameElement]
 @init{startElement($nameElement);}
@@ -853,6 +891,37 @@ spec_const_10_3_std[String nameElement]
   (CHARG CHARB) | (CHARG CHARN) {content($text);};
 
 // Données spéciales (associant plusieurs données générales)
+spec_act_10[String nameElement, int maxSize]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  st_non_sized_optionnal[$nameElement + ".1"] (REPETITEUR st_non_sized_optionnal[$nameElement + ".1"])*
+  st_non_sized_optionnal[$nameElement + ".2"]
+   {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+  
+spec_ac_8[String nameElement, int maxSize]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  nm_nonsized_mandatory[$nameElement + ".1"]
+  DELIMITER2 spec_ac_8_2[$nameElement + ".2"]
+  DELIMITER2 spec_ac_8_3[$nameElement + ".3"]
+  nm_nonsized_mandatory[$nameElement + ".4"]
+  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+
+spec_fac_6[String nameElement, int maxSize]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  st_sized_optionnal[$nameElement + ".1", 9]
+  (DELIMITER2 st_sized_optionnal[$nameElement + ".2", 9]
+   (DELIMITER2 st_sized_optionnal[$nameElement + ".3", 40])?)?
+  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+
+spec_reg_4[String nameElement, int maxSize]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  nm_nonsized_mandatory[$nameElement + ".1"]
+  DELIMITER2 st_nonsized_mandatory[$nameElement + ".2"]
+  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+
 
 spec_sized_10_6[String nameElement, int maxSize]
 @init{startElement($nameElement);}
@@ -1090,6 +1159,13 @@ nm_sized_optionnal[String nameElement, int maxSize]
   {if ($text != null)
      matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
+nm_sized_mandatory[String nameElement, int maxSize]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  final_nm
+  {if ($text != null)
+     matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
+
 nm_integer_sized_optionnal[String nameElement, int maxSize]
 @init{startElement($nameElement);}
 @after{endElement();}:
@@ -1193,6 +1269,8 @@ final_VS: CHARV CHARS {content($text);};
 final_Null: CHARN CHARu CHARl CHARl {content($text);};
 final_symbol_inf: CHAR_SYMBOL_INF {content($text);};
 final_symbol_sup: CHAR_SYMBOL_SUP {content($text);};
+final_symbol_plus: PLUS {content($text);};
+final_symbol_moins: MOINS {content($text);};
 
 final_version_2_0: CHARH CHIFFRE2 POINT CHIFFRE0 {content($text);};
 final_version_2_1: CHARH CHIFFRE2 POINT CHIFFRE1 {content($text);};
@@ -1208,6 +1286,8 @@ final_TR: CHART CHARR {content($text);};
 final_FR: CHARF CHARR {content($text);};
 final_PF: CHARP CHARF {content($text);};
 final_SS: CHARS CHARS {content($text);};
+final_RX: CHARR CHARX {content($text);};
+final_HR: CHARH CHARR {content($text);};
 
 final_charA: CHARA {content($text);};
 final_charB: CHARB {content($text);};
