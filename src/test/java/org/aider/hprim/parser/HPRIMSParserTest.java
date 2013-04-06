@@ -1,4 +1,4 @@
-package aider.org.hprim.parser;
+package org.aider.hprim.parser;
 
 import static org.junit.Assert.*;
 
@@ -32,12 +32,12 @@ public class HPRIMSParserTest {
 		"OBX|3|FIC|TEXTE~~L||GALAXIE~AL213202.j1~TXT\r\n" +
 		"L|1\r\n";
 
-		// Création de la source de tokens
+		// Crï¿½ation de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859-1"));
 		
-		// Récupère ce qui est écrit pas le collecteur
+		// Rï¿½cupï¿½re ce qui est ï¿½crit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
@@ -45,10 +45,10 @@ public class HPRIMSParserTest {
 				new CommonTokenStream(tks),
 				new XmlContentHandler(new PrintWriter(baos)));
 		
-		// Parsing de la chaine de caractères
+		// Parsing de la chaine de caractï¿½res
 		parser.hprim();
 
-		// Tests des résultats
+		// Tests des rï¿½sultats
 		assertEquals("Erreur de resultat de parsing",
 			"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><HPRIM.ORU.2.1><H><H.1>H</H.1><H.2>|~^\\&amp;</H.2>" +
 			"<H.3>Test1.HPR</H.3><H.4></H.4><H.5><H.5.1>PO</H.5.1><H.5.2>LABM</H.5.2></H.5><H.6><H.6.1>" +
@@ -98,15 +98,15 @@ public class HPRIMSParserTest {
 	 */
 	@Test
 	public void testSgt_nm_long() throws IOException, RecognitionException {
-		// Chaine de caractères à tester
+		// Chaine de caractï¿½res ï¿½ tester
 		String testString = "H|~^\\&-1.60";
 		
-		// Création de la source de tokens
+		// Crï¿½ation de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
 		
-		// Récupère ce qui est écrit pas le collecteur
+		// Rï¿½cupï¿½re ce qui est ï¿½crit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
@@ -118,10 +118,9 @@ public class HPRIMSParserTest {
 		parser.delimiters();
 		parser.nm_sized_optionnal("SimpleExample", 15);
 
-		// Tests des résultats
+		// Tests des rï¿½sultats
 		assertEquals("Erreur de resultat de parsing",
-				"<champ nom=\"delimiteurs\">|~^\\&amp;</champ>" +
-				"<champ nom=\"SimpleExample\">-1.60</champ>",
+				"<H.2>|~^\\&amp;</H.2><SimpleExample>-1.60</SimpleExample>",
 				baos.toString());	
 		assertTrue(parser.getNumberOfSyntaxErrors() == 0);
 	}
@@ -137,7 +136,7 @@ public class HPRIMSParserTest {
 		// Chaine de caractères à tester
 		String testString = "H|~^\\&toto~";
 		
-		// Création de la source de tokens
+		// Crï¿½ation de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
@@ -156,25 +155,24 @@ public class HPRIMSParserTest {
 
 		// Tests des résultats
 		assertEquals("Erreur de resultat de parsing",
-				"<champ nom=\"delimiteurs\">|~^\\&amp;</champ>" +
-				"<champ nom=\"OBR_9.3\"><champ nom=\"OBR_9.3.1\">toto</champ><champ nom=\"OBR_9.3.2\"></champ></champ>",
+				"<H.2>|~^\\&amp;</H.2><OBR_9.3><OBR_9.3.1>toto</OBR_9.3.1><OBR_9.3.2></OBR_9.3.2></OBR_9.3>",
 				baos.toString());	
 	}
 	
 	/**
-	 * SimpleExample la réaction devant une erreur de matchRegexp
+	 * SimpleExample la rï¿½action devant une erreur de matchRegexp
 	 */
 	@Test
 	public void testError_Case_1() throws IOException, RecognitionException {
-		// Chaine de caractères à tester
+		// Chaine de caractï¿½res ï¿½ tester
 		String testString = "H|~^\\&123";
 		
-		// Création de la source de tokens
+		// Crï¿½ation de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
 		
-		// Récupère ce qui est écrit pas le collecteur
+		// Rï¿½cupï¿½re ce qui est ï¿½crit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
@@ -182,10 +180,10 @@ public class HPRIMSParserTest {
 				new CommonTokenStream(tks),
 				new XmlContentHandler(new PrintWriter(baos)));
 		
-		// Destiné à recevoir l'erreur émise
+		// Destinï¿½ ï¿½ recevoir l'erreur ï¿½mise
 		String error = null;
 		
-		// Parsing de la chaine de caractères
+		// Parsing de la chaine de caractï¿½res
 		parser.delimiters();
 		try {
 			parser.st_sized_optionnal("SimpleExample", 2);

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package aider.org.hprim.parser;
+package org.aider.hprim.parser;
 
 import static org.junit.Assert.*;
 
