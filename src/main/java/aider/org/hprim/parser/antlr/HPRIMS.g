@@ -761,11 +761,19 @@ spec_act_11[String nameElement]
 @after{endElement();}:
   final_HR | final_RX | final_charR;
 
-
 spec_p_or_m[String nameElement]
 @init{startElement($nameElement);}
 @after{endElement();}:
   final_symbol_plus | final_symbol_moins;
+  
+spec_ac_8[String nameElement, int maxSize]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  nm_nonsized_mandatory[$nameElement + ".1"]
+  DELIMITER2 spec_ac_8_2[$nameElement + ".2"]
+  DELIMITER2 spec_ac_8_3[$nameElement + ".3"]
+  nm_nonsized_mandatory[$nameElement + ".4"]
+  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_ac_8_2[String nameElement]
 @init{startElement($nameElement);}
@@ -895,17 +903,8 @@ spec_act_10[String nameElement, int maxSize]
 @init{startElement($nameElement);}
 @after{endElement();}:
   st_non_sized_optionnal[$nameElement + ".1"] (REPETITEUR st_non_sized_optionnal[$nameElement + ".1"])*
-  st_non_sized_optionnal[$nameElement + ".2"]
+  DELIMITER2 st_non_sized_optionnal[$nameElement + ".2"]
    {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
-  
-spec_ac_8[String nameElement, int maxSize]
-@init{startElement($nameElement);}
-@after{endElement();}:
-  nm_nonsized_mandatory[$nameElement + ".1"]
-  DELIMITER2 spec_ac_8_2[$nameElement + ".2"]
-  DELIMITER2 spec_ac_8_3[$nameElement + ".3"]
-  nm_nonsized_mandatory[$nameElement + ".4"]
-  {matchRegex($text, "^.{0," + $maxSize + "}$", retval.start);};
 
 spec_fac_6[String nameElement, int maxSize]
 @init{startElement($nameElement);}
