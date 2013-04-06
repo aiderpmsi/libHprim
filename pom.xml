@@ -3,7 +3,27 @@
   <groupId>aider.org</groupId>
   <artifactId>libHprim</artifactId>
   <version>3.2.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <name>libHprim</name>
+  <url>http://github.com/aiderpmsi/libHprim</url>
+  <description>Librairie de lecture de fichiers HPRIM </description>
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License, Version 2.0</name>
+      <url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>http://github.com/aiderpmsi/libHprim</url>
+    <connection>http://github.com/aiderpmsi/libHprim</connection>
+  </scm>
+  <developers>
+    <developer>
+      <name>Jean-Philippe Delabre</name>
+    </developer>
+  </developers>
+
   <build>
 
     <plugins>
@@ -33,6 +53,23 @@
         <executions>
           <execution>
             <id>javadoc-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
+        <configuration>
+        </configuration>
+        <executions>
+          <execution>
+            <id>javasources-jar</id>
             <phase>package</phase>
             <goals>
               <goal>jar</goal>
@@ -79,5 +116,5 @@
             
   	
   </dependencies>
-  
+
 </project>

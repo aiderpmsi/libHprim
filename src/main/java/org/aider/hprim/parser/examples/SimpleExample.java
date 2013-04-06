@@ -1,4 +1,4 @@
-package aider.org.hprim.parser.examples;
+package org.aider.hprim.parser.examples;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,13 +7,13 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
+import org.aider.hprim.parser.HPRIMSInputStreamReader;
+import org.aider.hprim.parser.HPRIMSTokenSource;
+import org.aider.hprim.parser.antlr.HPRIMSParser;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 
-import aider.org.hprim.parser.HPRIMSInputStreamReader;
-import aider.org.hprim.parser.HPRIMSTokenSource;
-import aider.org.hprim.parser.antlr.HPRIMSParser;
 
 
 /**

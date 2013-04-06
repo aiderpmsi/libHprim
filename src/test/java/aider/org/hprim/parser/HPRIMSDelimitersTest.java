@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
+import org.aider.hprim.parser.HPRIMSDelimiters;
 import org.junit.Test;
 
 public class HPRIMSDelimitersTest {

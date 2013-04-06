@@ -1,7 +1,10 @@
-package aider.org.hprim.parser.xml;
+package org.aider.hprim.parser.xml;
 
 import java.io.IOException;
 
+import org.aider.hprim.parser.HPRIMSInputStreamReader;
+import org.aider.hprim.parser.HPRIMSTokenSource;
+import org.aider.hprim.parser.antlr.HPRIMSParser;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
@@ -9,9 +12,6 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.XMLFilterImpl;
 
-import aider.org.hprim.parser.HPRIMSInputStreamReader;
-import aider.org.hprim.parser.HPRIMSTokenSource;
-import aider.org.hprim.parser.antlr.HPRIMSParser;
 
 /**
  * @author delabre

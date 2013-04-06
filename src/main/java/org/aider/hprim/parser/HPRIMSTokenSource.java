@@ -1,4 +1,4 @@
-package aider.org.hprim.parser;
+package org.aider.hprim.parser;
 
 import java.io.*;
 import java.util.LinkedList;
@@ -7,10 +7,10 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.aider.hprim.parser.antlr.HPRIMSLexer;
+import org.aider.hprim.parser.antlr.HPRIMSParser;
 import org.antlr.runtime.*;
 
-import aider.org.hprim.parser.antlr.HPRIMSLexer;
-import aider.org.hprim.parser.antlr.HPRIMSParser;
 
 /**
  * Limitations de ce tokenizer pour HPRIM :

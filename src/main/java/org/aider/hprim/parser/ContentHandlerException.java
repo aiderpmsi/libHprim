@@ -1,4 +1,4 @@
-package aider.org.hprim.parser;
+package org.aider.hprim.parser;
 
 import org.antlr.runtime.IntStream;
 import org.antlr.runtime.RecognitionException;

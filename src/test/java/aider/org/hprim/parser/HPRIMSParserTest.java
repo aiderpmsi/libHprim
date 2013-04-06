@@ -6,12 +6,15 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import org.aider.hprim.parser.HPRIMSInputStreamReader;
+import org.aider.hprim.parser.HPRIMSTokenSource;
+import org.aider.hprim.parser.antlr.HPRIMSParser;
+import org.aider.hprim.parser.xml.XmlContentHandler;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.junit.Test;
 
-import aider.org.hprim.parser.antlr.HPRIMSParser;
-import aider.org.hprim.parser.xml.XmlContentHandler;
 
 public class HPRIMSParserTest {
 
@@ -47,82 +50,44 @@ public class HPRIMSParserTest {
 
 		// Tests des résultats
 		assertEquals("Erreur de resultat de parsing",
-			"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><message nom=\"hprim_oru_2_1\"><ligne nom=\"H\">" +
-			"<champ nom=\"delimiteurs\">|~^\\&amp;</champ><champ nom=\"H_7.3\">Test1.HPR</champ><champ nom=\"H_7.4\">" +
-			"</champ><champ nom=\"H_7.5\"><champ nom=\"H_7.5.1\">PO</champ><champ nom=\"H_7.5.2\">LABM</champ></champ>" +
-			"<champ nom=\"H_7.6\"><champ nom=\"H_7.6.1\"></champ></champ><champ nom=\"H_7.7\">ORU</champ>" +
-			"<champ nom=\"H_7.8\"><champ nom=\"H_7.8.1\"></champ></champ><champ nom=\"H_7.9\"></champ>" +
-			"<champ nom=\"H_7.10\"><champ nom=\"H_7.10.1\">HPRIM</champ><champ nom=\"H_7.10.2\">TESTE</champ>" +
-			"</champ><champ nom=\"H_7.11\"></champ><champ nom=\"H_7.12\">P</champ><champ nom=\"H_7.13\">" +
-			"<champ nom=\"H_7.13.1\">H2.1</champ><champ nom=\"H_7.13.2\">C</champ></champ>" +
-			"<champ nom=\"H_7.14\">201204292059</champ></ligne><body nom=\"P\"><ligne nom=\"P\">" +
-			"<champ nom=\"P_8.2\">1</champ><champ nom=\"P_8.3\"><champ nom=\"P_8.3.1\">398</champ></champ>" +
-			"<champ nom=\"P_8.4\">B1042100871</champ><champ nom=\"P_8.5\"></champ><champ nom=\"P_8.6\">" +
-			"<champ nom=\"P_8.6.1\">GAULLE</champ><champ nom=\"P_8.6.2\">MARECHAL</champ></champ>" +
-			"<champ nom=\"P_8.7\">PIT</champ><champ nom=\"P_8.8\">19370325</champ><champ nom=\"P_8.9\">F</champ>" +
-			"<champ nom=\"P_8.10\"></champ>" +
-			"<champ nom=\"P_8.11\"><champ nom=\"P_8.11.1\">28 RUE DE LA PAIX</champ><champ nom=\"P_8.11.2\">" +
-			"</champ><champ nom=\"P_8.11.3\">PARIS</champ><champ nom=\"P_8.11.4\"></champ><champ nom=\"P_8.11.5\">75000</champ>" +
-			"</champ><champ nom=\"P_8.12\"></champ><champ nom=\"P_8.13\"><champ nom=\"P_8.13.1\"></champ></champ>" +
-			"<champ nom=\"P_8.14\"><champ nom=\"P_8.14.1\"></champ></champ><champ nom=\"P_8.15\"></champ>" +
-			"<champ nom=\"P_8.16\"></champ><champ nom=\"P_8.17\"></champ><champ nom=\"P_8.18\"></champ>" +
-			"<champ nom=\"P_8.19\"><champ nom=\"P_8.19.1\"></champ></champ><champ nom=\"P_8.20\"></champ>" +
-			"<champ nom=\"P_8.21\"></champ><champ nom=\"P_8.22\"></champ><champ nom=\"P_8.23\"></champ>" +
-			"<champ nom=\"P_8.24\"></champ><champ nom=\"P_8.25\"></champ><champ nom=\"P_8.26\">" +
-			"<champ nom=\"P_8.26.1\"></champ><champ nom=\"P_8.26.2\"></champ><champ nom=\"P_8.26.3\">TEST</champ>" +
-			"</champ></ligne><body nom=\"OBR\"><ligne nom=\"OBR\"><champ nom=\"OBR_9.2\">1</champ><champ nom=\"OBR_9.3\">" +
-			"<champ nom=\"OBR_9.3.1\">idechantillo</champ><champ nom=\"OBR_9.3.2\"></champ></champ><champ nom=\"OBR_9.4\">" +
-			"<champ nom=\"OBR_9.4.1\"></champ><champ nom=\"OBR_9.4.2\">20428E9575</champ></champ>" +
-			"<champ nom=\"OBR_9.5\"><champ nom=\"OBR_9.5.1\">TGO1</champ><champ nom=\"OBR_9.5.2\">TGO ADVI</champ>" +
-			"<champ nom=\"OBR_9.5.3\">L</champ></champ><champ nom=\"OBR_9.5\"><champ nom=\"OBR_9.5.1\">TGP1</champ>" +
-			"<champ nom=\"OBR_9.5.2\">TGP ADVI</champ><champ nom=\"OBR_9.5.3\">L</champ></champ><champ nom=\"OBR_9.5\">" +
-			"<champ nom=\"OBR_9.5.1\">LDH1</champ><champ nom=\"OBR_9.5.2\">LDH ADVI</champ><champ nom=\"OBR_9.5.3\">L</champ>" +
-			"</champ><champ nom=\"OBR_9.5\"><champ nom=\"OBR_9.5.1\">CK1</champ><champ nom=\"OBR_9.5.2\">CK ADVIA</champ>" +
-			"<champ nom=\"OBR_9.5.3\">L</champ></champ><champ nom=\"OBR_9.5\"><champ nom=\"OBR_9.5.1\">NFG</champ>" +
-			"<champ nom=\"OBR_9.5.2\">NF</champ><champ nom=\"OBR_9.5.3\">L</champ></champ><champ nom=\"OBR_9.5\">" +
-			"<champ nom=\"OBR_9.5.1\">NFF</champ><champ nom=\"OBR_9.5.2\">NF</champ><champ nom=\"OBR_9.5.3\">L</champ>" +
-			"</champ><champ nom=\"OBR_9.5\"><champ nom=\"OBR_9.5.1\">NF100</champ><champ nom=\"OBR_9.5.2\">100%</champ>" +
-			"<champ nom=\"OBR_9.5.3\">L</champ></champ><champ nom=\"OBR_9.5\"><champ nom=\"OBR_9.5.1\">PLA</champ>" +
-			"<champ nom=\"OBR_9.5.2\">PLA</champ><champ nom=\"OBR_9.5.3\">L</champ></champ><champ nom=\"OBR_9.5\">" +
-			"<champ nom=\"OBR_9.5.1\">TROPV</champ><champ nom=\"OBR_9.5.2\">TROPV</champ><champ nom=\"OBR_9.5.3\">L</champ>" +
-			"</champ><champ nom=\"OBR_9.6\">S</champ><champ nom=\"OBR_9.7\"></champ><champ nom=\"OBR_9.8\">" +
-			"<champ nom=\"OBR_9.8.1\">201204281412</champ><champ nom=\"OBR_9.8.2\">20120428</champ></champ>" +
-			"<champ nom=\"OBR_9.9\"></champ><champ nom=\"OBR_9.10\"></champ><champ nom=\"OBR_9.11\"><champ nom=\"OBR_9.11.1\">" +
-			"</champ></champ><champ nom=\"OBR_9.12\">N</champ><champ nom=\"OBR_9.13\"><champ nom=\"OBR_9.13.1\">" +
-			"</champ></champ><champ nom=\"OBR_9.14\"></champ><champ nom=\"OBR_9.15\">201204281413</champ>" +
-			"<champ nom=\"OBR_9_16\"><champ nom=\"OBR_9_16.2\"><champ nom=\"OBR_9_16.2.1\"></champ></champ></champ>" +
-			"<champ nom=\"OBR_9.17\"><champ nom=\"OBR_9.17.1\">PILO</champ><champ nom=\"OBR_9.17.2\">DR PITO OLIV</champ>" +
-			"<champ nom=\"OBR_9.17.3\">L</champ><champ nom=\"OBR_9.17.4\">TESTHP</champ><champ nom=\"OBR_9.17.5\">Clinique HP</champ>" +
-			"<champ nom=\"OBR_9.17.6\">L</champ></champ><champ nom=\"OBR_9.18\"><champ nom=\"OBR_9.18.1\">0468638395</champ>" +
-			"</champ><champ nom=\"OBR_9.19\"></champ><champ nom=\"OBR_9.20\"></champ><champ nom=\"OBR_9.21\"></champ>" +
-			"<champ nom=\"OBR_9.22\"></champ><champ nom=\"OBR_9.23\"></champ><champ nom=\"OBR_9.24\"></champ><champ nom=\"OBR_9.25\"><champ nom=\"OBR_9.25.1\">" +
-			"</champ></champ><champ nom=\"OBR_9.26\">F</champ><champ nom=\"OBR_9.27\"></champ><champ nom=\"OBR_9.28\"></champ><champ nom=\"OBR_9.29\"><champ nom=\"OBR_9.29.1\"></champ>" +
-			"</champ><champ nom=\"OBR_9.30\"><champ nom=\"OBR_9.30.1\"></champ></champ><champ nom=\"OBR_9.31\"></champ>" +
-			"<champ nom=\"OBR_9.32\"></champ><champ nom=\"OBR_9.33\"><champ nom=\"OBR_9.33.1\">VBIO</champ></champ>" +
-			"</ligne><body nom=\"OBX\"><ligne nom=\"OBX\"><champ nom=\"OBX_10.2\">1</champ><champ nom=\"OBX_10.3\">NM</champ>" +
-			"<champ nom=\"OBX_10.4\"><champ nom=\"OBX_10.4.1\">OT1</champ><champ nom=\"OBX_10.4.2\">TGO ADVIA</champ>" +
-			"<champ nom=\"OBX_10.4.3\">L</champ></champ><champ nom=\"OBX_10.5\"></champ><champ nom=\"OBX_10.6\">16</champ>" +
-			"<champ nom=\"OBX_10.7\">UI/l</champ><champ nom=\"OBX_10.8\">10 - 40</champ><champ nom=\"OBX_10.9\">N</champ>" +
-			"<champ nom=\"OBX_10.10\"></champ><champ nom=\"OBX_10.11\"></champ><champ nom=\"OBX_10.12\">F</champ>" +
-			"<champ nom=\"OBX_10.13\"></champ><champ nom=\"OBX_10.14\"></champ><champ nom=\"OBX_10.15\">201204281438</champ>" +
-			"<champ nom=\"OBX_10.16\"><champ nom=\"OBX_10.16.1\">BIOCH</champ><champ nom=\"OBX_10.16.2\">80</champ>" +
-			"<champ nom=\"OBX_10.16.3\">TGO1</champ><champ nom=\"OBX_10.16.4\">388</champ><champ nom=\"OBX_10.16.5\">0</champ>" +
-			"<champ nom=\"OBX_10.16.6\">P</champ></champ></ligne><ligne nom=\"C\"><champ nom=\"C_12.2\">1</champ>" +
-			"<champ nom=\"C_12.3\">L</champ><champ nom=\"C_12.4\">Anemie macrocytaire</champ></ligne></body>" +
-			"<body nom=\"OBX\"><ligne nom=\"OBX\"><champ nom=\"OBX_10.2\">2</champ><champ nom=\"OBX_10.3\">NM</champ>" +
-			"<champ nom=\"OBX_10.4\"><champ nom=\"OBX_10.4.1\">HT</champ><champ nom=\"OBX_10.4.2\">  Hematocrite</champ>" +
-			"<champ nom=\"OBX_10.4.3\">L</champ></champ><champ nom=\"OBX_10.5\"></champ><champ nom=\"OBX_10.6\">38.2</champ>" +
-			"<champ nom=\"OBX_10.7\">%</champ><champ nom=\"OBX_10.8\">35 - 48</champ><champ nom=\"OBX_10.9\">N</champ>" +
-			"<champ nom=\"OBX_10.10\"></champ><champ nom=\"OBX_10.11\"></champ><champ nom=\"OBX_10.12\">F</champ>" +
-			"<champ nom=\"OBX_10.13\"></champ><champ nom=\"OBX_10.14\"></champ><champ nom=\"OBX_10.15\">201204281504</champ>" +
-			"<champ nom=\"OBX_10.16\"><champ nom=\"OBX_10.16.1\">HEMAT</champ><champ nom=\"OBX_10.16.2\">20</champ>" +
-			"<champ nom=\"OBX_10.16.3\">NFG</champ><champ nom=\"OBX_10.16.4\">15</champ><champ nom=\"OBX_10.16.5\">2</champ>" +
-			"<champ nom=\"OBX_10.16.6\">P</champ></champ></ligne></body><body nom=\"OBX\"><ligne nom=\"OBX\">" +
-			"<champ nom=\"OBX_10.2\">3</champ><champ nom=\"OBX_10.3\">FIC</champ><champ nom=\"OBX_10.4\">" +
-			"<champ nom=\"OBX_10.4.1\">TEXTE</champ><champ nom=\"OBX_10.4.2\"></champ><champ nom=\"OBX_10.4.3\">L</champ>" +
-			"</champ><champ nom=\"OBX_10.5\"></champ><champ nom=\"OBX_10.6\"><champ nom=\"OBX_10.6.1\">GALAXIE</champ>" +
-			"<champ nom=\"OBX_10.6.2\">AL213202.j1</champ><champ nom=\"OBX_10.6.3\">TXT</champ></champ></ligne>" +
-			"</body></body></body><ligne nom=\"L\"><champ nom=\"L_14.2\">1</champ></ligne></message>",
+			"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><HPRIM.ORU.2.1><H><H.1>H</H.1><H.2>|~^\\&amp;</H.2>" +
+			"<H.3>Test1.HPR</H.3><H.4></H.4><H.5><H.5.1>PO</H.5.1><H.5.2>LABM</H.5.2></H.5><H.6><H.6.1>" +
+			"</H.6.1></H.6><H.7>ORU</H.7><H.8><H.8.1></H.8.1></H.8><H.9></H.9><H.10><H.10.1>HPRIM</H.10.1>" +
+			"<H.10.2>TESTE</H.10.2></H.10><H.11></H.11><H.12>P</H.12><H.13><H.13.1>H2.1</H.13.1><H.13.2>C</H.13.2>" +
+			"</H.13><H.14>201204292059</H.14></H><P><P.1>P</P.1><P.2>1</P.2><P.3><P.3.1>398</P.3.1></P.3><P.4>B1042100871</P.4>" +
+			"<P.5></P.5><P.6><P.6.1>GAULLE</P.6.1><P.6.2>MARECHAL</P.6.2></P.6><P.7>PIT</P.7><P.8>19370325</P.8><P.9>F</P.9>" +
+			"<P.10></P.10><P.11><P.11.1>28 RUE DE LA PAIX</P.11.1><P.11.2></P.11.2><P.11.3>PARIS</P.11.3><P.11.4></P.11.4>" +
+			"<P.11.5>75000</P.11.5></P.11><P.12></P.12><P.13><P.13.1></P.13.1></P.13><P.14><P.14.1></P.14.1></P.14><P.15>" +
+			"</P.15><P.16></P.16><P.17></P.17><P.18></P.18><P.19><P.19.1></P.19.1></P.19><P.20></P.20><P.21></P.21><P.22>" +
+			"</P.22><P.23></P.23><P.24></P.24><P.25></P.25><P.26><P.26.1></P.26.1><P.26.2></P.26.2><P.26.3>TEST</P.26.3>" +
+			"</P.26></P><OBR><OBR.1>OBR</OBR.1><OBR.2>1</OBR.2><OBR.3><OBR.3.1>idechantillo</OBR.3.1><OBR.3.2></OBR.3.2></OBR.3>" +
+			"<OBR.4><OBR.4.1></OBR.4.1><OBR.4.2>20428E9575</OBR.4.2></OBR.4><OBR.5><OBR.5.1>TGO1</OBR.5.1><OBR.5.2>TGO ADVI</OBR.5.2>" +
+			"<OBR.5.3>L</OBR.5.3></OBR.5><OBR.5><OBR.5.1>TGP1</OBR.5.1><OBR.5.2>TGP ADVI</OBR.5.2><OBR.5.3>L</OBR.5.3>" +
+			"</OBR.5><OBR.5><OBR.5.1>LDH1</OBR.5.1><OBR.5.2>LDH ADVI</OBR.5.2><OBR.5.3>L</OBR.5.3></OBR.5><OBR.5>" +
+			"<OBR.5.1>CK1</OBR.5.1><OBR.5.2>CK ADVIA</OBR.5.2><OBR.5.3>L</OBR.5.3></OBR.5><OBR.5><OBR.5.1>NFG</OBR.5.1>" +
+			"<OBR.5.2>NF</OBR.5.2><OBR.5.3>L</OBR.5.3></OBR.5><OBR.5><OBR.5.1>NFF</OBR.5.1><OBR.5.2>NF</OBR.5.2><OBR.5.3>L</OBR.5.3>" +
+			"</OBR.5><OBR.5><OBR.5.1>NF100</OBR.5.1><OBR.5.2>100%</OBR.5.2><OBR.5.3>L</OBR.5.3></OBR.5><OBR.5><OBR.5.1>PLA</OBR.5.1>" +
+			"<OBR.5.2>PLA</OBR.5.2><OBR.5.3>L</OBR.5.3></OBR.5><OBR.5><OBR.5.1>TROPV</OBR.5.1><OBR.5.2>TROPV</OBR.5.2><OBR.5.3>L</OBR.5.3>" +
+			"</OBR.5><OBR.6>S</OBR.6><OBR.7></OBR.7><OBR.8><OBR.8.1>201204281412</OBR.8.1><OBR.8.2>20120428</OBR.8.2></OBR.8><OBR.9>" +
+			"</OBR.9><OBR.10></OBR.10><OBR.11><OBR.11.1></OBR.11.1></OBR.11><OBR.12>N</OBR.12><OBR.13><OBR.13.1></OBR.13.1></OBR.13>" +
+			"<OBR.14></OBR.14><OBR.15>201204281413</OBR.15><OBR.16><OBR.16.2><OBR.16.2.1></OBR.16.2.1></OBR.16.2></OBR.16><OBR.17>" +
+			"<OBR.17.1>PILO</OBR.17.1><OBR.17.2>DR PITO OLIV</OBR.17.2><OBR.17.3>L</OBR.17.3><OBR.17.4>TESTHP</OBR.17.4>" +
+			"<OBR.17.5>Clinique HP</OBR.17.5><OBR.17.6>L</OBR.17.6></OBR.17><OBR.18><OBR.18.1>0468638395</OBR.18.1></OBR.18><OBR.19>" +
+			"</OBR.19><OBR.20></OBR.20><OBR.21></OBR.21><OBR.22></OBR.22><OBR.23></OBR.23><OBR.24></OBR.24><OBR.25><OBR.25.1>" +
+			"</OBR.25.1></OBR.25><OBR.26>F</OBR.26><OBR.27></OBR.27><OBR.28></OBR.28><OBR.29><OBR.29.1></OBR.29.1></OBR.29><OBR.30>" +
+			"<OBR.30.1></OBR.30.1></OBR.30><OBR.31></OBR.31><OBR.32></OBR.32><OBR.33><OBR.33.1>VBIO</OBR.33.1></OBR.33></OBR>" +
+			"<OBX><OBX.1>OBX</OBX.1><OBX.2>1</OBX.2><OBX.3>NM</OBX.3><OBX.4><OBX.4.1>OT1</OBX.4.1><OBX.4.2>TGO ADVIA</OBX.4.2>" +
+			"<OBX.4.3>L</OBX.4.3></OBX.4><OBX.5></OBX.5><OBX.6>16</OBX.6><OBX.7>UI/l</OBX.7><OBX.8>10 - 40</OBX.8><OBX.9>N</OBX.9>" +
+			"<OBX.10></OBX.10><OBX.11></OBX.11><OBX.12>F</OBX.12><OBX.13></OBX.13><OBX.14></OBX.14><OBX.15>201204281438</OBX.15>" +
+			"<OBX.16><OBX.16.1>BIOCH</OBX.16.1><OBX.16.2>80</OBX.16.2><OBX.16.3>TGO1</OBX.16.3><OBX.16.4>388</OBX.16.4>" +
+			"<OBX.16.5>0</OBX.16.5><OBX.16.6>P</OBX.16.6></OBX.16></OBX><C><C.2>1</C.2><C.3>L</C.3><C.4>Anemie macrocytaire</C.4>" +
+			"</C><OBX><OBX.1>OBX</OBX.1><OBX.2>2</OBX.2><OBX.3>NM</OBX.3><OBX.4><OBX.4.1>HT</OBX.4.1><OBX.4.2>  Hematocrite</OBX.4.2>" +
+			"<OBX.4.3>L</OBX.4.3></OBX.4><OBX.5></OBX.5><OBX.6>38.2</OBX.6><OBX.7>%</OBX.7><OBX.8>35 - 48</OBX.8><OBX.9>N</OBX.9>" +
+			"<OBX.10></OBX.10><OBX.11></OBX.11><OBX.12>F</OBX.12><OBX.13></OBX.13><OBX.14></OBX.14><OBX.15>201204281504</OBX.15><OBX.16>" +
+			"<OBX.16.1>HEMAT</OBX.16.1><OBX.16.2>20</OBX.16.2><OBX.16.3>NFG</OBX.16.3><OBX.16.4>15</OBX.16.4><OBX.16.5>2</OBX.16.5>" +
+			"<OBX.16.6>P</OBX.16.6></OBX.16></OBX><OBX><OBX.1>OBX</OBX.1><OBX.2>3</OBX.2><OBX.3>FIC</OBX.3><OBX.4>" +
+			"<OBX.4.1>TEXTE</OBX.4.1><OBX.4.2></OBX.4.2><OBX.4.3>L</OBX.4.3></OBX.4><OBX.5></OBX.5><OBX.6><OBX.6.1>GALAXIE</OBX.6.1>" +
+			"<OBX.6.2>AL213202.j1</OBX.6.2><OBX.6.3>TXT</OBX.6.3></OBX.6></OBX><L><L.2>1</L.2></L></HPRIM.ORU.2.1>",
 				baos.toString());	
 	}
 	

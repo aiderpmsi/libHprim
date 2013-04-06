@@ -1,4 +1,4 @@
-package aider.org.hprim.parser.examples;
+package org.aider.hprim.parser.examples;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,12 +15,12 @@ import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamSource;
 
+import org.aider.hprim.parser.xml.HprimReader;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import aider.org.hprim.parser.xml.HprimReader;
 
 
 /**

@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+
+import org.aider.hprim.parser.HPRIMSInputStreamReader;
 import org.junit.Test;
 
 /**
@@ -16,7 +18,7 @@ import org.junit.Test;
 public class HPRIMSInputStreamReaderTest {
 
 	/**
-	 * SimpleExample method for {@link aider.org.hprim.parser.HPRIMSInputStreamReader#read()}.
+	 * SimpleExample method for {@link org.aider.hprim.parser.HPRIMSInputStreamReader#read()}.
 	 * @throws IOException 
 	 */
 	@Test

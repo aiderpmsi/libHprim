@@ -1,4 +1,4 @@
-package aider.org.hprim.parser.examples;
+package org.aider.hprim.parser.examples;
 
 import java.io.IOException;
 import java.io.Writer;
