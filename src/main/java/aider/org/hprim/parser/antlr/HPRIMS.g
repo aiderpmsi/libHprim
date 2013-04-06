@@ -207,7 +207,8 @@ hprim
 @after{endDocument();}:
   hprim_oru_2_2 | hprim_oru_2_1 | hprim_oru_2_0 |
   hprim_orm_2_2 | hprim_orm_2_1 | hprim_orm_2_0 |
-  hprim_ora_2_2 | hprim_ora_2_1 | hprim_ora_2_0 ;
+  hprim_ora_2_2 | hprim_ora_2_1 | hprim_ora_2_0 |
+  hprim_adm_2_2 | hprim_adm_2_1 | hprim_adm_2_0;
 
 // Messages ORU
 hprim_oru_2_2
@@ -289,6 +290,62 @@ hprim_orm_2_0
 @after{endElement();endElement();}:
   line_h2_0_orm
   body_p_orm+
+  line_l
+  CR?
+  EOF;
+
+// Messages ADM
+hprim_adm_2_2
+@init{startElement("HPRIM.ADM.2.2");startElement("H");}
+@after{endElement();endElement();}:
+  line_h2_2_adm
+  body_p_adm+
+  line_l
+  CR?
+  EOF;
+
+hprim_adm_2_1
+@init{startElement("HPRIM.ADM.2.1");startElement("H");}
+@after{endElement();endElement();}:
+  line_h2_1_adm
+  body_p_adm+
+  line_l
+  CR?
+  EOF;
+
+hprim_adm_2_0
+@init{startElement("HPRIM.ADM.2.0");startElement("H");}
+@after{endElement();endElement();}:
+  line_h2_0_adm
+  body_p_adm+
+  line_l
+  CR?
+  EOF;
+
+// Messages FAC
+hprim_fac_2_2
+@init{startElement("HPRIM.FAC.2.2");startElement("H");}
+@after{endElement();endElement();}:
+  line_h2_2_fac
+  body_p_fac+
+  line_l
+  CR?
+  EOF;
+
+hprim_fac_2_1
+@init{startElement("HPRIM.FAC.2.1");startElement("H");}
+@after{endElement();endElement();}:
+  line_h2_1_fac
+  body_p_fac+
+  line_l
+  CR?
+  EOF;
+
+hprim_fac_2_0
+@init{startElement("HPRIM.FAC.2.0");startElement("H");}
+@after{endElement();endElement();}:
+  line_h2_0_fac
+  body_p_fac+
   line_l
   CR?
   EOF;
@@ -381,6 +438,49 @@ body_ac_adm
 @init{startElement("AC");}
 @after{endElement();} :
   line_ac (line_c)*;
+
+// Définitions FAC
+body_p_fac
+@init{startElement("P");}
+@after{endElement();} :
+  line_p (line_c)*
+  body_ap_fac*;
+
+body_ap_fac
+@init{startElement("AP");}
+@after{endElement();} :
+  line_ap (line_c)*
+  body_ac_fac;
+
+body_ac_fac
+@init{startElement("AC");}
+@after{endElement();} :
+  body_ac_fac_second_level*
+  body_fac_fac+;
+
+body_ac_fac_second_level
+@init{startElement("AC");}
+@after{endElement();} :
+  line_ac (line_c)*;
+
+body_fac_fac
+@init{startElement("FAC");}
+@after{endElement();} :
+   line_fac (line_c)*
+   body_reg_fac;
+
+body_reg_fac
+@init{startElement("REG");}
+@after{endElement();} :
+   line_reg (line_c)*
+   body_act_fac*;
+
+body_act_fac
+@init{startElement("ACT");}
+@after{endElement();} :
+   line_act (line_c)*;
+   
+
 
 // =========== Définition des des lignes hprim =================
 
@@ -499,6 +599,31 @@ line_h2_1_adm :
 line_h2_0_adm :
   start_line_h
   DELIMITER1 spec_const_7_7_contexte_ADM["H.7"]
+  midd_line_h
+  DELIMITER1 spec_const_7_13_version_2_0["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
+  DELIMITER1?;
+
+// Messages FAC
+line_h2_2_fac :
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_FAC["H.7"]
+  midd_line_h
+  DELIMITER1 spec_const_7_13_version_2_2["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
+  DELIMITER1?;
+
+line_h2_1_fac :
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_FAC["H.7"]
+  midd_line_h
+  DELIMITER1 spec_const_7_13_version_2_1["H.13"]
+  DELIMITER1 ts_sized_mandatory["H.14", 26]
+  DELIMITER1?;
+
+line_h2_0_fac :
+  start_line_h
+  DELIMITER1 spec_const_7_7_contexte_FAC["H.7"]
   midd_line_h
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
@@ -839,6 +964,11 @@ spec_const_7_7_contexte_ADM[String nameElement]
 @init{startElement($nameElement);}
 @after{endElement();}:
   final_ADM;
+  
+spec_const_7_7_contexte_FAC[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  final_FAC;
 
 spec_const_7_12[String nameElement]
 @init{startElement($nameElement);}
@@ -1254,6 +1384,7 @@ final_ADM: CHARA CHARD CHARM {content($text);};
 final_ORA: CHARO CHARR CHARA {content($text);};
 final_ORU: CHARO CHARR CHARU {content($text);};
 final_ORM: CHARO CHARR CHARM {content($text);};
+final_FAC: CHARF CHARA CHARC {content($text);};
 
 final_CART: CHARC CHARA CHARR CHART {content($text);};
 final_PORT: CHARP CHARO CHARR CHART {content($text);};
