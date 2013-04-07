@@ -70,8 +70,6 @@ public class XmlXsltSaxExample {
 		    transformer.transform(new SAXSource(reader, inputS), new SAXResult(example));
 		    // If only xml output :
 		    // transformer.transform(new SAXSource(reader, inputS), new StreamResult(System.out));
-		} catch (NullPointerException e) {
-			e.printStackTrace();
 		} finally {
 			if (is != null) {
 				is.close();
