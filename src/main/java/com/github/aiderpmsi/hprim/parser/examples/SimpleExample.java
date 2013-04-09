@@ -1,4 +1,4 @@
-package org.aider.hprim.parser.examples;
+package com.github.aiderpmsi.hprim.parser.examples;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,13 +7,14 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
-import org.aider.hprim.parser.HPRIMSInputStreamReader;
-import org.aider.hprim.parser.HPRIMSTokenSource;
-import org.aider.hprim.parser.antlr.HPRIMSParser;
-import org.aider.hprim.parser.xml.XmlContentHandler;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
+
+import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
+import com.github.aiderpmsi.hprim.parser.HPRIMSTokenSource;
+import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
+
 
 
 /**
@@ -21,13 +22,13 @@ import org.antlr.runtime.TokenStream;
  * @author delabre
  * @version $Id: SimpleExample.java 1024 2012-08-06 19:47:04Z jp $
  */
-public class XmlReaderExample {
+public class SimpleExample {
 
 	/**
 	 * Logger de la classe
 	 */
 	@SuppressWarnings("unused")
-	private static final Logger logger = Logger.getLogger(XmlReaderExample.class.getCanonicalName());
+	private static final Logger logger = Logger.getLogger(SimpleExample.class.getCanonicalName());
 	
 	/**
 	 * @param args
@@ -41,7 +42,7 @@ public class XmlReaderExample {
 	public static void main(String[] args) throws IOException, RecognitionException {
 
 		// Création du collecteur par défaut (affiche sur la console les données)
-		XmlContentHandler contentHandler = new XmlContentHandler(new PrintWriter(System.out));
+		ContentHandlerExample contentHandler = new ContentHandlerExample(new PrintWriter(System.out));
 		
 		// Définition des flux matériels (à fermer en fin d'utilisation)
 		InputStream is = null;

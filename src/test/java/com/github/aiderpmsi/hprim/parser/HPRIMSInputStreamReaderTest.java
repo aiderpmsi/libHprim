@@ -1,15 +1,16 @@
 /**
  * 
  */
-package org.aider.hprim.parser;
+package com.github.aiderpmsi.hprim.parser;
 
 import static org.junit.Assert.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import org.aider.hprim.parser.HPRIMSInputStreamReader;
 import org.junit.Test;
+
+import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
 
 /**
  * @author delabre
@@ -18,7 +19,7 @@ import org.junit.Test;
 public class HPRIMSInputStreamReaderTest {
 
 	/**
-	 * SimpleExample method for {@link org.aider.hprim.parser.HPRIMSInputStreamReader#read()}.
+	 * SimpleExample method for {@link com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader#read()}.
 	 * @throws IOException 
 	 */
 	@Test

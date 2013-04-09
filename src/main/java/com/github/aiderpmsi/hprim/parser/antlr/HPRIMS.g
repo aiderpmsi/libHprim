@@ -5,7 +5,7 @@ options {
 }
 
 @header {
-package org.aider.hprim.parser.antlr;
+package com.github.aiderpmsi.hprim.parser.antlr;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,8 +13,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.LinkedList;
 
-import org.aider.hprim.parser.MatchRegexTokenException;
-import org.aider.hprim.parser.ContentHandlerException;
+import com.github.aiderpmsi.hprim.parser.MatchRegexTokenException;
+import com.github.aiderpmsi.hprim.parser.ContentHandlerException;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
@@ -23,7 +23,7 @@ import org.xml.sax.helpers.AttributesImpl;
 
 
 @lexer::header {
-package org.aider.hprim.parser.antlr;
+package com.github.aiderpmsi.hprim.parser.antlr;
 
 }
 

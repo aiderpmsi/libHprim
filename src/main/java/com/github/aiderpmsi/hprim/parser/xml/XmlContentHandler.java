@@ -1,4 +1,4 @@
-package org.aider.hprim.parser.xml;
+package com.github.aiderpmsi.hprim.parser.xml;
 
 import java.io.IOException;
 import java.io.PrintStream;

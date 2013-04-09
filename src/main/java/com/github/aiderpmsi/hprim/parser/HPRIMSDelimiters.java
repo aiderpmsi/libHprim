@@ -1,4 +1,4 @@
-package org.aider.hprim.parser;
+package com.github.aiderpmsi.hprim.parser;
 
 import java.io.IOException;
 import java.util.Arrays;

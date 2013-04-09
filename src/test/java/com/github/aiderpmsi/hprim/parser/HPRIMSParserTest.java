@@ -1,4 +1,4 @@
-package org.aider.hprim.parser;
+package com.github.aiderpmsi.hprim.parser;
 
 import static org.junit.Assert.*;
 
@@ -7,20 +7,21 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import org.aider.hprim.parser.HPRIMSInputStreamReader;
-import org.aider.hprim.parser.HPRIMSTokenSource;
-import org.aider.hprim.parser.antlr.HPRIMSParser;
-import org.aider.hprim.parser.xml.XmlContentHandler;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.junit.Test;
+
+import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
+import com.github.aiderpmsi.hprim.parser.HPRIMSTokenSource;
+import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
+import com.github.aiderpmsi.hprim.parser.xml.XmlContentHandler;
 
 
 public class HPRIMSParserTest {
 
 	@Test
 	public void testHprim_2_1() throws IOException, RecognitionException {
-		// Chaine de caractères à tester
+		// Chaine de caractï¿½res ï¿½ tester
 		String testString = 
 		"H|~^\\&|Test1.HPR||PO~LABM||ORU|||HPRIM~TESTE||P|H2.1~C|201204292059\r\n" +
 		"P|1|398|B1042100871||GAULLE~MARECHAL|PIT|19370325|F||28 RUE DE LA PAIX~~PARIS~~75000|||||||||||||||~~TEST\r\n" +
@@ -114,7 +115,7 @@ public class HPRIMSParserTest {
 				new CommonTokenStream(tks),
 				new XmlContentHandler(new PrintWriter(baos)));
 		
-		// Parsing de la chaine de caractères
+		// Parsing de la chaine de caractï¿½res
 		parser.delimiters();
 		parser.nm_sized_optionnal("SimpleExample", 15);
 
@@ -126,14 +127,14 @@ public class HPRIMSParserTest {
 	}
 	
 	/**
-	 * SimpleExample la possibilité qu'il y ait un segment 9.3 avec :
+	 * SimpleExample la possibilitï¿½ qu'il y ait un segment 9.3 avec :
 	 * DELIMITER1 (vide) DELIMITER2 (vide) DELIMITER1
 	 * @throws IOException 
 	 * @throws RecognitionException 
 	 */
 	@Test
 	public void testSgt_cm_9_3_Case_1() throws IOException, RecognitionException {
-		// Chaine de caractères à tester
+		// Chaine de caractï¿½res ï¿½ tester
 		String testString = "H|~^\\&toto~";
 		
 		// Crï¿½ation de la source de tokens
@@ -141,7 +142,7 @@ public class HPRIMSParserTest {
 				new HPRIMSInputStreamReader(
 						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
 		
-		// Récupère ce qui est écrit pas le collecteur
+		// Rï¿½cupï¿½re ce qui est ï¿½crit pas le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
@@ -149,11 +150,11 @@ public class HPRIMSParserTest {
 				new CommonTokenStream(tks),
 				new XmlContentHandler(new PrintWriter(baos)));
 		
-		// Parsing de la chaine de caractères
+		// Parsing de la chaine de caractï¿½res
 		parser.delimiters();
 		parser.spec_sized_9_3("OBR_9.3", 23);
 
-		// Tests des résultats
+		// Tests des rï¿½sultats
 		assertEquals("Erreur de resultat de parsing",
 				"<H.2>|~^\\&amp;</H.2><OBR_9.3><OBR_9.3.1>toto</OBR_9.3.1><OBR_9.3.2></OBR_9.3.2></OBR_9.3>",
 				baos.toString());	

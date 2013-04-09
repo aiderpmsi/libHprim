@@ -1,14 +1,15 @@
-package org.aider.hprim.parser;
+package com.github.aiderpmsi.hprim.parser;
 
 import static org.junit.Assert.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import org.aider.hprim.parser.HPRIMSInputStreamReader;
-import org.aider.hprim.parser.HPRIMSTokenSource;
-import org.aider.hprim.parser.antlr.HPRIMSParser;
 import org.junit.Test;
+
+import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
+import com.github.aiderpmsi.hprim.parser.HPRIMSTokenSource;
+import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
 
 
 public class HPRIMSTokenSourceTest {

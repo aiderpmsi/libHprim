@@ -1,11 +1,12 @@
-package org.aider.hprim.parser;
+package com.github.aiderpmsi.hprim.parser;
 
 import static org.junit.Assert.*;
 
 import java.io.IOException;
 
-import org.aider.hprim.parser.HPRIMSDelimiters;
 import org.junit.Test;
+
+import com.github.aiderpmsi.hprim.parser.HPRIMSDelimiters;
 
 public class HPRIMSDelimitersTest {
 
