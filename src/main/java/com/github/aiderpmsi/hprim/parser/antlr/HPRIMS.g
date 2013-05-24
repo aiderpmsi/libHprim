@@ -1027,7 +1027,7 @@ line_obx
     | (spec_const_10_3_st["OBX.3"]
      (DELIMITER1 spec_sized_10_4["OBX.4", 200]
       (DELIMITER1 st_sized_optionnal["OBX.5", 10]
-       (DELIMITER1 spec_sized_10_6_tx["OBX.6", 64000] (REPETITEUR spec_sized_10_6_tx["OBX.6", 64000])*
+       (DELIMITER1 st_sized_mandatory["OBX.6", 64000] (REPETITEUR st_sized_mandatory["OBX.6", 64000])*
         line_obx2_1_post10_6?)?)?)?)
     | (spec_const_10_3_gc["OBX.3"]
      (DELIMITER1 spec_sized_10_4["OBX.4", 200]
@@ -1037,7 +1037,7 @@ line_obx
     | (spec_const_10_3_tx["OBX.3"]
      (DELIMITER1 spec_sized_10_4["OBX.4", 200]
       (DELIMITER1 st_sized_optionnal["OBX.5", 10]
-       (DELIMITER1 spec_sized_10_6_tx["OBX.6", 64000] (REPETITEUR spec_sized_10_6_tx["OBX.6", 64000])*
+       (DELIMITER1 spec_sized_10_6_tx["OBX.6", 64000]
         line_obx2_1_post10_6?)?)?)?)
     | (spec_const_10_3_std["OBX.3"]
      (DELIMITER1 spec_sized_10_4["OBX.4", 200]
@@ -1494,6 +1494,14 @@ spec_sized_10_6_tx[String nameElement, int maxSize]
   g=final_spec_10_6_tx?
   {if ($g.consoText != null)
     matchRegex($g.consoText, "^.{0," + $maxSize + "}$", retval.start);};
+
+spec_tx[String nameElement]
+@init{
+  ParserRuleReturnScope retval = new ParserRuleReturnScope();
+  retval.start = input.LT(1);
+  startElement($nameElement);}
+@after{endElement();}:
+  g=final_spec_10_6_tx?;
 
 spec_sized_tn[String nameElement, int maxSize]
 @init{startElement($nameElement);}
