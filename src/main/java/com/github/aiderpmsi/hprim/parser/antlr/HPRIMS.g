@@ -202,6 +202,11 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 
 // =========== Définition de la structure hprim ================
 
+hprim_crapy
+@init{startDocument();}
+@after{endDocument();}:
+  hprim_adm_crapy;
+
 hprim
 @init{startDocument();}
 @after{endDocument();}:
@@ -301,7 +306,7 @@ hprim_adm_2_2
 @init{startElement("HPRIM.ADM.2.2");}
 @after{endElement();}:
   line_h2_2_adm
-  body_p_adm+
+  body_p_adm_crapy+
   line_l
   CR?
   EOF;
@@ -328,7 +333,7 @@ hprim_adm_crapy
 @init{startElement("HPRIM.ADM.CRAPY");}
 @after{endElement();}:
   line_h_crapy_adm
-  body_p_adm+
+  body_p_adm_crapy+
   line_l
   CR?
   EOF;
@@ -1080,20 +1085,26 @@ crapy_repet[String nameElement] :
 crapy_champ_full[String nameElement]
 @init{startElement($nameElement);}
 @after{endElement();}:
-  (final_st | crapy_champ_ordered[$nameElement, 0])?;
+  (final_st |
+   (crapy_sous_champ_full[$nameElement + ".1"]
+    crapy_champ_ordered[$nameElement, 2])
+  )?;
 
 crapy_champ_ordered[String nameElement, int order] :
-  crapy_sous_champ_full[$nameElement + "." + $order]
-    DELIMITER2 crapy_champ_ordered[$nameElement, $order + 1]?;
+  DELIMITER2 crapy_sous_champ_full[$nameElement + "." + $order]
+  crapy_champ_ordered[$nameElement, $order + 1]?;
   
 crapy_sous_champ_full[String nameElement]
 @init{startElement($nameElement);}
 @after{endElement();}:
-  (final_st | crapy_sous_champ_ordered[$nameElement, 0])?;
+  (final_st |
+   (crapy_sous_sous_champ_full[$nameElement + ".1"]
+   crapy_sous_champ_ordered[$nameElement, 2])
+  )?;
 
 crapy_sous_champ_ordered[String nameElement, int order] :
-  crapy_sous_sous_champ_full[$nameElement + "." + $order]
-    DELIMITER3 crapy_sous_champ_ordered[$nameElement, $order + 1]?;
+  DELIMITER3 crapy_sous_sous_champ_full[$nameElement + "." + $order]
+    crapy_sous_champ_ordered[$nameElement, $order + 1]?;
 
 crapy_sous_sous_champ_full[String nameElement]
 @init{startElement($nameElement);}
