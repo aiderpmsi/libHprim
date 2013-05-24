@@ -169,11 +169,11 @@ public class HPRIMSTokenSource implements TokenSource {
     private int fillToken() {
     	int nbadded = 0;
 		try {
-			// On r�cup�re le prochain token
+			// On récupère le prochain token
 			int readresult = inputReader.read();
 			char nextChar = (char) readresult;
 			
-			// L'inputReader est � la fin du flux.
+			// L'inputReader est à la fin du flux.
 			if (readresult == -1) {
 				tokenList.add(CommonToken.EOF_TOKEN);
 				nbadded++;
