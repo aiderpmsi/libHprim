@@ -462,6 +462,13 @@ start_line_h :
   DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
   DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100];
 
+start_line_h_crapy :
+  {startElement("H.1");content("H");endElement();} delimiters
+  DELIMITER1 crapy_repet["H.3"] 
+  DELIMITER1 crapy_repet["H.4"]
+  DELIMITER1 crapy_repet["H.5"]
+  DELIMITER1 crapy_repet["H.6"];
+  
 // Milieu de ligne H, identique pour toutes les versions
 midd_line_h :
   DELIMITER1 spec_sized_tn["H.8", 40]
@@ -470,8 +477,21 @@ midd_line_h :
   DELIMITER1 st_sized_optionnal["H.11", 80]
   DELIMITER1 spec_const_7_12["H.12"];
 
-// Messages ORU
+midd_line_h_crapy :
+  (DELIMITER1 crapy_repet["H.8"]
+   (DELIMITER1 crapy_repet["H.9"]
+    (DELIMITER1 crapy_repet["H.10"]
+     (DELIMITER1 crapy_repet["H.11"]
+      (DELIMITER1 crapy_repet["H.12"]
+       (DELIMITER1 crapy_repet["H.13"]
+        (DELIMITER1 crapy_repet["H.14"]
+         DELIMITER1?)?)?)?)?)?)?)?;
 
+
+// Ligne H comme la date est nécessaire, en fait tous les champs
+// sont obligatoires
+
+// Messages ORU
 line_h2_2_oru
 @init{startElement("H");}
 @after{endElement();} :
@@ -482,8 +502,6 @@ line_h2_2_oru
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
-// Ligne H 2.1 : comme la date est nécessaire, en fait tous les champs
-// sont obligatoires
 line_h2_1_oru
 @init{startElement("H");}
 @after{endElement();} :
@@ -494,7 +512,6 @@ line_h2_1_oru
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
-// Ligne H 2.0
 line_h2_0_oru
 @init{startElement("H");}
 @after{endElement();} :
@@ -504,6 +521,13 @@ line_h2_0_oru
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
+
+line_h_crapy_oru
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_crapy
+  DELIMITER1 spec_const_7_7_contexte_ORU["H.7"]
+  midd_line_h_crapy;
 
 // Messages ORM :
 line_h2_2_orm
@@ -536,6 +560,13 @@ line_h2_0_orm
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
+line_h_crapy_orm
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_crapy
+  DELIMITER1 spec_const_7_7_contexte_ORM["H.7"]
+  midd_line_h_crapy;
+
 // Messages ORA
 line_h2_2_ora
 @init{startElement("H");}
@@ -566,6 +597,13 @@ line_h2_0_ora
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
+
+line_h_crapy_ora
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_crapy
+  DELIMITER1 spec_const_7_7_contexte_ORA["H.7"]
+  midd_line_h_crapy;
 
 // Messages ADM
 line_h2_2_adm
@@ -598,6 +636,13 @@ line_h2_0_adm
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
+line_h_crapy_adm
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_crapy
+  DELIMITER1 spec_const_7_7_contexte_ADM["H.7"]
+  midd_line_h_crapy;
+
 // Messages FAC
 line_h2_2_fac
 @init{startElement("H");}
@@ -628,6 +673,13 @@ line_h2_0_fac
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
+
+line_h_crapy_fac
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_crapy
+  DELIMITER1 spec_const_7_7_contexte_FAC["H.7"]
+  midd_line_h_crapy;
 
 // Messages REG
 line_h2_2_reg
@@ -660,6 +712,13 @@ line_h2_0_reg
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
+line_h_crapy_reg
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_crapy
+  DELIMITER1 spec_const_7_7_contexte_REG["H.7"]
+  midd_line_h_crapy;
+
 // Messages NS
 line_h2_2_ns
 @init{startElement("H");}
@@ -690,6 +749,13 @@ line_h2_0_ns
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
+
+line_h_crapy_ns
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_crapy
+  DELIMITER1 spec_const_7_7_contexte_NS["H.7"]
+  midd_line_h_crapy;
 
 // Ligne AP (assuré primaire)
 line_ap
