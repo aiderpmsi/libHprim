@@ -851,6 +851,21 @@ line_ac
    (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["AC.10", 200]
     DELIMITER1?)?)?;
 
+line_ac_crapy
+@init{startElement("AC");}
+@after{endElement();} :
+  (CR CHARA CHARC) {startElement("AC.1");content("AC");endElement();}
+  (DELIMITER1 crapy_repet["AC.2"]
+   (DELIMITER1 crapy_repet["AC.3"]
+    (DELIMITER1 crapy_repet["AC.4"]
+     (DELIMITER1 crapy_repet["AC.5"]
+      (DELIMITER1 crapy_repet["AC.6"]
+       (DELIMITER1 crapy_repet["AC.7"]
+        (DELIMITER1 crapy_repet["AC.8"]
+         (DELIMITER1 crapy_repet["AC.9"]
+          (DELIMITER1 crapy_repet["AC.10"]
+           DELIMITER1?)?)?)?)?)?)?)?)?)?;
+
 // ligne ACT (acte)
 line_act
 @init{startElement("ACT");}
@@ -867,6 +882,22 @@ line_act
   DELIMITER1 spec_act_10["ACT.10", 64000]
   DELIMITER1 spec_act_11["ACT.11"]
   DELIMITER1?;
+
+line_act_crapy
+@init{startElement("ACT");}
+@after{endElement();} :
+  (CR CHARA CHARC CHART) {startElement("ACT.1");content("ACT");endElement();}
+  (DELIMITER1 crapy_repet["ACT.2"]
+   (DELIMITER1 crapy_repet["ACT.3"]
+    (DELIMITER1 crapy_repet["ACT.4"]
+     (DELIMITER1 crapy_repet["ACT.5"]
+      (DELIMITER1 crapy_repet["ACT.6"]
+       (DELIMITER1 crapy_repet["ACT.7"]
+        (DELIMITER1 crapy_repet["ACT.8"]
+         (DELIMITER1 crapy_repet["ACT.9"]
+          (DELIMITER1 crapy_repet["ACT.10"]
+           (DELIMITER1 crapy_repet["ACT.11"]
+            DELIMITER1?)?)?)?)?)?)?)?)?)?)?;
 
 // Ligne fac (facture)
 line_fac
