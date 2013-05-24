@@ -882,6 +882,45 @@ line_p
                                (DELIMITER1 ts_sized_optionnal["P.34", 26]
                                 DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
+line_p_crapy
+@init{startElement("P");}
+@after{endElement();} :
+  (CR CHARP) {startElement("P.1");content("P");endElement();}
+  (DELIMITER1 crapy_repet["P.2"]
+   (DELIMITER1 crapy_repet["P.3"]
+    (DELIMITER1 crapy_repet["P.4"]
+     (DELIMITER1 crapy_repet["P.5"]
+      (DELIMITER1 crapy_repet["P.6"]
+       (DELIMITER1 crapy_repet["P.7"]
+        (DELIMITER1 crapy_repet["P.8"]
+         (DELIMITER1 crapy_repet["P.9"]
+          (DELIMITER1 crapy_repet["P.10"]
+           (DELIMITER1 crapy_repet["P.11"]
+            (DELIMITER1 crapy_repet["P.12"]
+             (DELIMITER1 crapy_repet["P.13"]
+              (DELIMITER1 crapy_repet["P.14"]
+               (DELIMITER1 crapy_repet["P.15"]
+                (DELIMITER1 crapy_repet["P.16"]
+                 (DELIMITER1 crapy_repet["P.17"]
+                  (DELIMITER1 crapy_repet["P.18"]
+                   (DELIMITER1 crapy_repet["P.19"]
+                    (DELIMITER1 crapy_repet["P.20"]
+                     (DELIMITER1 crapy_repet["P.21"]
+                      (DELIMITER1 crapy_repet["P.22"]
+                       (DELIMITER1 crapy_repet["P.23"]
+                        (DELIMITER1 crapy_repet["P.24"]
+                         (DELIMITER1 crapy_repet["P.25"]
+                          (DELIMITER1 crapy_repet["P.26"]
+                           (DELIMITER1 crapy_repet["P.27"]
+                            (DELIMITER1 crapy_repet["P.28"]
+                             (DELIMITER1 crapy_repet["P.29"]
+                              (DELIMITER1 crapy_repet["P.30"]
+                               (DELIMITER1 crapy_repet["P.31"]
+                                (DELIMITER1 crapy_repet["P.32"]
+                                 (DELIMITER1 crapy_repet["P.33"]
+                                  (DELIMITER1 crapy_repet["P.34"]
+                                   DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+
 // Ligne REG (règlements)
 line_reg
 @init{startElement("REG");}
