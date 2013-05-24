@@ -1039,7 +1039,7 @@ line_reg_crapy
       (DELIMITER1 crapy_repet["REG.6"]
        (DELIMITER1 crapy_repet["REG.7"]
         (DELIMITER1 crapy_repet["REG.8"]
-         DELIMITER1?)?)?;
+         DELIMITER1?)?)?)?)?)?)?)?;
 
 // Ligne OBR (demandes d'examen)
 line_obr
@@ -1089,7 +1089,7 @@ line_obr
                           (DELIMITER1 ts_sized_optionnal["OBR.37", 26]
                             DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
-line_obr
+line_obr_crapy
 @init{startElement("OBR");}
 @after{endElement();} :
   (CR CHARO CHARB CHARR) {startElement("OBR.1");content("OBR");endElement();}
