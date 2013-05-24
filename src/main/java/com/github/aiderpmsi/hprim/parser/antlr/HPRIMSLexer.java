@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g 2013-05-25 01:34:23
+// $ANTLR 3.4 C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g 2013-05-25 01:54:05
 
 package com.github.aiderpmsi.hprim.parser.antlr;
 
@@ -82,8 +82,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1849:4: ( 'CR' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1849:6: 'CR'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1947:4: ( 'CR' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1947:6: 'CR'
             {
             match("CR"); 
 
@@ -105,8 +105,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = TOKENMISMATCH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1850:15: ( 'MISMATCH' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1850:17: 'MISMATCH'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1948:15: ( 'MISMATCH' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1948:17: 'MISMATCH'
             {
             match("MISMATCH"); 
 
@@ -128,8 +128,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = DELIMITER1;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1851:11: ( '|' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1851:13: '|'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1949:11: ( '|' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1949:13: '|'
             {
             match('|'); 
 
@@ -149,8 +149,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = DELIMITER2;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1852:11: ( '~' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1852:13: '~'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1950:11: ( '~' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1950:13: '~'
             {
             match('~'); 
 
@@ -170,8 +170,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = DELIMITER3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1853:11: ( '&' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1853:13: '&'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1951:11: ( '&' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1951:13: '&'
             {
             match('&'); 
 
@@ -191,8 +191,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = DELIMITERS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1854:11: ( 'DDWWDD' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1854:13: 'DDWWDD'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1952:11: ( 'DDWWDD' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1952:13: 'DDWWDD'
             {
             match("DDWWDD"); 
 
@@ -214,8 +214,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = REPETITEUR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1855:11: ( '^' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1855:13: '^'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1953:11: ( '^' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1953:13: '^'
             {
             match('^'); 
 
@@ -235,8 +235,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE0;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1857:9: ( '0' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1857:11: '0'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1955:9: ( '0' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1955:11: '0'
             {
             match('0'); 
 
@@ -256,8 +256,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE1;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1858:9: ( '1' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1858:11: '1'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1956:9: ( '1' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1956:11: '1'
             {
             match('1'); 
 
@@ -277,8 +277,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE2;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1859:9: ( '2' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1859:11: '2'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1957:9: ( '2' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1957:11: '2'
             {
             match('2'); 
 
@@ -298,8 +298,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1860:9: ( '3' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1860:11: '3'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1958:9: ( '3' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1958:11: '3'
             {
             match('3'); 
 
@@ -319,8 +319,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE4;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1861:9: ( '4' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1861:11: '4'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1959:9: ( '4' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1959:11: '4'
             {
             match('4'); 
 
@@ -340,8 +340,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE5;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1862:9: ( '5' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1862:11: '5'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1960:9: ( '5' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1960:11: '5'
             {
             match('5'); 
 
@@ -361,8 +361,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE6;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1863:9: ( '6' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1863:11: '6'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1961:9: ( '6' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1961:11: '6'
             {
             match('6'); 
 
@@ -382,8 +382,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE7;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1864:9: ( '7' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1864:11: '7'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1962:9: ( '7' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1962:11: '7'
             {
             match('7'); 
 
@@ -403,8 +403,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE8;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1865:9: ( '8' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1865:11: '8'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1963:9: ( '8' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1963:11: '8'
             {
             match('8'); 
 
@@ -424,8 +424,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHIFFRE9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1866:9: ( '9' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1866:11: '9'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1964:9: ( '9' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1964:11: '9'
             {
             match('9'); 
 
@@ -445,8 +445,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = POINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1868:6: ( '.' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1868:8: '.'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1966:6: ( '.' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1966:8: '.'
             {
             match('.'); 
 
@@ -466,8 +466,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1869:5: ( '+' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1869:7: '+'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1967:5: ( '+' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1967:7: '+'
             {
             match('+'); 
 
@@ -487,8 +487,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = MOINS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1870:6: ( '-' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1870:8: '-'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1968:6: ( '-' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1968:8: '-'
             {
             match('-'); 
 
@@ -508,8 +508,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1872:7: ( 'A' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1872:9: 'A'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1970:7: ( 'A' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1970:9: 'A'
             {
             match('A'); 
 
@@ -529,8 +529,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1873:7: ( 'B' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1873:9: 'B'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1971:7: ( 'B' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1971:9: 'B'
             {
             match('B'); 
 
@@ -550,8 +550,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1874:7: ( 'C' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1874:9: 'C'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1972:7: ( 'C' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1972:9: 'C'
             {
             match('C'); 
 
@@ -571,8 +571,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1875:7: ( 'D' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1875:9: 'D'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1973:7: ( 'D' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1973:9: 'D'
             {
             match('D'); 
 
@@ -592,8 +592,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1876:7: ( 'E' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1876:9: 'E'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1974:7: ( 'E' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1974:9: 'E'
             {
             match('E'); 
 
@@ -613,8 +613,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1877:7: ( 'F' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1877:9: 'F'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1975:7: ( 'F' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1975:9: 'F'
             {
             match('F'); 
 
@@ -634,8 +634,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1878:7: ( 'G' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1878:9: 'G'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1976:7: ( 'G' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1976:9: 'G'
             {
             match('G'); 
 
@@ -655,8 +655,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1879:7: ( 'H' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1879:9: 'H'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1977:7: ( 'H' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1977:9: 'H'
             {
             match('H'); 
 
@@ -676,8 +676,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1880:7: ( 'I' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1880:9: 'I'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1978:7: ( 'I' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1978:9: 'I'
             {
             match('I'); 
 
@@ -697,8 +697,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1881:7: ( 'K' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1881:9: 'K'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1979:7: ( 'K' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1979:9: 'K'
             {
             match('K'); 
 
@@ -718,8 +718,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1882:7: ( 'L' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1882:9: 'L'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1980:7: ( 'L' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1980:9: 'L'
             {
             match('L'); 
 
@@ -739,8 +739,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1883:7: ( 'M' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1883:9: 'M'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1981:7: ( 'M' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1981:9: 'M'
             {
             match('M'); 
 
@@ -760,8 +760,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1884:7: ( 'N' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1884:9: 'N'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1982:7: ( 'N' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1982:9: 'N'
             {
             match('N'); 
 
@@ -781,8 +781,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1885:7: ( 'O' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1885:9: 'O'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1983:7: ( 'O' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1983:9: 'O'
             {
             match('O'); 
 
@@ -802,8 +802,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1886:7: ( 'P' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1886:9: 'P'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1984:7: ( 'P' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1984:9: 'P'
             {
             match('P'); 
 
@@ -823,8 +823,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1887:7: ( 'R' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1887:9: 'R'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1985:7: ( 'R' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1985:9: 'R'
             {
             match('R'); 
 
@@ -844,8 +844,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1888:7: ( 'S' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1888:9: 'S'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1986:7: ( 'S' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1986:9: 'S'
             {
             match('S'); 
 
@@ -865,8 +865,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHART;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1889:7: ( 'T' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1889:9: 'T'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1987:7: ( 'T' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1987:9: 'T'
             {
             match('T'); 
 
@@ -886,8 +886,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARU;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1890:7: ( 'U' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1890:9: 'U'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1988:7: ( 'U' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1988:9: 'U'
             {
             match('U'); 
 
@@ -907,8 +907,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1891:7: ( 'V' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1891:9: 'V'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1989:7: ( 'V' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1989:9: 'V'
             {
             match('V'); 
 
@@ -928,8 +928,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1892:7: ( 'W' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1892:9: 'W'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1990:7: ( 'W' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1990:9: 'W'
             {
             match('W'); 
 
@@ -949,8 +949,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1893:7: ( 'X' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1893:9: 'X'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1991:7: ( 'X' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1991:9: 'X'
             {
             match('X'); 
 
@@ -970,8 +970,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARl;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1895:7: ( 'l' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1895:9: 'l'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1993:7: ( 'l' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1993:9: 'l'
             {
             match('l'); 
 
@@ -991,8 +991,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHARu;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1896:7: ( 'u' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1896:9: 'u'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1994:7: ( 'u' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1994:9: 'u'
             {
             match('u'); 
 
@@ -1012,8 +1012,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHAR_SYMBOL_INF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1898:17: ( '<' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1898:19: '<'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1996:17: ( '<' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1996:19: '<'
             {
             match('<'); 
 
@@ -1033,8 +1033,8 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = CHAR_SYMBOL_SUP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1899:17: ( '>' )
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1899:19: '>'
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1997:17: ( '>' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1997:19: '>'
             {
             match('>'); 
 
@@ -1054,7 +1054,7 @@ public class HPRIMSLexer extends Lexer {
         try {
             int _type = LETTRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1901:7: ( 'A' .. 'Z' | 'a' .. 'z' )
+            // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:1999:7: ( 'A' .. 'Z' | 'a' .. 'z' )
             // C:\\Users\\delabre\\git\\libHprim\\target\\classes\\com\\github\\aiderpmsi\\hprim\\parser\\antlr\\HPRIMS.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {

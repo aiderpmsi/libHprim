@@ -244,6 +244,14 @@ hprim_oru_2_0
   CR?
   EOF;
 
+hprim_oru_crapy
+@init{startElement("HPRIM.ORU.CRAPY");}
+@after{endElement();}:
+  line_h_crapy_oru
+  line_crapy*
+  CR?
+  EOF;
+
 // Messages ORA
 hprim_ora_2_2
 @init{startElement("HPRIM.ORA.2.2");}
@@ -269,6 +277,14 @@ hprim_ora_2_0
   line_h2_0_ora
   body_p_ora+
   line_l
+  CR?
+  EOF;
+
+hprim_ora_crapy
+@init{startElement("HPRIM.ORA.CRAPY");}
+@after{endElement();}:
+  line_h_crapy_ora
+  line_crapy*
   CR?
   EOF;
 
@@ -300,12 +316,20 @@ hprim_orm_2_0
   CR?
   EOF;
 
+hprim_orm_crapy
+@init{startElement("HPRIM.ORM.CRAPY");}
+@after{endElement();}:
+  line_h_crapy_orm
+  line_crapy*
+  CR?
+  EOF;
+
 // Messages ADM
 hprim_adm_2_2
 @init{startElement("HPRIM.ADM.2.2");}
 @after{endElement();}:
   line_h2_2_adm
-  body_p_adm_crapy+
+  body_p_adm+
   line_l
   CR?
   EOF;
@@ -332,8 +356,7 @@ hprim_adm_crapy
 @init{startElement("HPRIM.ADM.CRAPY");}
 @after{endElement();}:
   line_h_crapy_adm
-  body_p_adm_crapy+
-  line_l
+  line_crapy*
   CR?
   EOF;
 
@@ -365,6 +388,14 @@ hprim_fac_2_0
   CR?
   EOF;
 
+hprim_fac_crapy
+@init{startElement("HPRIM.FAC.CRAPY");}
+@after{endElement();}:
+  line_h_crapy_fac
+  line_crapy*
+  CR?
+  EOF;
+
 // Messages REG
 hprim_reg_2_2
 @init{startElement("HPRIM.REG.2.2");}
@@ -393,6 +424,14 @@ hprim_reg_2_0
   CR?
   EOF;
 
+hprim_reg_crapy
+@init{startElement("HPRIM.REG.CRAPY");}
+@after{endElement();}:
+  line_h_crapy_reg
+  line_crapy*
+  CR?
+  EOF;
+
 // Message non standard : NS (nom d'espace = envoi d'un header seulement)
 hprim_ns_2_2
 @init{startElement("HPRIM.NS.2.2");}
@@ -417,6 +456,27 @@ hprim_ns_2_0
   line_l
   CR?
   EOF;
+
+hprim_ns_crapy
+@init{startElement("HPRIM.NS.CRAPY");}
+@after{endElement();}:
+  line_h_crapy_ns
+  line_crapy*
+  CR?
+  EOF;
+
+// Définition line crapy
+line_crapy :
+  line_p_crapy |
+  line_c_crapy |
+  line_ap_crapy |
+  line_ac_crapy |
+  line_obr_crapy |
+  line_obx_crapy |
+  line_fac_crapy |
+  line_reg_crapy |
+  line_act_crapy |
+  line_l_crapy;
 
 // Définitions ORM
 body_p_orm :
@@ -445,12 +505,6 @@ body_p_oru :
 // Définitions ADM
 body_p_adm :
   line_p (line_c)*
-  (line_ap (line_c)*
-   (line_ac (line_c)*)*
-  )*;
-
-body_p_adm_crapy :
-  line_p_crapy (line_c)*
   (line_ap (line_c)*
    (line_ac (line_c)*)*
   )*;
@@ -1187,6 +1241,29 @@ line_obx2_1_post10_6:
              (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBX.16", 60]
               (DELIMITER1 st_sized_optionnal["OBX.17", 60] DELIMITER1?)?)?)?)?)?)?)?)?)?)?);
 
+line_obx_crapy
+@init{startElement("OBX");}
+@after{endElement();} :
+  (CR CHARO CHARB CHARX) {startElement("OBX.1");content("OBX");endElement();}
+  (DELIMITER1 crapy_repet["OBX.2"]
+   (DELIMITER1 crapy_repet["OBX.3"]
+    (DELIMITER1 crapy_repet["OBX.4"]
+     (DELIMITER1 crapy_repet["OBX.5"]
+      (DELIMITER1 crapy_repet["OBX.6"]
+       (DELIMITER1 crapy_repet["OBX.7"]
+        (DELIMITER1 crapy_repet["OBX.8"]
+         (DELIMITER1 crapy_repet["OBX.9"]
+          (DELIMITER1 crapy_repet["OBX.10"]
+           (DELIMITER1 crapy_repet["OBX.11"]
+            (DELIMITER1 crapy_repet["OBX.12"] 
+             (DELIMITER1 crapy_repet["OBX.13"] 
+              (DELIMITER1 crapy_repet["OBX.14"]
+               (DELIMITER1 crapy_repet["OBX.15"]
+                (DELIMITER1 crapy_repet["OBX.16"]
+                 (DELIMITER1 crapy_repet["OBX.17"]
+                  DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+
+// Ligne C (commentaires)
 line_c
 @init{startElement("C");}
 @after{endElement();}:
@@ -1196,6 +1273,16 @@ line_c
   DELIMITER1 st_sized_optionnal["C.4", 64000] (REPETITEUR st_sized_optionnal["C.4", 64000])*  
   DELIMITER1?;
 
+line_c_crapy
+@init{startElement("C");}
+@after{endElement();}:
+  CR CHARC
+  (DELIMITER1 crapy_repet["C.2"]
+   (DELIMITER1 crapy_repet["C.3"]
+    (DELIMITER1 crapy_repet["C.4"]  
+     DELIMITER1?)?)?)?;
+
+// Ligne L (fin de fichier)
 line_l
 @init{startElement("L");}
 @after{endElement();}:
@@ -1205,6 +1292,17 @@ line_l
     (DELIMITER1 nm_integer_sized_optionnal["L.4", 4]
      (DELIMITER1 nm_integer_sized_optionnal["L.5", 10]
       (DELIMITER1 st_sized_optionnal["L.6", 12] DELIMITER1?)?)?)?)?)?;
+
+line_l_crapy
+@init{startElement("L");}
+@after{endElement();}:
+  CR CHARL
+  (DELIMITER1 crapy_repet["L.2"]
+   (DELIMITER1 crapy_repet["L.3"]
+    (DELIMITER1 crapy_repet["L.4"]
+     (DELIMITER1 crapy_repet["L.5"]
+      (DELIMITER1 crapy_repet["L.6"]
+       DELIMITER1?)?)?)?)?)?;
 
 // =========== Pour le crapy hprim, on définit simplement les champs, sous champs et sous sous champs =========
 
