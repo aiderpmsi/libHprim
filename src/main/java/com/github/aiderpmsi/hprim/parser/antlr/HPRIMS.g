@@ -21,7 +21,6 @@ import org.xml.sax.helpers.AttributesImpl;
 
 }
 
-
 @lexer::header {
 package com.github.aiderpmsi.hprim.parser.antlr;
 
@@ -806,6 +805,35 @@ line_ap
        (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["AP.22", 200]
         (DELIMITER1 ts_sized_optionnal["AP.23", 15]
          DELIMITER1?)?)?)?)?)?)?)?;
+
+line_ap_crapy
+@init{startElement("AP");}
+@after{endElement();} :
+  (CR CHARA CHARP) {startElement("AP.1");content("AP");endElement();}
+  (DELIMITER1 crapy_repet["AP.2"]
+   (DELIMITER1 crapy_repet["AP.3"]
+    (DELIMITER1 crapy_repet["AP.4"]
+     (DELIMITER1 crapy_repet["AP.5"]
+      (DELIMITER1 crapy_repet["AP.6"]
+       (DELIMITER1 crapy_repet["AP.7"]
+        (DELIMITER1 crapy_repet["AP.8"]
+         (DELIMITER1 crapy_repet["AP.9"]
+          (DELIMITER1 crapy_repet["AP.10"]
+           (DELIMITER1 crapy_repet["AP.11"]
+            (DELIMITER1 crapy_repet["AP.11"]
+             (DELIMITER1 crapy_repet["AP.12"]
+              (DELIMITER1 crapy_repet["AP.13"]
+               (DELIMITER1 crapy_repet["AP.14"]
+                (DELIMITER1 crapy_repet["AP.15"]
+                 (DELIMITER1 crapy_repet["AP.16"]
+                  (DELIMITER1 crapy_repet["AP.17"]
+                   (DELIMITER1 crapy_repet["AP.18"]
+                    (DELIMITER1 crapy_repet["AP.19"]
+                     (DELIMITER1 crapy_repet["AP.20"]
+                      (DELIMITER1 crapy_repet["AP.21"]
+                       (DELIMITER1 crapy_repet["AP.22"]
+                        (DELIMITER1 crapy_repet["AP.23"]
+                         DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
 // Ligne AC (assuré complémentaire)
 line_ac
