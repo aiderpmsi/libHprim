@@ -952,6 +952,34 @@ line_l
      (DELIMITER1 nm_integer_sized_optionnal["L.5", 10]
       (DELIMITER1 st_sized_optionnal["L.6", 12] DELIMITER1?)?)?)?)?)?;
 
+// =========== Pour le crapy hprim, on définit simplement les champs, sous champs et sous sous champs =========
+
+crapy_repet[String nameElement] :
+  crapy_champ_full[$nameElement] (REPETITEUR crapy_repet[$nameElement])?;
+
+crapy_champ_full[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  (final_st | crapy_champ_ordered[$nameElement, 0])?;
+
+crapy_champ_ordered[String nameElement, int order] :
+  crapy_sous_champ_full[$nameElement + "." + $order]
+    DELIMITER2 crapy_champ_ordered[$nameElement, $order + 1]?;
+  
+crapy_sous_champ_full[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  (final_st | crapy_sous_champ_ordered[$nameElement, 0])?;
+
+crapy_sous_champ_ordered[String nameElement, int order] :
+  crapy_sous_sous_champ_full[$nameElement + "." + $order]
+    DELIMITER3 crapy_sous_champ_ordered[$nameElement, $order + 1]?;
+
+crapy_sous_sous_champ_full[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  final_st;
+  
 // =========== Définition des éléments des champs hprim ===============
 
 // Je définis que :
