@@ -324,6 +324,15 @@ hprim_adm_2_0
   CR?
   EOF;
 
+hprim_adm_crapy
+@init{startElement("HPRIM.ADM.CRAPY");}
+@after{endElement();}:
+  line_h_crapy_adm
+  body_p_adm+
+  line_l
+  CR?
+  EOF;
+
 // Messages FAC
 hprim_fac_2_2
 @init{startElement("HPRIM.FAC.2.2");}
@@ -432,6 +441,12 @@ body_p_oru :
 // Définitions ADM
 body_p_adm :
   line_p (line_c)*
+  (line_ap (line_c)*
+   (line_ac (line_c)*)*
+  )*;
+
+body_p_adm_crapy :
+  line_p_crapy (line_c)*
   (line_ap (line_c)*
    (line_ac (line_c)*)*
   )*;
