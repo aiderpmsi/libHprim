@@ -202,9 +202,12 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 // =========== Définition de la structure hprim ================
 
 hprim_crapy
-@init{startDocument();}
-@after{endDocument();}:
-  hprim_adm_crapy;
+@init{startDocument();startElement("HPRIM.CRAPY");}
+@after{endDocument();endElement();}:
+  line_h_crapy
+  line_crapy*
+  CR?
+  EOF;
 
 hprim
 @init{startDocument();}
@@ -244,14 +247,6 @@ hprim_oru_2_0
   CR?
   EOF;
 
-hprim_oru_crapy
-@init{startElement("HPRIM.ORU.CRAPY");}
-@after{endElement();}:
-  line_h_crapy_oru
-  line_crapy*
-  CR?
-  EOF;
-
 // Messages ORA
 hprim_ora_2_2
 @init{startElement("HPRIM.ORA.2.2");}
@@ -277,14 +272,6 @@ hprim_ora_2_0
   line_h2_0_ora
   body_p_ora+
   line_l
-  CR?
-  EOF;
-
-hprim_ora_crapy
-@init{startElement("HPRIM.ORA.CRAPY");}
-@after{endElement();}:
-  line_h_crapy_ora
-  line_crapy*
   CR?
   EOF;
 
@@ -316,14 +303,6 @@ hprim_orm_2_0
   CR?
   EOF;
 
-hprim_orm_crapy
-@init{startElement("HPRIM.ORM.CRAPY");}
-@after{endElement();}:
-  line_h_crapy_orm
-  line_crapy*
-  CR?
-  EOF;
-
 // Messages ADM
 hprim_adm_2_2
 @init{startElement("HPRIM.ADM.2.2");}
@@ -349,14 +328,6 @@ hprim_adm_2_0
   line_h2_0_adm
   body_p_adm+
   line_l
-  CR?
-  EOF;
-
-hprim_adm_crapy
-@init{startElement("HPRIM.ADM.CRAPY");}
-@after{endElement();}:
-  line_h_crapy_adm
-  line_crapy*
   CR?
   EOF;
 
@@ -388,14 +359,6 @@ hprim_fac_2_0
   CR?
   EOF;
 
-hprim_fac_crapy
-@init{startElement("HPRIM.FAC.CRAPY");}
-@after{endElement();}:
-  line_h_crapy_fac
-  line_crapy*
-  CR?
-  EOF;
-
 // Messages REG
 hprim_reg_2_2
 @init{startElement("HPRIM.REG.2.2");}
@@ -424,14 +387,6 @@ hprim_reg_2_0
   CR?
   EOF;
 
-hprim_reg_crapy
-@init{startElement("HPRIM.REG.CRAPY");}
-@after{endElement();}:
-  line_h_crapy_reg
-  line_crapy*
-  CR?
-  EOF;
-
 // Message non standard : NS (nom d'espace = envoi d'un header seulement)
 hprim_ns_2_2
 @init{startElement("HPRIM.NS.2.2");}
@@ -454,14 +409,6 @@ hprim_ns_2_0
 @after{endElement();}:
   line_h2_0_ns
   line_l
-  CR?
-  EOF;
-
-hprim_ns_crapy
-@init{startElement("HPRIM.NS.CRAPY");}
-@after{endElement();}:
-  line_h_crapy_ns
-  line_crapy*
   CR?
   EOF;
 
@@ -535,13 +482,6 @@ start_line_h :
   DELIMITER1 spec_sized_mult_lvl1_st_mandatory_2["H.5", 40]
   DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["H.6", 100];
 
-start_line_h_crapy :
-  {startElement("H.1");content("H");endElement();} delimiters
-  DELIMITER1 crapy_repet["H.3"] 
-  DELIMITER1 crapy_repet["H.4"]
-  DELIMITER1 crapy_repet["H.5"]
-  DELIMITER1 crapy_repet["H.6"];
-  
 // Milieu de ligne H, identique pour toutes les versions
 midd_line_h :
   DELIMITER1 spec_sized_tn["H.8", 40]
@@ -550,7 +490,13 @@ midd_line_h :
   DELIMITER1 st_sized_optionnal["H.11", 80]
   DELIMITER1 spec_const_7_12["H.12"];
 
-midd_line_h_crapy :
+line_h_crapy :
+  {startElement("H.1");content("H");endElement();} delimiters
+  DELIMITER1 crapy_repet["H.3"] 
+  DELIMITER1 crapy_repet["H.4"]
+  DELIMITER1 crapy_repet["H.5"]
+  DELIMITER1 crapy_repet["H.6"]
+  DELIMITER1 crapy_repet["H.7"]
   (DELIMITER1 crapy_repet["H.8"]
    (DELIMITER1 crapy_repet["H.9"]
     (DELIMITER1 crapy_repet["H.10"]
@@ -595,13 +541,6 @@ line_h2_0_oru
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
-line_h_crapy_oru
-@init{startElement("H");}
-@after{endElement();} :
-  start_line_h_crapy
-  DELIMITER1 spec_const_7_7_contexte_ORU["H.7"]
-  midd_line_h_crapy;
-
 // Messages ORM :
 line_h2_2_orm
 @init{startElement("H");}
@@ -632,13 +571,6 @@ line_h2_0_orm
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
-
-line_h_crapy_orm
-@init{startElement("H");}
-@after{endElement();} :
-  start_line_h_crapy
-  DELIMITER1 spec_const_7_7_contexte_ORM["H.7"]
-  midd_line_h_crapy;
 
 // Messages ORA
 line_h2_2_ora
@@ -671,13 +603,6 @@ line_h2_0_ora
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
-line_h_crapy_ora
-@init{startElement("H");}
-@after{endElement();} :
-  start_line_h_crapy
-  DELIMITER1 spec_const_7_7_contexte_ORA["H.7"]
-  midd_line_h_crapy;
-
 // Messages ADM
 line_h2_2_adm
 @init{startElement("H");}
@@ -708,13 +633,6 @@ line_h2_0_adm
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
-
-line_h_crapy_adm
-@init{startElement("H");}
-@after{endElement();} :
-  start_line_h_crapy
-  DELIMITER1 spec_const_7_7_contexte_ADM["H.7"]
-  midd_line_h_crapy;
 
 // Messages FAC
 line_h2_2_fac
@@ -747,13 +665,6 @@ line_h2_0_fac
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
-line_h_crapy_fac
-@init{startElement("H");}
-@after{endElement();} :
-  start_line_h_crapy
-  DELIMITER1 spec_const_7_7_contexte_FAC["H.7"]
-  midd_line_h_crapy;
-
 // Messages REG
 line_h2_2_reg
 @init{startElement("H");}
@@ -785,13 +696,6 @@ line_h2_0_reg
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
 
-line_h_crapy_reg
-@init{startElement("H");}
-@after{endElement();} :
-  start_line_h_crapy
-  DELIMITER1 spec_const_7_7_contexte_REG["H.7"]
-  midd_line_h_crapy;
-
 // Messages NS
 line_h2_2_ns
 @init{startElement("H");}
@@ -822,13 +726,6 @@ line_h2_0_ns
   DELIMITER1 spec_const_7_13_version_2_0["H.13"]
   DELIMITER1 ts_sized_mandatory["H.14", 26]
   DELIMITER1?;
-
-line_h_crapy_ns
-@init{startElement("H");}
-@after{endElement();} :
-  start_line_h_crapy
-  DELIMITER1 spec_const_7_7_contexte_NS["H.7"]
-  midd_line_h_crapy;
 
 // Ligne AP (assuré primaire)
 line_ap
