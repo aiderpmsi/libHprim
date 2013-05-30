@@ -1,7 +1,9 @@
 package com.github.aiderpmsi.hprim.parser;
 
 import java.io.*;
+import java.nio.CharBuffer;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -62,6 +64,10 @@ public class HPRIMSTokenSource implements TokenSource {
      */
     private LinkedList<Token> tokenList = new LinkedList<Token>();
     
+    /**
+     * 
+     */
+    StringBuilder content = new StringBuilder();
     
 	/**
 	 * Pattern matching précompilée pour reconnaitre les charactères imprimables
@@ -83,10 +89,10 @@ public class HPRIMSTokenSource implements TokenSource {
      * @throws IOException Si la lecture duflux est impossible
      */
     private void parseDelimiters() throws RecognitionException, IOException {
-    	// == Définition des variables de la méthode : ==
     	char[] delimitersBuffer = new char[5]; // Buffer récupérant les caractères délimiteurs
     	int nbcharsread; // Variable récupérant le nombre de caractères ayant été effectivement lus
-    	
+
+    	// Remplissage du buffer pour lire la définition des délimiteurs
     	nbcharsread = inputReader.read(delimitersBuffer);
     	if (nbcharsread == -1)
     		throw new HPRIMSRecognitionException("Fin prématurée du fichier",
@@ -112,115 +118,66 @@ public class HPRIMSTokenSource implements TokenSource {
 	}
 	
     /**
-     * Renvoie le code du Lexer associé à un caractère
-     * @param character
-     * @return
-     */
-    public int getCharTokenClass(char character) {
-    	switch (character) {
-    		case '0' : return HPRIMSParser.CHIFFRE0;
-    		case '1' : return HPRIMSParser.CHIFFRE1;
-    		case '2' : return HPRIMSParser.CHIFFRE2;
-    		case '3' : return HPRIMSParser.CHIFFRE3;
-    		case '4' : return HPRIMSParser.CHIFFRE4;
-    		case '5' : return HPRIMSParser.CHIFFRE5;
-    		case '6' : return HPRIMSParser.CHIFFRE6;
-    		case '7' : return HPRIMSParser.CHIFFRE7;
-    		case '8' : return HPRIMSParser.CHIFFRE8;
-    		case '9' : return HPRIMSParser.CHIFFRE9;
-    		case '.' : return HPRIMSParser.POINT;
-    		case '+' : return HPRIMSParser.PLUS;
-    		case '-' : return HPRIMSParser.MOINS;
-    		case 'A' : return HPRIMSParser.CHARA;
-    		case 'B' : return HPRIMSParser.CHARB;
-    		case 'C' : return HPRIMSParser.CHARC;
-    		case 'D' : return HPRIMSParser.CHARD;
-    		case 'E' : return HPRIMSParser.CHARE;
-    		case 'F' : return HPRIMSParser.CHARF;
-    		case 'G' : return HPRIMSParser.CHARG;
-    		case 'H' : return HPRIMSParser.CHARH;
-    		case 'I' : return HPRIMSParser.CHARI;
-    		case 'K' : return HPRIMSParser.CHARK;
-    		case 'L' : return HPRIMSParser.CHARL;
-    		case 'M' : return HPRIMSParser.CHARM;
-    		case 'N' : return HPRIMSParser.CHARN;
-    		case 'O' : return HPRIMSParser.CHARO;
-    		case 'P' : return HPRIMSParser.CHARP;
-    		case 'R' : return HPRIMSParser.CHARR;
-    		case 'S' : return HPRIMSParser.CHARS;
-    		case 'T' : return HPRIMSParser.CHART;
-    		case 'U' : return HPRIMSParser.CHARU;
-    		case 'V' : return HPRIMSParser.CHARV;
-    		case 'W' : return HPRIMSParser.CHARW;
-    		case 'X' : return HPRIMSParser.CHARX;
-    		case 'l' : return HPRIMSParser.CHARl;
-    		case 'u' : return HPRIMSParser.CHARu;
-    		case '<' : return HPRIMSParser.CHAR_SYMBOL_INF;
-    		case '>' : return HPRIMSParser.CHAR_SYMBOL_SUP;
-    		default:
-    			return HPRIMSParser.LETTRE;
-    	}
-    }
-    
-    /**
      * Remplit le tampon du tokenizer 
      * @return le nombre de tokens rajoutés
      */
     private int fillToken() {
     	int nbadded = 0;
 		try {
-			// On récupère le prochain token
+			// On récupère le prochain caractère
 			int readresult = inputReader.read();
 			char nextChar = (char) readresult;
 			
-			// L'inputReader est à la fin du flux.
+			// Si no est à la fin du flux, on envoie le token de fin de flux
 			if (readresult == -1) {
 				tokenList.add(CommonToken.EOF_TOKEN);
 				nbadded++;
 			}
 			
-			// Le tokenizer attend un caract�re standard et n'est pas dans un �t� particulier
+			// Si tokenSourceState est à STD_CHAR, le tokenizer n'attend par de caractère particulier
 			else if (tokenSourceState == TokenSourceState.STD_CHAR) {
 
-				// Le prochain caract�re est un caract�re d'�chappement
+				// Le prochain caractère est un caractère d'échappement, il faut le mettre de côté et
+				// spécifier que l'état du tokenizer est en post-caractère d'échappement (ECHAPED)
 				if (nextChar == delimiters.getEchap()) {
 					tokenSourceState = TokenSourceState.ECHAPED;
-					nbadded += fillToken(); 
+					nbadded += fillToken();
 				}
 				
-				// Le prochain caract�re est un d�limiteur 1
+				// Le prochain caractère est un délimiteur 1, il faut renvoyer un token DELIMITER1
 				else if (nextChar == delimiters.getDelimiter1()) {
 					tokenList.add(createToken(HPRIMSParser.DELIMITER1,
 							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
 					nbadded++;
 				}
 				
-				// Le prochain caract�re est un d�limiteur 2
+				// Le prochain caractère est un délimiteur 2, il faut renvoyer un token DELIMITER2
 				else if (nextChar == delimiters.getDelimiter2()) {
 					tokenList.add(createToken(HPRIMSParser.DELIMITER2,
 							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
 					nbadded++;
 				}
 				
-				// Le prochain caract�re est un d�limiteur 3
+				// Le prochain caractère est un délimiteur 3, il faut renvoyer un token DELIMITER3
 				else if (nextChar == delimiters.getDelimiter3()) {
 					tokenList.add(createToken(HPRIMSParser.DELIMITER3,
 							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
 					nbadded++;
 				}
 				
-				// Le prochain caract�re est un r�p�titeur
+				// Le prochain caractère est un répétiteur, il faut envoyer un token REPETITEUR
 				else if (nextChar == delimiters.getRepet()) {
 					tokenList.add(createToken(HPRIMSParser.REPETITEUR,
 							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
 					nbadded++;
 				}
 				
-				// Le prochain caract�re est un carriage return
+				// Le prochain caractère est un carriage return, il faut vérifier qu'on ne soit pas juste à
+				// un saut de ligne 
 				else if (nextChar == '\r') {
 
-					// En cas de A apr�s les caract�res non imprimables on n'envoie pas le CR
-					// ni le A ni le d�limiteur
+					// En cas de A après les caractères non imprimables on n'envoie pas le CR
+					// ni le A ni le délimiteur
 					while (true) {
 						readresult = inputReader.read();
 						nextChar = (char) readresult;
@@ -234,9 +191,9 @@ public class HPRIMSTokenSource implements TokenSource {
 							break;
 					}
 					if (nextChar != 'A') {
-						tokenList.add(createToken(HPRIMSLexer.CR,
+						tokenList.add(createToken(HPRIMSParser.CR,
 								Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
-						tokenList.add(createToken(getCharTokenClass(nextChar),
+						tokenList.add(createToken(HPRIMSParser.CONTENT,
 								Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
 						nbadded += 2;
 					} else {
@@ -247,32 +204,32 @@ public class HPRIMSTokenSource implements TokenSource {
 							nbadded++;
 						} else {
 							if (nextChar != delimiters.getDelimiter1())
-								reportError(new HPRIMSRecognitionException("Suite de ligne A sans d�limiteur",
+								reportError(new HPRIMSRecognitionException("Suite de ligne A sans délimiteur",
 										inputReader, new char[]{nextChar}));
 							nbadded += fillToken();							
 						}
 					}
 				}
 				
-				// Le caract�re ne revet aucun caract�re particulier, en renvoie un token
+				// Le caractère ne revet aucun caractère particulier, on le rajoute à la liste des 
 				else {
-					tokenList.add(createToken(getCharTokenClass(nextChar),
+					tokenList.add(createToken(HPRIMSLexer.CONTENT,
 							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
 					nbadded++;
 				}
 
 			}
 			
-			// Le dernier caract�re �tait un caract�re d'�chappement, on renvoie le suivant
+			// Le dernier caractère était un caractère d'échappement, on renvoie le suivant
 			// quel qu'il soit.
 			else if (tokenSourceState == TokenSourceState.ECHAPED) {
 				tokenSourceState = TokenSourceState.STD_CHAR;
-				tokenList.add(createToken(getCharTokenClass(nextChar), 
+				tokenList.add(createToken(HPRIMSLexer.CONTENT, 
 						Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
 				nbadded++;
 			}
 
-			// Le tokenizer attend les caract�res d'initialisation
+			// Le tokenizer attend les caractères d'initialisation
 			else if (tokenSourceState == TokenSourceState.INIT) {
 				if (nextChar == 'H') {
 					try {
@@ -298,6 +255,12 @@ public class HPRIMSTokenSource implements TokenSource {
 		}
 		return nbadded;
 	}
+    
+    private char[] purgeContent() {
+    	char[] toPurge = content.toString().toCharArray();
+    	content.setLength(0);
+    	return toPurge;
+    }
     
 	/**
 	 * Retourne le prochain token retrouvé dans le flux d'entrée de caractères
