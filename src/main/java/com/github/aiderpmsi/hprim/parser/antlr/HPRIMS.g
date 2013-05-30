@@ -4,7 +4,7 @@ options {
   language = Java;
 }
 
-@header {
+@parser::header {
 package com.github.aiderpmsi.hprim.parser.antlr;
 
 import java.util.logging.Level;
@@ -29,7 +29,7 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 @lexer::members {
 }
 
-@members {
+@parser::members {
 
   /**
    * Collecteur utilisé dans cette classe
@@ -61,7 +61,7 @@ package com.github.aiderpmsi.hprim.parser.antlr;
    * 2 = moyen
    * 3 = fort
    */
-  private int strictNess = 3;
+  private int strictNess = 2;
 
   /**
    * Constructeur
@@ -215,45 +215,43 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 hprim
 @init{startDocument();}
 @after{endDocument();} :
-  start_line_h;
+  start_line_h EOF;
 
 // Début de ligne H, identique pour toutes les versions
 start_line_h :
-  {startElement("H.1");content("H");endElement();} delimiters
+  {startElement("H.1");content("H");endElement();}
+  {startElement("H.2");} delimiters {endElement();}
   DELIMITER1 {startElement("H.3");} field {endElement();}
   DELIMITER1 {startElement("H.4");} field {endElement();}
   DELIMITER1 {startElement("H.5");}
-    ({startElement("H.5.1");} spec_field["^.{1}$"] {endElement();}
-     DELIMITER2 {startElement("H.5.2");} spec_field["^.{1}$"] {endElement();}
-     ( | {strictNess <= 2}? DELIMITER2?)) {endElement();};
+    ({startElement("H.5.1");} h_5_1=spec_field["^.{1,}$"] {endElement();}
+     DELIMITER2 {startElement("H.5.2");} h_5_2=spec_field["^.{1,}$"] {endElement();}
+     (| {strictNess <= 2}? (DELIMITER2 spec_field[""])?)) {matchRegex($h_5_1.text + $h_5_2.text, "^.{0,15}$")}? {endElement();};
 
 // ========== Définitions de types spéciaux réutilisables ======
 
 // Champ, avec spécification de champ
 spec_field[String fieldPattern] :
-  {matchRegex($text, fieldPattern)}?
-  CONTENT*
+  {matchRegex(input.LT(1).getText(), fieldPattern)}?
+  CONTENT
   {content($text);};
 
 // Champ sans spécification de type
 field :
-  CONTENT*
+  CONTENT
   {content($text);};
 
 // Données de type délimiteurs
-delimiters
-@init{startElement("H.2");}
-@after{endElement();}:
+delimiters :
   DELIMITERS
   {content($text);};
  
 // =========== Définitions pour le lexer perso =========
 
-fragment CR : 'h';
-fragment TOKENMISMATCH : 'g';
-fragment DELIMITER1: 'f';
-fragment DELIMITER2: 'e';
-fragment DELIMITER3: 'd';
-fragment DELIMITERS: 'c';
-fragment REPETITEUR: 'b';
-fragment CONTENT: 'a';
+CR : 'h';
+DELIMITER1: 'f';
+DELIMITER2: 'e';
+DELIMITER3: 'd';
+DELIMITERS: 'c';
+REPETITEUR: 'b';
+CONTENT: 'a';

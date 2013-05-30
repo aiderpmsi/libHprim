@@ -1,5 +1,6 @@
 package com.github.aiderpmsi.hprim.parser.examples;
 
+import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,9 +52,10 @@ public class SimpleExample {
 		try {
 			// Création de l'inputstream en entrée
 			is = new FileInputStream(args[0]);
-	
+			String toRead = "H|~^\\&|DORI007.HPR||TOTO;igb~JPOUliu";
+			ByteArrayInputStream by = new ByteArrayInputStream(toRead.getBytes("ISO8859_1"));
 			// Création de la source des tokens
-			inputreader = new HPRIMSInputStreamReader(is, "ISO8859_1");
+			inputreader = new HPRIMSInputStreamReader(by, "ISO8859_1");
 			HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader);
 	
 			// Création du flux de tokens
