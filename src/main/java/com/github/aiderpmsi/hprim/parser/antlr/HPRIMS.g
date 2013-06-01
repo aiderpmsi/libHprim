@@ -42,6 +42,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   private final static List<String> p_11 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> p_13 = Arrays.asList(new String[] {".*", ".*"});
   private final static List<String> p_14 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> p_19 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> p_26 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*", ".*", ".*"});
 
   /**
    * Indicateur définissant s'il faut ou non enregistrer le parsing
@@ -323,40 +325,36 @@ line_p
         (DELIMITER1 lvl1_fields["P.11", p_11, 0, "^.{0,200}$"]
          (DELIMITER1 {startElement("P.12");} spec_field["^.{0,120}$", true, false] {endElement();}
           (DELIMITER1 lvl1_fields_repet["P.13", p_13, 0, "^.{0,40}$"]
-           (DELIMITER1 spec_sized_cna["P.14", p_14, 0, "^.{0,60}$"]
-           )?)?)?)?)?)?)?)?)?)?;
-
-
            // Je ne sais pas si c'est chaque CNA qui ne doit pas faire plus de 60 caractères ou si c'est
            // l'ensemble qui ne doit pas en faire plus de 60. Je considère le premier
-//           (DELIMITER1 spec_sized_cna["P.14", 60] (REPETITEUR spec_sized_cna["P.14", 60])*
-//            (DELIMITER1 st_sized_optionnal["P.15", 60]
-//             (DELIMITER1 st_sized_optionnal["P.16", 60]
+           (DELIMITER1 spec_sized_cna["P.14", p_14, 0, "^.{0,60}$"] (REPETITEUR spec_sized_cna["P.14", p_14, 0, "^.{0,60}$"])*
+            (DELIMITER1 {startElement("P.15");} spec_field["^.{0,60}$", true, false] {endElement();}
+             (DELIMITER1 {startElement("P.16");} spec_field["^.{0,60}$", true, false] {endElement();}
               // Le champ 8.17 (taille) est de type CQ : impossible d'en trouver la norme, je mets un numérique
-//              (DELIMITER1 nm_sized_optionnal["P.17", 10]
+              (DELIMITER1 {startElement("P.17");} spec_field["^[0-9]{0,10}$", true, false] {endElement();}
                // Le champ 8.18 (poids) est de type CQ : impossible d'en trouver la norme, je mets un numérique
-//               (DELIMITER1 nm_sized_optionnal["P.18", 10]
-//                (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["P.19", 200] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["P.19", 200])*
-//                 (DELIMITER1 st_sized_optionnal["P.20", 200] (REPETITEUR st_sized_optionnal["P.20", 200])*
-//                  (DELIMITER1 st_sized_optionnal["P.21", 200]
-//                   (DELIMITER1 st_sized_optionnal["P.22", 60]
-//                    (DELIMITER1 st_sized_optionnal["P.23", 60]
-//                     (DELIMITER1 ts_sized_optionnal["P.24", 26] (REPETITEUR ts_sized_optionnal["P.24", 26])?
-//                      (DELIMITER1 spec_const_8_25["P.25"]
-//                       (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_8["P.26", 100]
+               (DELIMITER1 {startElement("P.18");} spec_field["^[0-9]{0,10}$", true, false] {endElement();}
+                (DELIMITER1 lvl1_fields["P.19", p_19, 0, "^.{0,200}$"] (REPETITEUR lvl1_fields["P.19", p_19, 0, "^.{0,200}$"])*
+                 (DELIMITER1 {startElement("P.20");} spec_field["^.{0,200}$", true, false] {endElement();} (REPETITEUR {startElement("P.20");} spec_field["^.{0,200}$", true, false] {endElement();})*
+                  (DELIMITER1 {startElement("P.21");} spec_field["^.{0,200}$", true, false] {endElement();}
+                   (DELIMITER1 {startElement("P.22");} spec_field["^.{0,60}$", true, false] {endElement();}
+                    (DELIMITER1 {startElement("P.23");} spec_field["^.{0,60}$", true, false] {endElement();}
+                     (DELIMITER1 {startElement("P.24");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();} (REPETITEUR {startElement("P.24");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();})*
+                      (DELIMITER1 {startElement("P.25");} spec_field["^(OP|IP|ER|PA|MP)?^$", true, false] {endElement();}
+                       (DELIMITER1 lvl1_fields["P.26", p_26, 0, "^.{0,100}$"]
                         // Je n'ai pas la table des classification du diagnostic, je mets une chaine de caractères 
-//                        (DELIMITER1 st_sized_optionnal["P.27", 100]
-//                         (DELIMITER1 spec_const_race["P.28"]
+                        (DELIMITER1 {startElement("P.27");} spec_field["^.{0,100}$", true, false] {endElement();}
+                         (DELIMITER1 {startElement("P.28");} spec_field["^$", true, false] {endElement();}
                           // Je n'ai pas la table de classification de situation maritale, je mets une chaine de caractères
-//                          (DELIMITER1 st_sized_optionnal["P.29", 2]
+                          (DELIMITER1 {startElement("P.29");} spec_field["^.{0,2}$", true, false] {endElement();}
                            // Je n'ai pas la table des précautions à prendre, je mets une chaine de caractères
-//                           (DELIMITER1 st_sized_optionnal["P.30", 20]
-//                            (DELIMITER1 st_sized_optionnal["P.31", 20]
+                           (DELIMITER1 {startElement("P.30");} spec_field["^.{0,20}$", true, false] {endElement();}
+                            (DELIMITER1 {startElement("P.31");} spec_field["^.{0,20}$", true, false] {endElement();}
                              // Je n'ai pas la table du statut de confidentialité, je mets une chaine de caractères
-//                             (DELIMITER1 st_sized_optionnal["P.32", 20]
-//                              (DELIMITER1 ts_sized_optionnal["P.33", 26]
-//                               (DELIMITER1 ts_sized_optionnal["P.34", 26]
-//                                DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+                             (DELIMITER1 {startElement("P.32");} spec_field["^.{0,20}$", true, false] {endElement();}
+                              (DELIMITER1 {startElement("P.33");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();}
+                               (DELIMITER1 {startElement("P.34");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();}
+                                DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
 // ======= Définitions de types spécaux non réutilisables ==========
 spec_sized_cna[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
