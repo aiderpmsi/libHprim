@@ -35,6 +35,13 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   // ========== Elements de définition des documents ===========
   private final static List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
   private final static List<String> h_6 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> h_8 = Arrays.asList(new String[] {".*", ".*"});
+  private final static List<String> h_10 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
+
+  /**
+   * Indicateur définissant s'il faut ou non enregistrer le parsing
+   */
+  boolean record = false;
 
   /**
    * Collecteur utilisé dans cette classe
@@ -91,6 +98,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
    * Encadre l'appel du contentHandler
    */
   public void startElement(String nameElement) throws ContentHandlerException {
+    if (!record) return;
+
       try {
           // Enregistrement de cet élément
           XmlElement xmlElement = new XmlElement();
@@ -112,6 +121,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
    * Encadre l'appel du contentHandler
    */
   public void endElement() throws ContentHandlerException {
+    if (!record) return;
+
     try {
         XmlElement xmlElement = xmlElements.pollLast();
         contentHandler.endElement(xmlElement.uri,
@@ -128,6 +139,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
    * Début de document hprim
    */
   public void startDocument() throws ContentHandlerException {
+    if (!record) return;
+
     try {
         contentHandler.startDocument();
      } catch (SAXException e) {
@@ -142,6 +155,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
    * Fin de document hprim
    */
   public void endDocument() throws ContentHandlerException {
+    if (!record) return;
+
     try {
         contentHandler.endDocument();
      } catch (SAXException e) {
@@ -156,6 +171,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
    * Encadre l'appel du contentHandler
    */
   public void content(String content) throws ContentHandlerException {
+    if (!record) return;
+
     try {
         contentHandler.characters(content.toCharArray(),
             0, content.length());
@@ -203,8 +220,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
      * @param input
      * @throws RecognitionException
      */
-    public boolean matchRegex(String text, String regex) {
-      if (strictNess <= 1)
+    public boolean matchRegex(String text, String regex, boolean force) {
+      if (force == false && strictNess <= 1)
         return true;
       Pattern my_p = Pattern.compile(regex, Pattern.DOTALL);
       Matcher my_m = my_p.matcher(text);
@@ -214,51 +231,110 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 }  
 
 // =========== Définition de la structure hprim ================
-
-// =========== Définition des des lignes hprim =================
-
 hprim[int strictNess]
 @init{this.strictNess = $strictNess;startDocument();}
 @after{endDocument();} :
-  start_line_oru EOF;
+  (line_h2_2_oru[false]) => (line_h2_2_oru[true] EOF)
+  |
+  (line_h2_2_adm[false]) => (line_h2_2_adm[true] EOF)
+  ;
+
+
+// =========== Définition des des lignes hprim =================
+
+// == Ligne H ==
 
 // Début de ligne H, identique pour toutes les versions
 start_line_h :
   {startElement("H.1");content("H");endElement();}
   {startElement("H.2");} delimiters {endElement();}
-  DELIMITER1 {startElement("H.3");} field[true] {endElement();}
-  DELIMITER1 {startElement("H.4");} field[true] {endElement();}
+  DELIMITER1 {startElement("H.3");} spec_field["^.{0,12}$", true, false] {endElement();}
+  DELIMITER1 {startElement("H.4");} spec_field["^.{0,12}$", true, false] {endElement();}
   DELIMITER1 lvl1_fields["H.5", h_5, 2, "^.{0,15}$"]
   DELIMITER1 lvl1_fields["H.6", h_6, 0, "^.{0,100}$"];
 
-start_line_oru :
+// Milieu de ligne H, identique pour toutes les versions
+midd_line_h :
+  DELIMITER1 lvl1_fields_repet["H.8", h_8, 0, "^.{0,40}$"]
+  DELIMITER1 {startElement("H.9");} spec_field["^.{0,40}$", true, false] {endElement();}
+  DELIMITER1 lvl1_fields["H.10", h_10, 2, "^.{0,40}$"]
+  DELIMITER1 {startElement("H.11");} spec_field["^.{0,80}$", true, false] {endElement();}
+  DELIMITER1 {startElement("H.12");} spec_field["^(P|D|T)$", true, false] {endElement();};
+
+// Bloc définissant les lines H en fonction de leur version
+bloc_line_h_2_2 :
+    DELIMITER1 {startElement("H.13");startElement("H.13.1");} spec_field["^H2\\.2$", true, true] {endElement();}
+             DELIMITER2 {startElement("H.13.2");} spec_field["^(C|L|R)$", true, false] {endElement();endElement();};
+  
+// Fin de ligne, identiqu pour toutes les versions
+end_line_h :
+  DELIMITER1 {startElement("H.14");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();}
+  DELIMITER1? spec_field["", false, false]?;
+
+// Messages ORU :
+start_line_h_oru :
   start_line_h
-  DELIMITER1 {startElement("H.7");} spec_field["^ORU$", true] {endElement();};
+  DELIMITER1 {startElement("H.7");} spec_field["^ORU$", true, true] {endElement();}
+  midd_line_h;
 
+line_h2_2_oru[boolean record]
+@init{this.record = $record;startElement("H");}
+@after{endElement();} :
+  start_line_h_oru
+  bloc_line_h_2_2
+  end_line_h;
 
+// Messages ADM :
+start_line_h_adm :
+  start_line_h
+  DELIMITER1 {startElement("H.7");} spec_field["^ADM$", true, true] {endElement();}
+  midd_line_h;
+
+line_h2_2_adm[boolean record]
+@init{this.record = $record;startElement("H");}
+@after{endElement();} :
+  start_line_h_adm
+  bloc_line_h_2_2
+  end_line_h;
 
 // ========== Définitions de types spéciaux réutilisables ======
-
 lvl1_fields[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
 @init{startElement(nameElement);}
 @after{endElement();} :
   r=lvl1_subfields[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern];
 
 lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern]:
-  {$size == $patterns.size()}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true] {$recorded.append($g.text);endElement();}
-                                     ({strictNess <= 2}? (DELIMITER2 spec_field["", false])? | )
-                                   {matchRegex($recorded.toString(), $completeFieldPattern)}?)
+  {$size == $patterns.size()}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
+                                     ({strictNess <= 2}? (DELIMITER2 spec_field["", false, false])? | )
+                                   {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
   |
-  {$size < $nbMandatory}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true] {$recorded.append($g.text);endElement();}
+  {$size < $nbMandatory}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
                                 DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern])
   |
-  ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true] {$recorded.append($g.text);endElement();}
-     ((DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]) | {matchRegex($recorded.toString(), $completeFieldPattern)}?))
+  ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
+     ((DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]) | {matchRegex($recorded.toString(), $completeFieldPattern, false)}?))
+  ;
+
+lvl1_fields_repet[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
+@init{startElement(nameElement);}
+@after{endElement();} :
+  r=lvl1_subfields_repet[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern];
+
+lvl1_subfields_repet[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern]:
+  {$size == $patterns.size()}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
+                                     ({strictNess <= 2}? (REPETITEUR spec_field["", false, false])? | )
+                                   {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
+  |
+  {$size < $nbMandatory}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
+                                REPETITEUR lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern])
+  |
+  ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
+     ((REPETITEUR lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]) | {matchRegex($recorded.toString(), $completeFieldPattern, false)}?))
   ;
 
 // Champ, avec spécification de type
-spec_field[String fieldPattern, boolean record] :
-  {matchRegex(input.LT(1).getText(), $fieldPattern)}?
+spec_field[String fieldPattern, boolean record, boolean forceRegex] :
+  {matchRegex(input.LT(1).getText(), $fieldPattern, $forceRegex)}?
   CONTENT
   {if (record) content($text);};
 

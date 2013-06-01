@@ -52,7 +52,7 @@ public class SimpleExample {
 		try {
 			// Création de l'inputstream en entrée
 			is = new FileInputStream(args[0]);
-			String toRead = "H|~^\\&|DORI007.HPR||TOTO;igb~JPOUliu";
+			String toRead = "H|~^\\&|DORI007.HPR||TOTO~JPOUfgdfg|~~~~~|ADM|ru^tu|toto|yep~yop\rA||help|P|H2.2~C|000000";
 			ByteArrayInputStream by = new ByteArrayInputStream(toRead.getBytes("ISO8859_1"));
 			// Création de la source des tokens
 			inputreader = new HPRIMSInputStreamReader(by, "ISO8859_1");
@@ -65,8 +65,7 @@ public class SimpleExample {
 			// la classe collecteur l'export des données
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
 	
-			// Pour l'instant, seul le parser hprim 2.1 est fonctionnel
-			parser.hprim();
+			parser.hprim(3);
 		} finally {
 			// Fermeture propre des ressources allouées
 			if (inputreader != null)
