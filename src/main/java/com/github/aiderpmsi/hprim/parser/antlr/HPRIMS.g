@@ -41,6 +41,7 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   private final static List<String> p_6 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> p_11 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> p_13 = Arrays.asList(new String[] {".*", ".*"});
+  private final static List<String> p_14 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
 
   /**
    * Indicateur définissant s'il faut ou non enregistrer le parsing
@@ -320,8 +321,10 @@ line_p
       (DELIMITER1 {startElement("P.9");} spec_field["^[M|F|U]?$", true, false] {endElement();}
        (DELIMITER1 {startElement("P.10");} spec_field["^$", true, false] {endElement();}
         (DELIMITER1 lvl1_fields["P.11", p_11, 0, "^.{0,200}$"]
-         ({startElement("P.12");} spec_field["^.{0,120}$", true, false] {endElement();}
-          (DELIMITER1 lvl1_fields_repet["P.13", p_13, 0, "^.{0,40}$"])?)?)?)?)?)?)?)?)?;
+         (DELIMITER1 {startElement("P.12");} spec_field["^.{0,120}$", true, false] {endElement();}
+          (DELIMITER1 lvl1_fields_repet["P.13", p_13, 0, "^.{0,40}$"]
+           (DELIMITER1 spec_sized_cna["P.14", p_14, 0, "^.{0,60}$"]
+           )?)?)?)?)?)?)?)?)?)?;
 
 
            // Je ne sais pas si c'est chaque CNA qui ne doit pas faire plus de 60 caractères ou si c'est
@@ -359,10 +362,10 @@ line_p
 spec_sized_cna[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
 @init{startElement($nameElement);}
 @after{endElement();}:
-  {startElement($nameElement + ".1")} h=field[true, false] {endElement();}
+  {startElement($nameElement + ".1");} h=field[true] {endElement();}
    (DELIMITER2 i=lvl2_fields[$nameElement + ".2", $patterns, $nbMandatory, ".*"]
-    ({startElement($nameElement + ".3")} j=field[true, false] {endElement();})?)?
-  {matchRegex(($h.text == null ? "" : $h.text) + ($i.contentText == null ? "" : $i.contentText) + ($j.text == null ? "" : $j.text));};
+    (DELIMITER2 {startElement($nameElement + ".3");} j=field[true] {endElement();})?)?
+  {matchRegex(($h.text == null ? "" : $h.text) + ($i.contentText == null ? "" : $i.contentText) + ($j.text == null ? "" : $j.text), $completeFieldPattern, false)}?;
 
 // ========== Définitions de types spéciaux réutilisables ======
 // Répétitions de champs entre délimiteurs 2
@@ -370,11 +373,11 @@ lvl1_fields[String nameElement, List<String> patterns, int nbMandatory, String c
 @init{startElement(nameElement);}
 @after{endElement();} :
   r=lvl1_subfields[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern] {$contentText = $r.contentText;};
-
+  
 lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern] returns [String contentText]:
   {$size == $patterns.size()}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
-                                     ({strictNess <= 2}? (DELIMITER2 spec_field["", false, false])? | )
-                                   {$contentText = $recorded.toString()} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
+                                     ({strictNess <= 2}? DELIMITER2 spec_field["", false, false])?
+                                   {$contentText = $recorded.toString();} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
   |
   {$size < $nbMandatory}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
                                 DELIMITER2 h=lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
@@ -393,14 +396,14 @@ lvl1_fields_repet[String nameElement, List<String> patterns, int nbMandatory, St
 lvl1_subfields_repet[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern] returns [String contentText]:
   {$size == $patterns.size()}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
                                      ({strictNess <= 2}? (REPETITEUR spec_field["", false, false])? | )
-                                   {$contentText = $recorded.toString()} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
+                                   {$contentText = $recorded.toString();} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
   |
   {$size < $nbMandatory}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
-                                REPETITEUR h=lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
+                                REPETITEUR h=lvl1_subfields_repet[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
                                 {$contentText = $h.contentText;})
   |
   ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
-     ((REPETITEUR h=lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern] {$contentText = $h.contentText;}) |
+     ((REPETITEUR h=lvl1_subfields_repet[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern] {$contentText = $h.contentText;}) |
        {$contentText = $recorded.toString();} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?))
   ;
 
@@ -408,19 +411,19 @@ lvl1_subfields_repet[String nameElement, List<String> patterns, int nbMandatory,
 lvl2_fields[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern] returns [String contentText]
 @init{startElement(nameElement);}
 @after{endElement();} :
-  r=lvl1_subfields[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern] {$contentText = $r.contentText;};
+  r=lvl2_subfields[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern] {$contentText = $r.contentText;};
 
 lvl2_subfields[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern] returns [String contentText]:
   {$size == $patterns.size()}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
                                      ({strictNess <= 2}? (DELIMITER3 spec_field["", false, false])? | )
-                                   {$contentText = $recorded.toString()} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
+                                   {$contentText = $recorded.toString();} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?)
   |
   {$size < $nbMandatory}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
-                                DELIMITER3 h=lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
+                                DELIMITER3 h=lvl2_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
                                 {$contentText = $h.contentText;})
   |
   ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true, false] {$recorded.append($g.text);endElement();}
-     ((DELIMITER3 h=lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern] {$contentText = $h.contentText;}) |
+     ((DELIMITER3 h=lvl2_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern] {$contentText = $h.contentText;}) |
        {$contentText = $recorded.toString();} {matchRegex($recorded.toString(), $completeFieldPattern, false)}?))
   ;
 
