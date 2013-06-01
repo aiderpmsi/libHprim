@@ -33,7 +33,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 @parser::members {
 
   // ========== Elements de définition des documents ===========
-  private static List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
+  private final static List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
+  private final static List<String> h_6 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
 
   /**
    * Collecteur utilisé dans cette classe
@@ -219,15 +220,20 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 hprim[int strictNess]
 @init{this.strictNess = $strictNess;startDocument();}
 @after{endDocument();} :
-  start_line_h EOF;
+  start_line_oru EOF;
 
 // Début de ligne H, identique pour toutes les versions
 start_line_h :
   {startElement("H.1");content("H");endElement();}
   {startElement("H.2");} delimiters {endElement();}
-  DELIMITER1 {startElement("H.3");} field {endElement();}
-  DELIMITER1 {startElement("H.4");} field {endElement();}
-  DELIMITER1 lvl1_fields["H.5", h_5, 2, "^.{0,15}$"];
+  DELIMITER1 {startElement("H.3");} field[true] {endElement();}
+  DELIMITER1 {startElement("H.4");} field[true] {endElement();}
+  DELIMITER1 lvl1_fields["H.5", h_5, 2, "^.{0,15}$"]
+  DELIMITER1 lvl1_fields["H.6", h_6, 0, "^.{0,100}$"];
+
+start_line_oru :
+  start_line_h
+  DELIMITER1 {startElement("H.7");} spec_field["^ORU$", true] {endElement();};
 
 
 
@@ -236,33 +242,30 @@ start_line_h :
 lvl1_fields[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
 @init{startElement(nameElement);}
 @after{endElement();} :
-  r=lvl1_subfields[$nameElement, $patterns, $nbMandatory]
-  {matchRegex($r.contentText, $completeFieldPattern)}?;
+  r=lvl1_subfields[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern];
 
-lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory] returns [String contentText]
-@init{size = 1} :
-  {size}
-  (
-    {$size <= $patterns.size()}? {matchRegex(input.LT(1).getText(), $patterns.get($size - 1))}?
-      (  {$size < $nbMandatory}? 
-            ({startElement($nameElement + "." + $size);} g=field {endElement();} DELIMITER2 h=lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1])
-       | {$size >= $nbMandatory}?
-            ({startElement($nameElement + "." + $size);} g=field {endElement();} (DELIMITER2 h=lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1])?)
-      )
-    |
-      ({strictNess <= 2}? (DELIMITER2 spec_field[""])? | )
-    ) {$contentText = $g.text + $h.contentText == null ? "" : $h.contentText;};
+lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern]:
+  {$size == $patterns.size()}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true] {$recorded.append($g.text);endElement();}
+                                     ({strictNess <= 2}? (DELIMITER2 spec_field["", false])? | )
+                                   {matchRegex($recorded.toString(), $completeFieldPattern)}?)
+  |
+  {$size < $nbMandatory}? => ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true] {$recorded.append($g.text);endElement();}
+                                DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern])
+  |
+  ({startElement($nameElement + "." + $size);} g=spec_field[$patterns.get($size - 1), true] {$recorded.append($g.text);endElement();}
+     ((DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]) | {matchRegex($recorded.toString(), $completeFieldPattern)}?))
+  ;
 
-// Champ, avec spécification de champ
-spec_field[String fieldPattern] :
+// Champ, avec spécification de type
+spec_field[String fieldPattern, boolean record] :
   {matchRegex(input.LT(1).getText(), $fieldPattern)}?
   CONTENT
-  {content($text);};
+  {if (record) content($text);};
 
 // Champ sans spécification de type
-field :
+field[boolean record] :
   CONTENT
-  {content($text);};
+  {if (record) content($text);};
 
 // Données de type délimiteurs
 delimiters :
