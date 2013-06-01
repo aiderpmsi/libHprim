@@ -53,7 +53,8 @@ public class SimpleExample {
 			// Création de l'inputstream en entrée
 			is = new FileInputStream(args[0]);
 			String toRead = "H|~^\\&|TEST.HPR||code~labo||ORU|||AIDER~A.I.D.E.R.||P|H2.2~C|200700\r" +
-					"P|1|01234|A0010308007|01234|NOM~PRENOM~AUTRE||19790101|F||21 RUE DE LA PAIX~~PARIS~~75000|||hello~un&deux^bye~3&4~good";
+					"P|1|01234|A0010308007|01234|NOM~PRENOM~AUTRE||19790101|F||21 RUE DE LA PAIX~~PARIS~~75000|||hello~un&deux^bye~3&4~good\r" +
+					"C|2|P|toto";
 			ByteArrayInputStream by = new ByteArrayInputStream(toRead.getBytes("ISO8859_1"));
 			// Création de la source des tokens
 			inputreader = new HPRIMSInputStreamReader(by, "ISO8859_1");

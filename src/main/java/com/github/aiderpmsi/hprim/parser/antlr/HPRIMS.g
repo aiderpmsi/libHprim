@@ -249,9 +249,24 @@ hprim[int strictNess]
   ;
 
 body_p_oru :
-  line_p;
+  (start_line_p) => (
+    line_p ((start_line_c) => line_c)*);
 
 // =========== Définition des des lignes hprim =================
+
+// == Ligne C ==
+// Ligne C (commentaires)
+start_line_c:
+  CR spec_field["^C$", false, true];
+
+line_c
+@init{startElement("C");}
+@after{endElement();}:
+  CR {startElement("C.1");} spec_field["^C$", true, true] {endElement();} 
+  DELIMITER1 {startElement("C.2");} spec_field["^[0-9]{1,10}$", true, false] {endElement();}
+  (DELIMITER1 {startElement("C.3");} spec_field["^(P|L)?$", true, false] {endElement();}
+   (DELIMITER1 {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();} (REPETITEUR {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();})*  
+    DELIMITER1?)?)?;
 
 // == Ligne H ==
 
@@ -308,7 +323,10 @@ line_h2_2_adm[boolean record]
   bloc_line_h_2_2
   end_line_h;
 
-// == Ligne P ==
+// == Ligne P (patient) ==
+start_line_p:
+  CR spec_field["^P$", false, true];
+  
 line_p
 @init{startElement("P");}
 @after{endElement();} :
