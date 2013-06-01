@@ -44,6 +44,9 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   private final static List<String> p_14 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> p_19 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> p_26 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_3 = Arrays.asList(new String[] {"^.{0,12}$", "^.{0,10}$"});
+  private final static List<String> obr_4 = Arrays.asList(new String[] {".*", ".*"});
+  private final static List<String> obr_5 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
 
   /**
    * Indicateur définissant s'il faut ou non enregistrer le parsing
@@ -322,6 +325,60 @@ line_h2_2_adm[boolean record]
   start_line_h_adm
   bloc_line_h_2_2
   end_line_h;
+  
+// == Ligne OBR (demande d'examen) ==
+// Ligne OBR (demandes d'examen)
+start_line_obr:
+  CR spec_field["^OBR$", false, true];
+
+line_obr
+@init{startElement("OBR");}
+@after{endElement();} :
+  CR {startElement("OBR.1");} spec_field["^OBR$", true, true] {endElement();}
+  DELIMITER1 {startElement("OBR.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
+  DELIMITER1 lvl1_fields["OBR.3", obr_3, 0, "^.{0,22}$"]
+  DELIMITER1 lvl1_fields["OBR.4", obr_4, 0, "^.{0,22}$"]
+  DELIMITER1 lvl1_fields["OBR.5", obr_5, 0, "^.{0,64000}$"] (REPETITEUR lvl1_fields["OBR.5", obr_5, 0, "^.{0,64000}$"])*;
+//  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR.5", 640000] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["OBR.5", 64000])*
+  // Je n'ai pas la table de specs pour la priorité, je mets une chaine de caractères
+//  DELIMITER1 st_sized_optionnal["OBR.6", 2] (REPETITEUR st_sized_optionnal["OBR.6", 2])*
+//  DELIMITER1 ts_sized_optionnal["OBR.7", 26]
+//  DELIMITER1 spec_non_sized_9_8["OBR.8"]
+//  DELIMITER1 ts_sized_optionnal["OBR.9", 26]
+  // Le volume de recueil est de type CQ dont je ne connais pas la norme, je mets une chaine de caractères
+//  DELIMITER1 st_sized_optionnal["OBR.10", 20]
+//  DELIMITER1 spec_sized_cna["OBR.11", 60]
+  // Je n'ai pas les specs du code action, je mets une chaine de caractères en attendant
+//  DELIMITER1 st_sized_optionnal["OBR.12", 1]
+  // TODO : vérifier que le cm du 9.13 correspond aux mêmes que 9.3 et 9.4
+//  (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR.13", 60]
+//   (DELIMITER1 st_sized_optionnal["OBR.14", 300]
+//    (DELIMITER1 ts_sized_optionnal["OBR.15", 26]
+//     (DELIMITER1 spec_sized_9_16["OBR.16", 300]
+//      (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR.17", 60]
+//       (DELIMITER1 spec_sized_tn["OBR.18", 40]
+//        (DELIMITER1 st_sized_optionnal["OBR.19", 60]
+//         (DELIMITER1 st_sized_optionnal["OBR.20", 60]
+//          (DELIMITER1 st_sized_optionnal["OBR.21", 60]
+//           (DELIMITER1 st_sized_optionnal["OBR.22", 60]
+//            (DELIMITER1 ts_sized_optionnal["OBR.23", 26]
+//             (DELIMITER1 spec_const_race["OBR.24"]
+//              (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR.25", 10]
+//               (DELIMITER1 spec_const_9_26["OBR.26"]
+//                (DELIMITER1 spec_const_race["OBR.27"]
+//                 (DELIMITER1 spec_const_race["OBR.28"]
+//                  (DELIMITER1 spec_sized_cna["OBR.29", 150] (REPETITEUR spec_sized_cna["OBR.29", 150])*
+//                   (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4["OBR.30", 150]
+//                    (DELIMITER1 spec_const_9_31["OBR.31"]
+                     // Les specs du motif de la demande sont inconnues, on met une chaine de caractères que l'on peut répéter
+//                     (DELIMITER1 st_sized_optionnal["OBR.32", 300] (REPETITEUR st_sized_optionnal["OBR.32", 300])*
+//                      (DELIMITER1 spec_sized_cna["OBR.33", 60]
+//                       (DELIMITER1 spec_sized_cna["OBR.34", 60]
+//                        (DELIMITER1 spec_sized_cna["OBR.35", 60]
+//                         (DELIMITER1 spec_sized_cna["OBR.36", 60]
+//                          (DELIMITER1 ts_sized_optionnal["OBR.37", 26]
+//                            DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+
 
 // == Ligne P (patient) ==
 start_line_p:
