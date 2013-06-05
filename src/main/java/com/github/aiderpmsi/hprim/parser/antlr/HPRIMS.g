@@ -37,6 +37,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   private final static List<String> ap_22 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> ac_8 = Arrays.asList(new String[] {"^.{1,}$", "^(TM|TR|FR)$", "^(PF|SS|FR)$"});
   private final static List<String> ac_10 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> act_9 = Arrays.asList(new String[] {"^.{0,9}$", "^.{0,9}$", "^.{0,40}$"});
+  private final static List<String> act_10 = Arrays.asList(new String[] {".*", ".*"});
   private final static List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
   private final static List<String> h_6 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> h_8 = Arrays.asList(new String[] {".*", ".*"});
@@ -334,6 +336,27 @@ line_ac
    (DELIMITER1 lvl1_fields["AC.10", ac_10, 0, "^.{0,200}$"]
     (DELIMITER1 spec_field["", false, false])?)?)?;
 
+// == ligne ACT (acte) ==
+line_act
+@init{startElement("ACT");}
+@after{endElement();} :
+  CR LINE_ACT {startElement("ACT.1");content("ACT");endElement();}
+  DELIMITER1 {startElement("ACT.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
+  DELIMITER1 {startElement("ACT.3");} spec_field["^.{1,10}$", true, false] {endElement();}
+  DELIMITER1 {startElement("ACT.4");} spec_field["^(?!.{11,})(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", true, false] {endElement();}
+  DELIMITER1 {startElement("ACT.5");} spec_field["^(?!.{11,})(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", true, false] {endElement();}
+  DELIMITER1 {startElement("ACT.6");} spec_field["^(?!.{11,})(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", true, false] {endElement();}
+  DELIMITER1 {startElement("ACT.7");} spec_field["^.{0,64000}$", true, false] {endElement();}
+  DELIMITER1 {startElement("ACT.8");} spec_field["^.{0,3}$", true, false] {endElement();}
+  DELIMITER1 lvl1_fields["ACT.9", act_9, 0, "^.{0,60}$"]
+  // D'après HPRIM, Ce champ est décomposé en 2 sous-champs :
+  // => : Codes à la nomenclature des analyses ou actes, séparés par des répétiteurs  
+  // => : Catalogue (codification) utilisée
+  // Ce qui est étrange puisque chaque code devrait être associé à son catalogue et que les répétiteurs doivent être au premier niveau
+  // Je considère donc que ce seraient plutôt des doublets séparés par des répétiteurs
+  DELIMITER1 lvl1_fields["ACT.10", act_10, 0, "^.{0,64000}$"] (REPETITEUR lvl1_fields["ACT.10", act_10, 0, "^.{0,64000}$"])* 
+  DELIMITER1 {startElement("ACT.11");} spec_field["^(HR|RX|R)$", true, false] {endElement();}
+  (DELIMITER1 spec_field["", false, false])?;
 
 // == Ligne C (commentaires) ==
 line_c
@@ -710,6 +733,7 @@ CONTENT: 'a';
 
 LINE_AP: 'o';
 LINE_AC: 'q';
+LINE_ACT: 'r';
 LINE_C: 'm';
 LINE_GENERIC: 'l';
 LINE_H: 'i';
