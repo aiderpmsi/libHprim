@@ -39,6 +39,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   private final static List<String> ac_10 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> act_9 = Arrays.asList(new String[] {"^.{0,9}$", "^.{0,9}$", "^.{0,40}$"});
   private final static List<String> act_10 = Arrays.asList(new String[] {".*", ".*"});
+  private final static List<String> fac_6 = Arrays.asList(new String[] {"^.{0,9}$", "^.{0,9}$", "^.{0,40}$"});
+  private final static List<String> fac_7 = Arrays.asList(new String[] {"^.{0,9}$", "^.{0,9}$", "^.{0,40}$"});
   private final static List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
   private final static List<String> h_6 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> h_8 = Arrays.asList(new String[] {".*", ".*"});
@@ -367,6 +369,20 @@ line_c
   (DELIMITER1 {startElement("C.3");} spec_field["^(P|L)?$", true, false] {endElement();}
    (DELIMITER1 {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();} (REPETITEUR {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();})*  
     (DELIMITER1 spec_field["", false, false])?)?)?;
+
+// == Ligne fac (facture) ==
+line_fac
+@init{startElement("FAC");}
+@after{endElement();} :
+  CR LINE_FAC {startElement("FAC.1");content("FAC");endElement();}
+  DELIMITER1 {startElement("FAC.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
+  DELIMITER1 {startElement("FAC.3");} spec_field["^.{1,16}$", true, false] {endElement();}
+  DELIMITER1 {startElement("FAC.4");} spec_field["^.{1,10}$", true, false] {endElement();}
+  DELIMITER1 {startElement("FAC.5");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?", true, false] {endElement();}
+  (DELIMITER1 lvl1_fields["FAC.6", fac_6, 0, "^.{0,60}$"]
+   (DELIMITER1 lvl1_fields["FAC.7", fac_7, 0, "^.{0,60}$"]
+    (DELIMITER1 {startElement("FAC.8");} spec_field["^(O|N)?$", true, false] {endElement();}
+     (DELIMITER1 spec_field["", false, false])?)?)?)?;
 
 // == Ligne H ==
 
@@ -734,6 +750,7 @@ CONTENT: 'a';
 LINE_AP: 'o';
 LINE_AC: 'q';
 LINE_ACT: 'r';
+LINE_FAC: 's';
 LINE_C: 'm';
 LINE_GENERIC: 'l';
 LINE_H: 'i';
