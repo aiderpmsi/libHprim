@@ -177,6 +177,8 @@ public class HPRIMSTokenSource implements TokenSource {
 							token = HPRIMSParser.LINE_OBX;
 						else if (start_line_content.equals("AP"))
 							token = HPRIMSParser.LINE_AP;
+						else if (start_line_content.equals("AC"))
+							token = HPRIMSParser.LINE_AC;
 						// On a passé le début de ligne, changement de l'état du
 						// tokenizer
 						tokenSourceStates.removeLast();

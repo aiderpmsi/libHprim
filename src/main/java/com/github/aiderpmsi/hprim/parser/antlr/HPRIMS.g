@@ -33,8 +33,10 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 @parser::members {
 
   // ========== Elements de définition des documents ===========
-  private final static List<String> ap_14 = Arrays.asList(new String[] {".{1,}", ".{1,}", ".{1,}", ".{1,}", ".{1,}", ".{1,}"});
+  private final static List<String> ap_14 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$", "^.{1,}$", "^.{1,}$", "^.{1,}$", "^.{1,}$"});
   private final static List<String> ap_22 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> ac_8 = Arrays.asList(new String[] {"^.{1,}$", "^(TM|TR|FR)$", "^(PF|SS|FR)$"});
+  private final static List<String> ac_10 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
   private final static List<String> h_6 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> h_8 = Arrays.asList(new String[] {".*", ".*"});
@@ -316,6 +318,23 @@ line_ap
         (DELIMITER1 {startElement("AP.23");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
          (DELIMITER1 spec_field["^$", false, false])?)?)?)?)?)?)?)?;
 
+// == Ligne AC (assuré complémentaire) ==
+line_ac
+@init{startElement("AC");}
+@after{endElement();} :
+  CR LINE_AC {startElement("AC.1");content("AC");endElement();}
+  DELIMITER1 {startElement("AC.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AC.3");} spec_field["^.{1,9}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AC.4");} spec_field["^.{1,15}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AC.5");} spec_field["^(?:[0-9]{6}(?:[0-9]{2})?)?$", true, false] {endElement();}
+  DELIMITER1 {startElement("AC.6");} spec_field["^[0-9]{6}(?:[0-9]{2})?$", true, false] {endElement();}
+  DELIMITER1 {startElement("AC.7");} spec_field["^.{0,28}$", true, false] {endElement();}
+  DELIMITER1 lvl1_fields["AC.8", ac_8, 3, "^.{10}$"]
+  (DELIMITER1 {startElement("AC.9");} spec_field["^.{0,40}$", true, false] {endElement();}
+   (DELIMITER1 lvl1_fields["AC.10", ac_10, 0, "^.{0,200}$"]
+    (DELIMITER1 spec_field["", false, false])?)?)?;
+
+
 // == Ligne C (commentaires) ==
 line_c
 @init{startElement("C");}
@@ -324,7 +343,7 @@ line_c
   DELIMITER1 {startElement("C.2");} spec_field["^[0-9]{1,10}$", true, false] {endElement();}
   (DELIMITER1 {startElement("C.3");} spec_field["^(P|L)?$", true, false] {endElement();}
    (DELIMITER1 {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();} (REPETITEUR {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();})*  
-    (DELIMITER1 spec_field["", false, false]?)?)?)?;
+    (DELIMITER1 spec_field["", false, false])?)?)?;
 
 // == Ligne H ==
 
@@ -690,6 +709,7 @@ REPETITEUR: 'b';
 CONTENT: 'a';
 
 LINE_AP: 'o';
+LINE_AC: 'q';
 LINE_C: 'm';
 LINE_GENERIC: 'l';
 LINE_H: 'i';
