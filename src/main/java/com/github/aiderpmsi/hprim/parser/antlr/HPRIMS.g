@@ -33,6 +33,8 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 @parser::members {
 
   // ========== Elements de définition des documents ===========
+  private final static List<String> ap_14 = Arrays.asList(new String[] {".{1,}", ".{1,}", ".{1,}", ".{1,}", ".{1,}", ".{1,}"});
+  private final static List<String> ap_22 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
   private final static List<String> h_6 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
   private final static List<String> h_8 = Arrays.asList(new String[] {".*", ".*"});
@@ -47,9 +49,30 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   private final static List<String> obr_3 = Arrays.asList(new String[] {"^.{0,12}$", "^.{0,10}$"});
   private final static List<String> obr_4 = Arrays.asList(new String[] {".*", ".*"});
   private final static List<String> obr_5 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_8 = Arrays.asList(new String[] {"^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", "^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$"});
+  private final static List<String> obr_11 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_13 = Arrays.asList(new String[] {".*", ".*"});
+  private final static List<String> obr_16 = Arrays.asList(new String[] {".*", ".*", ".*"});
+  private final static List<String> obr_17 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_18 = Arrays.asList(new String[] {".*", ".*"});
+  private final static List<String> obr_25 = Arrays.asList(new String[] {".*", ".*"});
+  private final static List<String> obr_29 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_30 = Arrays.asList(new String[] {".*", ".*", ".*", ".*"});
+  private final static List<String> obr_33 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_34 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_35 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obr_36 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obx_4 = Arrays.asList(new String[] {"^.{1,}$", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> obx_6_std = Arrays.asList(new String[] {".*", ".*", ".*"});
+  private final static List<String> obx_6_gc = Arrays.asList(new String[] {"^(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", "^(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$"}); // Recherche de nombre (+|-)xx.yy
+  private final static List<String> obx_16 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
 
   /**
-   * Indicateur définissant s'il faut ou non enregistrer le parsing
+   * Indicateur définissant s'il faut ou non enregistrer le parsing.
+   * Il permet de faire des recherches en avant (prédicats syntaxiques)
+   * sans pour autant envoyer d'éléments au gestionnaire de contenu
+   * qui pourrait se voir envoyer des données qui sont ensuite invalidées
+   * (essai / erreur)
    */
   boolean record = false;
 
@@ -245,37 +268,69 @@ hprim[int strictNess]
 @init{this.strictNess = $strictNess;startDocument();}
 @after{endDocument();} :
   (line_h2_2_oru[false]) =>
-    (line_h2_2_oru[true] body_p_oru+ EOF)
+    ({startElement("HPRIM.ORU.2_2");} line_h2_2_oru[true] body_p_oru+ EOF {endElement();})
+  |
+  (line_h2_1_oru[false]) =>
+    ({startElement("HPRIM.ORU.2_1");} line_h2_1_oru[true] body_p_oru+ EOF {endElement();})
+  |
+  (line_h2_0_oru[false]) =>
+    ({startElement("HPRIM.ORU.2_0");} line_h2_0_oru[true] body_p_oru+ EOF {endElement();})
   |
   (line_h2_2_adm[false]) =>
-    (line_h2_2_adm[true] body_p_oru+ EOF)
+    ({startElement("HPRIM.ADM.2_2");} line_h2_2_adm[true] body_p_oru+ EOF {endElement();})
   ;
 
 body_p_oru :
-  (start_line_p) => (
-    line_p ((start_line_c) => line_c)*);
+  (line_p (line_c)*
+   (line_obr (line_c)*
+    (line_obx (line_c)*)*)*);
 
 // =========== Définition des des lignes hprim =================
 
-// == Ligne C ==
-// Ligne C (commentaires)
-start_line_c:
-  CR spec_field["^C$", false, true];
+// == Ligne AP (assuré primaire) ==
+line_ap
+@init{startElement("AP");}
+@after{endElement();} :
+  CR LINE_AP {startElement("AP.1");content("AP");endElement();}
+  DELIMITER1 {startElement("AP.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.3");} spec_field["^[0-9]{1,2}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.4");} spec_field["^(?:[0-9]{6}(?:[0-9]{2})?)?", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.5");} spec_field["^(?:[0-9]{6}(?:[0-9]{2})?)?", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.6");} spec_field["^[0-9]{1,15}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.7");} spec_field["^.{1,3}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.8");} spec_field["^[0-9]{1,2}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.9");} spec_field["^[0-9]{1,2}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.10");} spec_field["^[0-9]{1,3}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.11");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.12");} spec_field["^.$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.13");} spec_field["^.{1,2}$", true, false] {endElement();}
+  DELIMITER1 lvl1_fields["AP.14", ap_14, 6, "^.{1,48}$"]
+  DELIMITER1 {startElement("AP.15");} spec_field["^.{0,24}$", true, false] {endElement();}
+  DELIMITER1 {startElement("AP.16");} spec_field["^[0-9]{1,6}$", true, false] {endElement();}
+  (DELIMITER1 {startElement("AP.17");} spec_field["^[0-9]{0,9}$", true, false] {endElement();}
+   (DELIMITER1 {startElement("AP.18");} spec_field["^(O|N)?$", true, false] {endElement();}
+    (DELIMITER1 {startElement("AP.19");} spec_field["^(?:[0-9]{6}(?:[0-9]{2})?)?", true, false] {endElement();}
+     (DELIMITER1 {startElement("AP.20");} spec_field["^(?:[0-9]{6}(?:[0-9]{2})?)?", true, false] {endElement();}
+      (DELIMITER1  {startElement("AP.21");} spec_field["^.{0,30}$", true, false] {endElement();}
+       (DELIMITER1 lvl1_fields["AP.22", ap_22, 0, "^.{0,200}$"]
+        (DELIMITER1 {startElement("AP.23");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
+         (DELIMITER1 spec_field["^$", false, false])?)?)?)?)?)?)?)?;
 
+// == Ligne C (commentaires) ==
 line_c
 @init{startElement("C");}
 @after{endElement();}:
-  CR {startElement("C.1");} spec_field["^C$", true, true] {endElement();} 
+  CR LINE_C {startElement("C.1");content("C");endElement();} 
   DELIMITER1 {startElement("C.2");} spec_field["^[0-9]{1,10}$", true, false] {endElement();}
   (DELIMITER1 {startElement("C.3");} spec_field["^(P|L)?$", true, false] {endElement();}
    (DELIMITER1 {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();} (REPETITEUR {startElement("C.4");} spec_field["^.{0,64000}$", true, false] {endElement();})*  
-    DELIMITER1?)?)?;
+    (DELIMITER1 spec_field["", false, false]?)?)?)?;
 
 // == Ligne H ==
 
 // Début de ligne H, identique pour toutes les versions
 start_line_h :
-  {startElement("H.1");content("H");endElement();}
+  LINE_H {startElement("H.1");content("H");endElement();}
   {startElement("H.2");} delimiters {endElement();}
   DELIMITER1 {startElement("H.3");} spec_field["^.{0,12}$", true, false] {endElement();}
   DELIMITER1 {startElement("H.4");} spec_field["^.{0,12}$", true, false] {endElement();}
@@ -294,11 +349,17 @@ midd_line_h :
 bloc_line_h_2_2 :
     DELIMITER1 {startElement("H.13");startElement("H.13.1");} spec_field["^H2\\.2$", true, true] {endElement();}
              DELIMITER2 {startElement("H.13.2");} spec_field["^[C|L|R]$", true, false] {endElement();endElement();};
+bloc_line_h_2_1 :
+    DELIMITER1 {startElement("H.13");startElement("H.13.1");} spec_field["^H2\\.1$", true, true] {endElement();}
+             DELIMITER2 {startElement("H.13.2");} spec_field["^[C|L|R]$", true, false] {endElement();endElement();};
+bloc_line_h_2_0 :
+    DELIMITER1 {startElement("H.13");startElement("H.13.1");} spec_field["^H2\\.0$", true, true] {endElement();}
+             DELIMITER2 {startElement("H.13.2");} spec_field["^[C|L|R]$", true, false] {endElement();endElement();};
   
-// Fin de ligne, identiqu pour toutes les versions
+// Fin de ligne, identique pour toutes les versions
 end_line_h :
   DELIMITER1 {startElement("H.14");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();}
-  DELIMITER1? spec_field["", false, false]?;
+  (DELIMITER1 spec_field["", false, false]?)?;
 
 // Messages ORU :
 start_line_h_oru :
@@ -311,6 +372,20 @@ line_h2_2_oru[boolean record]
 @after{endElement();} :
   start_line_h_oru
   bloc_line_h_2_2
+  end_line_h;
+
+line_h2_1_oru[boolean record]
+@init{this.record = $record;startElement("H");}
+@after{endElement();} :
+  start_line_h_oru
+  bloc_line_h_2_1
+  end_line_h;
+
+line_h2_0_oru[boolean record]
+@init{this.record = $record;startElement("H");}
+@after{endElement();} :
+  start_line_h_oru
+  bloc_line_h_2_0
   end_line_h;
 
 // Messages ADM :
@@ -328,66 +403,137 @@ line_h2_2_adm[boolean record]
   
 // == Ligne OBR (demande d'examen) ==
 // Ligne OBR (demandes d'examen)
-start_line_obr:
-  CR spec_field["^OBR$", false, true];
-
 line_obr
 @init{startElement("OBR");}
 @after{endElement();} :
-  CR {startElement("OBR.1");} spec_field["^OBR$", true, true] {endElement();}
+  CR LINE_OBR {startElement("OBR.1");content("OBR");endElement();}
   DELIMITER1 {startElement("OBR.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
   DELIMITER1 lvl1_fields["OBR.3", obr_3, 0, "^.{0,22}$"]
   DELIMITER1 lvl1_fields["OBR.4", obr_4, 0, "^.{0,22}$"]
-  DELIMITER1 lvl1_fields["OBR.5", obr_5, 0, "^.{0,64000}$"] (REPETITEUR lvl1_fields["OBR.5", obr_5, 0, "^.{0,64000}$"])*;
-//  DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR.5", 640000] (REPETITEUR spec_sized_mult_lvl1_st_optionnal_6["OBR.5", 64000])*
+  DELIMITER1 lvl1_fields["OBR.5", obr_5, 0, "^.{0,64000}$"] (REPETITEUR lvl1_fields["OBR.5", obr_5, 0, "^.{0,64000}$"])*
   // Je n'ai pas la table de specs pour la priorité, je mets une chaine de caractères
-//  DELIMITER1 st_sized_optionnal["OBR.6", 2] (REPETITEUR st_sized_optionnal["OBR.6", 2])*
-//  DELIMITER1 ts_sized_optionnal["OBR.7", 26]
-//  DELIMITER1 spec_non_sized_9_8["OBR.8"]
-//  DELIMITER1 ts_sized_optionnal["OBR.9", 26]
+  DELIMITER1 {startElement("OBR.6");} spec_field["^.{0,2}$", true, false] {endElement();} (REPETITEUR {startElement("OBR.6");} spec_field["^.{0,2}$", true, false] {endElement();})*
+  DELIMITER1 {startElement("OBR.7");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
+  DELIMITER1 lvl1_fields["OBR.8", obr_8, 0, ".*"]
+  DELIMITER1 {startElement("OBR.9");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
   // Le volume de recueil est de type CQ dont je ne connais pas la norme, je mets une chaine de caractères
-//  DELIMITER1 st_sized_optionnal["OBR.10", 20]
-//  DELIMITER1 spec_sized_cna["OBR.11", 60]
+  DELIMITER1 {startElement("OBR.10");} spec_field["^.{0,20}$", true, false] {endElement();}
+  DELIMITER1 spec_sized_cna["OBR.11", obr_11, 0, "^.{0,60}$"]
   // Je n'ai pas les specs du code action, je mets une chaine de caractères en attendant
-//  DELIMITER1 st_sized_optionnal["OBR.12", 1]
+  DELIMITER1 {startElement("OBR.12");} spec_field["^.{0,1}$", true, false] {endElement();}
   // TODO : vérifier que le cm du 9.13 correspond aux mêmes que 9.3 et 9.4
-//  (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR.13", 60]
-//   (DELIMITER1 st_sized_optionnal["OBR.14", 300]
-//    (DELIMITER1 ts_sized_optionnal["OBR.15", 26]
-//     (DELIMITER1 spec_sized_9_16["OBR.16", 300]
-//      (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_6["OBR.17", 60]
-//       (DELIMITER1 spec_sized_tn["OBR.18", 40]
-//        (DELIMITER1 st_sized_optionnal["OBR.19", 60]
-//         (DELIMITER1 st_sized_optionnal["OBR.20", 60]
-//          (DELIMITER1 st_sized_optionnal["OBR.21", 60]
-//           (DELIMITER1 st_sized_optionnal["OBR.22", 60]
-//            (DELIMITER1 ts_sized_optionnal["OBR.23", 26]
-//             (DELIMITER1 spec_const_race["OBR.24"]
-//              (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_2["OBR.25", 10]
-//               (DELIMITER1 spec_const_9_26["OBR.26"]
-//                (DELIMITER1 spec_const_race["OBR.27"]
-//                 (DELIMITER1 spec_const_race["OBR.28"]
-//                  (DELIMITER1 spec_sized_cna["OBR.29", 150] (REPETITEUR spec_sized_cna["OBR.29", 150])*
-//                   (DELIMITER1 spec_sized_mult_lvl1_st_optionnal_4["OBR.30", 150]
-//                    (DELIMITER1 spec_const_9_31["OBR.31"]
+  (DELIMITER1 lvl1_fields["OBR.13", obr_13, 0, "^.{0,60}$"]
+   (DELIMITER1 {startElement("OBR.14");} spec_field["^.{0,300}$", true, false] {endElement();}
+    (DELIMITER1 {startElement("OBR.15");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
+     (DELIMITER1 spec_obr_16["OBR.16", obr_16, 0, "^.{0,300}$"]
+      (DELIMITER1 lvl1_fields["OBR.17", obr_17, 0, "^.{0,60}$"]
+       (DELIMITER1 lvl1_fields_repet["OBR.18", obr_18, 0, "^.{0,40}$"]
+        (DELIMITER1 {startElement("OBR.19");} spec_field["^.{0,60}$", true, false] {endElement();}
+         (DELIMITER1 {startElement("OBR.20");} spec_field["^.{0,60}$", true, false] {endElement();}
+          (DELIMITER1 {startElement("OBR.21");} spec_field["^.{0,60}$", true, false] {endElement();}
+           (DELIMITER1 {startElement("OBR.22");} spec_field["^.{0,60}$", true, false] {endElement();}
+            (DELIMITER1 {startElement("OBR.23");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
+             (DELIMITER1 {startElement("OBR.24");} spec_field["^$", true, false] {endElement();}
+              (DELIMITER1 lvl1_fields["OBR.25", obr_25, 0, "^.{0,10}$"]
+               (DELIMITER1 {startElement("OBR.26");} spec_field["^(F|P|M|I|R|C|O|D|X)?$", true, false] {endElement();}
+                (DELIMITER1 {startElement("OBR.27");} spec_field["^$", true, false] {endElement();}
+                 (DELIMITER1 {startElement("OBR.28");} spec_field["^$", true, false] {endElement();}
+                  (DELIMITER1 spec_sized_cna["OBR.29", obr_29, 0, "^.{0,150}$"] (REPETITEUR spec_sized_cna["OBR.29", obr_29, 0, "^.{0,150}$"])*
+                   (DELIMITER1 lvl1_fields["OBR.30", obr_30, 0, "^.{0,150}$"]
+                    (DELIMITER1 {startElement("OBR.31");} spec_field["^(PORT|CART|WHLC|WALK)?$", true, false] {endElement();}
                      // Les specs du motif de la demande sont inconnues, on met une chaine de caractères que l'on peut répéter
-//                     (DELIMITER1 st_sized_optionnal["OBR.32", 300] (REPETITEUR st_sized_optionnal["OBR.32", 300])*
-//                      (DELIMITER1 spec_sized_cna["OBR.33", 60]
-//                       (DELIMITER1 spec_sized_cna["OBR.34", 60]
-//                        (DELIMITER1 spec_sized_cna["OBR.35", 60]
-//                         (DELIMITER1 spec_sized_cna["OBR.36", 60]
-//                          (DELIMITER1 ts_sized_optionnal["OBR.37", 26]
-//                            DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+                     (DELIMITER1 {startElement("OBR.32");} spec_field["^.{0,300}$", true, false] {endElement();} (REPETITEUR {startElement("OBR.32");} spec_field["^.{0,300}$", true, false] {endElement();})*
+                      (DELIMITER1 spec_sized_cna["OBR.33", obr_33, 0, "^.{0,60}$"]
+                       (DELIMITER1 spec_sized_cna["OBR.34", obr_34, 0, "^.{0,60}$"]
+                        (DELIMITER1 spec_sized_cna["OBR.35", obr_35, 0, "^.{0,60}$"]
+                         (DELIMITER1 spec_sized_cna["OBR.36", obr_36, 0, "^.{0,60}$"]
+                          (DELIMITER1 {startElement("OBR.37");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
+                           (DELIMITER1 spec_field["^$", true, false])?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
 
+// Ligne OBX (résultats)
+line_obx
+@init{startElement("OBX");}
+@after{endElement();} :
+  CR LINE_OBX {startElement("OBX.1");content("OBX");endElement();}
+  DELIMITER1 {startElement("OBX.2");} spec_field["^[0-9]{1,10}$", true, false] {endElement();}
+  DELIMITER1 (
+    (spec_field["^NM$", false, true]) => (
+      {startElement("OBX.3");} field[true] {endElement();}
+      DELIMITER1 lvl1_fields["OBX.4", obx_4, 1, "^.{1,200}$"]
+      (DELIMITER1 {startElement("OBX.5");} spec_field["^.{0,10}$", true, false] {endElement();}
+       (DELIMITER1 {startElement("OBX.6");} spec_field["^(?!.{64001,})(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", true, false]
+        {endElement();} (REPETITEUR {startElement("OBX.6");} spec_field["^(?!.{64001,})(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", true, false] {endElement();})*
+        end_line_obx)?)?
+     )
+     |
+     (spec_field["^CE$", false, true]) => (
+      {startElement("OBX.3");} field[true] {endElement();}
+      DELIMITER1 lvl1_fields["OBX.4", obx_4, 1, "^.{1,200}$"]
+      (DELIMITER1 {startElement("OBX.5");} spec_field["^.{0,10}$", true, false] {endElement();}
+       (DELIMITER1 lvl1_fields["OBX.6", obx_6_std, 0, "^.{0,64000}$"] (REPETITEUR lvl1_fields["OBX.6", obx_6_std, 0, "^.{0,64000}$"])*
+        end_line_obx)?)?
+     )
+     |
+     (spec_field["^FIC$", false, true]) => (
+      {startElement("OBX.3");} field[true] {endElement();}
+      DELIMITER1 lvl1_fields["OBX.4", obx_4, 1, "^.{1,200}$"]
+      (DELIMITER1 {startElement("OBX.5");} spec_field["^.{0,10}$", true, false] {endElement();}
+       (DELIMITER1 lvl1_fields["OBX.6", obx_6_std, 0, "^.{0,64000}$"] (REPETITEUR lvl1_fields["OBX.6", obx_6_std, 0, "^.{0,64000}$"])*
+        end_line_obx)?)?
+     )
+     |
+     (spec_field["^ST$", false, true]) => (
+      {startElement("OBX.3");} field[true] {endElement();}
+      DELIMITER1 lvl1_fields["OBX.4", obx_4, 1, "^.{1,200}$"]
+      (DELIMITER1 {startElement("OBX.5");} spec_field["^.{0,10}$", true, false] {endElement();}
+       (DELIMITER1 {startElement("OBX.6");} spec_field["^.{0,64000}$", true, false] {endElement();} (REPETITEUR spec_field["^.{0,64000}$", true, false])*
+        end_line_obx)?)?
+     )
+     |
+     (spec_field["^GC$", false, true]) => (
+      {startElement("OBX.3");} field[true] {endElement();}
+      DELIMITER1 lvl1_fields["OBX.4", obx_4, 1, "^.{1,200}$"]
+      (DELIMITER1 {startElement("OBX.5");} spec_field["^.{0,10}$", true, false] {endElement();}
+       (DELIMITER1 lvl1_fields["OBX.6", obx_6_gc, 2, "^.{0,64000}$"] (REPETITEUR lvl1_fields["OBX.6", obx_6_gc, 2, "^.{0,64000}$"])*
+        end_line_obx)?)?
+     )
+     |
+     (spec_field["^TX$", false, true]) => (
+      {startElement("OBX.3");} field[true] {endElement();}
+      DELIMITER1 lvl1_fields["OBX.4", obx_4, 1, "^.{1,200}$"]
+      (DELIMITER1 {startElement("OBX.5");} spec_field["^.{0,10}$", true, false] {endElement();}
+       (DELIMITER1 {startElement("OBX.3");} tx_field["^.{0,64000}$", true, false] {endElement();}
+        end_line_obx)?)?
+     )
+     |
+     (spec_field["^(AD|CK|CNA|DT|PN|RT|TN|GB|GN)$", false, true]) => (
+      {startElement("OBX.3");} field[true] {endElement();}
+      DELIMITER1 lvl1_fields["OBX.4", obx_4, 1, "^.{1,200}$"]
+      (DELIMITER1 {startElement("OBX.5");} spec_field["^.{0,10}$", true, false] {endElement();}
+       (DELIMITER1 {startElement("OBX.6");} spec_field["^.{0,64000}$", true, false] {endElement();} (REPETITEUR {startElement("OBX.6");} spec_field["^.{0,64000}$", true, false] {endElement();})*
+        end_line_obx)?)?
+     )
+  );
+  
+end_line_obx:
+  (DELIMITER1 {startElement("OBX.7");} spec_field["^.{0,20}$", true, false] {endElement();}
+   (DELIMITER1 {startElement("OBX.8");} spec_field["^.{0,60}$", true, false] {endElement();} (REPETITEUR {startElement("OBX.8");} spec_field["^.{0,60}$", true, false])*
+    (DELIMITER1 {startElement("OBX.9");} spec_field["^(L|H|LL|HH|\\<|\\>|N|A|AA|Null|U|D|B|W|R|I|S|MS)?$", true, false] {endElement();} (REPETITEUR {startElement("OBX.9");} spec_field["^(L|H|LL|HH|\\<|\\>|N|A|AA|Null|U|D|B|W|R|I|S|MS)?$", true, false] {endElement();})*
+     (DELIMITER1 {startElement("OBX.10");} spec_field["^(?!.{6,})(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", true, false] {endElement();}
+      (DELIMITER1 {startElement("OBX.11");} spec_field["^(A|S|R|N)?$", true, false] {endElement();} (REPETITEUR {startElement("OBX.11");} spec_field["^(A|S|R|N)?$", true, false] {endElement();})*
+       (DELIMITER1 {startElement("OBX.12");} spec_field["^(R|P|F|C|I|D|X|U)?$", true, false] {endElement();} (REPETITEUR {startElement("OBX.12");} spec_field["^(R|P|F|C|I|D|X|U)?$", true, false] {endElement();})* 
+        (DELIMITER1 {startElement("OBX.13");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
+         (DELIMITER1 {startElement("OBX.14");} spec_field["^.{0,20}$", true, false] {endElement();}
+          (DELIMITER1 {startElement("OBX.15");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
+           (DELIMITER1 lvl1_fields["OBX.16", obx_16, 0, "^.{0,60}$"]
+            (DELIMITER1 {startElement("OBX.14");} spec_field["^.{0,20}$", true, false] {endElement();}
+             (DELIMITER1 spec_field["^$", false, false])?)?)?)?)?)?)?)?)?)?)?)?;
 
 // == Ligne P (patient) ==
-start_line_p:
-  CR spec_field["^P$", false, true];
-  
 line_p
 @init{startElement("P");}
 @after{endElement();} :
-  CR {startElement("P.1");} spec_field["^P$", true, true] {endElement();} 
+  CR LINE_P {startElement("P.1");content("P");endElement();} 
   DELIMITER1 {startElement("P.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
   DELIMITER1 lvl1_fields["P.3", p_3, 1, "^.{1,36}$"]
   DELIMITER1 {startElement("P.4");} spec_field["^.{0,16}$", true, false] {endElement();}
@@ -439,6 +585,14 @@ spec_sized_cna[String nameElement, List<String> patterns, int nbMandatory, Strin
    (DELIMITER2 i=lvl2_fields[$nameElement + ".2", $patterns, $nbMandatory, ".*"]
     (DELIMITER2 {startElement($nameElement + ".3");} j=field[true] {endElement();})?)?
   {matchRegex(($h.text == null ? "" : $h.text) + ($i.contentText == null ? "" : $i.contentText) + ($j.text == null ? "" : $j.text), $completeFieldPattern, false)}?;
+
+spec_obr_16[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  h=lvl2_fields[$nameElement + ".1", $patterns, $nbMandatory, ".*"]
+  (DELIMITER2 {startElement($nameElement + ".2");} i=field[true] {endElement();}
+   (DELIMITER2 {startElement($nameElement + ".3");} j=field[true] {endElement();})?)?
+  {matchRegex(($h.contentText == null ? "" : $h.contentText) + ($i.text == null ? "" : $i.text) + ($j.text == null ? "" : $j.text), $completeFieldPattern, false)}?;
 
 // ========== Définitions de types spéciaux réutilisables ======
 // Répétitions de champs entre délimiteurs 2
@@ -511,6 +665,15 @@ field[boolean record] :
   CONTENT
   {if (record) content($text);};
 
+// Champ de type tx (avec sauts de lignes à la place de répétiteurs) :
+tx_field[String fieldPattern, boolean record, boolean forceRegex] :
+  tx_field_internal[$fieldPattern, new StringBuilder(), $record, $forceRegex];
+
+tx_field_internal[String fieldPattern, StringBuilder recorded, boolean record, boolean forceRegex] :
+  h=((CONTENT | DELIMITER2 | DELIMITER3) {$recorded.append($h.text);})?
+    ((REPETITEUR tx_field_internal[$fieldPattern, $recorded.append('\n'), $record, $forceRegex]) |
+     {matchRegex($recorded.toString(), $fieldPattern, $forceRegex)}? {if ($record) content($recorded.toString());}); 
+
 // Données de type délimiteurs
 delimiters :
   DELIMITERS
@@ -525,3 +688,11 @@ DELIMITER3: 'd';
 DELIMITERS: 'c';
 REPETITEUR: 'b';
 CONTENT: 'a';
+
+LINE_AP: 'o';
+LINE_C: 'm';
+LINE_GENERIC: 'l';
+LINE_H: 'i';
+LINE_OBR: 'k';
+LINE_OBX: 'n';
+LINE_P: 'j';

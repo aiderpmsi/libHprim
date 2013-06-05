@@ -52,9 +52,13 @@ public class SimpleExample {
 		try {
 			// Création de l'inputstream en entrée
 			is = new FileInputStream(args[0]);
-			String toRead = "H|~^\\&|TEST.HPR||code~labo||ORU|||AIDER~A.I.D.E.R.||P|H2.2~C|200700\r" +
+			String toRead = "H|~^\\&|TEST.HPR||code~labo||ORU|||TEST~T.E.S.T||P|H2.2~C|200700\r" +
 					"P|1|01234|A0010308007|01234|NOM~PRENOM~AUTRE||19790101|F||21 RUE DE LA PAIX~~PARIS~~75000|||hello~un&deux^bye~3&4~good\r" +
-					"C|2|P|toto";
+					"C|2|P|toto\r" +
+					"OBR|1|~|227dc251e1~70528100180|NF|R||200705281759|||hello~un&deux|N|||200705281801||MAB~DR MAB OUL~L|||||||||F|||||||VAUTO\r" +
+					"OBX|1|NM|GR~HEMATIES x1 000 000~L||3.98|/mm3|7 - 5.7|L|||F|||200705291644|HEMAT~20~NF~10~0~P\r" +
+					"C|2|P|toto\r" +
+					"P|1|01234|A0010308007|01234|NOM~PRENOM~AUTRE||19790101|F||21 RUE DE LA PAIX~~PARIS~~75000|||hello~un&deux^bye~3&4~good";
 			ByteArrayInputStream by = new ByteArrayInputStream(toRead.getBytes("ISO8859_1"));
 			// Création de la source des tokens
 			inputreader = new HPRIMSInputStreamReader(by, "ISO8859_1");
@@ -67,7 +71,7 @@ public class SimpleExample {
 			// la classe collecteur l'export des données
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
 	
-			parser.hprim(3);
+			parser.hprim(2);
 		} finally {
 			// Fermeture propre des ressources allouées
 			if (inputreader != null)
