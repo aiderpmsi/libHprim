@@ -72,6 +72,7 @@ package com.github.aiderpmsi.hprim.parser.antlr;
   private final static List<String> obx_6_std = Arrays.asList(new String[] {".*", ".*", ".*"});
   private final static List<String> obx_6_gc = Arrays.asList(new String[] {"^(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$", "^(?:\\+|-)?(?:(?:[0-9]+(?:\\.[0-9]*)?)|(?:[0-9]*(?:\\.[0-9]+)?))$"}); // Recherche de nombre (+|-)xx.yy
   private final static List<String> obx_16 = Arrays.asList(new String[] {".*", ".*", ".*", ".*", ".*", ".*"});
+  private final static List<String> reg_4 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
 
   /**
    * Indicateur définissant s'il faut ou non enregistrer le parsing.
@@ -80,7 +81,7 @@ package com.github.aiderpmsi.hprim.parser.antlr;
    * qui pourrait se voir envoyer des données qui sont ensuite invalidées
    * (essai / erreur)
    */
-  boolean record = false;
+  boolean record = true;
 
   /**
    * Collecteur utilisé dans cette classe
@@ -271,25 +272,99 @@ package com.github.aiderpmsi.hprim.parser.antlr;
 
 // =========== Définition de la structure hprim ================
 hprim[int strictNess]
-@init{this.strictNess = $strictNess;startDocument();}
-@after{endDocument();} :
-  (line_h2_2_oru[false]) =>
-    ({startElement("HPRIM.ORU.2_2");} line_h2_2_oru[true] body_p_oru+ EOF {endElement();})
+@init{this.strictNess = $strictNess;startDocument();record = false;}
+@after{record = true;endDocument();} :
+  (line_h2_2_adm) =>
+    ({record = true;startElement("HPRIM.ADM.2_2");} line_h2_2_adm body_p_adm+ line_l CR? EOF {endElement();})
   |
-  (line_h2_1_oru[false]) =>
-    ({startElement("HPRIM.ORU.2_1");} line_h2_1_oru[true] body_p_oru+ EOF {endElement();})
+  (line_h2_1_adm) =>
+    ({record = true;startElement("HPRIM.ADM.2_1");} line_h2_1_adm body_p_adm+ line_l CR? EOF {endElement();})
   |
-  (line_h2_0_oru[false]) =>
-    ({startElement("HPRIM.ORU.2_0");} line_h2_0_oru[true] body_p_oru+ EOF {endElement();})
+  (line_h2_0_adm) =>
+    ({record = true;startElement("HPRIM.ADM.2_0");} line_h2_0_adm body_p_adm+ line_l CR? EOF {endElement();})
   |
-  (line_h2_2_adm[false]) =>
-    ({startElement("HPRIM.ADM.2_2");} line_h2_2_adm[true] body_p_oru+ EOF {endElement();})
+  (line_h2_2_fac) =>
+    ({record = true;startElement("HPRIM.FAC.2_2");} line_h2_2_fac body_p_fac+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_1_fac) =>
+    ({record = true;startElement("HPRIM.FAC.2_1");} line_h2_1_fac body_p_fac+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_0_fac) =>
+    ({record = true;startElement("HPRIM.FAC.2_0");} line_h2_0_fac body_p_fac+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_2_ora) =>
+    ({record = true;startElement("HPRIM.ORA.2_2");} line_h2_2_ora body_p_ora+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_1_ora) =>
+    ({record = true;startElement("HPRIM.ORA.2_1");} line_h2_1_ora body_p_ora+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_0_ora) =>
+    ({record = true;startElement("HPRIM.ORA.2_0");} line_h2_0_ora body_p_ora+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_2_orm) =>
+    ({record = true;startElement("HPRIM.ORM.2_2");} line_h2_2_orm body_p_orm+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_1_orm) =>
+    ({record = true;startElement("HPRIM.ORM.2_1");} line_h2_1_orm body_p_orm+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_0_orm) =>
+    ({record = true;startElement("HPRIM.ORM.2_0");} line_h2_0_orm body_p_orm+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_2_oru) =>
+    ({record = true;startElement("HPRIM.ORU.2_2");} line_h2_2_oru body_p_oru+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_1_oru) =>
+    ({record = true;startElement("HPRIM.ORU.2_1");} line_h2_1_oru body_p_oru+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_0_oru) =>
+    ({record = true;startElement("HPRIM.ORU.2_0");} line_h2_0_oru body_p_oru+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_2_reg) =>
+    ({record = true;startElement("HPRIM.REG.2_2");} line_h2_2_reg body_p_reg+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_1_reg) =>
+    ({record = true;startElement("HPRIM.REG.2_1");} line_h2_1_reg body_p_reg+ line_l CR? EOF {endElement();})
+  |
+  (line_h2_0_reg) =>
+    ({record = true;startElement("HPRIM.REG.2_0");} line_h2_0_reg body_p_reg+ line_l CR? EOF {endElement();})  
   ;
+
+// == Définition des lignes acceptées selon les messages ==
+body_p_adm :
+  (line_p (line_c)*
+   (line_ap (line_c)*
+    (line_ac (line_c)*)*)*);
+
+body_p_fac :
+  (line_p (line_c)*
+   (line_ap (line_c)*
+    (line_ac (line_c)*)*)?
+   (line_fac (line_c)*
+    (line_reg (line_c)*)*
+    (line_act (line_c)*)*)+);
+
+body_p_ora :
+  (line_p (line_c)*
+   (line_ap (line_c)*
+    (line_ac (line_c)*)*
+    (line_obr (line_c)*
+     (line_obx (line_c)*)*
+    )+)+);
+
+body_p_orm :
+  (line_p (line_c)*
+   (line_obr (line_c)*
+    (line_obx (line_c)*)*)+);
 
 body_p_oru :
   (line_p (line_c)*
    (line_obr (line_c)*
-    (line_obx (line_c)*)*)*);
+    (line_obx (line_c)*)+)+);
+
+body_p_reg :
+  (line_p (line_c)*
+   (line_reg (line_c)*)+);
+    
 
 // =========== Définition des des lignes hprim =================
 
@@ -419,44 +494,166 @@ end_line_h :
   DELIMITER1 {startElement("H.14");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();}
   (DELIMITER1 spec_field["", false, false]?)?;
 
-// Messages ORU :
-start_line_h_oru :
-  start_line_h
-  DELIMITER1 {startElement("H.7");} spec_field["^ORU$", true, true] {endElement();}
-  midd_line_h;
-
-line_h2_2_oru[boolean record]
-@init{this.record = $record;startElement("H");}
-@after{endElement();} :
-  start_line_h_oru
-  bloc_line_h_2_2
-  end_line_h;
-
-line_h2_1_oru[boolean record]
-@init{this.record = $record;startElement("H");}
-@after{endElement();} :
-  start_line_h_oru
-  bloc_line_h_2_1
-  end_line_h;
-
-line_h2_0_oru[boolean record]
-@init{this.record = $record;startElement("H");}
-@after{endElement();} :
-  start_line_h_oru
-  bloc_line_h_2_0
-  end_line_h;
-
 // Messages ADM :
 start_line_h_adm :
   start_line_h
   DELIMITER1 {startElement("H.7");} spec_field["^ADM$", true, true] {endElement();}
   midd_line_h;
 
-line_h2_2_adm[boolean record]
-@init{this.record = $record;startElement("H");}
+line_h2_2_adm
+@init{startElement("H");}
 @after{endElement();} :
   start_line_h_adm
   bloc_line_h_2_2
+  end_line_h;
+
+line_h2_1_adm
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_adm
+  bloc_line_h_2_1
+  end_line_h;
+
+line_h2_0_adm
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_adm
+  bloc_line_h_2_0
+  end_line_h;
+
+// Messages REG :
+start_line_h_reg :
+  start_line_h
+  DELIMITER1 {startElement("H.7");} spec_field["^REG$", true, true] {endElement();}
+  midd_line_h;
+
+line_h2_2_reg
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_reg
+  bloc_line_h_2_2
+  end_line_h;
+
+line_h2_1_reg
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_reg
+  bloc_line_h_2_1
+  end_line_h;
+
+line_h2_0_reg
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_reg
+  bloc_line_h_2_0
+  end_line_h;
+
+// Messages FAC :
+start_line_h_fac :
+  start_line_h
+  DELIMITER1 {startElement("H.7");} spec_field["^FAC$", true, true] {endElement();}
+  midd_line_h;
+
+line_h2_2_fac
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_fac
+  bloc_line_h_2_2
+  end_line_h;
+
+line_h2_1_fac
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_fac
+  bloc_line_h_2_1
+  end_line_h;
+
+line_h2_0_fac
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_fac
+  bloc_line_h_2_0
+  end_line_h;
+
+// Messages ORA :
+start_line_h_ora :
+  start_line_h
+  DELIMITER1 {startElement("H.7");} spec_field["^ORA$", true, true] {endElement();}
+  midd_line_h;
+
+line_h2_2_ora
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_ora
+  bloc_line_h_2_2
+  end_line_h;
+
+line_h2_1_ora
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_ora
+  bloc_line_h_2_1
+  end_line_h;
+
+line_h2_0_ora
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_ora
+  bloc_line_h_2_0
+  end_line_h;
+
+// Messages ORM :
+start_line_h_orm :
+  start_line_h
+  DELIMITER1 {startElement("H.7");} spec_field["^ORM$", true, true] {endElement();}
+  midd_line_h;
+
+line_h2_2_orm
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_orm
+  bloc_line_h_2_2
+  end_line_h;
+
+line_h2_1_orm
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_orm
+  bloc_line_h_2_1
+  end_line_h;
+
+line_h2_0_orm
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_orm
+  bloc_line_h_2_0
+  end_line_h;
+
+// Messages ORU :
+start_line_h_oru :
+  start_line_h
+  DELIMITER1 {startElement("H.7");} spec_field["^ORU$", true, true] {endElement();}
+  midd_line_h;
+
+line_h2_2_oru
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_oru
+  bloc_line_h_2_2
+  end_line_h;
+
+line_h2_1_oru
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_oru
+  bloc_line_h_2_1
+  end_line_h;
+
+line_h2_0_oru
+@init{startElement("H");}
+@after{endElement();} :
+  start_line_h_oru
+  bloc_line_h_2_0
   end_line_h;
   
 // == Ligne OBR (demande d'examen) ==
@@ -472,7 +669,7 @@ line_obr
   // Je n'ai pas la table de specs pour la priorité, je mets une chaine de caractères
   DELIMITER1 {startElement("OBR.6");} spec_field["^.{0,2}$", true, false] {endElement();} (REPETITEUR {startElement("OBR.6");} spec_field["^.{0,2}$", true, false] {endElement();})*
   DELIMITER1 {startElement("OBR.7");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
-  DELIMITER1 lvl1_fields["OBR.8", obr_8, 0, ".*"]
+  DELIMITER1 lvl1_fields_repet["OBR.8", obr_8, 0, ".*"]
   DELIMITER1 {startElement("OBR.9");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();}
   // Le volume de recueil est de type CQ dont je ne connais pas la norme, je mets une chaine de caractères
   DELIMITER1 {startElement("OBR.10");} spec_field["^.{0,20}$", true, false] {endElement();}
@@ -618,7 +815,7 @@ line_p
                   (DELIMITER1 {startElement("P.21");} spec_field["^.{0,200}$", true, false] {endElement();}
                    (DELIMITER1 {startElement("P.22");} spec_field["^.{0,60}$", true, false] {endElement();}
                     (DELIMITER1 {startElement("P.23");} spec_field["^.{0,60}$", true, false] {endElement();}
-                     (DELIMITER1 {startElement("P.24");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();} (REPETITEUR {startElement("P.24");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();})*
+                     (DELIMITER1 {startElement("P.24");} spec_field["^(?:[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?)?$", true, false] {endElement();} (REPETITEUR {startElement("P.24");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();})*
                       (DELIMITER1 {startElement("P.25");} spec_field["^(OP|IP|ER|PA|MP)?^$", true, false] {endElement();}
                        (DELIMITER1 lvl1_fields["P.26", p_26, 0, "^.{0,100}$"]
                         // Je n'ai pas la table des classification du diagnostic, je mets une chaine de caractères 
@@ -633,7 +830,33 @@ line_p
                              (DELIMITER1 {startElement("P.32");} spec_field["^.{0,20}$", true, false] {endElement();}
                               (DELIMITER1 {startElement("P.33");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();}
                                (DELIMITER1 {startElement("P.34");} spec_field["^[0-9]{6}(?:[0-9]{2}(?:[0-9]{4}(?:[0-9]{2})?)?)?$", true, false] {endElement();}
-                                DELIMITER1?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+                                (DELIMITER1 spec_field["^$", false, false])?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?)?;
+
+// == Ligne REG (règlements) ==
+line_reg
+@init{startElement("REG");}
+@after{endElement();} :
+  CR LINE_REG {startElement("REG.1");content("REG");endElement();}
+  DELIMITER1 {startElement("REG.2");} spec_field["^[0-9]{1,4}$", true, false] {endElement();}
+  DELIMITER1 {startElement("REG.3");} spec_field["^.{1,16}$", true, false] {endElement();}
+  DELIMITER1 lvl1_fields["REG.4", reg_4, 2, "^.{0,11}$"]
+  DELIMITER1 {startElement("REG.5");} spec_field["^(?:\\+|-)$", true, false] {endElement();}
+  DELIMITER1 {startElement("REG.6");} spec_field["^.{1,26}$", true, false] {endElement();}
+  // Le Mode de paiement (champ REG.7) est un spec qui n'est pas défini dans la norme hprim, je mais une chaine de caractères en attendant d'en savoir plus.
+  (DELIMITER1 {startElement("REG.7");} spec_field["^.{0,60}$", true, false] {endElement();}
+   (DELIMITER1 {startElement("REG.8");} spec_field["^.{0,10}$", true, false] {endElement();}
+    (DELIMITER1 spec_field["^$", false, false])?)?)?;
+
+line_l
+@init{startElement("L");}
+@after{endElement();}:
+  CR LINE_L {startElement("L.1");content("L");endElement();}
+  (DELIMITER1 {startElement("L.2");} spec_field["^[0-9]{0,1}$", true, false] {endElement();}
+   (DELIMITER1 {startElement("L.3");} spec_field["^$", true, false] {endElement();}
+    (DELIMITER1 {startElement("L.4");} spec_field["^[0-9]{0,4}$", true, false] {endElement();}
+     (DELIMITER1 {startElement("L.5");} spec_field["^[0-9]{0,10}$", true, false] {endElement();}
+      (DELIMITER1 {startElement("L.6");} spec_field["^.{0,12}$", true, false] {endElement();}
+       (DELIMITER1 spec_field["^$", false, false])?)?)?)?)?)?;
 
 // ======= Définitions de types spécaux non réutilisables ==========
 spec_sized_cna[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
@@ -750,10 +973,12 @@ CONTENT: 'a';
 LINE_AP: 'o';
 LINE_AC: 'q';
 LINE_ACT: 'r';
-LINE_FAC: 's';
 LINE_C: 'm';
+LINE_FAC: 's';
 LINE_GENERIC: 'l';
 LINE_H: 'i';
+LINE_L: 'u';
 LINE_OBR: 'k';
 LINE_OBX: 'n';
 LINE_P: 'j';
+LINE_REG: 't';

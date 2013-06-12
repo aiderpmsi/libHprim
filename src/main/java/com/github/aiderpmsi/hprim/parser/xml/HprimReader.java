@@ -39,7 +39,7 @@ public class HprimReader extends XMLFilterImpl {
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, getContentHandler());
 	
 			// Parsing hprim oru
-			parser.start_line_h();
+			parser.hprim(3);
 		} catch (RecognitionException e) {
 			throw new SAXException(e);
 		} catch (IllegalArgumentException e) {

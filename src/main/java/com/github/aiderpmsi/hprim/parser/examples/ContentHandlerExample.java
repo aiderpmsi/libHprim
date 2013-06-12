@@ -26,6 +26,7 @@ public class ContentHandlerExample implements ContentHandler {
 	public void startDocument() throws SAXException {
 		try {
 			out.write("Début document ");
+			out.flush();
 		} catch (IOException e) {
 			throw new SAXException(e);
 		}
@@ -57,6 +58,7 @@ public class ContentHandlerExample implements ContentHandler {
 			out.write("\n");
 			indent();
 			out.write(localName + " : ");
+			out.flush();
 		} catch (IOException e) {
 			throw new SAXException(e);
 		}
@@ -67,6 +69,11 @@ public class ContentHandlerExample implements ContentHandler {
 	public void endElement(String uri, String localName, String qName)
 			throws SAXException {
 		level--;
+		try {
+			out.flush();
+		} catch (IOException e) {
+			throw new SAXException(e);
+		}
 	}
 
 	@Override

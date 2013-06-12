@@ -52,13 +52,16 @@ public class SimpleExample {
 		try {
 			// Création de l'inputstream en entrée
 			is = new FileInputStream(args[0]);
-			String toRead = "H|~^\\&|TEST.HPR||code~labo||ORU|||TEST~T.E.S.T||P|H2.2~C|200700\r" +
-					"P|1|01234|A0010308007|01234|NOM~PRENOM~AUTRE||19790101|F||21 RUE DE LA PAIX~~PARIS~~75000|||hello~un&deux^bye~3&4~good\r" +
-					"C|2|P|toto\r" +
-					"OBR|1|~|227dc251e1~70528100180|NF|R||200705281759|||hello~un&deux|N|||200705281801||MAB~DR MAB OUL~L|||||||||F|||||||VAUTO\r" +
-					"OBX|1|NM|GR~HEMATIES x1 000 000~L||3.98|/mm3|7 - 5.7|L|||F|||200705291644|HEMAT~20~NF~10~0~P\r" +
-					"C|2|P|toto\r" +
-					"P|1|01234|A0010308007|01234|NOM~PRENOM~AUTRE||19790101|F||21 RUE DE LA PAIX~~PARIS~~75000|||hello~un&deux^bye~3&4~good";
+			String toRead = "H|~^\\&|Test1.HPR||PO~LABM||ORU|||HPRIM~TESTE||P|H2.1~C|201204292059\r\n" +
+					"P|1|398|B1042100871||GAULLE~MARECHAL|PIT|19370325|F||28 RUE DE LA PAIX~~PARIS~~75000|||||||||||||||~~TEST\r\n" +
+					"OBR|1|idechantillo~|~20428E9575|TGO1~TGO ADVI~L^TGP1~TGP ADVI~L^LDH1~LDH ADVI~L^CK1~CK ADVIA~L^NFG~NF~L^NFF~NF~L^NF100~100%~L^PLA~PLA~L^TROPV~TROPV~L|S||201204281412^20120428||||N|||201204281413||PILO~DR PITO OLIV~L~TESTHP~Cliniq\r\n" +
+					"A|ue HP~L|0468638395||||||||F|||||||VBIO\r\n" +
+					"OBX|1|NM|OT1~TGO ADVIA~L||16|UI/l|10 - 40|N|||F|||201204281438|BIOCH~80~TGO1~388~0~P\r\n" +
+					"C|1|L|Anemie macrocytaire\r\n" +
+					"OBX|2|NM|HT~  Hematocrite~L||38.2|%|35 - 48|N|||F|||201204281504|HEMAT~20~NFG~15~2~P\r\n" +
+					"OBX|3|FIC|TEXTE~~L||GALAXIE~AL213202.j1~TXT\r\n" +
+					"L|1\r\n";
+;
 			ByteArrayInputStream by = new ByteArrayInputStream(toRead.getBytes("ISO8859_1"));
 			// Création de la source des tokens
 			inputreader = new HPRIMSInputStreamReader(by, "ISO8859_1");

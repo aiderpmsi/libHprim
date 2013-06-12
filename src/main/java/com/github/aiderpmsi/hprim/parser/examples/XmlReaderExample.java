@@ -63,7 +63,7 @@ public class XmlReaderExample {
 			// la classe collecteur l'export des données
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
 	
-			parser.start_line_h();
+			parser.hprim(3);
 		} finally {
 			// Fermeture propre des ressources allouées
 			if (inputreader != null)

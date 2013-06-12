@@ -139,7 +139,7 @@ public class HPRIMSTokenSource implements TokenSource {
 				nbadded += 2;
 			}
 
-			// Si tokenSourceState est à STD_CHAR, le tokenizer n'attend par de caractère particulier
+			// Si tokenSourceState est à STD_CHAR, le tokenizer n'attend pas de caractère particulier
 			// Si le tokenSourceState est à START_LINE, le tokenizer n'attend que un délimiteur1
 			else if (tokenSourceStates.getLast() == TokenSourceState.STD_CHAR ||
 					tokenSourceStates.getLast() == TokenSourceState.START_LINE) {
@@ -183,6 +183,10 @@ public class HPRIMSTokenSource implements TokenSource {
 							token = HPRIMSParser.LINE_ACT;
 						else if (start_line_content.equals("FAC"))
 							token = HPRIMSParser.LINE_FAC;
+						else if (start_line_content.equals("REG"))
+							token = HPRIMSParser.LINE_REG;
+						else if (start_line_content.equals("L"))
+							token = HPRIMSParser.LINE_L;
 						// On a passé le début de ligne, changement de l'état du
 						// tokenizer
 						tokenSourceStates.removeLast();
@@ -262,9 +266,25 @@ public class HPRIMSTokenSource implements TokenSource {
 						readresult = inputReader.read();
 						nextChar = (char) readresult;
 						if (readresult == -1) {
+							// On est à la fin du fichier, on renvoie les données lues jusqu'à présent si on est dans la lecture standard
+							// Et on renvoie le saut de ligne
+							if (tokenSourceStates.getLast() == TokenSourceState.STD_CHAR) {
+								tokenList.add(createToken(HPRIMSParser.CONTENT,
+										Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
+								tokenList.add(createToken(HPRIMSParser.CR,
+										Lexer.DEFAULT_TOKEN_CHANNEL, new char['\r']));
+								nbadded +=2;
+							}
+							// Si on est dans la lecture de début de ligne et que le contenu n'est pas vide,
+							// on retourne un token d'erreur
+							else if (content.length() != 0) {
+								tokenList.add(CommonToken.INVALID_TOKEN);
+								nbadded++;
+							}
 							tokenList.add(CommonToken.EOF_TOKEN);
 							nbadded++;
-							break;
+							// On sort de la lecture
+							return nbadded;
 						}
 						Matcher m = patternPrintable.matcher(Character.toString(nextChar));
 						if (m.matches())
