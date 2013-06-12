@@ -61,7 +61,7 @@ public class XmlXsltSaxExample {
 			TransformerFactory tFactory = TransformerFactory.newInstance();
 			
 			// Définition du xslt utilisé
-			InputStream isXslt = reader.getClass().getClassLoader().getResourceAsStream("aider/org/hprim/parser/examples/example.xslt");
+			InputStream isXslt = reader.getClass().getClassLoader().getResourceAsStream("com/github/aiderpmsi/hprim/parser/examples/example.xslt");
 		    Transformer transformer = tFactory.newTransformer(new StreamSource(isXslt));
 		    
 		    // Définition du contenthandler de sortie :

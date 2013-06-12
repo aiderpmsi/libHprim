@@ -8,7 +8,6 @@ import org.antlr.runtime.Token;
 /**
  * Erreur lors des non reconnaissances de regex 
  * @author delabre
- * @version $Revision: 972 $
  */
 public class MatchRegexTokenException extends RecognitionException {
 

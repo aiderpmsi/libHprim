@@ -8,11 +8,11 @@ Package permettant de lire un fichier HPRIM.
 
 Les classes piliers sont, dans l'ordre d'utilisation :
 <ol>
-  <li>HprimsInputStreamReader : prend un InputStream et implémente les fonctions pour le
+  <li>HPRIMSInputStreamReader : prend un InputStream et implémente les fonctions pour le
   lire selon les critères HPRIM :
   <ul>
     <li>lecture jusqu'à CARRIAGE RETURN puis non prise en compte de tous les caractères non imprimables</li>
-    <li>Stockage du numér de lign et de caractère pour retour correct des erreurs</li>
+    <li>Stockage du numéro de ligne et de caractère pour retour correct des erreurs</li>
   </ul>
   <li>HPRIMSTokenSource : Tokenizer pour prise en compte des spécifications HPRIM :
   <ul>
@@ -20,10 +20,9 @@ Les classes piliers sont, dans l'ordre d'utilisation :
     <li>Prise en compte des grandes lignes avec A pour concaténer les lignes</li>
   </ul>
   </li>
-  <li>HPRIMSParser : généré à partir de HPRIMS.g, syntaxe EBNF de la grammaire de HPRIM
-  </li>
-  <li>HPRIMSCollecteur : classe abstraite à implémenter pour récupérer les informations venant du parseur
-  </li>
+  <li>HPRIMSParser : généré à partir de HPRIMS.g, syntaxe EBNF de la grammaire de HPRIM</li>
+  <li>org.xml.sax.ContentHandler : interface à implémenter pour récupérer les informations
+  collectées par le parseur</li>
 </ol>
 
 </body>

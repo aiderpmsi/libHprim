@@ -20,6 +20,8 @@ import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
  */
 public class HprimReader extends XMLFilterImpl {
 
+	private int strictness = 3;
+	
 	@Override
 	public void parse(InputSource input) throws IOException, SAXException {
 
@@ -39,7 +41,7 @@ public class HprimReader extends XMLFilterImpl {
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, getContentHandler());
 	
 			// Parsing hprim oru
-			parser.hprim(3);
+			parser.hprim(strictness);
 		} catch (RecognitionException e) {
 			throw new SAXException(e);
 		} catch (IllegalArgumentException e) {
@@ -49,6 +51,18 @@ public class HprimReader extends XMLFilterImpl {
 			if (inputreader != null)
 				inputreader.close();
 		}
+	}
+
+
+
+	public int getStrictness() {
+		return strictness;
+	}
+
+
+
+	public void setStrictness(int strictness) {
+		this.strictness = strictness;
 	}
 
 }
