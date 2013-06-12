@@ -10,18 +10,19 @@ import java.io.PrintWriter;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.junit.Test;
+import org.xml.sax.SAXException;
 
 import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
 import com.github.aiderpmsi.hprim.parser.HPRIMSTokenSource;
 import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
 import com.github.aiderpmsi.hprim.parser.xml.XmlContentHandler;
-
+import org.custommonkey.xmlunit.*;
 
 public class HPRIMSParserTest {
 
 	@Test
-	public void testHprim_2_1() throws IOException, RecognitionException {
-		// Chaine de caract�res � tester
+	public void testHprim() throws IOException, SAXException, RecognitionException {
+		// Chaine de caractères à tester
 		String testString = 
 		"H|~^\\&|Test1.HPR||PO~LABM||ORU|||HPRIM~TESTE||P|H2.1~C|201204292059\r\n" +
 		"P|1|398|B1042100871||GAULLE~MARECHAL|PIT|19370325|F||28 RUE DE LA PAIX~~PARIS~~75000|||||||||||||||~~TEST\r\n" +
@@ -33,12 +34,12 @@ public class HPRIMSParserTest {
 		"OBX|3|FIC|TEXTE~~L||GALAXIE~AL213202.j1~TXT\r\n" +
 		"L|1\r\n";
 
-		// Cr�ation de la source de tokens
+		// Création de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
 				new HPRIMSInputStreamReader(
-						new ByteArrayInputStream(testString.getBytes()), "ISO8859-1"));
+						new ByteArrayInputStream(testString.getBytes("ISO8859-1")), "ISO8859-1"));
 		
-		// R�cup�re ce qui est �crit pas le collecteur
+		// Récupère ce qui est écrit par le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		// Initialisation du parseur
@@ -46,12 +47,12 @@ public class HPRIMSParserTest {
 				new CommonTokenStream(tks),
 				new XmlContentHandler(new PrintWriter(baos)));
 		
-		// Parsing de la chaine de caract�res
-		parser.hprim();
+		// Parsing de la chaine de caractères
+		parser.hprim(3);
 
-		// Tests des r�sultats
-		assertEquals("Erreur de resultat de parsing",
-			"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><HPRIM.ORU.2.1><H><H.1>H</H.1><H.2>|~^\\&amp;</H.2>" +
+		// Tests des résultats
+		String controlXML =
+			"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><HPRIM.ORU.2_1><H><H.1>H</H.1><H.2>|~^\\&amp;</H.2>" +
 			"<H.3>Test1.HPR</H.3><H.4></H.4><H.5><H.5.1>PO</H.5.1><H.5.2>LABM</H.5.2></H.5><H.6><H.6.1>" +
 			"</H.6.1></H.6><H.7>ORU</H.7><H.8><H.8.1></H.8.1></H.8><H.9></H.9><H.10><H.10.1>HPRIM</H.10.1>" +
 			"<H.10.2>TESTE</H.10.2></H.10><H.11></H.11><H.12>P</H.12><H.13><H.13.1>H2.1</H.13.1><H.13.2>C</H.13.2>" +
@@ -71,7 +72,7 @@ public class HPRIMSParserTest {
 			"<OBR.5.2>PLA</OBR.5.2><OBR.5.3>L</OBR.5.3></OBR.5><OBR.5><OBR.5.1>TROPV</OBR.5.1><OBR.5.2>TROPV</OBR.5.2><OBR.5.3>L</OBR.5.3>" +
 			"</OBR.5><OBR.6>S</OBR.6><OBR.7></OBR.7><OBR.8><OBR.8.1>201204281412</OBR.8.1><OBR.8.2>20120428</OBR.8.2></OBR.8><OBR.9>" +
 			"</OBR.9><OBR.10></OBR.10><OBR.11><OBR.11.1></OBR.11.1></OBR.11><OBR.12>N</OBR.12><OBR.13><OBR.13.1></OBR.13.1></OBR.13>" +
-			"<OBR.14></OBR.14><OBR.15>201204281413</OBR.15><OBR.16><OBR.16.2><OBR.16.2.1></OBR.16.2.1></OBR.16.2></OBR.16><OBR.17>" +
+			"<OBR.14></OBR.14><OBR.15>201204281413</OBR.15><OBR.16><OBR.16.1><OBR.16.1.1></OBR.16.1.1></OBR.16.1></OBR.16><OBR.17>" +
 			"<OBR.17.1>PILO</OBR.17.1><OBR.17.2>DR PITO OLIV</OBR.17.2><OBR.17.3>L</OBR.17.3><OBR.17.4>TESTHP</OBR.17.4>" +
 			"<OBR.17.5>Clinique HP</OBR.17.5><OBR.17.6>L</OBR.17.6></OBR.17><OBR.18><OBR.18.1>0468638395</OBR.18.1></OBR.18><OBR.19>" +
 			"</OBR.19><OBR.20></OBR.20><OBR.21></OBR.21><OBR.22></OBR.22><OBR.23></OBR.23><OBR.24></OBR.24><OBR.25><OBR.25.1>" +
@@ -88,110 +89,10 @@ public class HPRIMSParserTest {
 			"<OBX.16.1>HEMAT</OBX.16.1><OBX.16.2>20</OBX.16.2><OBX.16.3>NFG</OBX.16.3><OBX.16.4>15</OBX.16.4><OBX.16.5>2</OBX.16.5>" +
 			"<OBX.16.6>P</OBX.16.6></OBX.16></OBX><OBX><OBX.1>OBX</OBX.1><OBX.2>3</OBX.2><OBX.3>FIC</OBX.3><OBX.4>" +
 			"<OBX.4.1>TEXTE</OBX.4.1><OBX.4.2></OBX.4.2><OBX.4.3>L</OBX.4.3></OBX.4><OBX.5></OBX.5><OBX.6><OBX.6.1>GALAXIE</OBX.6.1>" +
-			"<OBX.6.2>AL213202.j1</OBX.6.2><OBX.6.3>TXT</OBX.6.3></OBX.6></OBX><L><L.2>1</L.2></L></HPRIM.ORU.2.1>",
-				baos.toString());	
-	}
-	
-	/**
-	 * Teste le matching des chiffres (sgt_nm_long)
-	 * @throws IOException 
-	 * @throws RecognitionException 
-	 */
-	@Test
-	public void testSgt_nm_long() throws IOException, RecognitionException {
-		// Chaine de caract�res � tester
-		String testString = "H|~^\\&-1.60";
-		
-		// Cr�ation de la source de tokens
-		HPRIMSTokenSource tks = new HPRIMSTokenSource(
-				new HPRIMSInputStreamReader(
-						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
-		
-		// R�cup�re ce qui est �crit pas le collecteur
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			"<OBX.6.2>AL213202.j1</OBX.6.2><OBX.6.3>TXT</OBX.6.3></OBX.6></OBX><L><L.2>1</L.2></L></HPRIM.ORU.2_1>";
+		Diff myDiff = new Diff(controlXML, baos.toString());
 
-		// Initialisation du parseur
-		HPRIMSParser parser = new HPRIMSParser(
-				new CommonTokenStream(tks),
-				new XmlContentHandler(new PrintWriter(baos)));
-		
-		// Parsing de la chaine de caract�res
-		parser.delimiters();
-		parser.nm_sized_optionnal("SimpleExample", 15);
-
-		// Tests des r�sultats
-		assertEquals("Erreur de resultat de parsing",
-				"<H.2>|~^\\&amp;</H.2><SimpleExample>-1.60</SimpleExample>",
-				baos.toString());	
-		assertTrue(parser.getNumberOfSyntaxErrors() == 0);
-	}
-	
-	/**
-	 * SimpleExample la possibilit� qu'il y ait un segment 9.3 avec :
-	 * DELIMITER1 (vide) DELIMITER2 (vide) DELIMITER1
-	 * @throws IOException 
-	 * @throws RecognitionException 
-	 */
-	@Test
-	public void testSgt_cm_9_3_Case_1() throws IOException, RecognitionException {
-		// Chaine de caract�res � tester
-		String testString = "H|~^\\&toto~";
-		
-		// Cr�ation de la source de tokens
-		HPRIMSTokenSource tks = new HPRIMSTokenSource(
-				new HPRIMSInputStreamReader(
-						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
-		
-		// R�cup�re ce qui est �crit pas le collecteur
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-
-		// Initialisation du parseur
-		HPRIMSParser parser = new HPRIMSParser(
-				new CommonTokenStream(tks),
-				new XmlContentHandler(new PrintWriter(baos)));
-		
-		// Parsing de la chaine de caract�res
-		parser.delimiters();
-		parser.spec_sized_9_3("OBR_9.3", 23);
-
-		// Tests des r�sultats
-		assertEquals("Erreur de resultat de parsing",
-				"<H.2>|~^\\&amp;</H.2><OBR_9.3><OBR_9.3.1>toto</OBR_9.3.1><OBR_9.3.2></OBR_9.3.2></OBR_9.3>",
-				baos.toString());	
-	}
-	
-	/**
-	 * SimpleExample la r�action devant une erreur de matchRegexp
-	 */
-	@Test
-	public void testError_Case_1() throws IOException, RecognitionException {
-		// Chaine de caract�res � tester
-		String testString = "H|~^\\&123";
-		
-		// Cr�ation de la source de tokens
-		HPRIMSTokenSource tks = new HPRIMSTokenSource(
-				new HPRIMSInputStreamReader(
-						new ByteArrayInputStream(testString.getBytes()), "ISO8859_1"));
-		
-		// R�cup�re ce qui est �crit pas le collecteur
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-
-		// Initialisation du parseur
-		HPRIMSParser parser = new HPRIMSParser(
-				new CommonTokenStream(tks),
-				new XmlContentHandler(new PrintWriter(baos)));
-		
-		// Destin� � recevoir l'erreur �mise
-		String error = null;
-		
-		// Parsing de la chaine de caract�res
-		parser.delimiters();
-		try {
-			parser.st_sized_optionnal("SimpleExample", 2);
-		} catch (IllegalArgumentException e) {
-			error = e.getMessage();
-		}
-		assertEquals("Reader line 1:7 Malformed message : 123 does not match ^.{0,2}$", error);
+		assertTrue("Similar output " + myDiff, myDiff.similar());	
 	}
 
 }
