@@ -467,7 +467,7 @@ start_line_h :
   {startElement("H.2");} delimiters {endElement();}
   DELIMITER1 {startElement("H.3");} spec_field["^.{0,12}$", true, false] {endElement();}
   DELIMITER1 {startElement("H.4");} spec_field["^.{0,12}$", true, false] {endElement();}
-  DELIMITER1 lvl1_fields["H.5", h_5, 2, "^.{0,15}$"]
+  DELIMITER1 lvl1_fields["H.5", h_5, 2, "^.{0,40}$"]
   DELIMITER1 lvl1_fields["H.6", h_6, 0, "^.{0,100}$"];
 
 // Milieu de ligne H, identique pour toutes les versions
