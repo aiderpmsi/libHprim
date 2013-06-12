@@ -82,14 +82,14 @@ public class HPRIMSParserTest {
 			"<OBX.4.3>L</OBX.4.3></OBX.4><OBX.5></OBX.5><OBX.6>16</OBX.6><OBX.7>UI/l</OBX.7><OBX.8>10 - 40</OBX.8><OBX.9>N</OBX.9>" +
 			"<OBX.10></OBX.10><OBX.11></OBX.11><OBX.12>F</OBX.12><OBX.13></OBX.13><OBX.14></OBX.14><OBX.15>201204281438</OBX.15>" +
 			"<OBX.16><OBX.16.1>BIOCH</OBX.16.1><OBX.16.2>80</OBX.16.2><OBX.16.3>TGO1</OBX.16.3><OBX.16.4>388</OBX.16.4>" +
-			"<OBX.16.5>0</OBX.16.5><OBX.16.6>P</OBX.16.6></OBX.16></OBX><C><C.2>1</C.2><C.3>L</C.3><C.4>Anemie macrocytaire</C.4>" +
+			"<OBX.16.5>0</OBX.16.5><OBX.16.6>P</OBX.16.6></OBX.16></OBX><C><C.1>C</C.1><C.2>1</C.2><C.3>L</C.3><C.4>Anemie macrocytaire</C.4>" +
 			"</C><OBX><OBX.1>OBX</OBX.1><OBX.2>2</OBX.2><OBX.3>NM</OBX.3><OBX.4><OBX.4.1>HT</OBX.4.1><OBX.4.2>  Hematocrite</OBX.4.2>" +
 			"<OBX.4.3>L</OBX.4.3></OBX.4><OBX.5></OBX.5><OBX.6>38.2</OBX.6><OBX.7>%</OBX.7><OBX.8>35 - 48</OBX.8><OBX.9>N</OBX.9>" +
 			"<OBX.10></OBX.10><OBX.11></OBX.11><OBX.12>F</OBX.12><OBX.13></OBX.13><OBX.14></OBX.14><OBX.15>201204281504</OBX.15><OBX.16>" +
 			"<OBX.16.1>HEMAT</OBX.16.1><OBX.16.2>20</OBX.16.2><OBX.16.3>NFG</OBX.16.3><OBX.16.4>15</OBX.16.4><OBX.16.5>2</OBX.16.5>" +
 			"<OBX.16.6>P</OBX.16.6></OBX.16></OBX><OBX><OBX.1>OBX</OBX.1><OBX.2>3</OBX.2><OBX.3>FIC</OBX.3><OBX.4>" +
 			"<OBX.4.1>TEXTE</OBX.4.1><OBX.4.2></OBX.4.2><OBX.4.3>L</OBX.4.3></OBX.4><OBX.5></OBX.5><OBX.6><OBX.6.1>GALAXIE</OBX.6.1>" +
-			"<OBX.6.2>AL213202.j1</OBX.6.2><OBX.6.3>TXT</OBX.6.3></OBX.6></OBX><L><L.2>1</L.2></L></HPRIM.ORU.2_1>";
+			"<OBX.6.2>AL213202.j1</OBX.6.2><OBX.6.3>TXT</OBX.6.3></OBX.6></OBX><L><L.1>L</L.1><L.2>1</L.2></L></HPRIM.ORU.2_1>";
 		Diff myDiff = new Diff(controlXML, baos.toString());
 
 		assertTrue("Similar output " + myDiff, myDiff.similar());	
