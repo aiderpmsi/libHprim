@@ -62,7 +62,7 @@ public class SimpleExample {
 			// la classe collecteur l'export des données
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
 	
-			parser.hprim(2);
+			parser.dirty_hprim();
 		} finally {
 			// Fermeture propre des ressources allouées
 			if (inputreader != null)

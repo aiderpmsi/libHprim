@@ -329,6 +329,11 @@ hprim[int strictNess]
     ({record = true;startElement("HPRIM.REG.2_0");} line_h2_0_reg body_p_reg+ line_l CR? EOF {endElement();})  
   ;
 
+dirty_hprim
+@init{startDocument();startElement("HPRIM.DIRTY");}
+@after{endElement();endDocument();} :
+  dirty_line[2]* CR? EOF;
+
 // == Définition des lignes acceptées selon les messages ==
 body_p_adm :
   (line_p (line_c)*
@@ -364,7 +369,6 @@ body_p_oru :
 body_p_reg :
   (line_p (line_c)*
    (line_reg (line_c)*)+);
-    
 
 // =========== Définition des des lignes hprim =================
 
@@ -858,6 +862,17 @@ line_l
       (DELIMITER1 {startElement("L.6");} spec_field["^.{0,12}$", true, false] {endElement();}
        (DELIMITER1 spec_field["^$", false, false])?)?)?)?)?)?;
 
+dirty_line[int start_count] :
+  (
+    (CR g=(LINE_AP | LINE_AC | LINE_ACT | LINE_C | LINE_FAC | LINE_GENERIC | LINE_L | LINE_OBR | LINE_OBX | LINE_P | LINE_REG)
+     {startElement($g.text);startElement($g.text + ".1");content($g.text);endElement();})
+    |
+    (g=LINE_H {startElement($g.text);startElement($g.text + ".1");content($g.text);endElement();startElement("H.2");} delimiters {endElement();$start_count++;})
+  )
+  (DELIMITER1 dirty_repet[$g.text + "." + $start_count] {$start_count++;})*
+  {endElement();};
+
+
 // ======= Définitions de types spécaux non réutilisables ==========
 spec_sized_cna[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
 @init{startElement($nameElement);}
@@ -874,6 +889,38 @@ spec_obr_16[String nameElement, List<String> patterns, int nbMandatory, String c
   (DELIMITER2 {startElement($nameElement + ".2");} i=field[true] {endElement();}
    (DELIMITER2 {startElement($nameElement + ".3");} j=field[true] {endElement();})?)?
   {matchRegex(($h.contentText == null ? "" : $h.contentText) + ($i.text == null ? "" : $i.text) + ($j.text == null ? "" : $j.text), $completeFieldPattern, false)}?;
+
+dirty_repet[String nameElement] :
+  dirty_champ[$nameElement] (REPETITEUR dirty_repet[$nameElement])?;
+
+dirty_champ[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  (field[true] |
+   (dirty_sous_champ[$nameElement + ".1"]
+    dirty_champ_ordered[$nameElement, 2])
+  )?;
+
+dirty_champ_ordered[String nameElement, int order] :
+  DELIMITER2 dirty_sous_champ[$nameElement + "." + $order]
+  dirty_champ_ordered[$nameElement, $order + 1]?;
+  
+dirty_sous_champ[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  (field[true] |
+   (dirty_sous_sous_champ[$nameElement + ".1"]
+   dirty_sous_champ_ordered[$nameElement, 2])
+  )?;
+
+dirty_sous_champ_ordered[String nameElement, int order] :
+  DELIMITER3 dirty_sous_sous_champ[$nameElement + "." + $order]
+    dirty_sous_champ_ordered[$nameElement, $order + 1]?;
+
+dirty_sous_sous_champ[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  field[true];
 
 // ========== Définitions de types spéciaux réutilisables ======
 // Répétitions de champs entre délimiteurs 2
