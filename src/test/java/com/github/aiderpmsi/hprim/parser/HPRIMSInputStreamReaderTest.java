@@ -28,7 +28,7 @@ public class HPRIMSInputStreamReaderTest {
 		ByteArrayInputStream test1 = new ByteArrayInputStream(new byte[]{'L', 'i', 'g', ',', 'n', 'e', '1', '\r',
 				'\n', '\t', 'L', 'i', 'g', 'n', 'e', '2', '\r', '\n', '\n', '\t'});
 		
-		// SimpleExample de la cr�ation d'un flux en UTF-8 (NB, les flux HPRIM devraient �tre en ASCII
+		// SimpleExample de la création d'un flux en UTF-8 (NB, les flux HPRIM devraient être en ASCII)
 		HPRIMSInputStreamReader ins1 = new HPRIMSInputStreamReader(test1, "UTF-8");
 
 		// test lecture initial
@@ -37,7 +37,7 @@ public class HPRIMSInputStreamReaderTest {
 		// === SimpleExample 2 ===
 		ByteArrayInputStream test2 = new ByteArrayInputStream(new byte[]{'L'});
 		
-		// SimpleExample de la cr�ation d'un flux en UTF-8 (NB, les flux HPRIM devraient �tre en ASCII
+		// SimpleExample de la création d'un flux en UTF-8 (NB, les flux HPRIM devraient être en ASCII)
 		HPRIMSInputStreamReader ins2 = new HPRIMSInputStreamReader(test2, "ISO8859_1");
 
 		// test lecture initial
@@ -45,5 +45,8 @@ public class HPRIMSInputStreamReaderTest {
 		// test de lecture fin de flux
 		assertEquals(-1, ins2.read());
 
+		ins1.close();
+		ins2.close();
+		
 	}
 }

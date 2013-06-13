@@ -1,163 +1,193 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.aiderpmsi</groupId>
-  <artifactId>libHprim</artifactId>
-  <version>3.5.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <name>libHprim</name>
-  <url>http://github.com/aiderpmsi/libHprim</url>
-  <description>Librairie de lecture de fichiers HPRIM </description>
-  
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
-  
-  <licenses>
-    <license>
-      <name>GNU Lesser General Public License, Version 2.0</name>
-      <url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  
-  <scm>
-    <url>git@github.com:aiderpmsi/libHprim.git</url>
-    <connection>scm:git:git@github.com:aiderpmsi/libHprim.git</connection>
-    <developerConnection>scm:git:git@github.com:aiderpmsi/libHprim.git</developerConnection>
-    <tag>libHprim-3.4.0</tag>
-  </scm>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.aiderpmsi</groupId>
+	<artifactId>libHprim</artifactId>
+	<version>3.5.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>libHprim</name>
+	<url>http://github.com/aiderpmsi/libHprim</url>
+	<description>Librairie de lecture de fichiers HPRIM </description>
 
-  <developers>
-    <developer>
-      <name>Jean-Philippe Delabre</name>
-    </developer>
-  </developers>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 
-  <build>
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License, Version 2.0</name>
+			<url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
-    <plugins>
-    
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
-        <configuration>
-          <fork>true</fork>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-      
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.12.1</version>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.8.1</version>
-        <configuration>
-            <overview>${basedir}/src/main/java/overview.html</overview>
-        </configuration> 
-        <executions>
-          <execution>
-            <id>javadoc-jar</id>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>2.2.1</version>
-        <configuration>
-        </configuration>
-        <executions>
-          <execution>
-            <id>javasources-jar</id>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.4.1</version>
-        <configuration>
-          <mavenExecutorId>forked-path</mavenExecutorId>
-        </configuration>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.4</version>
-        <configuration>
-          <useAgent>true</useAgent>
-        </configuration>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
- 
-    </plugins>
-  </build>
+	<scm>
+		<url>git@github.com:aiderpmsi/libHprim.git</url>
+		<connection>scm:git:git@github.com:aiderpmsi/libHprim.git</connection>
+		<developerConnection>scm:git:git@github.com:aiderpmsi/libHprim.git</developerConnection>
+		<tag>libHprim-3.4.0</tag>
+	</scm>
 
-  <dependencies>
-  
-  	<dependency>
-  	  <groupId>org.antlr</groupId>
-  	  <artifactId>antlr-runtime</artifactId>
-  	  <version>3.4</version>
-  	</dependency>
-  	
-  	<dependency>
-  	  <groupId>junit</groupId>
-  	  <artifactId>junit</artifactId>
-  	  <version>4.10</version>
-  	  <scope>test</scope>
-  	</dependency>
-  	
-  	<dependency>
-	  <groupId>commons-lang</groupId>
-	  <artifactId>commons-lang</artifactId>
-	  <version>2.6</version>
-    </dependency>
-  	
-  	<dependency>
-	  <groupId>xalan</groupId>
-	  <artifactId>xalan</artifactId>
-	  <version>2.7.1</version>
-    </dependency>
-    
-    <dependency>
-	  <groupId>xerces</groupId>
-	  <artifactId>xercesImpl</artifactId>
-	  <version>2.9.1</version>
-    </dependency>
-    
-    <dependency>
-	  <groupId>xmlunit</groupId>
-	  <artifactId>xmlunit</artifactId>
-	  <version>1.4</version>
-    </dependency>
+	<developers>
+		<developer>
+			<name>Jean-Philippe Delabre</name>
+		</developer>
+	</developers>
 
-  </dependencies>
+	<build>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-enforcer-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>enforce</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<fork>true</fork>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.1</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<overview>${basedir}/src/main/java/overview.html</overview>
+				</configuration>
+				<executions>
+					<execution>
+						<id>javadoc-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<configuration />
+
+				<executions>
+					<execution>
+						<id>javasources-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<mavenExecutorId>forked-path</mavenExecutorId>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.4</version>
+				<configuration>
+					<useAgent>true</useAgent>
+				</configuration>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>antlr-runtime</artifactId>
+			<version>3.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+			<version>2.7.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>xmlunit</groupId>
+			<artifactId>xmlunit</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+	</dependencies>
 
 </project>
