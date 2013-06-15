@@ -28,7 +28,7 @@
 		<url>git@github.com:aiderpmsi/libHprim.git</url>
 		<connection>scm:git:git@github.com:aiderpmsi/libHprim.git</connection>
 		<developerConnection>scm:git:git@github.com:aiderpmsi/libHprim.git</developerConnection>
-		<tag>libHprim-3.4.0</tag>
+		<tag>libHprim-3.5.0-SNAPSHOT</tag>
 	</scm>
 
 	<developers>
@@ -36,6 +36,10 @@
 			<name>Jean-Philippe Delabre</name>
 		</developer>
 	</developers>
+
+	<properties>
+		<antlr.version>3.4</antlr.version>
+	</properties>
 
 	<build>
 
@@ -69,6 +73,40 @@
 		</pluginManagement>
 
 		<plugins>
+
+			<plugin>
+				<groupId>org.antlr</groupId>
+				<artifactId>antlr3-maven-plugin</artifactId>
+				<version>${antlr.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>antlr</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-antlr-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/main/antlr3</source>
+								<source>target/generated-sources/antlr3</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -154,7 +192,7 @@
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr-runtime</artifactId>
-			<version>3.4</version>
+			<version>${antlr.version}</version>
 		</dependency>
 
 		<dependency>

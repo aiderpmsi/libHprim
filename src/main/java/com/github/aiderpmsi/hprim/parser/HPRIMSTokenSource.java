@@ -1,15 +1,16 @@
 package com.github.aiderpmsi.hprim.parser;
 
 import java.io.*;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Matcher;
+import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
 import org.antlr.runtime.*;
-
 import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSLexer;
 import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
 
@@ -24,7 +25,7 @@ import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
  * @author delabre/aider
  * @version $Revision: 1028 $
  */
-public class HPRIMSTokenSource implements TokenSource {
+public class HPRIMSTokenSource implements TokenSource, Closeable {
 
 	/**
 	 * Logger Log4J
@@ -37,78 +38,88 @@ public class HPRIMSTokenSource implements TokenSource {
      */ 
 	private HPRIMSInputStreamReader inputReader;
 	
-    /**
-     * Classe définissant les délimiteurs HPRIM
-     */
-    private HPRIMSDelimiters delimiters;
-	
-    /**
-     * Liste des état du lecteur de tokens
-     */
-    public enum TokenSourceState {
-    	INIT,
-    	START_LINE,
-    	STD_CHAR,
-    	ECHAPED
-    }
+	/** 
+     * Scanner appliqué sur HPRIMSInputStreamReader
+     */ 
+	private Scanner scanner;
 
-    /**
-     * Pile des états de lecture du flux (permet de se souvenir de l'ancien
-     * état lors des échappements)
-     */
-    private LinkedList<TokenSourceState> tokenSourceStates =
-    		new LinkedList<HPRIMSTokenSource.TokenSourceState> (
-    				Arrays.asList(TokenSourceState.INIT));   
-
-    
     /**
      * Stocke des tokens à renvoyer dès que possible (Buffer lorsque plusieurs tokens
      * doivent être lus en même temps).
      */
-    private LinkedList<Token> tokenList = new LinkedList<Token>();
+    private LinkedList<Token> tokenList = new LinkedList<>();
     
     /**
-     * 
+     * Patterns pour récupérer les tokens
      */
-    StringBuilder content = new StringBuilder();
+    private List<Pattern> tokenRegexps = new ArrayList<>(8);
     
-	/**
-	 * Pattern matching précompilée pour reconnaitre les charactères imprimables
-	 */
-	private static final Pattern patternPrintable = Pattern.compile("\\p{Print}");
+    /**
+     * Indicateur pour générer un tokenizer strict ou non
+     */
+    private boolean strict;
     
     /**
      * Constructeur : prend un flux d'entrée et le transforme en tokens selon les délimiteurs déterminés
      * @param inputStream Flux d'où les caractères sont extraits
      * @throws IOException 
      */
-    public HPRIMSTokenSource(HPRIMSInputStreamReader inputStream) throws IOException {
+    public HPRIMSTokenSource(HPRIMSInputStreamReader inputStream, boolean strict) throws IOException {
     	this.inputReader = inputStream;
+    	this.strict = strict;
+    	scanner = new Scanner(inputReader);
     }
-
     /**
      * Prend les 6 prochains caractères dans le flux et regarde si on a H et les délimiteurs
      * @throws RecognitionException Si l'entête n'est pas compatible avec les spécifications HPRIM
      * @throws IOException Si la lecture duflux est impossible
      */
-    private void parseDelimiters() throws RecognitionException, IOException {
-    	char[] delimitersBuffer = new char[5]; // Buffer récupérant les caractères délimiteurs
-    	int nbcharsread; // Variable récupérant le nombre de caractères ayant été effectivement lus
+    private void parseDelimiters(boolean strict) {
+    	// Création du regex pour récupérer les 5 premiers caractères
+    	Pattern p;
+    	if (strict) p = Pattern.compile("^(H)((?!\\1)[^\\r\\n])((?!\\1)(?!\\2)[^\\r\\n])((?!\\1)(?!\\2)(?!\\3)[^\\r\\n])" +
+    			"((?!\\1)(?!\\2)(?!\\3)(?!\\4)[^\\r\\n])((?!\\1)(?!\\2)(?!\\3)(?!\\4)(?!\\5)[^\\r\\n])(\\2)");
+    	else p = Pattern.compile("^([A-Z]*)([^A-Z])((?!\\2)[^A-Z])((?!\\2)(?!\\3)[^A-Z])" +
+    			"((?!\\2)(?!\\3)(?!\\4)[^A-Z])((?!\\2)(?!\\3)(?!\\4)(?!\\5)[^A-Z])(\\2)");
 
-    	// Remplissage du buffer pour lire la définition des délimiteurs
-    	nbcharsread = inputReader.read(delimitersBuffer);
-    	if (nbcharsread == -1)
-    		throw new HPRIMSRecognitionException("Fin prématurée du fichier",
-        		inputReader, delimitersBuffer);
+    	// Si on ne trouve pas ce motif, il faut lancer une erreur
+    	if (scanner.findWithinHorizon(p, 0) == null)
+    		reportError ("Fin prématurée du fichier", inputReader.getLineNumber(), inputReader.getCharNumber());
     	
-  	  	// Création d'un objet de type délimiteurs à partir de cette chaîne
-    	delimiters = new HPRIMSDelimiters();
-    	try {
-    		delimiters.setDelimiters(delimitersBuffer);
-    	} catch (IOException e) {
-    		throw new HPRIMSRecognitionException(e.getMessage(),
-        		inputReader, delimitersBuffer);
-    	}
+    	// Arrivé ici, on a trouvé les délimiteurs de l'entête, il faut les stocker dans des tokens
+    	MatchResult m = scanner.match();
+		tokenList.add(createToken(HPRIMSLexer.NEWLINE,
+				Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{}));
+		tokenList.add(createToken(HPRIMSLexer.CONTENT,
+				Lexer.DEFAULT_TOKEN_CHANNEL, m.group(1).toCharArray()));
+		tokenList.add(createToken(HPRIMSLexer.DELIMITERS, 
+				Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{m.group(2).charAt(0), m.group(3).charAt(0),
+				m.group(4).charAt(0), m.group(5).charAt(0), m.group(6).charAt(0)}));
+		tokenList.add(createToken(HPRIMSLexer.DELIMITER1, 
+				Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{m.group(7).charAt(0)}));
+
+		// On crée la liste des patterns à appliquer à la suite :
+		// 1 - Délimiteur 1
+		tokenRegexps.add(Pattern.compile("^" + Pattern.quote(m.group(2))));
+		// 2 - Délimiteur 2
+		tokenRegexps.add(Pattern.compile("^" + Pattern.quote(m.group(3))));
+		// 3 - Répétiteur
+		tokenRegexps.add(Pattern.compile("^" + Pattern.quote(m.group(4))));
+		// 4 - Délimiteur 3
+		tokenRegexps.add(Pattern.compile("^" + Pattern.quote(m.group(6))));
+		// 5 - Contenu standard
+		tokenRegexps.add(Pattern.compile("^(?:[^" + Pattern.quote(m.group(2)) +
+				Pattern.quote(m.group(3)) + Pattern.quote(m.group(4)) +
+				Pattern.quote(m.group(5)) + Pattern.quote(m.group(6)) + "\\r\\n]|" +
+				"(?:" + Pattern.quote(m.group(5)) + ".)|(?:\\r[^\\p{Print}]*(?:A|" + 
+				Pattern.quote(m.group(5)) + "A)" + Pattern.quote(m.group(2)) + "))*"));
+		// 6 - Sauts de ligne
+		tokenRegexps.add(Pattern.compile("^\\r\\p{Print}*(?!A|" + Pattern.quote(m.group(5)) + "A)"));
+		
+		// On crée également les regex pour nettoyer les chaines de caractères du contenu
+		tokenRegexps.add(Pattern.compile("\\r[^\\p{Print}]*(?:A|" + Pattern.quote(m.group(5)) + "A)" +
+				Pattern.quote(m.group(2))));
+		tokenRegexps.add(Pattern.compile(Pattern.quote(m.group(5)) + "(.)"));
     }
                 
     /**
@@ -124,254 +135,69 @@ public class HPRIMSTokenSource implements TokenSource {
      * Remplit le tampon du tokenizer 
      * @return le nombre de tokens rajoutés
      */
-    private int fillToken() {
-    	int nbadded = 0;
-		try {
-			// On récupère le prochain caractère
-			int readresult = inputReader.read();
-			char nextChar = (char) readresult;
-			
-			// Si on est à la fin du flux, on envoie le contenu disponible puis on envoie le token de fin de flux
-			if (readresult == -1) {
-				tokenList.add(createToken(HPRIMSParser.CONTENT,
-						Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
-				tokenList.add(CommonToken.EOF_TOKEN);
-				nbadded += 2;
-			}
+    private void fillToken() {
+    	// Si les regexps pour lire les tokens ne sont pas définis, on les recherche :
+    	if (tokenRegexps.size() == 0)
+    		parseDelimiters(strict);
+    		
+    	// Essai de chaque regexp
+    	for (int i = 0 ; i < 6 ; i++) {
+    		Pattern to_match = tokenRegexps.get(i);
 
-			// Si tokenSourceState est à STD_CHAR, le tokenizer n'attend pas de caractère particulier
-			// Si le tokenSourceState est à START_LINE, le tokenizer n'attend que un délimiteur1
-			else if (tokenSourceStates.getLast() == TokenSourceState.STD_CHAR ||
-					tokenSourceStates.getLast() == TokenSourceState.START_LINE) {
-
-				// Le prochain caractère est un caractère d'échappement, il faut le mettre de côté et
-				// spécifier que l'état du tokenizer est en post-caractère d'échappement (ECHAPED)
-				if (nextChar == delimiters.getEchap()) {
-					tokenSourceStates.add(TokenSourceState.ECHAPED);
-					nbadded += fillToken();
-				}
-
-				// A chaque fois que l'on rencontre un délimiteur, il faut renvoyer le contenu qu'on vient de lire
-				// précédemment et le purger pour remplir avec un nouveau contenu 
-				
-				// Le prochain caractère est un délimiteur 1 , deux solutions :
-				// A - On est en début de ligne, il faut récupérer le contenu et décider
-				//     de quel token de début de ligne il s'agit, le renvoyer et renvoyer
-				//     un délimiteur1
-				// B - On est pas en début de ligne, on renvoie le contenu de content puis
-				//     un délimiteur1
-				else if (nextChar == delimiters.getDelimiter1()) {
-					if (tokenSourceStates.getLast() == TokenSourceState.STD_CHAR)
-						tokenList.add(createToken(HPRIMSParser.CONTENT,
-								Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
-					else {
-						String start_line_content = new String(purgeContent());
-						int token = HPRIMSParser.LINE_GENERIC;
-						if (start_line_content.equals("P"))
-							token = HPRIMSParser.LINE_P;
-						else if (start_line_content.equals("C"))
-							token = HPRIMSParser.LINE_C;
-						else if (start_line_content.equals("OBR"))
-							token = HPRIMSParser.LINE_OBR;
-						else if (start_line_content.equals("OBX"))
-							token = HPRIMSParser.LINE_OBX;
-						else if (start_line_content.equals("AP"))
-							token = HPRIMSParser.LINE_AP;
-						else if (start_line_content.equals("AC"))
-							token = HPRIMSParser.LINE_AC;
-						else if (start_line_content.equals("ACT"))
-							token = HPRIMSParser.LINE_ACT;
-						else if (start_line_content.equals("FAC"))
-							token = HPRIMSParser.LINE_FAC;
-						else if (start_line_content.equals("REG"))
-							token = HPRIMSParser.LINE_REG;
-						else if (start_line_content.equals("L"))
-							token = HPRIMSParser.LINE_L;
-						// On a passé le début de ligne, changement de l'état du
-						// tokenizer
-						tokenSourceStates.removeLast();
-						tokenSourceStates.add(TokenSourceState.STD_CHAR);
-						tokenList.add(createToken(token,
-								Lexer.DEFAULT_TOKEN_CHANNEL, start_line_content.toCharArray()));
-					}
-					tokenList.add(createToken(HPRIMSParser.DELIMITER1,
-							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
-					nbadded += 2;
-				}
-				
-				// Le prochain caractère est un délimiteur 2, il faut :
-				// A - vérifier qu'on ne soit pas dans un contexte de début de ligne,
-				//     dans ce cas renvoyer une erreur
-				// B - Si on n'est pas en début de ligne :
-				//   1 - renvoyer le contenu de content
-				//   2 - renvoyer un token DELIMITER2
-				else if (nextChar == delimiters.getDelimiter2()) {
-					if (tokenSourceStates.getLast() == TokenSourceState.START_LINE)
-						reportError(new HPRIMSRecognitionException("Délimiteur 2 dans un début de ligne interdit",
-								inputReader, new char[]{nextChar}));
-					tokenList.add(createToken(HPRIMSParser.CONTENT,
-							Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
-					tokenList.add(createToken(HPRIMSParser.DELIMITER2,
-							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
-					nbadded += 2;
-				}
-				
-				// Le prochain caractère est un délimiteur 3, il faut :
-				// A - vérifier qu'on ne soit pas dans un contexte de début de ligne,
-				//     dans ce cas renvoyer une erreur
-				// B - Si on n'est pas en début de ligne :
-				//   1 - renvoyer le contenu de content
-				//   2 - renvoyer un token DELIMITER3
-				else if (nextChar == delimiters.getDelimiter3()) {
-					if (tokenSourceStates.getLast() == TokenSourceState.START_LINE)
-						reportError(new HPRIMSRecognitionException("Délimiteur 3 dans un début de ligne interdit",
-								inputReader, new char[]{nextChar}));
-					tokenList.add(createToken(HPRIMSParser.CONTENT,
-							Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
-					tokenList.add(createToken(HPRIMSParser.DELIMITER3,
-							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
-					nbadded += 2;
-				}
-				
-				// Le prochain caractère est un répétiteur, il faut :
-				// A - vérifier qu'on ne soit pas dans un contexte de début de ligne,
-				//     dans ce cas renvoyer une erreur
-				// B - Si on n'est pas en début de ligne :
-				//   1 - renvoyer le contenu de content
-				//   2 - renvoyer un token REPETITEUR
-				else if (nextChar == delimiters.getRepet()) {
-					if (tokenSourceStates.getLast() == TokenSourceState.START_LINE)
-						reportError(new HPRIMSRecognitionException("Répétiteur dans un début de ligne interdit",
-								inputReader, new char[]{nextChar}));
-					tokenList.add(createToken(HPRIMSParser.CONTENT,
-							Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
-					tokenList.add(createToken(HPRIMSParser.REPETITEUR,
-							Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
-					nbadded += 2;
-				}
-				
-				// Le prochain caractère est un carriage return, il faut :
-				// A - vérifier qu'on ne soit pas dans un contexte de début de ligne,
-				//     dans ce cas renvoyer une erreur
-				// B - Si on n'est pas en début de ligne, il faut voir si c'est :
-				//   1 - Une fin de ligne
-				//   2 - Juste un saut dans une même ligne
-				else if (nextChar == '\r') {
-					if (tokenSourceStates.getLast() == TokenSourceState.START_LINE)
-						reportError(new HPRIMSRecognitionException("Absence de délimiteur 1 à la fin de la définition de ligne",
-								inputReader, new char[]{nextChar}));
-					// En cas de A après les caractères non imprimables on n'envoie pas le CR
-					// ni le A ni le délimiteur
-					while (true) {
-						readresult = inputReader.read();
-						nextChar = (char) readresult;
-						if (readresult == -1) {
-							// On est à la fin du fichier, on renvoie les données lues jusqu'à présent si on est dans la lecture standard
-							// Et on renvoie le saut de ligne
-							if (tokenSourceStates.getLast() == TokenSourceState.STD_CHAR) {
-								tokenList.add(createToken(HPRIMSParser.CONTENT,
-										Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
-								tokenList.add(createToken(HPRIMSParser.CR,
-										Lexer.DEFAULT_TOKEN_CHANNEL, new char['\r']));
-								nbadded +=2;
-							}
-							// Si on est dans la lecture de début de ligne et que le contenu n'est pas vide,
-							// on retourne un token d'erreur
-							else if (content.length() != 0) {
-								tokenList.add(CommonToken.INVALID_TOKEN);
-								nbadded++;
-							}
-							tokenList.add(CommonToken.EOF_TOKEN);
-							nbadded++;
-							// On sort de la lecture
-							return nbadded;
-						}
-						Matcher m = patternPrintable.matcher(Character.toString(nextChar));
-						if (m.matches())
-							break;
-					}
-					if (nextChar != 'A') {
-						// On n'a pas de A, c'est donc un entête de champ, on le traite comme
-						// du contenu standard et on change l'état de lecture
-						tokenList.add(createToken(HPRIMSParser.CONTENT,
-								Lexer.DEFAULT_TOKEN_CHANNEL, purgeContent()));
-						tokenList.add(createToken(HPRIMSParser.CR,
-								Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{nextChar}));
-						tokenSourceStates.removeLast();
-						tokenSourceStates.add(TokenSourceState.START_LINE);
-						content.append(nextChar);
-						nbadded += 2;
-					} else {
-						// On a un A, il faut continuer à lire comme du contenu standard
-						readresult = inputReader.read();
-						nextChar = (char) readresult;
-						if (readresult == -1) {
-							tokenList.add(CommonToken.EOF_TOKEN);
-							nbadded++;
-						} else {
-							if (nextChar != delimiters.getDelimiter1())
-								reportError(new HPRIMSRecognitionException("Suite de ligne A sans délimiteur",
-										inputReader, new char[]{nextChar}));
-						}
-					}
-				}
-				
-				// Le caractère ne revet aucun caractère particulier, on le rajoute au contenu en cours de sauvegarde 
-				else {
-					content.append(nextChar);
-				}
-
-			}
-			
-			// Le dernier caractère était un caractère d'échappement, on rajoute au contenu le prohain quel qu'il soit
-			else if (tokenSourceStates.getLast() == TokenSourceState.ECHAPED) {
-				// Changement de l'état de lecture : récupération de l'état précédent
-				tokenSourceStates.removeLast();
-				content.append(nextChar);
-			}
-
-			// Le tokenizer attend les caractères d'initialisation
-			else if (tokenSourceStates.getLast() == TokenSourceState.INIT) {
-				// Récupération du H et des délimiteurs
-				if (nextChar == 'H') {
-					try {
-						parseDelimiters();
-					} catch (RecognitionException e) {
-						reportError(e);
-					}
-				} else {
-					reportError(new HPRIMSRecognitionException("Entête non compatible HPRIM",
-							inputReader, new char[]{nextChar}));
-				}
-				// Récupération du délimiteur1 suivant
-				if (inputReader.read() != (int)delimiters.getDelimiter1()) {
-					reportError(new HPRIMSRecognitionException("Entête non compatible HPRIM",
-							inputReader, new char[]{nextChar}));
-				}
-				tokenList.add(createToken(HPRIMSLexer.LINE_H,
-						Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{'H'}));
-				tokenList.add(createToken(HPRIMSLexer.DELIMITERS, 
-						Lexer.DEFAULT_TOKEN_CHANNEL, delimiters.getDelimiters()));
-				tokenList.add(createToken(HPRIMSLexer.DELIMITER1, 
-						Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{delimiters.getDelimiter1()}));
-				tokenSourceStates.remove();
-				tokenSourceStates.add(TokenSourceState.STD_CHAR);
-				nbadded++;
-			}
-			
-			else {
-				reportError(new HPRIMSRecognitionException("Etat inconnu", inputReader, new char[]{nextChar}));
-			}
-		} catch (IOException e) {
-			reportError(new HPRIMSRecognitionException("Impossible de lire le flux", inputReader, new char[]{}));
-		}
-		return nbadded;
-	}
-    
-    private char[] purgeContent() {
-    	char[] toPurge = content.toString().toCharArray();
-    	content.setLength(0);
-    	return toPurge;
+    		// Si le regexp ne fonctionne pas, on passe au suivant
+    		if (scanner.findWithinHorizon(to_match, 0) == null)
+    			continue;
+    		
+    		// Arrivé ici, le regexp fonctionne bien, on renvoie le token correspondant :
+    		// Chaine dans le token
+    		MatchResult m = scanner.match();
+    		String tokenString = m.group(0);
+    		// Identifiant du token
+    		int tokenType = 0;
+    		switch (i) {
+    			case 0:
+    				tokenType = HPRIMSParser.DELIMITER1;
+    				break;
+    			case 1:
+    				tokenType = HPRIMSParser.DELIMITER2;
+    				break;
+    			case 2:
+    				tokenType = HPRIMSParser.REPETITEUR;
+    				break;
+    			case 3:
+    				tokenType = HPRIMSParser.DELIMITER3;
+    				break;
+    			case 4:
+    				tokenType = HPRIMSParser.CONTENT;
+    				// Il faut supprimer les les sauts de ligne
+    				tokenString = tokenRegexps.get(6).matcher(tokenString).replaceAll("");
+    				// Il faut remplacer les caractère échappés
+    				tokenString = tokenRegexps.get(7).matcher(tokenString).replaceAll("$1");
+    				break;
+    			case 5:
+    				tokenType = HPRIMSParser.NEWLINE;
+    				break;
+    		}
+    		// Ajout du token dans la liste des tokens
+			tokenList.add(createToken(tokenType,
+					Lexer.DEFAULT_TOKEN_CHANNEL, tokenString.toCharArray()));
+    		// Sortie de la fonction
+			return;
+    	}
+    	
+    	// Si on arrive ici, c'est qu'aucun regex n'a fonctionné :
+    	// 1 - Est-on arrivé à la fin du fichier ?
+    	try {
+    		if (inputReader.read() == -1)
+    			tokenList.add(createToken(HPRIMSParser.EOF,
+    					Lexer.DEFAULT_TOKEN_CHANNEL, new char[]{}));
+    		// 2 - On n'est pas à la fin
+    		else
+    			tokenList.add(CommonToken.INVALID_TOKEN);
+    	} catch (IOException e) {
+    		reportError(e.getMessage(), inputReader.getLineNumber(), inputReader.getCharNumber());
+    		tokenList.add(CommonToken.INVALID_TOKEN);
+    	}
     }
     
 	/**
@@ -379,15 +205,12 @@ public class HPRIMSTokenSource implements TokenSource {
 	 * @return Token token représentant la chaine trouvée, ou Token (EOF) si fin de fichier
 	 */
 	public Token nextToken() {
-		// On regarde s'il y a des tokens à envoyer
-		if (tokenList.size() != 0) {
-			return tokenList.removeFirst();
-		} else {
-			// On remplit la liste des tokens à envoyer
-			while (fillToken() == 0) { }
-			// On a trouvé un (ou des) nouveau(x) token(s), on l(les)'envoie
-			return nextToken();
+		// S'il n'y a pas de token dispo, on remplit la liste des tokens à envoyer
+		while (tokenList.size() != 0) {
+			fillToken();
 		}
+		// On a trouvé au moins un nouveau token, on l'envoie
+		return tokenList.removeFirst();
 	}
 
 	/**
@@ -411,10 +234,14 @@ public class HPRIMSTokenSource implements TokenSource {
 	 * la non production d'un lexem, et l'envoi d'un token invalide
 	 * @param e
 	 */
-	 public void reportError(RecognitionException e) {
-		 logger.log(Level.INFO, e.getMessage() + " L:" + e.line +" C:" + e.charPositionInLine);
-		 if (e instanceof HPRIMSRecognitionException)
-			 logger.log(Level.INFO, "Dans : " + new String(((HPRIMSRecognitionException) e).getContent()));
+	 public void reportError(String message, int line, int charInLine) {
+		 logger.log(Level.INFO, message + " L:" + line +" C:" + charInLine);
+		 throw new IllegalArgumentException(message + " L:" + line +" C:" + charInLine);
      }
+	 
+	 @Override
+	 public void close() {
+		 scanner.close();
+	 }
 	
 }
