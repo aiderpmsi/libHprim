@@ -108,9 +108,9 @@ public class HPRIMSTokenSource implements TokenSource, Closeable {
 		// 4 - Délimiteur 3
 		tokenRegexps.add(Pattern.compile("^" + Pattern.quote(m.group(6))));
 		// 5 - Contenu standard
-		tokenRegexps.add(Pattern.compile("^(?:[^" + Pattern.quote(m.group(2)) +
-				Pattern.quote(m.group(3)) + Pattern.quote(m.group(4)) +
-				Pattern.quote(m.group(5)) + Pattern.quote(m.group(6)) + "\\r\\n]|" +
+		tokenRegexps.add(Pattern.compile("^(?:(?!" + Pattern.quote(m.group(2)) + "|" +
+				Pattern.quote(m.group(3)) + "|" + Pattern.quote(m.group(4)) + "|" +
+				Pattern.quote(m.group(5)) + "|" + Pattern.quote(m.group(6)) + "|\\r|\\n).|" +
 				"(?:" + Pattern.quote(m.group(5)) + ".)|(?:\\r[^\\p{Print}]*(?:A|" + 
 				Pattern.quote(m.group(5)) + "A)" + Pattern.quote(m.group(2)) + "))*"));
 		// 6 - Sauts de ligne
@@ -206,7 +206,7 @@ public class HPRIMSTokenSource implements TokenSource, Closeable {
 	 */
 	public Token nextToken() {
 		// S'il n'y a pas de token dispo, on remplit la liste des tokens à envoyer
-		while (tokenList.size() != 0) {
+		while (tokenList.size() == 0) {
 			fillToken();
 		}
 		// On a trouvé au moins un nouveau token, on l'envoie
