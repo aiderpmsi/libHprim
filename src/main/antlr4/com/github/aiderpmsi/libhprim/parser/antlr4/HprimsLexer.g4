@@ -24,9 +24,11 @@ options {
 import com.github.aiderpmsi.libhprim.parser.AbstractHprimsLexer;
 }
 
-
+CR : {isNewLine()}? . ;
 DELIMITER1 : {tryToken(delimiters[0])}? . ;
 DELIMITER2 : {tryToken(delimiters[1])}? . ;
 REPETITER : {tryToken(delimiters[2])}? . ;
 ESC : {tryToken(delimiters[3])}? . ;
 DELIMITER3 : {tryToken(delimiters[4])}? . ;
+NONPRINTABLE : {isNotPrintable()}? . ;
+PRINTABLE : . ;

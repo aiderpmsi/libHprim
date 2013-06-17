@@ -109,10 +109,10 @@ public abstract class AbstractHprimsLexer
         Pattern p;
         if (strict)
         	p = Pattern.compile("^(H)((?!\\1)[^\\r\\n])((?!\\1)(?!\\2)[^\\r\\n])((?!\\1)(?!\\2)(?!\\3)[^\\r\\n])" +
-        			"((?!\\1)(?!\\2)(?!\\3)(?!\\4)[^\\r\\n])((?!\\1)(?!\\2)(?!\\3)(?!\\4)(?!\\5)[^\\r\\n])(\\2)$");
+        			"((?!\\1)(?!\\2)(?!\\3)(?!\\4)[^\\r\\n])((?!\\1)(?!\\2)(?!\\3)(?!\\4)(?!\\5)[^\\r\\n])$");
         else
         	p = Pattern.compile("^([A-Z]*)([^A-Z])((?!\\2)[^A-Z])((?!\\2)(?!\\3)[^A-Z])" +
-        			"((?!\\2)(?!\\3)(?!\\4)[^A-Z])((?!\\2)(?!\\3)(?!\\4)(?!\\5)[^A-Z])(\\2)$");
+        			"((?!\\2)(?!\\3)(?!\\4)[^A-Z])((?!\\2)(?!\\3)(?!\\4)(?!\\5)[^A-Z])$");
 
         // Check if it matches
         Matcher m = p.matcher(head);
@@ -126,7 +126,7 @@ public abstract class AbstractHprimsLexer
         	// 4 Escape char
         	delimiters[3] = m.group(5).charAt(0);
         	// 4 - Délimiter 3
-        	delimiters[5] = m.group(6).charAt(0);
+        	delimiters[4] = m.group(6).charAt(0);
         } else {
         	LexerNoViableAltException e = new LexerNoViableAltException(this, input, getCharIndex(), null);
         	notifyListeners(e);
@@ -134,20 +134,59 @@ public abstract class AbstractHprimsLexer
         }
     }
     
-    /***
+    /**
      * Finds if the next char is this char
      * @param character
      * @return
      */
     protected boolean tryToken(char character) {
     	if (getInputStream().LA(1) == character) {
-    		getInputStream().seek(getInputStream().index());
-    		return true;
+    		return seekNextChar();
     	} else {
     		return false;
-    	}
-    		
+    	}		
     }
     
+    /**
+     * Finds if the next char is a new line
+     * @return
+     */
+    protected boolean isNewLine() {
+    	switch (getInputStream().LA(1)) {
+    	case '\r':
+    		return seekNextChar();
+    	case '\n':
+    		if (!strict) {
+    			return seekNextChar();
+    		}
+    	default:
+    		return false;
+    	}
+    }
+    
+    /**
+     * Returns if next char is printable or not
+     * @return
+     */
+    protected boolean isNotPrintable() {
+    	Pattern p = Pattern.compile("^\\p{Print}$");
+    	int readed;
+    	if ((readed = getInputStream().LA(1)) != -1) {
+    		Matcher m = p.matcher(new String(new char[]{(char)readed}));
+    		if (!m.matches()) {
+    			return seekNextChar();
+    		}
+    	}
+    	return false;
+    }
+
+    /**
+     * Consumes one char
+     * @return
+     */
+    private boolean seekNextChar() {
+    	getInputStream().seek(getInputStream().index());
+    	return true;
+    }
 }
 
