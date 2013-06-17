@@ -15,19 +15,18 @@ options {
    // the named class, which is where any supporting code and 
    // variables will be placed.
    //
-   superClass = AbstractTLexer;
+   superClass = AbstractHprimsLexer;
 }
 
 // What package should the generated source exist in?
 //
 @header {
-
-package com.github.aiderpmsi.libhprim.parser.antlr4;
-
+import com.github.aiderpmsi.libhprim.parser.AbstractHprimsLexer;
 }
 
-// This is just a simple lexer that matches the usual suspects
-//
 
-KEYSER : 'Keyser' ;
-SOZE   : 'Soze' ;
+DELIMITER1 : {tryToken(delimiters[0])}? . ;
+DELIMITER2 : {tryToken(delimiters[1])}? . ;
+REPETITER : {tryToken(delimiters[2])}? . ;
+ESC : {tryToken(delimiters[3])}? . ;
+DELIMITER3 : {tryToken(delimiters[4])}? . ;
