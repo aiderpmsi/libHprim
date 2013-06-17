@@ -12,7 +12,7 @@ import org.antlr.runtime.RecognitionException;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
+import com.github.aiderpmsi.hprim.parser.HPRIMSScanner;
 import com.github.aiderpmsi.hprim.parser.HPRIMSTokenSource;
 import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
 import com.github.aiderpmsi.hprim.parser.xml.XmlContentHandler;
@@ -36,8 +36,9 @@ public class HPRIMSParserTest {
 
 		// Création de la source de tokens
 		HPRIMSTokenSource tks = new HPRIMSTokenSource(
-				new HPRIMSInputStreamReader(
-						new ByteArrayInputStream(testString.getBytes("ISO8859-1")), "ISO8859-1"));
+				new HPRIMSScanner(
+						new ByteArrayInputStream(testString.getBytes("ISO8859-1")), "ISO8859-1"),
+						true);
 		
 		// Récupère ce qui est écrit par le collecteur
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -48,7 +49,7 @@ public class HPRIMSParserTest {
 				new XmlContentHandler(new PrintWriter(baos)));
 		
 		// Parsing de la chaine de caractères
-		parser.hprim(3);
+		parser.hprim();
 
 		// Tests des résultats
 		String controlXML =

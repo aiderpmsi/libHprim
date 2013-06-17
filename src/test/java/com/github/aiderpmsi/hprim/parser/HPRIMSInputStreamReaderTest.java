@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
+import com.github.aiderpmsi.hprim.parser.HPRIMSScanner;
 
 /**
  * @author delabre
@@ -19,7 +19,7 @@ import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
 public class HPRIMSInputStreamReaderTest {
 
 	/**
-	 * SimpleExample method for {@link com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader#read()}.
+	 * SimpleExample method for {@link com.github.aiderpmsi.hprim.parser.HPRIMSScanner#read()}.
 	 * @throws IOException 
 	 */
 	@Test
@@ -29,7 +29,7 @@ public class HPRIMSInputStreamReaderTest {
 				'\n', '\t', 'L', 'i', 'g', 'n', 'e', '2', '\r', '\n', '\n', '\t'});
 		
 		// SimpleExample de la création d'un flux en UTF-8 (NB, les flux HPRIM devraient être en ASCII)
-		HPRIMSInputStreamReader ins1 = new HPRIMSInputStreamReader(test1, "UTF-8");
+		HPRIMSScanner ins1 = new HPRIMSScanner(test1, "UTF-8");
 
 		// test lecture initial
 		assertEquals('L', ins1.read());
@@ -38,7 +38,7 @@ public class HPRIMSInputStreamReaderTest {
 		ByteArrayInputStream test2 = new ByteArrayInputStream(new byte[]{'L'});
 		
 		// SimpleExample de la création d'un flux en UTF-8 (NB, les flux HPRIM devraient être en ASCII)
-		HPRIMSInputStreamReader ins2 = new HPRIMSInputStreamReader(test2, "ISO8859_1");
+		HPRIMSScanner ins2 = new HPRIMSScanner(test2, "ISO8859_1");
 
 		// test lecture initial
 		assertEquals('L', ins2.read());

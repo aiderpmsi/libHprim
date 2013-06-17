@@ -36,10 +36,10 @@ public class HPRIMSTokenSource implements TokenSource, Closeable {
      * La source de chaine de caractères. Pour permettre la lecture de grandes
      * quantités de données, les données sont envoyées sous forme d'un Stream
      */ 
-	private HPRIMSInputStreamReader inputReader;
+	private HPRIMSScanner inputReader;
 	
 	/** 
-     * Scanner appliqué sur HPRIMSInputStreamReader
+     * Scanner appliqué sur HPRIMSScanner
      */ 
 	private Scanner scanner;
 
@@ -64,10 +64,11 @@ public class HPRIMSTokenSource implements TokenSource, Closeable {
      * @param inputStream Flux d'où les caractères sont extraits
      * @throws IOException 
      */
-    public HPRIMSTokenSource(HPRIMSInputStreamReader inputStream, boolean strict) throws IOException {
+    public HPRIMSTokenSource(HPRIMSScanner inputStream, boolean strict) throws IOException {
     	this.inputReader = inputStream;
     	this.strict = strict;
     	scanner = new Scanner(inputReader);
+    	scanner.useDelimiter("");
     }
     /**
      * Prend les 6 prochains caractères dans le flux et regarde si on a H et les délimiteurs
@@ -143,14 +144,14 @@ public class HPRIMSTokenSource implements TokenSource, Closeable {
     	// Essai de chaque regexp
     	for (int i = 0 ; i < 6 ; i++) {
     		Pattern to_match = tokenRegexps.get(i);
-
+    		
     		// Si le regexp ne fonctionne pas, on passe au suivant
     		if (scanner.findWithinHorizon(to_match, 0) == null)
     			continue;
     		
     		// Arrivé ici, le regexp fonctionne bien, on renvoie le token correspondant :
     		// Chaine dans le token
-    		MatchResult m = scanner.match();
+    		MatchResult m = scanner.match(); scanner.
     		String tokenString = m.group(0);
     		// Identifiant du token
     		int tokenType = 0;

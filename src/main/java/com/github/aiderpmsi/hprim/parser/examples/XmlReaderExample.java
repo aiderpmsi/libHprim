@@ -11,7 +11,7 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 
-import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
+import com.github.aiderpmsi.hprim.parser.HPRIMSScanner;
 import com.github.aiderpmsi.hprim.parser.HPRIMSTokenSource;
 import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
 import com.github.aiderpmsi.hprim.parser.xml.XmlContentHandler;
@@ -46,15 +46,15 @@ public class XmlReaderExample {
 		
 		// Définition des flux matériels (à fermer en fin d'utilisation)
 		InputStream is = null;
-		HPRIMSInputStreamReader inputreader = null;
+		HPRIMSScanner inputreader = null;
 		
 		try {
 			// Création de l'inputstream en entrée
 			is = new FileInputStream(args[0]);
 	
 			// Création de la source des tokens
-			inputreader = new HPRIMSInputStreamReader(is, "ISO8859_1");
-			HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader);
+			inputreader = new HPRIMSScanner(is, "ISO8859_1");
+			HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader, true);
 	
 			// Création du flux de tokens
 			TokenStream tokenstream = new CommonTokenStream (toksce);
@@ -63,7 +63,7 @@ public class XmlReaderExample {
 			// la classe collecteur l'export des données
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, contentHandler);
 	
-			parser.hprim(3);
+			parser.hprim();
 		} finally {
 			// Fermeture propre des ressources allouées
 			if (inputreader != null)

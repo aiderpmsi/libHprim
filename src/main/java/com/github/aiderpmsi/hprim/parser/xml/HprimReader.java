@@ -9,7 +9,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.XMLFilterImpl;
 
-import com.github.aiderpmsi.hprim.parser.HPRIMSInputStreamReader;
+import com.github.aiderpmsi.hprim.parser.HPRIMSScanner;
 import com.github.aiderpmsi.hprim.parser.HPRIMSTokenSource;
 import com.github.aiderpmsi.hprim.parser.antlr.HPRIMSParser;
 
@@ -26,12 +26,12 @@ public class HprimReader extends XMLFilterImpl {
 	public void parse(InputSource input) throws IOException, SAXException {
 
 		// Définition des flux matériels (à fermer en fin d'utilisation)
-		HPRIMSInputStreamReader inputreader = null;
+		HPRIMSScanner inputreader = null;
 		
 		try {
 			// Création de la source des tokens
-			inputreader = new HPRIMSInputStreamReader(input.getCharacterStream());
-			HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader);
+			inputreader = new HPRIMSScanner(input.getCharacterStream());
+			HPRIMSTokenSource toksce = new HPRIMSTokenSource(inputreader, true);
 	
 			// Création du flux de tokens
 			TokenStream tokenstream = new CommonTokenStream (toksce);
@@ -41,7 +41,7 @@ public class HprimReader extends XMLFilterImpl {
 			HPRIMSParser parser = new HPRIMSParser(tokenstream, getContentHandler());
 	
 			// Parsing hprim oru
-			parser.hprim(strictness);
+			parser.hprim();
 		} catch (RecognitionException e) {
 			throw new SAXException(e);
 		} catch (IllegalArgumentException e) {
