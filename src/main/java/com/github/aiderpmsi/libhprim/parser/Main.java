@@ -1,9 +1,9 @@
 package com.github.aiderpmsi.libhprim.parser;
 
 import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.Token;
-
+import org.antlr.v4.runtime.CommonTokenStream;
 import com.github.aiderpmsi.libhprim.parser.antlr4.HprimsLexer;
+import com.github.aiderpmsi.libhprim.parser.antlr4.HprimsParser;
 
 public class Main {
 
@@ -13,14 +13,10 @@ public class Main {
 	public static void main(String[] args) {
 		ANTLRInputStream input = new ANTLRInputStream("H|~^\\&|COUCOU\r\n");
 		HprimsLexer lex = new HprimsLexer(input);
-		
-		Token currentToken;
-		while (true) {
-			currentToken = lex.nextToken();
-			System.out.println(currentToken.toString());
-			if (currentToken.getType() == HprimsLexer.EOF)
-				break;
-		}
+		CommonTokenStream cs = new CommonTokenStream(lex);
+		HprimsParser pars = new HprimsParser(cs);
+
+		pars.line_h();
 	}
 
 }
