@@ -11,7 +11,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ANTLRInputStream input = new ANTLRInputStream("H|~^\\&|COUCOU\r\n");
+		ANTLRInputStream input = new ANTLRInputStream("H|~^\\&|COUCOU\r\nA|CACONTINUE|");
 		HprimsLexer lex = new HprimsLexer(input);
 		CommonTokenStream cs = new CommonTokenStream(lex);
 		HprimsParser pars = new HprimsParser(cs);
