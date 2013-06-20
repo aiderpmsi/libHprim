@@ -30,5 +30,6 @@ DELIMITER2 : {tryToken(delimiters[1])}? . ;
 REPETITER : {tryToken(delimiters[2])}? . ;
 ESC : {tryToken(delimiters[3])}? . ;
 DELIMITER3 : {tryToken(delimiters[4])}? . ;
-NONPRINTABLE : {isNotPrintable()}? . ;
-PRINTABLE : . ;
+NONPRINTABLE : {isNotPrintable()}? . -> channel(HIDDEN);
+fragment PRINTABLE : {isPrintable()}? . ;
+CONTENT : PRINTABLE+;

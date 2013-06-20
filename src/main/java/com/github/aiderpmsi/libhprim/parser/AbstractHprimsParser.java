@@ -17,7 +17,7 @@ public abstract class AbstractHprimsParser extends Parser {
 	 * @return
 	 */
 	protected boolean tryToken(String content) {
-		if (getInputStream().LT(getInputStream().index()).getText().equals(content)) {getInputStream().
+		if (getInputStream().LT(1).getText().equals(content)) {
 			getInputStream().seek(1);
 			return true;
 		} else

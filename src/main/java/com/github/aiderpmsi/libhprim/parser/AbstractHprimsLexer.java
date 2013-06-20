@@ -165,15 +165,39 @@ public abstract class AbstractHprimsLexer
     }
     
     /**
-     * Returns if next char is printable or not
+     * Returns if next char is not printable and is not a delimiter
      * @return
      */
     protected boolean isNotPrintable() {
     	Pattern p = Pattern.compile("^\\p{Print}$");
     	int readed;
     	if ((readed = getInputStream().LA(1)) != -1) {
+    		for (int i = 0 ; i < 5 ; i++) {
+    			if ((char) readed == delimiters[i])
+    				return false;
+    		}
     		Matcher m = p.matcher(new String(new char[]{(char)readed}));
     		if (!m.matches()) {
+    			return seekNextChar();
+    		}
+    	}
+    	return false;
+    }
+
+    /**
+     * Returns if next char is printable and is not a delimiter
+     * @return
+     */
+    protected boolean isPrintable() {
+    	Pattern p = Pattern.compile("^\\p{Print}$");
+    	int readed;
+    	if ((readed = getInputStream().LA(1)) != -1) {
+    		for (int i = 0 ; i < 5 ; i++) {
+    			if ((char) readed == delimiters[i])
+    				return false;
+    		}
+    		Matcher m = p.matcher(new String(new char[]{(char)readed}));
+    		if (m.matches()) {
     			return seekNextChar();
     		}
     	}
