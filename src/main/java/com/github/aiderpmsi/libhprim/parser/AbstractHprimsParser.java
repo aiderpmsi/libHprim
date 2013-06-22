@@ -56,6 +56,14 @@ public abstract class AbstractHprimsParser extends Parser {
 		this.contentHandler = contentHandler;
 	}
 
+	public int getStrictNess() {
+		return strictNess;
+	}
+
+	public void setStrictNess(int strictNess) {
+		this.strictNess = strictNess;
+	}
+
 	/**
 	 * Finds if the next token has this content
 	 * @param character

@@ -20,24 +20,34 @@ options {
 
 @header {
 import com.github.aiderpmsi.libhprim.parser.AbstractHprimsParser;
+import java.util.HashMap;
+
 }
 
+hprim
+@init{startDocument();}
+@after{endDocument();} :
+  line_h;
+
 line_h
-@init{System.out.println("Start");}
-@after{System.out.println("End");} :
-   a=HCONTENT {System.out.println($a.text);}
-   HDELIMITER1 HDELIMITER2 HREPETITER HESC HDELIMITER3 DELIMITER1 g=content {System.out.println($g.contentText);} DELIMITER1 EOF;
-
-// Champs répétés
-
+@init{startElement("HPRIM", new HashMap<String, String>(){{put("strictness", Integer.toString(getStrictNess()));}});}
+@after{endElement();} :
+   a=HCONTENT {startElement("H.1", new HashMap<String, String>());content($a.text);endElement();}
+   b=HDELIMITER1 c=HDELIMITER2 d=HREPETITER e=HESC f=HDELIMITER3 {startElement("H.2", new HashMap<String, String>());content($b.text + $c.text + $d.text + $e.text + $f.text);endElement();}
+   DELIMITER1 g=content {startElement("H.3", new HashMap<String, String>());content($g.contentText);endElement();} DELIMITER1 CR+ NONPRINTABLE*
+   line_p
+   DELIMITER1 h=content {startElement("H.4", new HashMap<String, String>());content($h.contentText);endElement();} DELIMITER1 EOF;
 
 // Types de base pour les contenus
 content returns [String contentText]:
-  g=baseContent ((CR+ NONPRINTABLE* content_a DELIMITER1 h=content {$contentText = $g.text + $h.contentText;}) | {$contentText = $g.text;});
+  g=baseContent ((CR+ NONPRINTABLE* line_a DELIMITER1 h=content {$contentText = $g.text + $h.contentText;}) | {$contentText = $g.text;});
 
 // Débuts de ligne
-content_a :
+line_a :
   {tryToken("A")}? baseContent;
+
+line_p :
+  {tryToken("P")}? baseContent;
 
 baseContent :
   CONTENT?;
