@@ -25,16 +25,19 @@ import com.github.aiderpmsi.libhprim.parser.AbstractHprimsParser;
 line_h
 @init{System.out.println("Start");}
 @after{System.out.println("End");} :
-   hcontent_h HDELIMITER1 HDELIMITER2 HREPETITER HESC HDELIMITER3 DELIMITER1 g=content {System.out.println($g.contentText);} DELIMITER1 EOF;
+   a=HCONTENT {System.out.println($a.text);}
+   HDELIMITER1 HDELIMITER2 HREPETITER HESC HDELIMITER3 DELIMITER1 g=content {System.out.println($g.contentText);} DELIMITER1 EOF;
 
+// Champs répétés
+
+
+// Types de base pour les contenus
 content returns [String contentText]:
-  g=baseContent ((CR NONPRINTABLE* content_a DELIMITER1 h=content {$contentText = $g.text + $h.contentText;}) | {$contentText = $g.text;});
+  g=baseContent ((CR+ NONPRINTABLE* content_a DELIMITER1 h=content {$contentText = $g.text + $h.contentText;}) | {$contentText = $g.text;});
 
+// Débuts de ligne
 content_a :
   {tryToken("A")}? baseContent;
-
-hcontent_h :
-  {tryToken("H")}? HCONTENT;
 
 baseContent :
   CONTENT?;

@@ -13,8 +13,10 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ANTLRInputStream input = new ANTLRInputStream("H|~^\\&|COUCOU\r\nA|RORO|");
+		ANTLRInputStream input = new ANTLRInputStream("MSH|~^\\&|COUCOU\r\nA|RORO|");
 		HprimsLexer lex = new HprimsLexer(input);
+		lex.setStrict(false);
+		lex.findDelimiters();
 		CommonTokenStream cs = new CommonTokenStream(lex);
 		HprimsParser pars = new HprimsParser(cs);
 
@@ -22,6 +24,8 @@ public class Main {
 
 		ANTLRInputStream input2 = new ANTLRInputStream("H|~^\\&|COUCOU\r\nA|R\\|OR\\\\O|");
 		HprimsLexer lex2 = new HprimsLexer(input2);
+		lex2.setStrict(false);
+		lex2.findDelimiters();
 		
 		Token currentToken;
 		while (true) {

@@ -34,6 +34,11 @@ public abstract class AbstractHprimsLexer
 	private Pattern unescapePattern;
 	
 	/**
+	 * Indicates if the delimiters for this stream has been found
+	 */
+	private boolean delimitersFound = false;
+	
+	/**
      * Default constructor for the lexer, when you do not yet know what
      * the character stream to be provided is.
      */
@@ -48,7 +53,6 @@ public abstract class AbstractHprimsLexer
      */
     public AbstractHprimsLexer(CharStream input) {
         super(input);
-        findDelimiters();
     }
     
     /**
@@ -73,13 +77,13 @@ public abstract class AbstractHprimsLexer
      */
     public void setInputStream(IntStream input) {
     	super.setInputStream(input);
-    	findDelimiters();
+    	delimitersFound = false;
     }
 
     /**
      * Finds and set the delimiters from the head of the file.
      */
-    private void findDelimiters() {
+    public void findDelimiters() {
     	// gets the stream we are reading
     	CharStream input = getInputStream();
     	// stores the character we are reading
@@ -94,8 +98,11 @@ public abstract class AbstractHprimsLexer
     		i++;
     		if (readed >= 'A' && readed <= 'Z')
     			head.append((char)readed);
-    		else
+    		else {
+    			// go back one character ago
+    			i--;
     			break;
+    		}
     		// If we are in strict mode, just escape after first char
     		if (strict)
     			break;
@@ -144,6 +151,9 @@ public abstract class AbstractHprimsLexer
         		append(Pattern.quote(new String(new char[]{delimiters[3]}))).
         		append("(.)");
         unescapePattern = Pattern.compile(unescapePatternString.toString());
+        
+        // Delimiters have been found
+        delimitersFound = true;
     }
     
     /**
@@ -152,6 +162,9 @@ public abstract class AbstractHprimsLexer
      * @return
      */
     protected boolean tryToken(char character) {
+    	if (!delimitersFound)
+    		reportDelimitersNotFound();
+
     	if (getInputStream().LA(1) == character) {
     		return seekNextChar();
     	} else {
@@ -181,6 +194,9 @@ public abstract class AbstractHprimsLexer
      * @return
      */
     protected boolean isNotPrintable() {
+    	if (!delimitersFound)
+    		reportDelimitersNotFound();
+
     	Pattern p = Pattern.compile("^\\p{Print}$");
     	int readed;
     	if ((readed = getInputStream().LA(1)) != -1) {
@@ -201,6 +217,9 @@ public abstract class AbstractHprimsLexer
      * @return
      */
     protected boolean isPrintable() {
+    	if (!delimitersFound)
+    		reportDelimitersNotFound();
+   
     	Pattern p = Pattern.compile("^\\p{Print}$");
     	int readed;
     	if ((readed = getInputStream().LA(1)) != -1) {
@@ -224,11 +243,23 @@ public abstract class AbstractHprimsLexer
     	getInputStream().seek(getInputStream().index());
     	return true;
     }
+
+    /**
+     * Reports error when delimiters have not been set
+     */
+    private void reportDelimitersNotFound() {
+    	LexerNoViableAltException e = new LexerNoViableAltException(this, getInputStream(), getCharIndex(), null);
+    	notifyListeners(e);
+    	recover(e);
+    }
     
     /**
      * Removes the escape chars
      */
     protected String removeEscapes(String origin) {
+    	if (!delimitersFound)
+    		reportDelimitersNotFound();
+
     	int lastMatch = 0;
     	StringBuilder dest = new StringBuilder();
     	Matcher matcher = unescapePattern.matcher(origin);
