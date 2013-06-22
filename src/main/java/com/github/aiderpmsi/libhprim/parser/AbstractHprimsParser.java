@@ -3,9 +3,13 @@ package com.github.aiderpmsi.libhprim.parser;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map.Entry;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.antlr.v4.runtime.Parser;
+import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.TokenStream;
+import org.omg.CORBA.RepositoryIdHelper;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
@@ -74,6 +78,23 @@ public abstract class AbstractHprimsParser extends Parser {
 			return true;
 		} else
 			return false;
+	}
+	
+	protected boolean matchRegex(String content, String regex) {
+		// Il conformance is low, we can forget all the matchings
+		if (getStrictNess() <= LOW_CONFORMANCE)
+			return true;
+
+		// Makes the match
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(content);
+		if (m.matches())
+			return true;
+		else {
+			RecognitionException e = new RecognitionException(content + " does not match regex : " + regex, this, getInputStream(), getContext());
+			notifyErrorListeners(getInputStream().LT(1), e.getMessage(), e);
+			return false;
+		}
 	}
 	
 	/**

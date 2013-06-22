@@ -27,14 +27,39 @@ import java.util.HashMap;
 hprim
 @init{startDocument();}
 @after{endDocument();} :
-  line_h;
+  (test_line_h_adm) =>
+    ((test_line_h_2_0) => line_h_adm_2_0
+     |
+     (test_line_h_2_1) => line_h_adm_2_1
+     |
+     (test_line_h_2_2) => line_h_adm_2_2
+    )
+  |
+  (test_line_h_fac) =>
+    ((test_line_h_2_0) => line_h_fac_2_0
+     |
+     (test_line_h_2_1) => line_h_fac_2_1
+     |
+     (test_line_h_2_2) => line_h_fac_2_2
+    )
+  ;
+
+// Test simple (utilisé dans un prédicat syntaxique) permettant de savoir
+// quel type de message on a
+test_line_h_adm :
+  HCONTENT HDELIMITER1 HDELIMITER2 HREPETITER HESC HDELIMITER3
+  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
+  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
+  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
+  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
+  DELIMITER1 a=content {matchRegex($a.contentText, "^ADM$");};
 
 line_h
 @init{startElement("HPRIM", new HashMap<String, String>(){{put("strictness", Integer.toString(getStrictNess()));}});}
 @after{endElement();} :
    a=HCONTENT {startElement("H.1", new HashMap<String, String>());content($a.text);endElement();}
    b=HDELIMITER1 c=HDELIMITER2 d=HREPETITER e=HESC f=HDELIMITER3 {startElement("H.2", new HashMap<String, String>());content($b.text + $c.text + $d.text + $e.text + $f.text);endElement();}
-   DELIMITER1 g=content {startElement("H.3", new HashMap<String, String>());content($g.contentText);endElement();} DELIMITER1 CR+ NONPRINTABLE*
+   DELIMITER1 g=content {matchRegex("^.");} {startElement("H.3", new HashMap<String, String>());content($g.contentText);endElement();} DELIMITER1 CR+ NONPRINTABLE*
    line_p
    DELIMITER1 h=content {startElement("H.4", new HashMap<String, String>());content($h.contentText);endElement();} DELIMITER1 EOF;
 
