@@ -29,6 +29,11 @@ public abstract class AbstractHprimsLexer
 	protected char[] delimiters = new char[]{'|', '~', '^', '\\', '&'};
 	
 	/**
+	 * Pattern in order to unescape strings
+	 */
+	private Pattern unescapePattern;
+	
+	/**
      * Default constructor for the lexer, when you do not yet know what
      * the character stream to be provided is.
      */
@@ -132,6 +137,13 @@ public abstract class AbstractHprimsLexer
         	notifyListeners(e);
         	recover(e);
         }
+        
+        // Create the unescape pattern
+        StringBuilder unescapePatternString =
+        		new StringBuilder().
+        		append(Pattern.quote(new String(new char[]{delimiters[3]}))).
+        		append("(.)");
+        unescapePattern = Pattern.compile(unescapePatternString.toString());
     }
     
     /**
@@ -211,6 +223,29 @@ public abstract class AbstractHprimsLexer
     private boolean seekNextChar() {
     	getInputStream().seek(getInputStream().index());
     	return true;
+    }
+    
+    /**
+     * Removes the escape chars
+     */
+    protected String removeEscapes(String origin) {
+    	int lastMatch = 0;
+    	StringBuilder dest = new StringBuilder();
+    	Matcher matcher = unescapePattern.matcher(origin);
+    	
+    	// Tries to find the escaped sequence
+    	while(matcher.find()) {
+    		// copies content between lastMatch ant this match
+    		dest.append(origin.substring(lastMatch, matcher.start()));
+    		// copies the content of the escaped char
+    		dest.append(matcher.group(1));
+    		// Upgrade the lastMatch
+    		lastMatch = matcher.end();
+    	}
+    	// Copies the remaining sequence
+    	dest.append(origin.substring(lastMatch, origin.length()));
+    	
+    	return dest.toString();
     }
 }
 

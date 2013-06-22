@@ -20,7 +20,7 @@ public class Main {
 
 		pars.line_h();
 
-		ANTLRInputStream input2 = new ANTLRInputStream("H|~^\\&|COUCOU\r\nA|RORO|");
+		ANTLRInputStream input2 = new ANTLRInputStream("H|~^\\&|COUCOU\r\nA|R\\|OR\\\\O|");
 		HprimsLexer lex2 = new HprimsLexer(input2);
 		
 		Token currentToken;

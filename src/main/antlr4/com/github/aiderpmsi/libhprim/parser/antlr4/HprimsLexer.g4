@@ -24,12 +24,23 @@ options {
 import com.github.aiderpmsi.libhprim.parser.AbstractHprimsLexer;
 }
 
+HDELIMITER1 : {tryToken(delimiters[0])}? . ;
+HDELIMITER2 : {tryToken(delimiters[1])}? . ;
+HREPETITER : {tryToken(delimiters[2])}? . ;
+HESC : {tryToken(delimiters[3])}? .;
+HDELIMITER3 : {tryToken(delimiters[4])}? .  -> pushMode(POST_DELIMITERS);
+fragment HPRINTABLE : {isPrintable()}? . ;
+HCONTENT : HPRINTABLE+;
+
+mode POST_DELIMITERS;
+
+ESCAPED : ESC (DELIMITER1 | DELIMITER2 | REPETITER | ESC | DELIMITER3);
 CR : {isNewLine()}? . ;
 DELIMITER1 : {tryToken(delimiters[0])}? . ;
 DELIMITER2 : {tryToken(delimiters[1])}? . ;
 REPETITER : {tryToken(delimiters[2])}? . ;
-ESC : {tryToken(delimiters[3])}? . ;
 DELIMITER3 : {tryToken(delimiters[4])}? . ;
-NONPRINTABLE : {isNotPrintable()}? . -> channel(HIDDEN);
+ESC : {tryToken(delimiters[3])}? . ;
+NONPRINTABLE : {isNotPrintable()}? .;
 fragment PRINTABLE : {isPrintable()}? . ;
-CONTENT : PRINTABLE+;
+CONTENT : (PRINTABLE | ESCAPED)+ {setText(removeEscapes(getText()));};

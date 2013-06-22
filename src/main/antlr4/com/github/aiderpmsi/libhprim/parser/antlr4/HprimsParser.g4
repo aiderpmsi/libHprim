@@ -25,17 +25,16 @@ import com.github.aiderpmsi.libhprim.parser.AbstractHprimsParser;
 line_h
 @init{System.out.println("Start");}
 @after{System.out.println("End");} :
-   content_h DELIMITER1 DELIMITER2 REPETITER ESC DELIMITER3 DELIMITER1 full_content[""] DELIMITER1 EOF;
+   hcontent_h HDELIMITER1 HDELIMITER2 HREPETITER HESC HDELIMITER3 DELIMITER1 g=content {System.out.println($g.contentText);} DELIMITER1 EOF;
 
-full_content[String start] :
-  g=content ((CR NONPRINTABLE* content_a DELIMITER1 full_content[start + $g.text]) | {System.out.println(start + $g.text);});
+content returns [String contentText]:
+  g=baseContent ((CR NONPRINTABLE* content_a DELIMITER1 h=content {$contentText = $g.text + $h.contentText;}) | {$contentText = $g.text;});
 
- content_a :
-  {tryToken("A")}? content;
-   
- content_h :
-  {tryToken("H")}? content;
+content_a :
+  {tryToken("A")}? baseContent;
 
- content:
-   CONTENT?;
- 
+hcontent_h :
+  {tryToken("H")}? HCONTENT;
+
+baseContent :
+  CONTENT?;
