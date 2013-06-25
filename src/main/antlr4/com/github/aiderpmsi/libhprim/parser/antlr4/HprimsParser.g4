@@ -21,47 +21,55 @@ options {
 @header {
 import com.github.aiderpmsi.libhprim.parser.AbstractHprimsParser;
 import java.util.HashMap;
-
 }
 
 hprim
 @init{startDocument();}
 @after{endDocument();} :
-  (test_line_h_adm) =>
-    ((test_line_h_2_0) => line_h_adm_2_0
-     |
-     (test_line_h_2_1) => line_h_adm_2_1
-     |
-     (test_line_h_2_2) => line_h_adm_2_2
-    )
-  |
-  (test_line_h_fac) =>
-    ((test_line_h_2_0) => line_h_fac_2_0
-     |
-     (test_line_h_2_1) => line_h_fac_2_1
-     |
-     (test_line_h_2_2) => line_h_fac_2_2
-    )
-  ;
+  line_h
+  CR* NONPRINTABLE* EOF;
 
-// Test simple (utilisé dans un prédicat syntaxique) permettant de savoir
-// quel type de message on a
-test_line_h_adm :
-  HCONTENT HDELIMITER1 HDELIMITER2 HREPETITER HESC HDELIMITER3
-  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
-  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
-  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
-  DELIMITER1 (content | DELIMITER2 | REPETITER | DELIMITER3)*
-  DELIMITER1 a=content {matchRegex($a.contentText, "^ADM$");};
+// line h (same for all versions)
+line_h:
+   a=HCONTENT {startElement("H.1");content($a.text);endElement();}
+   b=HDELIMITER1 c=HDELIMITER2 d=HREPETITER e=HESC f=HDELIMITER3 {startElement("H.2");content($b.text + $c.text + $d.text + $e.text + $f.text);endElement();}
+   DELIMITER1 g=content {matchRegex($g.contentText, "^.{0,12}$");} {startElement("H.3");content($g.contentText);endElement();}
+   DELIMITER1 h=content {matchRegex($h.contentText, "^.{0,12}$");} {startElement("H.4");content($h.contentText);endElement();}
+   DELIMITER1 i=content {matchRegex($i.contentText, "^.{0,12}$");} {startElement("H.5");content($i.contentText);endElement();}
+   DELIMITER1 j=content {matchRegex($j.contentText, "^.{0,12}$");} {startElement("H.6");content($j.contentText);endElement();}
+   DELIMITER1 k=content {matchRegex($k.contentText, "^.{0,12}$");} {startElement("H.7");content($k.contentText);endElement();}
+   {tryRegex($k.contentText, "^(?:ADM)|(?:ORU)$")}?
+   DELIMITER1 l=content {matchRegex($l.contentText, "^.{0,12}$");} {startElement("H.8");content($l.contentText);endElement();}
+   DELIMITER1 m=content {matchRegex($m.contentText, "^.{0,12}$");} {startElement("H.9");content($m.contentText);endElement();}
+   DELIMITER1 n=content {matchRegex($n.contentText, "^.{0,12}$");} {startElement("H.10");content($n.contentText);endElement();}
+   DELIMITER1 o=content {matchRegex($o.contentText, "^.{0,12}$");} {startElement("H.11");content($o.contentText);endElement();}
+   DELIMITER1 p=content {matchRegex($p.contentText, "^.{0,12}$");} {startElement("H.12");content($p.contentText);endElement();}
+   DELIMITER1 q=content {matchRegex($q.contentText, "^.{0,12}$");} {startElement("H.13");content($q.contentText);endElement();}
+   {tryRegex($q.contentText, "^H2\\.[0-2]$")}?
+   ( {$k.contentText.equals("ADM")}?
+       ({$q.contentText.equals("H2.0")}? body_adm_2_0)
+   | {$k.contentText.equals("ORU")}?
+       ({$q.contentText.equals("H2.1")}? body_oru_2_1)
+   );
 
-line_h
-@init{startElement("HPRIM", new HashMap<String, String>(){{put("strictness", Integer.toString(getStrictNess()));}});}
-@after{endElement();} :
-   a=HCONTENT {startElement("H.1", new HashMap<String, String>());content($a.text);endElement();}
-   b=HDELIMITER1 c=HDELIMITER2 d=HREPETITER e=HESC f=HDELIMITER3 {startElement("H.2", new HashMap<String, String>());content($b.text + $c.text + $d.text + $e.text + $f.text);endElement();}
-   DELIMITER1 g=content {matchRegex("^.");} {startElement("H.3", new HashMap<String, String>());content($g.contentText);endElement();} DELIMITER1 CR+ NONPRINTABLE*
-   line_p
-   DELIMITER1 h=content {startElement("H.4", new HashMap<String, String>());content($h.contentText);endElement();} DELIMITER1 EOF;
+// Types de corps
+body_adm_2_0:
+  {startElement("H.14");content("ADM.2.0");endElement();} ;
+
+body_adm_2_1[String typeMsg, String versionMsg]:
+  {$typeMsg.equals("ADM") && $versionMsg.equals("H2.1")}? ;
+
+body_adm_2_2[String typeMsg, String versionMsg]:
+  {$typeMsg.equals("ADM") && $versionMsg.equals("H2.2")}? ;
+
+body_oru_2_0[String typeMsg, String versionMsg]:
+  {$typeMsg.equals("ORU") && $versionMsg.equals("H2.0")}? ;
+
+body_oru_2_1:
+  {startElement("H.14");content("ORU.2.1");endElement();} ;
+
+body_oru_2_2[String typeMsg, String versionMsg]:
+  {$typeMsg.equals("ORU") && $versionMsg.equals("H2.2")}? ;
 
 // Types de base pour les contenus
 content returns [String contentText]:

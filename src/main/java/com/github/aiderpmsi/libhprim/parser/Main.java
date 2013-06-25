@@ -17,7 +17,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ANTLRInputStream input = new ANTLRInputStream("MSH|~^\\&|COUCOU|RORO|RRO|TT|ADM");
+		ANTLRInputStream input = new ANTLRInputStream("MSH|~^\\&|COUCOU|RORO|RRO|TT|ORU|EE|TT|ZZ|PP|AQ|H2.1");
 		HprimsLexer lex = new HprimsLexer(input);
 		lex.setStrict(false);
 		lex.findDelimiters();
@@ -28,7 +28,7 @@ public class Main {
 		
 		pars.hprim();
 
-		ANTLRInputStream input2 = new ANTLRInputStream("H|~^\\&|COUCOU|\r\nP|R\\|OR\\\\O|");
+		ANTLRInputStream input2 = new ANTLRInputStream("MSH|~^\\&|COUCOU|RO\rA|RO|RRO|TT|ORU|EE|TT|ZZ|PP|AQ|H2.1");
 		HprimsLexer lex2 = new HprimsLexer(input2);
 		lex2.setStrict(false);
 		lex2.findDelimiters();

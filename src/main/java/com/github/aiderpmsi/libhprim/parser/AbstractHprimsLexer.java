@@ -166,7 +166,7 @@ public abstract class AbstractHprimsLexer
     		reportDelimitersNotFound();
 
     	if (getInputStream().LA(1) == character) {
-    		return seekNextChar();
+    		return seekChars(1);
     	} else {
     		return false;
     	}		
@@ -179,10 +179,10 @@ public abstract class AbstractHprimsLexer
     protected boolean isNewLine() {
     	switch (getInputStream().LA(1)) {
     	case '\r':
-    		return seekNextChar();
+    		return seekChars(1);
     	case '\n':
     		if (!strict) {
-    			return seekNextChar();
+    			return seekChars(1);
     		}
     	default:
     		return false;
@@ -206,7 +206,7 @@ public abstract class AbstractHprimsLexer
     		}
     		Matcher m = p.matcher(new String(new char[]{(char)readed}));
     		if (!m.matches()) {
-    			return seekNextChar();
+    			return seekChars(1);
     		}
     	}
     	return false;
@@ -229,18 +229,18 @@ public abstract class AbstractHprimsLexer
     		}
     		Matcher m = p.matcher(new String(new char[]{(char)readed}));
     		if (m.matches()) {
-    			return seekNextChar();
+    			return seekChars(1);
     		}
     	}
     	return false;
     }
 
     /**
-     * Consumes one char
+     * Consumes nb chars
      * @return
      */
-    private boolean seekNextChar() {
-    	getInputStream().seek(getInputStream().index());
+    private boolean seekChars(int nb) {
+    	getInputStream().seek(getInputStream().index() + nb - 1);
     	return true;
     }
 

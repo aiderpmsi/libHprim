@@ -34,13 +34,12 @@ HCONTENT : HPRINTABLE+;
 
 mode POST_DELIMITERS;
 
-ESCAPED : ESC (DELIMITER1 | DELIMITER2 | REPETITER | ESC | DELIMITER3);
+fragment ESCAPED : {tryToken(delimiters[3])}? . ;
 CR : {isNewLine()}? . ;
 DELIMITER1 : {tryToken(delimiters[0])}? . ;
 DELIMITER2 : {tryToken(delimiters[1])}? . ;
 REPETITER : {tryToken(delimiters[2])}? . ;
 DELIMITER3 : {tryToken(delimiters[4])}? . ;
-ESC : {tryToken(delimiters[3])}? . ;
 NONPRINTABLE : {isNotPrintable()}? .;
 fragment PRINTABLE : {isPrintable()}? . ;
 CONTENT : (PRINTABLE | ESCAPED)+ {setText(removeEscapes(getText()));};

@@ -98,7 +98,35 @@ public abstract class AbstractHprimsParser extends Parser {
 	}
 	
 	/**
-	 * Encadre l'appel du contentHandler
+	 * Tries the regex with the content. Even if conformance is low,
+	 * we must test the regex because this is for synactic predictions 
+	 * @param content
+	 * @param regex
+	 * @return
+	 */
+	protected boolean tryRegex(String content, String regex) {
+		// Makes the match
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(content);
+		if (m.matches())
+			return true;
+		else {
+			return false;
+		}
+	}
+
+	/**
+	 * Helper for access to startElement without attributes
+	 * @param nameElement
+	 */
+	public void startElement(String nameElement) {
+		startElement(nameElement, new HashMap<String, String>());
+	}
+	
+	/**
+	 * Helper for access to startElement with attributes
+	 * @param nameElement
+	 * @param attributes
 	 */
 	public void startElement(String nameElement, HashMap<String, String> attributes) {
 		try {
