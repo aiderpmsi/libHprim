@@ -24,22 +24,54 @@ options {
 import com.github.aiderpmsi.libhprim.parser.AbstractHprimsLexer;
 }
 
+tokens {
+  LINE_A, LINE_OBR, LINE_P, LINE_GENERIC
+}
+
 HDELIMITER1 : {tryToken(delimiters[0])}? . ;
 HDELIMITER2 : {tryToken(delimiters[1])}? . ;
 HREPETITER : {tryToken(delimiters[2])}? . ;
 HESC : {tryToken(delimiters[3])}? .;
-HDELIMITER3 : {tryToken(delimiters[4])}? .  -> pushMode(POST_DELIMITERS);
+HDELIMITER3 : {tryToken(delimiters[4])}? . -> pushMode(POST_DELIMITERS);
 fragment HPRINTABLE : {isPrintable()}? . ;
 HCONTENT : HPRINTABLE+;
 
 mode POST_DELIMITERS;
 
-fragment ESCAPED : {tryToken(delimiters[3])}? . ;
-CR : {isNewLine()}? . ;
+ESCAPED : ESC (DELIMITER1 | DELIMITER2 | REPETITER | ESC | DELIMITER3);
+CR : {isNewLine()}? . -> pushMode(POST_CR);
 DELIMITER1 : {tryToken(delimiters[0])}? . ;
 DELIMITER2 : {tryToken(delimiters[1])}? . ;
 REPETITER : {tryToken(delimiters[2])}? . ;
 DELIMITER3 : {tryToken(delimiters[4])}? . ;
+ESC : {tryToken(delimiters[3])}? . ;
 NONPRINTABLE : {isNotPrintable()}? .;
 fragment PRINTABLE : {isPrintable()}? . ;
 CONTENT : (PRINTABLE | ESCAPED)+ {setText(removeEscapes(getText()));};
+
+mode POST_CR;
+
+CRESCAPED : CRESC (CRDELIMITER1 | CRDELIMITER2 | CRREPETITER | CRESC | CRDELIMITER3);
+CRCR : {isNewLine()}? . ;
+CRDELIMITER1 : {tryToken(delimiters[0])}? . -> pushMode(POST_DELIMITERS);
+CRDELIMITER2 : {tryToken(delimiters[1])}? . ;
+CRREPETITER : {tryToken(delimiters[2])}? . ;
+CRDELIMITER3 : {tryToken(delimiters[4])}? . ;
+CRESC : {tryToken(delimiters[3])}? . ;
+CRNONPRINTABLE : {isNotPrintable()}? .;
+fragment CRPRINTABLE : {isPrintable()}? . ;
+CRCONTENT : (CRPRINTABLE | CRESCAPED)+
+  {setText(removeEscapes(getText()));
+   switch(getText()) {
+     case "A":
+       setType(LINE_A);
+       break;
+     case "P":
+       setType(LINE_P);
+       break;       
+     case "OBR":
+       setType(LINE_OBR);
+       break;       
+     default:
+       setType(LINE_GENERIC);
+   }};

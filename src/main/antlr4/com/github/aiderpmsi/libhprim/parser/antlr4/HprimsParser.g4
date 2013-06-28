@@ -27,7 +27,7 @@ hprim
 @init{startDocument();}
 @after{endDocument();} :
   line_h
-  CR* NONPRINTABLE* EOF;
+  CR* CRNONPRINTABLE* EOF;
 
 // line h (same for all versions)
 line_h:
@@ -46,41 +46,53 @@ line_h:
    DELIMITER1 p=content {matchRegex($p.contentText, "^.{0,12}$");} {startElement("H.12");content($p.contentText);endElement();}
    DELIMITER1 q=content {matchRegex($q.contentText, "^.{0,12}$");} {startElement("H.13");content($q.contentText);endElement();}
    {tryRegex($q.contentText, "^H2\\.[0-2]$")}?
+   CR+ CRNONPRINTABLE*
    ( {$k.contentText.equals("ADM")}?
-       ({$q.contentText.equals("H2.0")}? body_adm_2_0)
+       ({$q.contentText.equals("H2.0")}? body_adm_2_0
+        |
+        {$q.contentText.equals("H2.1")}? body_adm_2_1
+        |
+        {$q.contentText.equals("H2.2")}? body_adm_2_2)
    | {$k.contentText.equals("ORU")}?
-       ({$q.contentText.equals("H2.1")}? body_oru_2_1)
+       ({$q.contentText.equals("H2.0")}? body_oru_2_0
+        |
+        {$q.contentText.equals("H2.1")}? body_oru_2_1
+        |
+        {$q.contentText.equals("H2.2")}? body_oru_2_2)
    );
+
+// Line P (patient)
+line_p:
+  LINE_P CRDELIMITER1 content;
+
+// Line OBR (Result)
+line_obr:
+  LINE_OBR CRDELIMITER1 content;
+
 
 // Types de corps
 body_adm_2_0:
-  {startElement("H.14");content("ADM.2.0");endElement();} ;
+  ;
 
-body_adm_2_1[String typeMsg, String versionMsg]:
-  {$typeMsg.equals("ADM") && $versionMsg.equals("H2.1")}? ;
+body_adm_2_1:
+  ;
 
-body_adm_2_2[String typeMsg, String versionMsg]:
-  {$typeMsg.equals("ADM") && $versionMsg.equals("H2.2")}? ;
+body_adm_2_2:
+  ;
 
-body_oru_2_0[String typeMsg, String versionMsg]:
-  {$typeMsg.equals("ORU") && $versionMsg.equals("H2.0")}? ;
+body_oru_2_0:
+  ;
 
 body_oru_2_1:
-  {startElement("H.14");content("ORU.2.1");endElement();} ;
+  line_obr*;
 
-body_oru_2_2[String typeMsg, String versionMsg]:
-  {$typeMsg.equals("ORU") && $versionMsg.equals("H2.2")}? ;
+body_oru_2_2:
+  ;
 
 // Types de base pour les contenus
 content returns [String contentText]:
-  g=baseContent ((CR+ NONPRINTABLE* line_a DELIMITER1 h=content {$contentText = $g.text + $h.contentText;}) | {$contentText = $g.text;});
-
-// Débuts de ligne
-line_a :
-  {tryToken("A")}? baseContent;
-
-line_p :
-  {tryToken("P")}? baseContent;
+  g=baseContent {$contentText = ($g.text == null ? "" : $g.text);}
+  (CR+ CRNONPRINTABLE* LINE_A CRDELIMITER1 h=content {$contentText = $contentText + ($h.contentText == null ? "" : $h.contentText);})?;
 
 baseContent :
   CONTENT?;
