@@ -89,10 +89,50 @@ body_oru_2_1:
 body_oru_2_2:
   ;
 
+// Répétitions de champs entre délimiteurs 2
+lvl1_fields[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
+@init{startElement(nameElement);}
+@after{endElement();} :
+  r=lvl1_subfields[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern];
+  
+lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern]:
+  {$size == $patterns.size()}?
+    {startElement($nameElement + "." + $size);}
+    g=content
+    {matchRegex($g.contentText, $patterns.get($size - 1));
+     content($g.contentText);
+     endElement();
+     $recorded.append($g.contentText);}
+    ({strictNess <= MEDIUM_CONFORMANCE}?
+     DELIMITER2 h=content? {matchRegex($h.contentText, "^$")})?
+    {matchRegex($recorded.toString(), $completeFieldPattern);}
+  |
+  {$size < $nbMandatory}?
+    {startElement($nameElement + "." + $size);}
+     g=content
+    {matchRegex($g.contentText, $patterns.get($size - 1));
+     content($g.contentText);
+     endElement();
+     $recorded.append($g.contentText);}
+    DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
+  |
+  {startElement($nameElement + "." + $size);
+  g=content
+  {matchRegex($g.contentText, $patterns.get($size - 1));
+  $recorded.append($g.contentText);
+  endElement();}
+  (DELIMITER2
+   lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
+   |
+   {$contentText = $recorded.toString();
+    matchRegex($recorded.toString(), $completeFieldPattern)})
+  ;
+
 // Types de base pour les contenus
 content returns [String contentText]:
   g=baseContent {$contentText = ($g.text == null ? "" : $g.text);}
   (CR+ CRNONPRINTABLE* LINE_A CRDELIMITER1 h=content {$contentText = $contentText + ($h.contentText == null ? "" : $h.contentText);})?;
 
+// Contenu de base
 baseContent :
   CONTENT?;
