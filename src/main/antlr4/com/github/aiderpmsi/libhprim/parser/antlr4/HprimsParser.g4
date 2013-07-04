@@ -103,8 +103,8 @@ lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int s
      content($g.contentText);
      endElement();
      $recorded.append($g.contentText);}
-    ({strictNess <= MEDIUM_CONFORMANCE}?
-     DELIMITER2 h=content? {matchRegex($h.contentText, "^$")})?
+    ({getStrictNess() <= MEDIUM_CONFORMANCE}?
+     DELIMITER2 h=content? {matchRegex($h.contentText, "^\$");})
     {matchRegex($recorded.toString(), $completeFieldPattern);}
   |
   {$size < $nbMandatory}?
@@ -116,7 +116,7 @@ lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int s
      $recorded.append($g.contentText);}
     DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
   |
-  {startElement($nameElement + "." + $size);
+  {startElement($nameElement + "." + $size);}
   g=content
   {matchRegex($g.contentText, $patterns.get($size - 1));
   $recorded.append($g.contentText);
@@ -124,8 +124,7 @@ lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int s
   (DELIMITER2
    lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
    |
-   {$contentText = $recorded.toString();
-    matchRegex($recorded.toString(), $completeFieldPattern)})
+   {matchRegex($recorded.toString(), $completeFieldPattern);})
   ;
 
 // Types de base pour les contenus
