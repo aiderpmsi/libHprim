@@ -1,7 +1,9 @@
 package com.github.aiderpmsi.libhprim.parser;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -48,6 +50,9 @@ public abstract class AbstractHprimsParser extends Parser {
 	 */
 	private int strictNess = FULL_CONFORMANCE;
 
+	// Déclaration des types de sous-champs
+	public final static transient List<String> h_5 = Arrays.asList(new String[] {"^.{1,}$", "^.{1,}$"});
+	
 	public AbstractHprimsParser(TokenStream input) {
 		super(input);
 	}

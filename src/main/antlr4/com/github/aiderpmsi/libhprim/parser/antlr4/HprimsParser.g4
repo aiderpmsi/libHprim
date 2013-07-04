@@ -35,7 +35,7 @@ line_h:
    b=HDELIMITER1 c=HDELIMITER2 d=HREPETITER e=HESC f=HDELIMITER3 {startElement("H.2");content($b.text + $c.text + $d.text + $e.text + $f.text);endElement();}
    DELIMITER1 g=content {matchRegex($g.contentText, "^.{0,12}$");} {startElement("H.3");content($g.contentText);endElement();}
    DELIMITER1 h=content {matchRegex($h.contentText, "^.{0,12}$");} {startElement("H.4");content($h.contentText);endElement();}
-   DELIMITER1 i=content {matchRegex($i.contentText, "^.{0,12}$");} {startElement("H.5");content($i.contentText);endElement();}
+   DELIMITER1 lvl1_fields["H.5", h_5, 2, "^.{0,40}$"]
    DELIMITER1 j=content {matchRegex($j.contentText, "^.{0,12}$");} {startElement("H.6");content($j.contentText);endElement();}
    DELIMITER1 k=content {matchRegex($k.contentText, "^.{0,12}$");} {startElement("H.7");content($k.contentText);endElement();}
    {tryRegex($k.contentText, "^(?:ADM)|(?:ORU)$")}?
@@ -104,10 +104,11 @@ lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int s
      endElement();
      $recorded.append($g.contentText);}
     ({getStrictNess() <= MEDIUM_CONFORMANCE}?
-     DELIMITER2 h=content? {matchRegex($h.contentText, "^\$");})
-    {matchRegex($recorded.toString(), $completeFieldPattern);}
+       (DELIMITER2 h=content? {matchRegex($h.contentText, "^\$");})?
+     | )
+       {matchRegex($recorded.toString(), $completeFieldPattern);}
   |
-  {$size < $nbMandatory}?
+  {$size < $nbMandatory  && $size != $patterns.size()}?
     {startElement($nameElement + "." + $size);}
      g=content
     {matchRegex($g.contentText, $patterns.get($size - 1));
@@ -116,9 +117,11 @@ lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int s
      $recorded.append($g.contentText);}
     DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
   |
+  {$size >= $nbMandatory && $size != $patterns.size()}?  
   {startElement($nameElement + "." + $size);}
   g=content
   {matchRegex($g.contentText, $patterns.get($size - 1));
+  content($g.contentText);
   $recorded.append($g.contentText);
   endElement();}
   (DELIMITER2
@@ -130,7 +133,7 @@ lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int s
 // Types de base pour les contenus
 content returns [String contentText]:
   g=baseContent {$contentText = ($g.text == null ? "" : $g.text);}
-  (CR+ CRNONPRINTABLE* LINE_A CRDELIMITER1 h=content {$contentText = $contentText + ($h.contentText == null ? "" : $h.contentText);})?;
+  (CR+ CRNONPRINTABLE* LINE_A CRDELIMITER1 h=content {$contentText = $contentText + ($h.contentText == null ? "" : $h.contentText);})*;
 
 // Contenu de base
 baseContent :

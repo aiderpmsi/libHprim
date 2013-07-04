@@ -18,7 +18,10 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		ANTLRInputStream input = new ANTLRInputStream(
-				"MSH|~^\\&|COUCOU|RORO|RRO|TT|ORU|EE|TT|ZZ|PP|AQ|H2.1\r" +
+				"MSH|~^\\&|COUCOU|RORO|RRO|TT|O\r" +
+				"A|\r" +
+				"A|R\r" +
+				"A|U|EE|TT|ZZ|PP|AQ|H2.1\r" +
 				"OBR|HELLP");
 		HprimsLexer lex = new HprimsLexer(input);
 		lex.setStrict(false);
