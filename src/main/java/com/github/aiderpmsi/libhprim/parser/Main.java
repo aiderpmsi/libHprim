@@ -18,7 +18,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		ANTLRInputStream input = new ANTLRInputStream(
-				"MSH|~^\\&|COUCOU|RORO|RRO|TT|O\r" +
+				"MSH|~^\\&|COUCOU|RORO|RRO^CADO|TT|O\r" +
 				"A|\r" +
 				"A|R\r" +
 				"A|U|EE|TT|ZZ|PP|AQ|H2.1\r" +

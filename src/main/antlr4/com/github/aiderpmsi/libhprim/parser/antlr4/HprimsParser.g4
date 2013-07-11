@@ -89,51 +89,39 @@ body_oru_2_1:
 body_oru_2_2:
   ;
 
-// Répétitions de champs entre délimiteurs 2
-lvl1_fields[String nameElement, List<String> patterns, int nbMandatory, String completeFieldPattern]
-@init{startElement(nameElement);}
-@after{endElement();} :
-  r=lvl1_subfields[$nameElement, $patterns, $nbMandatory, 1, new StringBuilder(), $completeFieldPattern];
-  
-lvl1_subfields[String nameElement, List<String> patterns, int nbMandatory, int size, StringBuilder recorded, String completeFieldPattern]:
-  {$size == $patterns.size()}?
-    {startElement($nameElement + "." + $size);}
-    g=content
-    {matchRegex($g.contentText, $patterns.get($size - 1));
-     content($g.contentText);
-     endElement();
-     $recorded.append($g.contentText);}
-    ({getStrictNess() <= MEDIUM_CONFORMANCE}?
-       (DELIMITER2 h=content? {matchRegex($h.contentText, "^\$");})?
-     | )
-       {matchRegex($recorded.toString(), $completeFieldPattern);}
-  |
-  {$size < $nbMandatory  && $size != $patterns.size()}?
-    {startElement($nameElement + "." + $size);}
-     g=content
-    {matchRegex($g.contentText, $patterns.get($size - 1));
-     content($g.contentText);
-     endElement();
-     $recorded.append($g.contentText);}
-    DELIMITER2 lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
-  |
-  {$size >= $nbMandatory && $size != $patterns.size()}?  
-  {startElement($nameElement + "." + $size);}
-  g=content
-  {matchRegex($g.contentText, $patterns.get($size - 1));
-  content($g.contentText);
-  $recorded.append($g.contentText);
-  endElement();}
-  (DELIMITER2
-   lvl1_subfields[$nameElement, $patterns, $nbMandatory, $size + 1, $recorded, $completeFieldPattern]
-   |
-   {matchRegex($recorded.toString(), $completeFieldPattern);})
-  ;
+// Répétitions de champs sans niveaux
+repet_nolevel[String nameElement]
+locals[int nb = 1]:
+  content[$nameElement + "." + $nb] {$nb++;}
+  (REPETITEUR content[$nameElement + "." + $nb] {$nb++;})*;
+
+// Répétitions de champs avec un seul niveau
+repet_level1[String nameElement]
+locals[int nb = 1]:
+  level1[$nameElement + "." + $nb] {$nb++;}
+  (REPETITEUR level1[$nameElement + "." + $nb] {$nb++;})*;
+
+// Champs avec un seul niveau
+level1[String nameElement]
+locals[int nb = 1]:
+  content[$nameElement + "." + $nb] {$nb++;}
+  (DELIMITER2 content[$nameElement + "." + $b] {$nb++;})*
+
+dirty_champ[String nameElement]
+@init{startElement($nameElement);}
+@after{endElement();}:
+  (field[true] |
+   (dirty_sous_champ[$nameElement + ".1"]
+    dirty_champ_ordered[$nameElement, 2])
+  )?;
 
 // Types de base pour les contenus
-content returns [String contentText]:
+content[String nameElement] returns [String contentText]
+@init{startElement($nameElement);}
+@after{endElement();}:
   g=baseContent {$contentText = ($g.text == null ? "" : $g.text);}
-  (CR+ CRNONPRINTABLE* LINE_A CRDELIMITER1 h=content {$contentText = $contentText + ($h.contentText == null ? "" : $h.contentText);})*;
+  (CR+ CRNONPRINTABLE* LINE_A CRDELIMITER1 h=baseContent {$contentText += ($h.text == null ? "" : $h.text);})*
+  {content($contentText);};
 
 // Contenu de base
 baseContent :
